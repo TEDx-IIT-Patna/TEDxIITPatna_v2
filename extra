@@ -1,0 +1,102 @@
+<template>
+	<div class="past-events" v-if="windowWidth<480">
+		<!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+
+
+		<div class="container" v-for="n in num">
+			<div v-if="n % 2 === 0">
+			<div><img class="pastimg" v-bind:src="images[n]"></div>
+				<div class="past-text">
+					<h1>Multiple of 2, n={{ n }}</h1>
+				</div>
+				
+			</div>
+			<div v-else>
+				<img class="pastimg" id="pastimg2" v-bind:src="images[n]">
+				<div class="past-text">
+					<h1>Not a Multiple of 2, n={{ n }}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="past-events" v-else>
+		<!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+
+
+		<div class="container" v-for="n in num">
+			<div class="row" v-if="n % 2 === 0">
+			<div class="col past-text">
+					<h1>Multiple of 2, n={{ n }}</h1>
+				</div>
+				<div class="col"><img class="pastimg" v-bind:src="images[n]"></div>
+				
+			</div>
+			<div class="row" v-else>
+				<div class="col"><img class="pastimg" id="pastimg2" v-bind:src="images[n]"></div>
+				<div class="col past-text">
+					<h1>Not a Multiple of 2, n={{ n }}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<br> Window width: {{ windowWidth }} <br />
+	</div>
+</template>
+
+<script>
+import HelloWorldVue from '@/components/HelloWorld.vue';
+export default {
+	name: 'HomeView',
+	components: {
+		HelloWorld
+	},
+	data() {
+		return {
+			num: ['0', '1'],
+			images: ["https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg",
+				"https://drive.google.com/uc?export=view&id=1nyWWM-9UG2M0aXaS-hgnEHaHbo_-2Qu0",
+			],
+			windowWidth: window.innerWidth,
+			txt: ''
+		}
+	},
+	
+	
+	mounted() {
+		this.$nextTick(() => {
+			window.addEventListener('resize', this.onResize);
+		})
+	},
+
+	beforeDestroy() {
+		window.removeEventListener('resize', this.onResize);
+	},
+
+	methods: {
+		onResize() {
+			this.windowWidth = window.innerWidth
+		}
+	}
+}
+</script>
+
+<style scoped>
+.pastimg {
+	max-height: 80vh;
+	max-width: 40vw;
+}
+
+#past-img2 {
+	height: 80vh;
+
+}
+
+.past-events {
+	margin-top: 10px;
+}
+
+.past-text {
+	padding-top: 5%;
+}
+</style>
