@@ -3,7 +3,7 @@
     <div class="container">
       <div class=" text">
    
-    <router-link to="/past_events"><button class="btn btn-danger back"> Go Back </button></router-link> 
+    <router-link to="/past_events"><button class="btn btn-outline-danger back"> Go Back </button></router-link> 
 <h1>
           ROAR | 2021
         </h1>

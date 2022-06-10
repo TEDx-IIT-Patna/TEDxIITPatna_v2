@@ -1,64 +1,92 @@
 <template>
 
-  <div class="pastevents">
-	  
-	  <section class="tab-group">
-<!-- <img class="pastimgs" v-bind:src="illustrations[0]" alt=""> -->
+	<div class="pastevents">
 
-<router-link to="/past_events/2021"><button class="btn btn-danger"> 2021 </button></router-link> 
-<router-link to="/past_events/2019"><button class="btn btn-danger"> 2019 </button></router-link> 
-<router-link to="/past_events/2016"><button class="btn btn-danger"> 2016 </button></router-link> 
-</section>
+		<section class="tab-group">
+			<!-- <img class="pastimgs" v-bind:src="illustrations[0]" alt=""> -->
+			<div class="text"><h1>Past Events.</h1></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+				<div class="card tab-element-box"></div>
+				<router-link to="/past_events/2021" style="width: 15rem;">
+					<div class="card bg-dark" style="width: 15rem;">
+						<img src="../assets/pastevents/illustrations/theme21icon.png" class="card-img-top" alt="...">
+					</div>
+				</router-link>
+				</div>
+
+				<div class="col">
+				<div class="card tab-element-box"></div>
+				<router-link to="/past_events/2019">
+					<div class="card bg-dark" style="width: 15rem;">
+						<img src="../assets/pastevents/illustrations/theme2019icon.png" class="card-img-top" alt="...">
+					</div>
+				</router-link>
+				</div>
+
+				<div class="col">
+				<div class="card tab-element-box"></div>
+				<router-link to="/past_events/2016">
+					<div class="card bg-dark" style="width: 15rem;">
+						<img src="../assets/pastevents/illustrations/theme16icon.png" class="card-img-top" alt="...">
+					</div>
+				</router-link>
+				</div>
+				</div>
+			</div>
+		</section>
 
 
 
- </div>
+	</div>
 </template>
 
 <script>
 // @ is an alias to /src
 
 export default {
-  name: 'PastEvents',
+	name: 'PastEvents',
 }
 </script>
 
 <style scoped>
-.pastevents
-{
-	background-color: black;
-	color:aliceblue;
+.pastevents {
+	color: aliceblue;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	height:100vh;
-}
-.tab-group
-{
-	height: 110vh;
-	max-width:100vw;
-	padding-top: 30vh;
-	padding-left: -5vw;
-	background-image: url("https://drive.google.com/uc?export=view&id=1U_zgI8G7nyiRKvgVPBUU4OJV8O8cSY0m");
-  
+	height: 100vh;
 }
 
-.tab-element
-{
-	width:300px;
-	height:300px;
-	margin-left: 1vw;
+.tab-group {
+	height: 110vh;
+	max-width: 100vw;
+	padding-left: 30%;
+	background-image: url("https://drive.google.com/uc?export=view&id=1U_zgI8G7nyiRKvgVPBUU4OJV8O8cSY0m");
+
 }
-.pastimgs
-{
-	width:30vw;
+
+.tab-element-box {
+	width: 15rem;
+	height: 15rem;
+	transform: translate(10px, 250px);
+	background-color: #410c14;
 }
-.eventyears
+
+.text {
+	width: 30vw;
+	transform: translate(0px, 200px);
+	
+}
+h1
 {
+	font-size: 70px;
+}
+.eventyears {
 	min-height: 100vh;
 }
-.back
-{
+
+.back {
 	background-color: transparent;
 	left: 0%;
 }
-
 </style>

@@ -2,7 +2,7 @@
   <div class="e2021 container-fluid">
     <div class="container">
       <div class=" text">
-
+        <router-link to="/past_events"><button class="btn btn-outline-danger back"> Go Back </button></router-link> 
         <h1>
           METAMORPHOSIS | 2019
         </h1>
