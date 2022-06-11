@@ -1,6 +1,6 @@
 <template>
   <div class="e2021 container-fluid">
-    <div class="container">
+    <div class="header container-fluid">
       <div class=" text">
    
     <router-link to="/past_events"><button class="btn btn-outline-danger back"> Go Back </button></router-link> 
@@ -13,27 +13,39 @@
       </div>
 
     </div>
-
+<Speakers/>
   </div>
+  
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Speakers from '../pastevents/Speakers.vue'
 export default {
   name: '2021',
   data() {
     return {
       illustrations: ["https://drive.google.com/uc?export=view&id=1xouLV0haUBa0AKCS4jp4W2t4y1LJx5rW"]
     }
-  }
+  },
+  components:
+  {
+    Speakers,
+    
+}
 
 }
 </script>
 
 <style scoped>
-.e2021 {
+
+.header
+{
   background-image: url("https://drive.google.com/uc?export=view&id=1ZrmLIf0YGcE4i0P7p-iknJLw6K7Ty_Cr");
+  height:115vh;
+}
+.e2021 {
+  background-color: black;
   color: aliceblue;
 }
 
