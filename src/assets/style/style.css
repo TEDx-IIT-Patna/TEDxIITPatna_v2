@@ -1,0 +1,247 @@
+*{
+  box-sizing:border-box ;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  background-color: white;
+  margin: 0;
+}
+
+/* The main division wrapping all the sections of the webpage */
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-left:auto;
+  margin-right:auto;
+  height:100vh;
+  background-color: black;
+}
+
+/* First div of the home page */
+.first{
+    height: 100vh;
+    width: 100%;
+    /* background-image: url("../half_black.png"); */
+    background-color: white;
+    background-size: 50%;
+    position: absolute;
+    overflow: hidden;
+    margin: -8px;
+    z-index: 10;
+    right: 0;
+}  
+
+/* 50% black background of the home page section 1 */
+.black_bg{
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  z-index: -5000;
+}
+
+/* Main styling of the tedx graphics */
+.tedx_img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right:150px;
+  top: 0;
+}
+
+/* Different layers of the tedx graphics */
+.x_1_img{
+  z-index: 1;
+  background: url('../x_1.png');
+  background-size: auto 100%;
+  background-position: right center;
+  transform: scale(1.2);
+  background-repeat: no-repeat;
+}
+.x_2_img{
+  z-index: 2;
+  background: url('../x_2.png');
+  background-size: auto 100%;
+  background-position: right center;
+  transform: scale(1.2);
+  background-repeat: no-repeat;
+}
+.x_3_img{
+  z-index: 3;
+  background: url('../x_3.png');
+  background-size: auto 100%;
+  background-position: right center;
+  transform: scale(1.2);
+  background-repeat: no-repeat;
+}
+
+/* The container for the timer */
+.timer-container {
+  position: absolute;
+  bottom: 0px;
+  font-family: gothambold;
+  width: 50%;
+  display: flex;
+align-items: center;
+}
+
+/* The LIVE IN written beside the timer */
+.timer-text {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    /* text-align: center; */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+ 
+  /* The Days and hours text */
+  .timer-li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 0.4em;
+    text-transform: uppercase;
+  }
+  
+  /* The span that contains the timer numerals */
+  .timer {
+    display: block;
+    font-size: 4.5rem;
+    /* transform: scale(1, 1.5); */
+    transform: scaleY(1.6);
+  }
+  
+  /* responsiveness in the timer container*/
+  @media all and (max-width: 768px) {
+    .timer-text {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    .timer-li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    .timer {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+
+  /* ------------------ Second Section starts here ---------------------*/
+  /* The second section of the home page */
+  .second{
+    min-width: 100vh;
+    width: 100.15%;
+    height: 230vh;
+    background-color: black;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 98vh;
+    z-index: -1;
+    margin-left: -10px;
+    right:0;
+  }
+
+  /* The text written on the inifinity logo in the black background */
+  .inf_black_text{
+    color:white;
+    text-align: center;
+    position: relative;
+    top: 27%;
+    z-index: 19;
+    font-size: 5vh;
+    letter-spacing: 4vh;
+    font-family: gothambold;
+  }
+
+  /* Styling corrresponding to the infinity logos both in black */
+  .inf_black{
+    width: 100%;
+    position: absolute;
+  }
+  .inf_black_1{
+    /* position: absolute; */
+    z-index: 1;
+  }
+  .inf_black_2{
+    /* position: absolute; */
+    z-index: 2;
+  }
+  .inf_black_3{
+    /* position: absolute; */
+    z-index: 5;
+  }
+  .inf_black_4{
+    /* position: absolute; */
+    z-index: 7;
+  }
+ /* ------------------ Second Section ends here ---------------------*/
+
+  /* ------------------ Third Section starts here ---------------------*/
+  /* The third section of the home page */
+  .third{
+    min-width: 100vh;
+    width: 100%;
+    height: 160vh;
+    background-color: transparent;
+    /* display: table-cell; */
+    position: absolute;
+    margin-top: 291vh;
+    z-index: -1;
+  }
+
+  /* The text written on the inifinity logo in the white background*/
+  .inf_white_text{
+    color:black;
+    text-align: center;
+    position: relative;
+    top: 34%;
+    z-index: 19;
+    font-size: 5vh;
+    letter-spacing: 4vh;
+    font-family: gothambold;
+  }
+
+   /* Styling corrresponding to the infinity logos both in white */
+   .inf_white_1{
+    position: absolute;
+    z-index: 1;
+    display: none;
+  }
+  .inf_white_2{
+    position: absolute;
+    z-index: 2;
+    display: none;
+
+  }
+  .inf_white_3{
+    position: absolute;
+    z-index: 5;
+    display: none;
+
+  }
+  .inf_white_4{
+    position: absolute;
+    z-index: 7;
+    display: none;
+
+  }
+ /* ------------------ Second Section ends here ---------------------*/
+
+  /* Styling of the scroll bar */
+  ::-webkit-scrollbar {
+    width: 15px;
+    background-color: black;
+    scroll-margin: -5;
+  }
+  ::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #fc003f;
+    height: 10% !important;
+  }
