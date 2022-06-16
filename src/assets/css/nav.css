@@ -1,0 +1,133 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 8%;
+    z-index: 2;
+    transition: all 0.2s 0s;
+    overflow: hidden;
+}
+
+.nav.hidden {
+    pointer-events: none;
+    opacity: 0;
+    width: 0;
+}
+
+.nav.show {
+    pointer-events: all;
+    opacity: 1;
+    width: 100vw;
+}
+
+.nav::before,
+.nav::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s calc(var(--order) * 0.1s);
+}
+
+.nav::before {
+    --order: 1
+}
+
+.nav::after {
+    --order: 2
+}
+
+.nav.hidden::before,
+.nav.hidden::after {
+    background-color: transparent;
+    width: 0%;
+}
+
+.nav.show::before {
+    background-color: var(--red);
+    width: 100%;
+    transition: all 0.5s calc(var(--order) * 0.1s);
+}
+
+.nav.show::after {
+    background-color: #000000;
+    width: 100%;
+    transition: all 0.5s calc(var(--order) * 0.1s);
+}
+
+.show-panel {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    text-transform: uppercase;
+    text-align: right;
+    cursor: pointer;
+}
+
+.nav.hidden .close {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s calc(var(--order) * 0.1s);
+}
+
+.nav.show .close {
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.2s calc(var(--order) * 0.1s);
+
+}
+
+.nav.show .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1rem;
+    align-items: left;
+    z-index: 3;
+    --order: 3;
+}
+
+.links span {
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Gotham', sans-serif;
+    text-transform: uppercase;
+    margin: 0.4rem 0;
+    transition: color 0.2s
+}
+
+.links span:hover {
+    color: var(--red)
+}
+
+.nav.hidden .flower {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s calc(var(--order) * 0.1s)
+}
+
+.nav.show .flower {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: clamp(50vh, max(50vw, 50vh), 500px);
+    z-index: 2;
+    transition: all 0.2s calc(var(--order) * 0.1s);
+    pointer-events: all;
+    opacity: 1;
+    --order: 3;
+}
