@@ -27,6 +27,12 @@ the new is possible only when we let go of the old.
     <section>
       <EventGallery v-if="windowwidth > 600"/>
     </section>
+    <section>
+      <Speakers2 v-if="windowwidth < 600"/>
+    </section>
+    <section>
+      <EventGallery2 v-if="windowwidth < 600"/>
+    </section>
     
   </div>
   
@@ -36,7 +42,8 @@ the new is possible only when we let go of the old.
 // @ is an alias to /src
 import Speakers from './Speakers/Speakers2016';
 import EventGallery from './EventGallery/EventGallery2016.vue';
-
+import Speakers2 from './Speakers/Speakers2016mobile';
+import EventGallery2 from './EventGallery/EventGallery2016mobile.vue';
 export default {
   name: '2016',
 
@@ -66,7 +73,7 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery
+    Speakers, EventGallery, Speakers2, EventGallery2
 
   }
 
@@ -115,10 +122,13 @@ h1 {
     background-color: black;
   }
   .header {
-  background-image: url("https://drive.google.com/uc?export=view&id=1-p9OurCPIW_ckXbCbOjNLRRGbLeDt_rf");
+  background-image: url("https://drive.google.com/uc?export=view&id=1qFHq-x92QmVmi9PW2vV0BzDYJqddQero");
   height:1000px;
   width:100vw;
 
+}
+.text{
+  font-size: 12px;
 }
 }
 </style>

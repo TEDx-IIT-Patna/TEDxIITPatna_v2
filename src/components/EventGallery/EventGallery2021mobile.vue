@@ -2,8 +2,7 @@
     <div class="container">
         <h1 style="transform: translate(0,140px); color: white; margin-bottom: 10%;">Gallery</h1>
         <div class="row row-cols-1 gallery-images">
-            <div v-for="image in images">
-                <div class="card tab-element-box"></div>
+            <div class= "gallery-image" v-for="image in images">
                 <div class="card speaker-card" style="width: 15rem;">
                     <div><img class="pastimg" v-bind:src="image"></div>
                 </div>
@@ -17,19 +16,20 @@
     color: aliceblue;
     background-color: black;
 }
-.gallery-images
+.gallery-image
 {
     margin-left: 10%;
+    margin-top: 10%;
 }
-.tab-element-box {
-    width: 15rem;
-    height: 10rem;
-    transform: translate(15px, 180px);
-    background-color: #410c14;
+.gallery-images{
+    margin-top: 40%;
 }
 .pastimg {
     width: 15rem;
+   padding: 2%;
+  
 }
+
 </style>
 
 <script>
@@ -38,19 +38,12 @@ export default {
     name: 'Gallery',
     data() {
         return {
-            images: ["https://drive.google.com/uc?export=view&id=1kL7sAqSjgECrn9cnkEh7ynlHoTTYn6YQ",
-                "https://drive.google.com/uc?export=view&id=1DJRH5C3rmcyMeblVjytSYQtXBwojTayH",
-                "https://drive.google.com/uc?export=view&id=1mgMxAv82eFQ-g7pRvjlCyTBVYHuVWn3U",
-                "https://drive.google.com/uc?export=view&id=1dH_EwkkIujgMZjga6Gn1x5x9VfEtjysa",
-                "https://drive.google.com/uc?export=view&id=1Lss0gNBMiDfAuDZ-YhyiQV9utP25-l_K",
-                "https://drive.google.com/uc?export=view&id=1Hizjn4IUwxCQIMV3z0vIcTwEjT3qFIUB",
-                "https://drive.google.com/uc?export=view&id=1nz_BOkamc_j4JROjEwUVZ6QUm6fjcOWK",
-                "https://drive.google.com/uc?export=view&id=1TbaYTzkWUbNFuvFxwUmtfjPx9itiw_3X",
-                "https://drive.google.com/uc?export=view&id=1j4LSTDDHFE8anrKoaxJwnWUXEUc0Jwvj",
-                "https://drive.google.com/uc?export=view&id=144A9E9nBdnXDiINnA6qzl4yk9fH3l5U-",
-                "https://drive.google.com/uc?export=view&id=1cSE8-eZKKSYcCf4bsY-04NuO5pfD8kGx",
-                "https://drive.google.com/uc?export=view&id=13MGTdUwA78ptlHzwp0JtzypdkgaBvRN3",
-                "https://drive.google.com/uc?export=view&id=1YQBaiUnpzcNtRGTpr3qTntLKGwS4fVUj",
+            images: ["https://drive.google.com/uc?export=view&id=1YbG-sKBzv6znPrkNGGJKMmpbAsUKPlHi",
+"https://drive.google.com/uc?export=view&id=1iIwIVt96WYzbNOniPx8rU04ckM7oK1hc",
+"https://drive.google.com/uc?export=view&id=1Yazj66dIBpBfqbf7JVoGUzmR2jFSiaKn",
+"https://drive.google.com/uc?export=view&id=1j-IU0GbQp5IoHY0h0F808pFHWMMTVLMV",
+"https://drive.google.com/uc?export=view&id=1ty2srCsxS1K0yTdu7aFTqxX84ZiKI20y",
+"https://drive.google.com/uc?export=view&id=1c09RhYT1Q-eGhNCgRcx9fbgyDPsiWHS9",
             ],
         }
     }

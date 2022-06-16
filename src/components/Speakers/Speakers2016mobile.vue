@@ -70,74 +70,64 @@ export default {
             speakers1:
                 [{
                     id: 0,
-                    name: "Speaker Name",
-                    image: "https://drive.google.com/uc?export=view&id=1Rh0R3uZo2v9ETezi77Yzb92zSKXOvjtm",
-                    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem reiciendis dolorum error quia numquam quidem perferendis maxime ratione natus minima ipsum necessitatibus",
-                    link: "https://drive.google.com/uc?export=view&id=1aPsCWBi1ycGgRxzvczpcYb9-3YhcvMxE"
+                    name: "Ashok Krish",
+                    position: "Head of Social Media & Workplace Reimagination Practice at TCS Digital Enterprise at Tata Consultancy Services",
+                    image: "https://drive.google.com/uc?export=view&id=1h1UtKUzwfC3GuxjpEVEh3jiCKLuspXHE",
+                    text: "Ashok Krish is a multi faceted and dynamic leader he is a lifelong technology geek, an open source enthusiast and a talented musician.He is a classical violinist and a guitarist, an amateur cellist, columnist for various newspapers, and used to be a Radio Jockey. A strong believer in technology's ability to solve any problem, at TCS he brings this ideology to his work.",
+                    linkactive: true,
+                    link: "https://youtu.be/MiSbmP_VA38"
+
                 },
 
                 ],
             speakers2: [
                 {
                     id: 1,
-                    name: " Rahul Aggarwal ",
-                    position:"Founder at Mission Oxygen",
-                    image: "https://drive.google.com/uc?export=view&id=1BEH2r8QFo057eShBRJL8jwxpo-tetVPY",
-
-                    text: " He was our second speaker, founder of Mission Oxygen and Co - founder of India 's first graphic design platform - Designhill.One of India 's youngest entrepreneurs, Rahul, is a passionate investor and marketer who acts as a startup advisor.",
-                    linkactive: false,
-                    link: ""
+                    name: "Dr. George Puthuran",
+                    position:"Doctor, Ophthalmologist",
+                    image: "https://drive.google.com/uc?export=view&id=1QChaPv175Blqm39-Y6VKOJltsHlLCcic",
+                    text: "Dr. George V Puthuran hailing from Kochi, Kerala. He currently heads the department of Glaucoma at Aravind Eye Hospital, Madurai. Dr George is the South Zone representative of the present executive committee of the Glaucoma Society Of India. He has presented at various international forums, is an editor of a textbook on Practical Perimetry published by Jaypee Medical Publishers. ",
+                    linkactive: true,
+                    link: "https://youtu.be/MhhvNLztZKI "
                 },
                 {
                     id: 2,
-                    name: "Dr Rishi Raj",
-                    position:"Associate Professor - IIT Patna",
-                    image: "https://drive.google.com/uc?export=view&id=1rYyIbiNFXAbDAuVbeIllGBm4mNOLtfkZ ",
-                    text: "He was our third speaker.He is a magnificent professor at IIT Patna.With five patents and more than 50 research papers, Dr Rishi has worked as a Postdoctoral Associate at the Massachusetts Institute of Technology.He has also received the prestigious Indian National Science Academy 's Medal for Young Scientist and the INAE 's Young Engineer Award.",
-                    linkactive: true,
-                    link: " https://youtu.be/HMvYMLkoShg"
+                    name: "Dr. Mohan Kameswaran",
+                    position:"Doctor, Otorhinolaryngologist",
+                    image: "https://drive.google.com/uc?export=view&id=12LQYodl5b_9YKH4Uk7Nt1Jfjn-NWfik3",
+                    text: "Dr. Mohan Kameswaran is an Indian otorhinolaryngologist, medical academic and the founder of MERF Institute of Speech and Hearing, a Chennai-based institution providing advanced training in audiology and speech-language pathology. The Government of India awarded him the fourth highest civilian honour of the Padma Shri, in 2006, for his contributions to Indian medicine.",
+                    linkactive: false,
+                    link: ""
                 },
                 
                 {
-                    id: 3,
-                    name: " Vivek Ram",
-                    position:"Senapati at Vaanarsena Studios",
-                    image: "https://drive.google.com/uc?export=view&id=1FXg2TLjzRl4bIHZpLaZATVTZUxswU2Ar ",
-                    text: "He is a well - known CG and VFX artist with a career span of 20 years.He has worked on many international feature films, including Fast and Furious 3, The Incredible Hulk, Night at the Museum and many more.Vivek is exceptionally passionate about mythical stories and aims to tell compelling stories which can connect to a contemporary audience.Vaanarsena Studios is a result of this extraordinary passion.",
-                    linkactive: true,
-                    link: " https://youtu.be/bG4VLt6uVUc"
-                },
-                {
-                    id: 4,
-                    name: "Yusra Mardini",
-                    position:"Swimmer, Olympian",
-                    image: "https://drive.google.com/uc?export=view&id=1ZKWNUBzAh8FPYmSAvBBZ1cNxk0490YZF",
-                    text: "She is an Olympic swimmer and is the youngest ever Goodwill Ambassador for UNHCR, the UN Refugee Agency.A Syrian refugee herself, she advocates for refugees globally and has become a powerful voice for the forcibly displaced across the world and is an example of their resilience and determination to rebuild lives and positively contribute to host communities.Yusra ' s incredible story is told in her memoir ' Butterfly: From Refugee to Olympian - My Story of Rescue, Hope and Triumph ' which is currently being adapted into a film.",
-                    linkactive: true,
-                    link: " https://youtu.be/xQ3gAIX6a7E"
-                },
-                {
-                    id: 5,
-                    name: "Rupesh Mahore",
-                    position:"Researcher and Innovator",
-                    image: "",
-
-                    text: " Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics.While interning at ISRO, he worked on a project used in the Chandrayan - 2 and worked with Padma Shri Prof.H.C.Verma.This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients.He has co - founded Spacegradeinc, a space tech startup.",
-
+                    id: 0,
+                    name: "Dr. Pushpak Bhattacharyya",
+                    position:"Professor, Computer Science and Engineering",
+                    image: "https://drive.google.com/uc?export=view&id=14csUm5fhmscBx8hhqxKVznxlKZS7630l",
+                    text: "Dr. Pushpak Bhattacharyya has made seminal contributions in NLP and ML, working in these fields for last 25 years. In addition to being Professor at Dept. of CSE in IIT Bombay, he has been a visiting Professor at Stanford University (2004), Distinguished lecturer at University of Houston, USA (2012), and Visiting Scholar- MIT (1990). ",
                     linkactive: false,
                     link: ""
                 },
                 {
-                    id: 6,
-                    name: "Zoya Agarwal",
-                    position:"Aircraft Pilot, UN Spokesperson",
-                    image: "https://drive.google.com/uc?export=view&id=1w3Jx2yq2JQCQ-rNtMW-pu-_tFBFPq9LT",
-
-                    text: "She became the youngest female pilot to fly a Boeing 777 in 2013. Captain Zoya turned a page in Indian aviation history when, for a first, she commanded an all - female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world 's longest non - stop commercial trip.In addition to being appointed as the spokesperson of Generation Equality by the UN this year, Captain Zoya is a TEDx Speaker who encourages aspiring youngsters and hopes to inspire young girls to dream big.",
+                    id: 1,
+                    name: "Dr. Satyajit Singh",
+                    position:"Doctor, Urologist",
+                    image: "",
+                    text: "Dr. Satyajit Singh is a consultant Urologist associated with Ruban Memorial Hospital, Patna. He served as a registrar, consultant and lecturer in various countries like UK, Scotland and Saudi Arabia.  ",
+                    linkactive: false,
+                    link: ""
+                },
+            {
+                    id: 2,
+                    name: "Tapabrata Chakraborty",
+                    position:"Mentalist",
+                    image: "https://drive.google.com/uc?export=view&id=1yC7CM-II7yeTQm_ag0VoYCzwFhwq9oQl",
+                    text: "Tapabrata Chakraborty, a modern-day Mystifier from Kolkata who is a close up magician and mentalist. He excels in cards and coin tricks , thought implantation, mind reading , hypnosis, psychokinesis, telekinesis and blind- folded driving and lots more. Touted as India's next sensation in the field, he has been doing Magic for ten years now. He is the Semi-Finalist of India's Got Talent and has appeared in some prominent televised shows.",
 
                     linkactive: false,
-                    link: "",
-                },
+                    link: ""
+                }
             ],
 
             illustration: "https://drive.google.com/uc?export=view&id=1DQzR9pKIv_5zL41FlxG1XBpRPFFhAq8J"
