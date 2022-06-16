@@ -1,0 +1,30 @@
+<!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-body" style="color: black;">
+
+                                                <div class="container">
+                                                    <div class="row"><button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                                    <div class="row">
+                                                        <div class="col-5"><img class="modalimg"
+                                                                v-bind:src="speaker.image"></div>
+
+                                                        <div class="col-6">
+                                                            <div class="modal-head">{{ speaker.name }}</div>
+                                                            <div class="modal-text">
+                                                                {{ speaker.text }}
+                                                            </div>
+                                                            <div><a :href="speaker.link" class="modal-link">Talk →</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>

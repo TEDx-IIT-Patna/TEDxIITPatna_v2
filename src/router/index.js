@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PastEvents from '../views/PastEvents.vue'
-import events2021 from '../components/pastevents/2021.vue'
-import events2019 from '../components/pastevents/2019.vue'
-import events2016 from '../components/pastevents/2016.vue'
+import events2021 from '../components/2021.vue'
+import events2019 from '../components/2019.vue'
+import events2016 from '../components/2016.vue'
 
 const routes = [
   {
