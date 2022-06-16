@@ -1,8 +1,7 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <!-- <nav>
+    <router-link to="/nav-panel">Navigation Panel</router-link>
+  </nav> -->
   <router-view/>
 </template>
 
@@ -15,16 +14,20 @@
   color: #2c3e50;
 }
 
-nav {
+/* nav {
   padding: 30px;
+  position: relative;
+  left: 22%;
 }
 
 nav a {
+  font-size: 0.75rem;
   font-weight: bold;
+  text-decoration: none;
   color: #2c3e50;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
