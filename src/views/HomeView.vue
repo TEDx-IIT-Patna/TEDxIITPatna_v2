@@ -1,21 +1,16 @@
 <template>
-  <div class="home">
-  <!-- <Footer/> -->
-  <Navbarpanel/>
-  </div>
+  <Nav />
+  <div class="home"></div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import Footer from '@/components/Footer.vue'
-import Navbarpanel from '@/components/navbarpanel.vue' 
+import Nav from '@/components/Nav.vue'
+
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld,
-    Footer,
-    Navbarpanel
-}
+    Nav
+  }
 }
 </script>
