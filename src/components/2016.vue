@@ -27,7 +27,7 @@ the new is possible only when we let go of the old.
     <section>
       <EventGallery v-if="windowwidth > 600"/>
     </section>
-    <section>
+      <section>
       <Speakers2 v-if="windowwidth < 600"/>
     </section>
     <section>
@@ -89,7 +89,7 @@ export default {
 .e2021 {
   background-color: black;
   color: white;
-}
+  }
 
 
 .text {
@@ -120,6 +120,7 @@ h1 {
   .e2021
   {
     background-color: black;
+    width: fit-content;
   }
   .header {
   background-image: url("https://drive.google.com/uc?export=view&id=1qFHq-x92QmVmi9PW2vV0BzDYJqddQero");
