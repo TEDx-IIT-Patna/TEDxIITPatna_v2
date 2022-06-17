@@ -170,7 +170,7 @@ body {
   letter-spacing: -0.05em;
   color: #000000;
   position: relative;
-  right: 130%;
+  right: 22vw;
   top: 13vh;
 }
 
@@ -261,7 +261,7 @@ body {
     align-items: flex-end;
     justify-content: flex-end; */
   left: 95%;
-  top: 185vh;
+  top: 303vh;
   /* font-family: 'Gotham'; */
   font-style: normal;
   font-weight: 700;
@@ -361,7 +361,7 @@ body {
   left: 15.9vw;
 }
 .image9_text {
-  left: 31.4vw;
+  left: 31.1vw;
 }
 .image1_img:hover {
   cursor: pointer;
