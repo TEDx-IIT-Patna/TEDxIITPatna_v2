@@ -65,5 +65,9 @@ a{
     margin-bottom: 0px;
 }
 
+.navs :hover{
+    background-color: red;
+}
+
 
 </style>

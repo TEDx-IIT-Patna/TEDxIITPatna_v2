@@ -1,6 +1,7 @@
 <template>
 <!-- <navbarVue/> -->
-<homeVue/>
+<!-- <navbarVue/> -->
+<router-view/>
 </template>
 
 <script>

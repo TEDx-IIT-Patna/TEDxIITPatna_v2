@@ -9,6 +9,11 @@ body{
   margin: 0;
 }
 
+nav{
+  z-index: 900;
+  position: relative;
+}
+
 /* The main division wrapping all the sections of the webpage */
 .wrapper{
   display: flex;

@@ -17,7 +17,7 @@
             <div class="row">
 
 
-                <div class="image image-1 col-3 ">
+                <div class="image image-1 col-3 " style="margin-right: 0px;">
 
                     <img src="..\assets\hand_graphics.png" style="    height: 77vh;
     width: auto;" />

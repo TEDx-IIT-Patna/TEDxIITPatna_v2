@@ -3,9 +3,6 @@
 
     <section>
       <div class="first" id="first">
-        <nav>
-          <navbarVue />
-        </nav>
         <div class="timer-container">
           <h1 id="headline" class="timer-text">live in</h1>
           <div id="countdown">
@@ -22,8 +19,11 @@
           <div class="x_2_img tedx_img"></div>
           <div class="x_3_img tedx_img"></div>
           <div class="black_bg" id="black_bg">
-          </div>
+            </div>
         </div>
+            <nav>
+              <navbarVue />
+            </nav>
       </div>
     </section>
 
@@ -77,7 +77,7 @@
     </section>
     </section>
 
-    <section class="homepage_content">
+    <section class="homepage_conent">
       <home_contentVue />
     </section>
 
