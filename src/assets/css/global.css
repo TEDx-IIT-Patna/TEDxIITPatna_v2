@@ -8,6 +8,8 @@ body {
     margin: 0;
     font-family: 'Gotham', sans-serif;
 }
+a{ color: black; }
+a:hover{ color: var(--red) }
 
 *, a {
     margin: 0;
