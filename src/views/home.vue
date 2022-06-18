@@ -19,72 +19,82 @@
           <div class="x_2_img tedx_img"></div>
           <div class="x_3_img tedx_img"></div>
           <div class="black_bg" id="black_bg">
-            </div>
+          </div>
         </div>
-            <nav>
-              <navbarVue />
-            </nav>
+        <nav>
+          <navbarVue />
+        </nav>
       </div>
     </section>
 
-  <section class="second_and_third">
-    <section class="second_section">
-      <div class="second second_item" id="second">
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-          class="inf_black inf_black_1 second_item" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-          :delay="300" class="inf_black inf_black_2 second_item" src="../assets/Infinity_Logo/Infinity_Layer_2.png"
-          alt="" />
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-          :delay="600" class="inf_black inf_black_3 second_item" src="../assets/Infinity_Logo/Infinity_Layer_3.png"
-          alt="" />
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-          :delay="900" class="inf_black inf_black_4 second_item" src="../assets/Infinity_Logo/Infinity_Layer_4.png"
-          alt="" />
+    <section class="second_and_third">
+      <section class="second_section">
+        <div class="second second_item" id="second">
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
+            class="inf_black inf_black_1 second_item" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
+            :delay="300" class="inf_black inf_black_2 second_item" src="../assets/Infinity_Logo/Infinity_Layer_2.png"
+            alt="" />
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
+            :delay="600" class="inf_black inf_black_3 second_item" src="../assets/Infinity_Logo/Infinity_Layer_3.png"
+            alt="" />
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
+            :delay="900" class="inf_black inf_black_4 second_item" src="../assets/Infinity_Logo/Infinity_Layer_4.png"
+            alt="" />
           <!-- <div class="white_infinity">
 
           </div> -->
-        <div class="inf_black_text second_item">
-          <span id="inf_aff_white">INFINITE AFFINITES</span>
+          <div class="inf_black_text second_item">
+            <span id="inf_aff_white">INFINITE AFFINITES</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="third">
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
-          class="inf_black inf_white_1" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
-          :delay="300" class="inf_black inf_white_2" src="../assets/Infinity_Logo/Infinity_Layer_2.png" alt="" />
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
-          :delay="600" class="inf_black inf_white_3" src="../assets/Infinity_Logo/Infinity_Layer_3.png" alt="" />
-        <img v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
-          :delay="900" class="inf_black inf_white_4" src="../assets/Infinity_Logo/Infinity_Layer_4.png" alt="" />
-        <div class="inf_white_text" v-motion :initial="{ opacity: 0, y: 0 }"
-          :visible="{ opacity: 1, y: 50, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
-          :delay="1200" :leave="{ opacity: 0}">
-          INFINITE AFFINITES
-        </div>
-      </div>
-    </section>
+      <!-- <section>
+        <div class="third">
+          <img 
+            class="inf_black inf_white_1" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
+          <img  class="inf_black inf_white_2" src="../assets/Infinity_Logo/Infinity_Layer_2.png" alt="" />
+          <img  class="inf_black inf_white_3" src="../assets/Infinity_Logo/Infinity_Layer_3.png" alt="" />
+          <img class="inf_black inf_white_4" src="../assets/Infinity_Logo/Infinity_Layer_4.png" alt="" />
+          <div class="inf_white_text" >
+            INFINITE AFFINITES
+          </div>
+        </div> -->
+        <!-- <div class="third">
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
+            class="inf_black inf_white_1" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
+            :delay="300" class="inf_black inf_white_2" src="../assets/Infinity_Logo/Infinity_Layer_2.png" alt="" />
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
+            :delay="600" class="inf_black inf_white_3" src="../assets/Infinity_Logo/Infinity_Layer_3.png" alt="" />
+          <img v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
+            :delay="900" class="inf_black inf_white_4" src="../assets/Infinity_Logo/Infinity_Layer_4.png" alt="" />
+          <div class="inf_white_text" v-motion :initial="{ opacity: 0, y: 0 }"
+            :visible="{ opacity: 1, y: 50, transition: { duration: 700, type: 'keyframes', ease: 'linear', } }"
+            :delay="1200" :leave="{ opacity: 0 }">
+            INFINITE AFFINITES
+          </div>
+        </div> -->
+      <!-- </section> -->
     </section>
 
     <section class="homepage_conent">
       <home_contentVue />
     </section>
 
-    <section class="footer">
+    <section class="footer_section">
       <footerVue />
     </section>
-    
+
   </div>
 </template>
 
@@ -97,11 +107,11 @@ import gsap from "gsap"
 
 export default {
   name: 'home',
-//   computed: {
-//   show () {
-//     return this.$route.meta.show
-//   }
-// },
+  //   computed: {
+  //   show () {
+  //     return this.$route.meta.show
+  //   }
+  // },
   components: {
     navbarVue,
     home_contentVue,
@@ -176,10 +186,10 @@ export default {
     var controller3 = new ScrollMagic.Controller();
     // Timeline for first section
     var tl = new gsap.timeline()
-    tl.fromTo(".black_bg", 1.5, { width: screen.width / 2 }, { width: 2*screen.width, ease: Linear.easeNone }, 0);
+    tl.fromTo(".black_bg", 1.5, { width: screen.width / 2 }, { width: 2 * screen.width, ease: Linear.easeNone }, 0);
     tl.fromTo(".x_3_img", 1.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
     tl.fromTo(".x_2_img", 1.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
-    tl.fromTo(".x_1_img", 1.5, { xPercent:0, opacity: 1 }, { xPercent: 50, opacity: 0, ease: Linear.easeNone }, 0)
+    tl.fromTo(".x_1_img", 1.5, { xPercent: 0, opacity: 1 }, { xPercent: 50, opacity: 0, ease: Linear.easeNone }, 0)
     // tl.fromTo(".x_1_img", 1.5, { scale: 1.2, opacity: 1 }, { scale: 0, opacity: 0, ease: Linear.easeNone }, 2)
     // tl.fromTo(".x_1_img",1.5,{opacity:1,xPercent:0,yPercent:0},{opacity:0,xPercent:70,yPercent:-70, ease: Linear.easeNone},2)
     tl.fromTo(".logo", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -200, ease: Linear.easeNone }, 0)
@@ -191,38 +201,38 @@ export default {
     //Timeline for the second section
     var tl2 = new gsap.timeline()
     tl2.fromTo(".wrapper", { css: { backgroundColor: "black" } }, { css: { backgroundColor: "white" }, ease: Linear.easeNone })
-    tl2.fromTo(".inf_black_1", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_2", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_3", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_4", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_text", 1, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_1", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_2", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_3", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_4", 0.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_text", 1, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
 
     //Timeline for the third section
-    var tl3 = new gsap.timeline()
-    tl2.fromTo(".inf_black_1", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_2", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_3", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
-    tl2.fromTo(".inf_black_4", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
-    tl3.fromTo(".inf_white_1", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
-    tl3.fromTo(".inf_white_2", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
-    tl3.fromTo(".inf_white_3", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
-    tl3.fromTo(".inf_white_4", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
+    // var tl3 = new gsap.timeline()
+    // tl2.fromTo(".inf_black_1", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_2", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_3", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
+    // tl2.fromTo(".inf_black_4", 0.5, { opacity: 1, css:{display: "block"} }, { opacity: 0, css:{display: "none"}, ease: Linear.easeNone }, 0)
+    // tl3.fromTo(".inf_white_1", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
+    // tl3.fromTo(".inf_white_2", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
+    // tl3.fromTo(".inf_white_3", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
+    // tl3.fromTo(".inf_white_4", 1, { opacity: 1, css:{display: "none"} }, { opacity: 1, css:{display: "block"}, ease: Linear.easeNone })
     // tl2.fromTo(".inf_white_text", 1, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone, delay:2 }, 0)
-    tl2.fromTo(".inf_white_text", 1, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    tl2.fromTo(".inf_black_text", 1, { css: { color: "white" } }, { css: { color: "black" }, ease: Linear.easeNone }, 0)
 
     // Timeline for the first div of the content section
     var tl4 = new gsap.timeline()
-    tl4.fromTo(".image-1", 1.5, { xPercent: -screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
-    tl4.fromTo(".content1", 1.5, { xPercent: screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
+    tl4.fromTo(".image-1", 1.5, { xPercent: -screen.width / 2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
+    tl4.fromTo(".content1", 1.5, { xPercent: screen.width / 2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
 
     // Timeline for the second div of the content section
     var tl5 = new gsap.timeline()
-    tl4.fromTo(".image-2", 1.5, { xPercent: screen.width/4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
-    tl4.fromTo(".content2", 1.5, { xPercent: -screen.width/4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
+    tl4.fromTo(".image-2", 1.5, { xPercent: screen.width / 4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
+    tl4.fromTo(".content2", 1.5, { xPercent: -screen.width / 4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
 
     // Timeline for the third div of the content section
-    tl5.fromTo(".image-3", 1.5, { xPercent: -screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
-    tl5.fromTo(".content3", 1.5, { xPercent: screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
+    tl5.fromTo(".image-3", 1.5, { xPercent: -screen.width / 2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
+    tl5.fromTo(".content3", 1.5, { xPercent: screen.width / 2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
 
 
 
@@ -257,23 +267,23 @@ export default {
       })
       .addTo(controller1);
 
-    var scene3 = new ScrollMagic.Scene({
-      triggerElement: ".third",
-      triggerHook: "onLeave",
-      duration: "20%"
-    })
-      .setPin(".third")
-      .setTween(tl3)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-        indent: 40
-      })
-      .addTo(controller2);
+    // var scene3 = new ScrollMagic.Scene({
+    //   triggerElement: ".third",
+    //   triggerHook: "onLeave",
+    //   duration: "20%"
+    // })
+    //   .setPin(".third")
+    //   .setTween(tl3)
+    //   .addIndicators({
+    //     colorTrigger: "white",
+    //     colorStart: "white",
+    //     colorEnd: "white",
+    //     indent: 40
+    //   })
+    //   .addTo(controller2);
 
     var scene4 = new ScrollMagic.Scene({
-      triggerElement: ".third",
+      triggerElement: ".inf_black_4",
       triggerHook: "onLeave",
       duration: "200%"
     })

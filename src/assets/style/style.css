@@ -250,3 +250,7 @@ align-items: center;
     background-color: #fc003f;
     height: 10% !important;
   }
+
+  .footer_section{
+    margin-top: 693vh;
+  }
