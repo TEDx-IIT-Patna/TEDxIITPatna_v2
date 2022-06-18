@@ -7,15 +7,10 @@
         <h1>
           SHEDDING OFF FEATHERS | 2016
         </h1>
-        End is an absolute myth.Sometimes when things are falling apart they may actually be falling
-into place. A place leading to a new beginning full of new hopes and dreams.To come out new,
-its always better to give past a big full stop. Just as birds shed their feathers allowing the new
-ones to embrace them taking them afresh to infinite skies, bringing out change is an inevitable
-part of one's life to keep walking the course of life. "Shedding off feathers" basically reflects the
-same urge to always keep our arms open to change. Change within us to become a better
-person or to this society to make this a better place to live in. Socrates says "The secret of
-change is to focus all your energy not on fighting the old, but on building the new" and building
-the new is possible only when we let go of the old.
+        Our very first edition in 2016 was kick started with the theme of Shedding Off Feathers.  
+"The secret of change is to focus all your energy not on fighting the old, but on building the new"
+ Just as birds shed their feathers allowing the new ones to embrace them taking them afresh to infinite skies, bringing out change is an inevitable part of one's life to keep walking the course of life. 'Shedding off feathers' basically reflects the same urge to always keep our arms open to change. Change within us to become a better person or to this society to make this a better place to live in.
+
         <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
       </div>

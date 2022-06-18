@@ -93,7 +93,7 @@ export default {
                     name: "Dr Rishi Raj",
                     position:"Associate Professor - IIT Patna",
                     image: "https://drive.google.com/uc?export=view&id=1rYyIbiNFXAbDAuVbeIllGBm4mNOLtfkZ ",
-                    text: "He was our third speaker.He is a magnificent professor at IIT Patna.With five patents and more than 50 research papers, Dr Rishi has worked as a Postdoctoral Associate at the Massachusetts Institute of Technology.He has also received the prestigious Indian National Science Academy 's Medal for Young Scientist and the INAE 's Young Engineer Award.",
+                    text: "He was our third speaker. He is a magnificent professor at IIT Patna. With five patents and more than 50 research papers, Dr Rishi has also worked as a Postdoctoral Associate at the Massachusetts Institute of Technology.",
                     linkactive: true,
                     link: " https://youtu.be/HMvYMLkoShg"
                 },
@@ -103,7 +103,7 @@ export default {
                     name: " Vivek Ram",
                     position:"Senapati at Vaanarsena Studios",
                     image: "https://drive.google.com/uc?export=view&id=1FXg2TLjzRl4bIHZpLaZATVTZUxswU2Ar ",
-                    text: "He is a well - known CG and VFX artist with a career span of 20 years.He has worked on many international feature films, including Fast and Furious 3, The Incredible Hulk, Night at the Museum and many more.Vivek is exceptionally passionate about mythical stories and aims to tell compelling stories which can connect to a contemporary audience.Vaanarsena Studios is a result of this extraordinary passion.",
+                    text: "He is a well-known CG and VFX artist and has worked on many international feature films, including Fast and Furious 3, The Incredible Hulk, Night at the Museum and many more. As the founder of Vanarsena studios, he is exceptionally passionate about mythical stories.",
                     linkactive: true,
                     link: " https://youtu.be/bG4VLt6uVUc"
                 },
@@ -112,7 +112,7 @@ export default {
                     name: "Yusra Mardini",
                     position:"Swimmer, Olympian",
                     image: "https://drive.google.com/uc?export=view&id=1ZKWNUBzAh8FPYmSAvBBZ1cNxk0490YZF",
-                    text: "She is an Olympic swimmer and is the youngest ever Goodwill Ambassador for UNHCR, the UN Refugee Agency.A Syrian refugee herself, she advocates for refugees globally and has become a powerful voice for the forcibly displaced across the world and is an example of their resilience and determination to rebuild lives and positively contribute to host communities.Yusra ' s incredible story is told in her memoir ' Butterfly: From Refugee to Olympian - My Story of Rescue, Hope and Triumph ' which is currently being adapted into a film.",
+                    text: "She is an Olympic swimmer and is the youngest ever Goodwill Ambassador for UNHCR, the UN Refugee Agency. A Syrian refugee herself, she advocates for refugees globally and has become a powerful voice for the forcibly displaced across the world. Yusra's incredible story is told in her memoir 'Butterfly: From Refugee to Olympian - My Story of Rescue, Hope and Triumph'",
                     linkactive: true,
                     link: " https://youtu.be/xQ3gAIX6a7E"
                 },
@@ -122,7 +122,7 @@ export default {
                     position:"Researcher and Innovator",
                     image: "",
 
-                    text: " Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics.While interning at ISRO, he worked on a project used in the Chandrayan - 2 and worked with Padma Shri Prof.H.C.Verma.This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients.He has co - founded Spacegradeinc, a space tech startup.",
+                    text: "Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics. This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients. Having worked with Padma Shri Prof. H.C.Verma, he has also worked on a project used in the Chandrayan-2.",
 
                     linkactive: false,
                     link: ""
@@ -133,7 +133,7 @@ export default {
                     position:"Aircraft Pilot, UN Spokesperson",
                     image: "https://drive.google.com/uc?export=view&id=1w3Jx2yq2JQCQ-rNtMW-pu-_tFBFPq9LT",
 
-                    text: "She became the youngest female pilot to fly a Boeing 777 in 2013. Captain Zoya turned a page in Indian aviation history when, for a first, she commanded an all - female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world 's longest non - stop commercial trip.In addition to being appointed as the spokesperson of Generation Equality by the UN this year, Captain Zoya is a TEDx Speaker who encourages aspiring youngsters and hopes to inspire young girls to dream big.",
+                    text: "The youngest female pilot to fly a Boeing 777,  Captain Zoya turned a page in Indian aviation history when she commanded an all-female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world's longest non-stop commercial trip. Zoya is also the spokesperson of Generation Equality by the UN.",
 
                     linkactive: false,
                     link: "",

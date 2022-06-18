@@ -240,7 +240,7 @@ export default {
 }
 
 .modalimg {
-    margin-top: 40%;
+    margin-top: 25%;
     width: 15rem;
     transform: translate(-70px, 0px);
 }
