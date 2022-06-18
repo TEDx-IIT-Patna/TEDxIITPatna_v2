@@ -22,16 +22,13 @@ the new is possible only when we let go of the old.
 
     </div>
     <section>
-      <Speakers v-if="windowwidth > 600"/>
+    <Speakers v-if="windowwidth > 990"/>
     </section>
     <section>
-      <EventGallery v-if="windowwidth > 600"/>
-    </section>
-      <section>
-      <Speakers2 v-if="windowwidth < 600"/>
+      <Speakers2 v-if="windowwidth <= 990"/>
     </section>
     <section>
-      <EventGallery2 v-if="windowwidth < 600"/>
+      <EventGallery/>
     </section>
     
   </div>
@@ -43,7 +40,7 @@ the new is possible only when we let go of the old.
 import Speakers from './Speakers/Speakers2016';
 import EventGallery from './EventGallery/EventGallery2016.vue';
 import Speakers2 from './Speakers/Speakers2016mobile';
-import EventGallery2 from './EventGallery/EventGallery2016mobile.vue';
+
 export default {
   name: '2016',
 
@@ -73,7 +70,7 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2, EventGallery2
+    Speakers, EventGallery, Speakers2,
 
   }
 
@@ -83,7 +80,7 @@ export default {
 <style scoped>
 .header {
   background-image: url("https://drive.google.com/uc?export=view&id=19FzGZmje31Caqc9McsR5sfrJA5Nvjj_6");
-  height: 115vh;
+  height: 768px;
 }
 
 .e2021 {
@@ -130,6 +127,23 @@ h1 {
 }
 .text{
   font-size: 12px;
+}
+}
+@media screen and (min-width: 600px) and (max-width: 990px) {
+  .header {
+  background-image: url("https://drive.google.com/uc?export=view&id=1-UdDn-jp0OkpbpEuRNdFJ8V3lgsSPjPx");
+  width:100%;
+  height: 768px;
+}
+.text{
+  font-size: 15px;
+}
+}
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .header {
+  background-image: url("https://drive.google.com/uc?export=view&id=1cfvIlfncEpelpVyTm3ygUcN1DteO4MFD");
+  width:100%;
+  height: 768px;
 }
 }
 </style>

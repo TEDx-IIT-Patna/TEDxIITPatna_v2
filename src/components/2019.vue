@@ -18,16 +18,13 @@
   <!-- Window width: {{ windowwidth }} -->
     </div>
     <section>
-      <Speakers v-if="windowwidth > 600"/>
+    <Speakers v-if="windowwidth > 990"/>
     </section>
     <section>
-      <EventGallery v-if="windowwidth > 600"/>
+      <Speakers2 v-if="windowwidth <= 990"/>
     </section>
     <section>
-      <Speakers2 v-if="windowwidth < 600"/>
-    </section>
-    <section>
-      <EventGallery2 v-if="windowwidth < 600"/>
+      <EventGallery/>
     </section>
   </div>
   
@@ -38,7 +35,7 @@
 import Speakers from './Speakers/Speakers2019';
 import Speakers2 from './Speakers/Speakers2019mobile';
 import EventGallery from './EventGallery/EventGallery2019.vue';
-import EventGallery2 from './EventGallery/EventGallery2019mobile.vue';
+
 export default {
   name: '2021',
 
@@ -67,7 +64,7 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2, EventGallery2
+    Speakers, EventGallery, Speakers2
 
   }
 
@@ -80,7 +77,7 @@ export default {
 }
 .header {
   background-image: url("https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl");
-  height:120vh;
+  height: 768px;
   width:100vw;
 }
 .text {
@@ -113,6 +110,23 @@ h1 {
 }
 .text{
   font-size: 13px;
+}
+}
+@media screen and (min-width: 600px) and (max-width: 990px) {
+  .header {
+  background-image: url("https://drive.google.com/uc?export=view&id=1zfawW9dklKN0hjffh_rOpb4udmJQ0grP");
+  width:100%;
+  height: 768px;
+}
+.text{
+  font-size: 15px;
+}
+}
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .header {
+  background-image: url("https://drive.google.com/uc?export=view&id=12uO7YqP_GJWfzBuU4Wpiv2-QLoJ3GYke");
+  width:100%;
+  height: 768px;
 }
 }
 </style>
