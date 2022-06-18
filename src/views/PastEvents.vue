@@ -63,7 +63,7 @@ export default {
 }
 
 .tab-group {
-	height: 110vh;
+	height: 768px;
 	max-width: 100vw;
 	padding-left: 30%;
 	/* background-image: url("https://drive.google.com/uc?export=view&id=1zv7nWao1g5nDkSRThT4SOOTDqkK_KJ8p"); */
@@ -95,7 +95,7 @@ h1 {
 
 	.tab-group {
 		padding-left: 0%;
-		height: 100vh;
+		height: 1000px;
 		background-image: url("https://drive.google.com/uc?export=view&id=1BQyUsZ2lKhBA5rCR-qi6Ts5Zx1G9iqd0");
 	}
 
@@ -126,5 +126,13 @@ h1 {
 		width: 10rem;
 		margin-bottom: 10%;
 	}
+}
+@media screen and (min-width: 600px) and (max-width:1120px){
+	.tab-group {
+		padding-left: 0%;
+		height: 1500px;
+		background-image: url("https://drive.google.com/uc?export=view&id=1o_ojNB-eXg36TjNn9mwYlB6PjUkPdRX6");
+	}
+
 }
 </style>
