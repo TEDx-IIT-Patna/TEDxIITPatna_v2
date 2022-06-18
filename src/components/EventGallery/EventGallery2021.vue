@@ -27,10 +27,11 @@
 }
 
 @media screen and (max-width: 600px) {
-.gallery-col
+
+.row
 {
+    margin-top: 20%;
     align-items: center;
-    margin-left: 20%;
 }
 }
 </style>

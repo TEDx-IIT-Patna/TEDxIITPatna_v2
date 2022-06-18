@@ -226,7 +226,7 @@ export default {
                     id: 0,
                     name: "Rupesh Mahore",
                     position:"Researcher and Innovator",
-                    image: "",
+                    image: "https://drive.google.com/uc?export=view&id=1auY98XRy40uwzb-7keGNDTLz4-lQIJJs",
 
                     text: "Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics. This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients. Having worked with Padma Shri Prof. H.C.Verma, he has also worked on a project used in the Chandrayan-2.",
 

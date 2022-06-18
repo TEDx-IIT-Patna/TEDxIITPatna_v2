@@ -6,37 +6,28 @@
                 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col" v-for="speaker in speakers1">
-                                    <div @click="n = speaker.id; show = !show">
-                                        <div class="card tab-element-box"></div>
-                                        <div class="card speaker-card" style="width: 15rem;">
-                                            <div><img class="pastimg" v-bind:src="speaker.image"></div>
-                                        </div>
-                                    </div>
 
+                        <div v-for="speaker in speakers1" style="align-items: center;">
+                            <div class="card speaker-card" style="width: 20rem;">
+                                <div class="container">
+                                    <div class="row container-fluid">{{ speaker.text }}</div>
+                                    <div class="row">
+                                        <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                                    </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item " v-for="speaker in speakers2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div @click="n = speaker.id; show = !show">
-                                        <div class="card tab-element-box"></div>
-                                        <div class="card speaker-card" style="width: 15rem;">
-                                            <div><img class="pastimg" v-bind:src="speaker.image"></div>
-                                        </div>
+                     <div class="carousel-item " v-for="speaker in speakers2" style="align-items: center;">
+                        <div class="card speaker-card" style="width: 20rem;">
+                                <div class="container">
+                                    <div class="row container-fluid">{{ speaker.text }}</div>
+                                    <div class="row">
+                                        <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
-
                                 </div>
-                                
                             </div>
-                        </div>
                     </div>
 
 
@@ -126,17 +117,15 @@ export default {
 .carousel-control {
     transform: translate(0px, 120px);
 }
-
-.tab-element-box {
-    width: 15rem;
-    height: 15rem;
-    transform: translate(30px, 265px);
-    background-color: #410c14;
+.row {
+    margin: 1%;
 }
 
 .speaker-card {
     background-color: black;
-    margin: 5%;
+    margin-top: 55%;
+    border-width: 2px;
+    border-color: #fff;
 }
 
 .speaker-card:hover {

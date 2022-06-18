@@ -3,40 +3,31 @@
         <h1 style="transform: translate(0,140px);">Speakers</h1>
         <div class="speaker-cards-section">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
-                
+
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col" v-for="speaker in speakers1">
-                                    <div @click="n = speaker.id; show = !show">
-                                        <div class="card tab-element-box"></div>
-                                        <div class="card speaker-card" style="width: 15rem;">
-                                            <div><img class="pastimg" v-bind:src="speaker.image"></div>
-                                        </div>
-                                    </div>
 
+                        <div v-for="speaker in speakers1" style="align-items: center;">
+                            <div class="card speaker-card" style="width: 20rem;">
+                                <div class="container">
+                                    <div class="row container-fluid">{{ speaker.text }}</div>
+                                    <div class="row">
+                                        <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                                    </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item " v-for="speaker in speakers2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div @click="n = speaker.id; show = !show">
-                                        <div class="card tab-element-box"></div>
-                                        <div class="card speaker-card" style="width: 15rem;">
-                                            <div><img class="pastimg" v-bind:src="speaker.image"></div>
-                                        </div>
+                    <div class="carousel-item " v-for="speaker in speakers2" style="align-items: center;">
+                        <div class="card speaker-card" style="width: 20rem;">
+                                <div class="container">
+                                    <div class="row container-fluid">{{ speaker.text }}</div>
+                                    <div class="row">
+                                        <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
-
                                 </div>
-                                
                             </div>
-                        </div>
                     </div>
 
 
@@ -70,10 +61,13 @@ export default {
             speakers1:
                 [{
                     id: 0,
-                    name: "Speaker Name",
-                    image: "https://drive.google.com/uc?export=view&id=1Rh0R3uZo2v9ETezi77Yzb92zSKXOvjtm",
-                    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem reiciendis dolorum error quia numquam quidem perferendis maxime ratione natus minima ipsum necessitatibus",
-                    link: "https://drive.google.com/uc?export=view&id=1aPsCWBi1ycGgRxzvczpcYb9-3YhcvMxE"
+                    name: "Darren Hood ",
+                    position: "Principle UX Designer",
+                    image: "https://drive.google.com/uc?export=view&id=1Rh0R3uZo2v9ETezi77Yzb92zSKXOvjtm ",
+                    text: " He was our first speaker who is not only a UX Designer but also a UX Experience Architect.He has worked on projects for the Fortune 50 and is the host of The World of UX Podcast on CX of M radio via Michigan State University.",
+                    linkactive: true,
+                    link: " https://youtu.be/6INnG61FLag"
+
                 },
 
                 ],
@@ -81,7 +75,7 @@ export default {
                 {
                     id: 1,
                     name: " Rahul Aggarwal ",
-                    position:"Founder at Mission Oxygen",
+                    position: "Founder at Mission Oxygen",
                     image: "https://drive.google.com/uc?export=view&id=1BEH2r8QFo057eShBRJL8jwxpo-tetVPY",
 
                     text: " He was our second speaker, founder of Mission Oxygen and Co - founder of India 's first graphic design platform - Designhill.One of India 's youngest entrepreneurs, Rahul, is a passionate investor and marketer who acts as a startup advisor.",
@@ -91,17 +85,17 @@ export default {
                 {
                     id: 2,
                     name: "Dr Rishi Raj",
-                    position:"Associate Professor - IIT Patna",
+                    position: "Associate Professor - IIT Patna",
                     image: "https://drive.google.com/uc?export=view&id=1rYyIbiNFXAbDAuVbeIllGBm4mNOLtfkZ ",
                     text: "He was our third speaker. He is a magnificent professor at IIT Patna. With five patents and more than 50 research papers, Dr Rishi has also worked as a Postdoctoral Associate at the Massachusetts Institute of Technology.",
                     linkactive: true,
                     link: " https://youtu.be/HMvYMLkoShg"
                 },
-                
+
                 {
                     id: 3,
                     name: " Vivek Ram",
-                    position:"Senapati at Vaanarsena Studios",
+                    position: "Senapati at Vaanarsena Studios",
                     image: "https://drive.google.com/uc?export=view&id=1FXg2TLjzRl4bIHZpLaZATVTZUxswU2Ar ",
                     text: "He is a well-known CG and VFX artist and has worked on many international feature films, including Fast and Furious 3, The Incredible Hulk, Night at the Museum and many more. As the founder of Vanarsena studios, he is exceptionally passionate about mythical stories.",
                     linkactive: true,
@@ -110,7 +104,7 @@ export default {
                 {
                     id: 4,
                     name: "Yusra Mardini",
-                    position:"Swimmer, Olympian",
+                    position: "Swimmer, Olympian",
                     image: "https://drive.google.com/uc?export=view&id=1ZKWNUBzAh8FPYmSAvBBZ1cNxk0490YZF",
                     text: "She is an Olympic swimmer and is the youngest ever Goodwill Ambassador for UNHCR, the UN Refugee Agency. A Syrian refugee herself, she advocates for refugees globally and has become a powerful voice for the forcibly displaced across the world. Yusra's incredible story is told in her memoir 'Butterfly: From Refugee to Olympian - My Story of Rescue, Hope and Triumph'",
                     linkactive: true,
@@ -119,8 +113,8 @@ export default {
                 {
                     id: 5,
                     name: "Rupesh Mahore",
-                    position:"Researcher and Innovator",
-                    image: "",
+                    position: "Researcher and Innovator",
+                    image: "https://drive.google.com/uc?export=view&id=1auY98XRy40uwzb-7keGNDTLz4-lQIJJs",
 
                     text: "Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics. This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients. Having worked with Padma Shri Prof. H.C.Verma, he has also worked on a project used in the Chandrayan-2.",
 
@@ -130,7 +124,7 @@ export default {
                 {
                     id: 6,
                     name: "Zoya Agarwal",
-                    position:"Aircraft Pilot, UN Spokesperson",
+                    position: "Aircraft Pilot, UN Spokesperson",
                     image: "https://drive.google.com/uc?export=view&id=1w3Jx2yq2JQCQ-rNtMW-pu-_tFBFPq9LT",
 
                     text: "The youngest female pilot to fly a Boeing 777,  Captain Zoya turned a page in Indian aviation history when she commanded an all-female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world's longest non-stop commercial trip. Zoya is also the spokesperson of Generation Equality by the UN.",
@@ -157,16 +151,15 @@ export default {
     transform: translate(0px, 120px);
 }
 
-.tab-element-box {
-    width: 15rem;
-    height: 15rem;
-    transform: translate(30px, 265px);
-    background-color: #410c14;
+.row {
+    margin: 1%;
 }
 
 .speaker-card {
     background-color: black;
-    margin: 5%;
+    margin-top: 55%;
+    border-width: 2px;
+    border-color: #fff;
 }
 
 .speaker-card:hover {
