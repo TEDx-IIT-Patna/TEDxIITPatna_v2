@@ -1,7 +1,7 @@
 <template>
 
 	<div class="pastevents">
-
+		<Nav/>
 		<section class="tab-group">
 			<!-- <img class="pastimgs" v-bind:src="illustrations[0]" alt=""> -->
 			<div class="text">
@@ -48,10 +48,12 @@
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue';
 // @ is an alias to /src
 
 export default {
-	name: 'PastEvents',
+    name: "PastEvents",
+    components: { Nav }
 }
 </script>
 

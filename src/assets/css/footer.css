@@ -1,0 +1,82 @@
+.footer-img {
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 5% 8%;
+    color: white;
+    background-color: black;
+}
+
+.Map {
+    grid-area: map;
+    border-radius: 5px;
+    width: 60%;
+    min-width: 360px;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 2.5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-links > * > * {
+    margin: 0.3rem 0;
+}
+
+.footer-links .pages,
+.footer-links .misc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer-links .pages{
+    align-items: flex-end;
+}
+
+.footer-links .misc .link{
+    position: relative;
+}
+
+/* .footer-links .misc .link::after{
+    content: '→';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 0.8rem);
+    transform: translate(0, -50%)
+} */
+
+.sep{
+    display: block;
+    width: 2px;
+    height: 80%;
+    background-color: grey;
+    margin: 0 1rem;
+}
+
+.socials{
+    margin: 2rem 0;
+}
+
+.socials .email{
+    text-decoration: underline;
+}
+
+.socials .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}

@@ -1,5 +1,7 @@
 <template>
   <div class="e2021 container-fluid" >
+    <NavVue/>
+      <div class="all container-fluid">
     <div class="header container-fluid">
       <div class=" text">
 
@@ -27,6 +29,7 @@
     <section>
       <EventGallery/>
     </section>
+    </div>
   </div>
   
 </template>
@@ -36,7 +39,7 @@
 import Speakers from './Speakers/Speakers2021';
 import Speakers2 from './Speakers/Speakers2021mobile';
 import EventGallery from './EventGallery/EventGallery2021.vue';
-
+import NavVue from './Nav.vue';
 export default {
   name: '2021',
 
@@ -65,7 +68,7 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2
+    Speakers, EventGallery, Speakers2, NavVue
 
   }
 
@@ -77,10 +80,17 @@ export default {
   background-image: url("https://drive.google.com/uc?export=view&id=1ZrmLIf0YGcE4i0P7p-iknJLw6K7Ty_Cr");
   height: 768px;
 }
-
+.all
+{
+  height: 2500px;
+  background-color: black;
+  width:100vw;
+  margin-left:-2%;
+}
 .e2021 {
   background-color: black;
   color: white;
+  height: 100vh;
 }
 
 
@@ -113,6 +123,12 @@ h1 {
   {
     background-color: black;
   }
+  .all
+{
+  width:101vw;
+  overflow-x: hidden;
+  
+}
   .header {
   background-image: url("https://drive.google.com/uc?export=view&id=1-p9OurCPIW_ckXbCbOjNLRRGbLeDt_rf");
   height:1000px;
@@ -133,12 +149,24 @@ h1 {
 .text{
   font-size: 15px;
 }
+  .all
+{
+  width:101vw;
+  overflow-x: hidden;
+  
+}
 }
 @media screen and (min-width: 990px) and (max-width: 1200px) {
   .header {
   background-image: url("https://drive.google.com/uc?export=view&id=14zw7Kcg1NQRruqxLf83VKXKzZSGSTcri");
   width:100%;
   height: 768px;
+}
+  .all
+{
+  width:101vw;
+  overflow-x: hidden;
+  
 }
 }
 
