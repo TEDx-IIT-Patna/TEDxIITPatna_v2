@@ -217,8 +217,8 @@ export default {
 
     // Timeline for the second div of the content section
     var tl5 = new gsap.timeline()
-    tl4.fromTo(".image-2", 1.5, { xPercent: screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 1)
-    tl4.fromTo(".content2", 1.5, { xPercent: -screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 1)
+    tl4.fromTo(".image-2", 1.5, { xPercent: screen.width/4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
+    tl4.fromTo(".content2", 1.5, { xPercent: -screen.width/4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
 
     // Timeline for the third div of the content section
     tl5.fromTo(".image-3", 1.5, { xPercent: -screen.width/2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
@@ -275,7 +275,7 @@ export default {
     var scene4 = new ScrollMagic.Scene({
       triggerElement: ".third",
       triggerHook: "onLeave",
-      duration: "250%"
+      duration: "200%"
     })
       .setTween(tl4)
       .addIndicators({
@@ -289,7 +289,7 @@ export default {
     var scene5 = new ScrollMagic.Scene({
       triggerElement: ".content1",
       triggerHook: "onLeave",
-      duration: "150%"
+      duration: "100%"
     })
       .setTween(tl5)
       .addIndicators({
