@@ -19,6 +19,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -63,6 +64,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -244,7 +246,11 @@ export default {
     text-align: left;
     padding-right: 5%;
 }
-
+.card-name
+{
+    font-size: 20px;
+    transform: translate(-10%,-70px);
+}
 .modal-link {
     text-decoration: none;
     color: red;

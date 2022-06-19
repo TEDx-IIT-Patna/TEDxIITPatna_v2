@@ -18,6 +18,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -62,6 +63,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name2">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -133,8 +135,8 @@ export default {
                 },
                 {
                     id: 1,
-                    name: "CEO, iCreate",
-                    position:"Anupam Jalote",
+                    position: "CEO, iCreate",
+                    name:"Anupam Jalote",
                     
                     image: "https://drive.google.com/uc?export=view&id=10_PVpaYQ5C7EQbG9V1Zpq7WM8JlUzE6z",
                     text: "He is an innovator, leader and mentors with domain expertise in startup ecosystems, institute buildings, promotion and funding of startups, driving international collaborations, renewable energy, telecom, customer experience and customer value management and strategic consulting. He is currently CEO at iCreate.",
@@ -233,7 +235,16 @@ export default {
 .speaker-card:hover {
     background-color: #fff;
 }
-
+.card-name
+{
+    font-size: 20px;
+    transform: translate(-10%,-70px);
+}
+.card-name2
+{
+    font-size: 30px;
+    transform: translate(-20%,-70px);
+}
 .pastimg {
     max-width: 15rem;
     max-height: 15rem;

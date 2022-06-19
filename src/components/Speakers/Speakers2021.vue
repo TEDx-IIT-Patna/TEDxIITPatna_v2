@@ -20,6 +20,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -64,6 +65,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name2">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -109,6 +111,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
+                                    <div class="card-name2">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -270,6 +273,16 @@ export default {
     background-color: #410c14;
 }
 
+.card-name
+{
+    font-size: 30px;
+    transform: translate(-10%,-70px);
+}
+.card-name2
+{
+    font-size: 30px;
+    transform: translate(-25%,-70px);
+}
 .modal-card {
     height: 300px;
     width: 800px;
