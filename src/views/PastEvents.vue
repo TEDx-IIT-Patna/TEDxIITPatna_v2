@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .pastevents {
 	color: white;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: GothamMedium;
 	height: 100vh;
 }
 
@@ -80,7 +80,7 @@ export default {
 }
 
 .text {
-	width: 30vw;
+	width: 40vw;
 	transform: translate(0px, 200px);
 
 }

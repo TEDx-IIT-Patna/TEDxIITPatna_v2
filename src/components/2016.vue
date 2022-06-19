@@ -99,15 +99,17 @@ export default {
   padding-top: 40vh;
   padding-left: 5vw;
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  font-family:GothamLight;
   text-align: left;
 }
 
 h1 {
   font-size: 40px;
   margin-bottom: 3vh;
+  font-family:GothamMedium;
+  font-weight: 700;
 }
 
 .back {

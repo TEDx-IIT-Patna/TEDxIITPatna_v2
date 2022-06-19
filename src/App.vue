@@ -12,8 +12,17 @@
 </script>
 
 <style>
+@font-face {
+    font-family: GothamMedium;
+    src: url('./assets/font-gotham/GothamMedium.ttf');
+}
+@font-face {
+    font-family: GothamLight;
+    src: url('./assets/font-gotham/GothamLight.ttf');
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: GothamMedium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
