@@ -191,6 +191,7 @@ export default {
     transform: translate(12vw, -60vh);
     color: black;
     padding-bottom: 5%;
+    border-radius: 20px;
 }
 
 .modal-close {
@@ -210,6 +211,7 @@ export default {
     text-align: left;
 }
 .modal-body {
+    border-radius: 20px;
     background-image: url("https://drive.google.com/uc?export=view&id=1DQzR9pKIv_5zL41FlxG1XBpRPFFhAq8J");
 }
 
@@ -253,6 +255,6 @@ export default {
 .modalimg {
     margin-top: 25%;
     width: 15rem;
-    transform: translate(-70px, 0px);
+    transform: translate(-60px, 0px);
 }
 </style>
