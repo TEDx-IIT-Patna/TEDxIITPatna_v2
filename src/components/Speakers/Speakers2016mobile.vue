@@ -8,23 +8,47 @@
                     <div class="carousel-item active">
 
                         <div v-for="speaker in speakers1" style="align-items: center;">
-                            <div class="card speaker-card" style="width: 20rem;">
-                                <div class="container">
-                                    <div class="row container-fluid">{{ speaker.text }}</div>
-                                    <div class="row">
+                            <div @click="show = !show">
+                                <div v-if="!show">
+                                    <div class="card tab-element-box"></div>
+                                    <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                                    </div>
+                                    <div class="card-name">{{ speaker.name }}</div>
+                                </div>
+                            </div>
+                            <div @click="show = !show">
+                                <div class="card speaker-card2" style="width: 20rem;" v-if="show">
+                                    <div class="container">
+                                        <div class="row speaker-name" >{{speaker.name}}</div>
+                                        <div class="row container-fluid">{{ speaker.text }}</div>
+                                        <div class="row">
+                                            <div><img class="pastimg2" v-bind:src="speaker.image"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                     <div class="carousel-item " v-for="speaker in speakers2" style="align-items: center;">
-                        <div class="card speaker-card" style="width: 20rem;">
-                                <div class="container">
-                                    <div class="row container-fluid">{{ speaker.text }}</div>
-                                    <div class="row">
+                    <div class="carousel-item " v-for="speaker in speakers2" style="align-items: center;">
+                        <div @click="show = !show">
+                                <div v-if="!show">
+                                    <div class="card tab-element-box"></div>
+                                    <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                                    </div>
+                                    <div class="card-name">{{ speaker.name }}</div>
+                                </div>
+                            </div>
+                            <div @click="show = !show">
+                                <div class="card speaker-card2" style="width: 20rem;" v-if="show">
+                                    <div class="container">
+                                        <div class="row speaker-name" >{{speaker.name}}</div>
+                                        <div class="row container-fluid">{{ speaker.text }}</div>
+                                        <div class="row">
+                                            <div><img class="pastimg2" v-bind:src="speaker.image"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -33,12 +57,12 @@
 
                 </div>
 
-                <button class="carousel-control-prev carousel-control" type="button"
+                <button @click="show = false" class="carousel-control-prev carousel-control" type="button"
                     data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next carousel-control" type="button"
+                <button @click="show = false" class="carousel-control-next carousel-control" type="button"
                     data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -130,32 +154,68 @@ export default {
 </script>
 
 <style scoped>
+h1{
+    font-family:GothamBold;
+    font-size:40px
+}
 .speakers {
     background-color: black;
 }
-
-.carousel-control {
-    transform: translate(0px, 120px);
+.speaker-name
+{
+    padding:4%;
+    font-size:30px;
+    font-family:GothamBold;
 }
-
+.carousel-control {
+    transform: translate(-9px, 120px);
+}
+.card-name
+{
+    font-size: 25px;
+    transform: translate(-10%,-70px);
+}
 .row {
     margin: 1%;
 }
 
-.speaker-card {
+.speaker-card2 {
     background-color: black;
     margin-top: 55%;
     border-width: 2px;
     border-color: #fff;
+    text-align:left;
+    font-family:GothamLight;
+    width:20px;
+    font-size:15px;
 }
 
 .speaker-card:hover {
     background-color: #fff;
 }
 
+.speaker-card {
+    background-color: black;
+    margin: 5%;
+}
+
 .pastimg {
     max-width: 15rem;
     max-height: 15rem;
+}
+
+.pastimg2 {
+    padding-top:20px;
+    max-width: 15rem;
+    max-height: 15rem;
+    transform:translate(-45px)
+}
+
+.tab-element-box {
+    width: 15rem;
+    height: 15rem;
+    transform: translate(30px, 265px);
+    background-color: #410c14;
 }
 
 

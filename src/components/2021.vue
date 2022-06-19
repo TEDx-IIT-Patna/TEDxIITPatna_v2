@@ -109,7 +109,7 @@ export default {
 h1 {
   font-size: 40px;
   margin-bottom: 3vh;
-    font-family:GothamMedium;
+  font-family:GothamMedium;
   font-weight: 700;
 
 }

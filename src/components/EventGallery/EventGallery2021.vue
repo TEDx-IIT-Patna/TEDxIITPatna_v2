@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 style="transform: translate(0,140px); color: white; margin-bottom: 10%;">Gallery</h1>
+        <h1 style="transform: translate(-16%,140px); color: white; margin-bottom: 10%;">GALLERY</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-col-lg-4 ">
             <div class="gallery-col" v-for="image in images">
                 <div class="card gallery-card" style="width: 15rem;">
@@ -25,7 +25,10 @@
     width: 15rem;
    padding: 2%;
 }
-
+h1{
+    font-family:GothamBold;
+    font-size:40px
+}
 @media screen and (max-width: 600px) {
 
 .row
