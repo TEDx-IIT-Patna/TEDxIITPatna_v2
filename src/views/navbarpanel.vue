@@ -58,5 +58,8 @@ li a{
   color: white;
   font-size: 150%;
 }
+#nav_img {
+  width: 100vw;
+}
 
 </style>

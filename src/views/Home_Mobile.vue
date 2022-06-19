@@ -6,7 +6,7 @@
       <router-view/>
 
       <div class="timer-container">
-        <h1 id="headline" class="timer-text">Live In</h1>
+        <h1 id="headline" class="timer-text">LIVE IN</h1>
         <div id="countdown">
           <ul>
             <li class="timer-li"><span id="days" class="timer"></span> days,</li>
@@ -19,12 +19,17 @@
       <div class="continer d-flex justify-content-center">
         <div class="row">
           <div class="images d-flex justify-content-center" id="x_div">
-            <img id="x_img" src="..\assets\xxx_img.png" height="280" width="280" />
+            <img id="x_img" src="../assets/xxx_img.png" height="280" width="280" />
           </div>
           <div class="images d-flex justify-content-center my-5">
-            <img id="ted_img" src="..\assets\logo.png" height="100" width="150" />
+            <img id="ted_img" src="../assets/logo.png" height="100" width="150" />
           </div>
         </div>
+      </div>
+    </section>
+    <section class="inf_sec">
+      <div class="images d-flex justify-content-center" id="inf_div">
+        <img id="inf_img" src="../assets/Infaffinitypsd.png" alt="" />
       </div>
     </section>
     
@@ -32,8 +37,16 @@
 
 <style>
 
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 nav {
-  padding: 30px;
+  padding: 5%;
   position: relative;
   left: 25%;
 }
@@ -41,6 +54,7 @@ nav {
 nav a {
   font-size: 0.6rem;
   font-weight: bold;
+  font-family: gothambold;
   text-decoration: none;
   color: #2c3e50;
 }
@@ -55,28 +69,34 @@ nav a.router-link-exact-active {
     justify-content: middle;
 }
 #x_div {
-  background-color: red;
+  background-color: #D82148;
   display: inline-block;
   position: relative;
-  left: 25%;
-  margin-bottom: 2rem;
+  /* right: 25%; */
+  margin-bottom: 2%;
+  margin-left: 28%;
+  margin-top: 20%;
   align-content: center;
   z-index: 0;
-  width: 90%;
+  width: 40vw;
   height: 40vh;
 }
 #x_img {
   position: absolute;
-  top: -5.5rem;
+  top: -32%;
   z-index: 1;
-  height: 520px;
-  width: 300px;
-  right: -3rem;
+  height: 80vh;
+  width: 70vw;
+  right: -25%;
   
 }
 #ted_img {
-  width: 100px;
-  height: 80px;
+  margin-top: 20%;
+  width: 20vw;
+  height: 10vh;
+}
+#inf_img {
+  margin: 5rem auto;
 }
 .timer-container {
   /* position: absolute; */
@@ -100,11 +120,12 @@ h1 {
 .timer-text {
     font-weight: normal;
     font-size: small;
+    font-family: gothambold;
     /* position: relative;
     left: 4rem; */
     font-weight: lighter;
     margin-bottom: 0;
-    /* letter-spacing: .125rem; */
+    letter-spacing: .125rem;
     /* display: inline; */
     /* text-transform: uppercase; */
     /* text-align: center; */
@@ -117,14 +138,15 @@ h1 {
     display: inline;
     font-size: 0.75rem;
     font-weight: bold;
+    letter-spacing: .125rem;
     list-style-type: none;
-    padding: 0 0.4em;
+    padding: 0 1%;
     text-transform: uppercase;
   }
   #countdown {
     width: 100%;
     box-align: center;
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
     /* bottom: 2rem; */
     /* left: 3rem; */
   }
@@ -139,16 +161,12 @@ h1 {
     /* transform: scale(1, 1.5); */
     transform: scaleY(1.6);
   }
-
-  #nav_panel {
-    position: relative;
-    left: 5rem;
-    bottom: 1rem;
+  
+  #inf_img {
+    height: 80vh;
+    width: 100vw;
   }
-
-  #inf_div {
-    margin-top: 10%;
-  }
+  
   
 </style>
 
