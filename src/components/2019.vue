@@ -1,5 +1,7 @@
 <template>
   <div class="e2019 container-fluid">
+    <NavVue/>
+    <div class="all container-fluid">
     <div class="container-fluid header">
       <div class=" text">
         <router-link to="/past_events"><button class="btn btn-outline-danger back"> Go Back </button></router-link>
@@ -21,7 +23,7 @@
       <EventGallery/>
     </section>
   </div>
-  
+  </div>
 </template>
 
 <script>
@@ -29,7 +31,7 @@
 import Speakers from './Speakers/Speakers2019';
 import Speakers2 from './Speakers/Speakers2019mobile';
 import EventGallery from './EventGallery/EventGallery2019.vue';
-
+import NavVue from './Nav.vue';
 export default {
   name: '2021',
 
@@ -58,7 +60,7 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2
+    Speakers, EventGallery, Speakers2, NavVue
 
   }
 
@@ -68,6 +70,15 @@ export default {
 <style scoped>
 .e2019 {
   background-color: black;
+  height: 100vh;
+  color:#fff;
+}
+.all
+{
+  height: 3500px;
+  background-color: black;
+  width:100vw;
+  margin-left:-2%;
 }
 .header {
   background-image: url("https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl");
@@ -96,6 +107,12 @@ h1 {
   {
     background-color: black;
   }
+    .all
+{
+  width:101vw;
+  overflow-x: hidden;
+  
+}
   .header {
   background-image: url("https://drive.google.com/uc?export=view&id=1x7MR3YIV3lRJxHTcrwXeTyFSxNd_tqWd");
   height:1000px;
@@ -115,12 +132,24 @@ h1 {
 .text{
   font-size: 15px;
 }
+  .all
+{
+  width:101vw;
+  overflow-x: hidden;
+  
+}
 }
 @media screen and (min-width: 990px) and (max-width: 1200px) {
   .header {
   background-image: url("https://drive.google.com/uc?export=view&id=12uO7YqP_GJWfzBuU4Wpiv2-QLoJ3GYke");
   width:100%;
   height: 768px;
+}
+  .all
+{
+  width:101vw;
+  overflow-x: hidden;
+  
 }
 }
 </style>
