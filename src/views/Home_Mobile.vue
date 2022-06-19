@@ -108,11 +108,7 @@ nav a.router-link-exact-active {
 }
 
 /* The LIVE IN written beside the timer */
-/* #headline {
-  display: block;
-  height: 5%;
-  
-} */
+
 h1 {
   width: 100%;
   text-align: center;
