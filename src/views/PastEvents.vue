@@ -5,7 +5,7 @@
 		<section class="tab-group">
 			<!-- <img class="pastimgs" v-bind:src="illustrations[0]" alt=""> -->
 			<div class="text">
-				<h1><span class="highlight">P</span>ast Events.</h1>
+				<h1 class="main-head" ><span class="highlight">P</span>ast Events.</h1>
 			</div>
 			<div class="container theme-group">
 				<div class="row">
@@ -20,7 +20,7 @@
 						</router-link>
 					</div>
 
-					<div class="col-md">
+					<div class="col-md col23">
 						<div class="card tab-element-box"></div>
 						<router-link to="/past_events/2019">
 							<div class="card bg-dark theme">
@@ -30,7 +30,7 @@
 						</router-link>
 					</div>
 
-					<div class="col-md">
+					<div class="col-md col23">
 						<div class="card tab-element-box"></div>
 						<router-link to="/past_events/2016">
 							<div class="card bg-dark theme">
@@ -64,11 +64,13 @@ export default {
 	font-family: GothamMedium;
 	height: 100vh;
 }
-
+.main-head
+{
+	padding-left: 20%;
+}
 .tab-group {
 	height: 768px;
 	max-width: 100vw;
-	padding-left: 30%;
 	/* background-image: url("https://drive.google.com/uc?export=view&id=1zv7nWao1g5nDkSRThT4SOOTDqkK_KJ8p"); */
 	background-image: url("https://drive.google.com/uc?export=view&id=1VnCqBNliFLv74ipW9ElyASII-Pe4fCJA");
 }
@@ -93,9 +95,20 @@ h1 {
 .theme {
 	width: 15rem;
 }
-
+.col23
+{
+	margin-left: -25%;
+}
 @media screen and (max-width: 600px) {
 
+.main-head
+{
+	padding-left: 0%;
+}
+.col23
+{
+	margin-left: 0%;
+}
 	.tab-group {
 		padding-left: 0%;
 		height: 1000px;
@@ -138,6 +151,12 @@ h1 {
 		height: 1500px;
 		background-image: url("https://drive.google.com/uc?export=view&id=1o_ojNB-eXg36TjNn9mwYlB6PjUkPdRX6");
 	}
-
+.main-head
+{
+	padding-left: 0%;
+}
+.col23{
+	margin-left: 0;
+}
 }
 </style>

@@ -20,7 +20,7 @@
           <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
         </div>
-        <h1 style="transform: translate(0,140px);  text-decoration: underline red solid 10px;">SPEAKERS.</h1>
+        <h1 class="speaker-head">SPEAKERS.</h1>
 
       </div>
       <section>
@@ -85,6 +85,11 @@ export default {
   height: 768px;
 }
 
+
+.speaker-head
+{
+  text-decoration: underline red solid 10px;
+}
 .all {
   height: 2500px;
   background-color: black;
@@ -124,6 +129,22 @@ h1 {
 
 .section {
   min-height: 100vh;
+}
+@media screen and (max-height: 750px)
+{
+  
+.speaker-head
+{
+  transform: translate(0,15vh);
+}
+}
+@media screen and (min-height: 750px)
+{
+  
+.speaker-head
+{
+  transform: translate(0,-10vh);
+}
 }
 
 @media screen and (max-width: 600px) {
