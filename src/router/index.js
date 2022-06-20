@@ -4,7 +4,8 @@ import PastEvents from '../views/PastEvents.vue'
 import events2021 from '../components/2021.vue'
 import events2019 from '../components/2019.vue'
 import events2016 from '../components/2016.vue'
-
+import about from '../views/AboutView.vue'
+import partners from '../views/Partners.vue'
 const routes = [
   {
     path: '/',
@@ -34,14 +35,15 @@ const routes = [
     component: events2016
 
   },
-  
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: about
+  },
+  {
+    path: '/partners',
+    name: 'partners',
+    component: partners
   }
 ]
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="partners">
   <div class="soon">
   COMING SOON
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'about',
+  name: 'partners',
   components:
   {
     
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 <style scoped>
-.about
+.partners
 {
   background-size: cover;
   height: 100vh;
