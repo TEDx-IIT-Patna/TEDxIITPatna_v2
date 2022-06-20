@@ -1,7 +1,7 @@
 <template>
 
 	<div class="pastevents">
-		<Nav/>
+		<Nav />
 		<section class="tab-group">
 			<!-- <img class="pastimgs" v-bind:src="illustrations[0]" alt=""> -->
 			<div class="text">
@@ -16,6 +16,7 @@
 								<img src="../assets/pastevents/illustrations/theme21icon.png" class="card-img-top"
 									alt="...">
 							</div>
+
 						</router-link>
 					</div>
 
@@ -52,8 +53,8 @@ import Nav from '@/components/Nav.vue';
 // @ is an alias to /src
 
 export default {
-    name: "PastEvents",
-    components: { Nav }
+	name: "PastEvents",
+	components: { Nav }
 }
 </script>
 
@@ -116,10 +117,11 @@ h1 {
 	h1 {
 		font-size: 60px;
 	}
-.highlight
-{
-	color: black;
-}
+
+	.highlight {
+		color: black;
+	}
+
 	.tab-element-box {
 		display: none;
 	}
@@ -129,7 +131,8 @@ h1 {
 		margin-bottom: 10%;
 	}
 }
-@media screen and (min-width: 600px) and (max-width:1120px){
+
+@media screen and (min-width: 600px) and (max-width:1120px) {
 	.tab-group {
 		padding-left: 0%;
 		height: 1500px;

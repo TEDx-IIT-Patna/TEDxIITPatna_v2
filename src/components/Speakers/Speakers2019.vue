@@ -1,6 +1,5 @@
 <template>
     <section class="speakers">
-        <h1 style="transform: translate(0,140px); color: white;">Speakers</h1>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -195,7 +194,7 @@ export default {
 }
 
 .modal-close {
-    transform: translate(10px, 0);
+    transform: translate(15px, 0);
 }
 
 .modal-head {
@@ -232,6 +231,7 @@ export default {
 .speaker-card {
     background-color: black;
     margin: 5%;
+    
 }
 
 .speaker-card:hover {

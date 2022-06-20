@@ -1,6 +1,10 @@
 <template>
-  <span class="show-panel" @click="this.state = 'show'">☰</span>
-  <nav :class="['nav',  this.state]">
+  <span class="show-panel" @click="this.state = 'show'">
+    <div class="menu">
+      <i id="bar" class="fa fa-bars"></i>
+    </div>
+  </span>
+  <nav :class="['nav', this.state]">
     <div class="close" @click="this.state = 'hidden'">Close</div>
     <div class="links">
       <router-link to="/"><span>Home</span></router-link>
@@ -25,5 +29,4 @@ export default {
 
 <style scoped>
 @import '@/assets/css/nav.css'
-
 </style>

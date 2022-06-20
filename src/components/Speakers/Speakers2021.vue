@@ -1,6 +1,5 @@
 <template>
     <section class="speakers">
-        <h1 style="transform: translate(0,140px);">Speakers</h1>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -122,7 +121,7 @@
                                             <div class="card modal-card">
                                                 <div class="container modal-body">
                                                     <div class="row">
-                                                        <button class="btn-close modal-close"
+                                                        <button class="btn-close"
                                                             @click="show = !show"></button>
                                                     </div>
                                                     <div class="row">
@@ -149,7 +148,7 @@
                 </div>
             </div>
 
-            <button class="carousel-control-prev carousel-control" type="button"
+             <button class="carousel-control-prev carousel-control" type="button"
                 data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -158,7 +157,9 @@
                 data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> 
+          
+
         </div>
     </section>
 </template>
@@ -295,6 +296,7 @@ export default {
 .modal-close {
     transform: translate(10px, 0);
 }
+
 
 .modal-head {
     font-size: 40px;

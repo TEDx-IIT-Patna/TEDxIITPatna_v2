@@ -68,8 +68,13 @@
     text-transform: uppercase;
     text-align: right;
     cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
 }
-
+ nav.menu{
+    font-size: 2.5em;
+    display: none;
+    }
 .nav.hidden .close {
     opacity: 0;
     pointer-events: none;

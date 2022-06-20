@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 style="transform: translate(0,140px); color: white; margin-bottom: 10%;">Gallery</h1>
+        <h1 style="transform: translate(-16%,140px); color: white; margin-bottom: 10%;">GALLERY.</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-col-lg-4 ">
             <div class="gallery-col" v-for="image in images">
                 <div class="card tab-element-box"></div>
@@ -16,22 +16,47 @@
 .container {
     color: aliceblue;
     background-color: black;
+    margin-left: 150px;
 }
+
 .tab-element-box {
     width: 15rem;
     height: 10rem;
     transform: translate(10px, 170px);
     background-color: #410c14;
 }
+
 .pastimg {
     width: 15rem;
+
 }
+
+h1 {
+    font-family: GothamBold;
+    font-size: 40px;
+    margin-left: 190px;
+    text-decoration: underline red solid 10px;
+}
+
 @media screen and (max-width: 600px) {
-.row
-{
-    margin-top: 20%;
-    align-items: center;
-}
+    .row {
+        margin-top: 20%;
+        margin-left: 20px;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: GothamBold;
+        font-size: 40px;
+        margin-left: 50px;
+    }
+
+    .container {
+        color: aliceblue;
+        background-color: black;
+        transform: translate(0, -350px);
+        margin-left: 8px;
+    }
 }
 </style>
 

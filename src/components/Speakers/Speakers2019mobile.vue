@@ -1,6 +1,5 @@
 <template>
     <section class="speakers">
-        <h1 style="transform: translate(0,140px);">Speakers</h1>
         <div class="speaker-cards-section">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
                 
@@ -133,10 +132,6 @@ export default {
 </script>
 
 <style scoped>
-h1{
-    font-family:GothamBold;
-    font-size:40px
-}
 .speakers {
     background-color: black;
 }
@@ -161,12 +156,13 @@ h1{
 .speaker-card2 {
     background-color: black;
     margin-top: 55%;
-    border-width: 2px;
+    border-radius: 20px;
     border-color: #fff;
     text-align:left;
     font-family:GothamLight;
     width:20px;
     font-size:15px;
+    overflow-y: hidden;
 }
 
 .speaker-card:hover {
@@ -200,5 +196,6 @@ h1{
 
 .speaker-cards-section {
     padding-bottom: 100px;
+    transform: translate(0,-250px);
 }
 </style>
