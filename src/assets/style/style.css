@@ -1,6 +1,16 @@
+
+@font-face {
+  font-family: gothambold;
+  src: url(../fonts/FontsFree-Net-Gotham-Bold.ttf);
+}
+@font-face {
+  font-family: gothamlight;
+  src: url(../fonts/Gotham\ Light.otf);
+}
 *{
   box-sizing:border-box ;
   scroll-behavior: smooth;
+  font-family: gothambold;
 }
 
 body{
@@ -83,6 +93,15 @@ nav{
   transform: scale(1.2);
   background-repeat: no-repeat;
 }
+.edition04{
+  z-index: 3;
+  background: url(../04edition.png);
+  background-size: auto 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  right: 8vw;
+  top: 6vh;
+}
 
 /* The container for the timer */
 .timer-container {
@@ -103,22 +122,34 @@ align-items: center;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
   }
+
+  .timer_ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
  
   /* The Days and hours text */
   .timer-li {
+    font-size: 16vh;
     display: inline-block;
-    font-size: 1.5em;
     list-style-type: none;
-    padding: 0.4em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    color: #a0a0a0;
+    margin: 0;
+    /* margin-bottom: -30px; */
+    margin-right: 2vw;
+    font-family: gothamlight;
   }
   
   /* The span that contains the timer numerals */
   .timer {
     display: block;
-    font-size: 4.5rem;
+    font-size: 16vh;
     /* transform: scale(1, 1.5); */
-    transform: scaleY(1.6);
+    transform: scaleY(1);
+    font-family: gothambold;
+    color: black;
   }
   
   /* responsiveness in the timer container*/
@@ -149,6 +180,10 @@ align-items: center;
     z-index: -1;
     margin-left: -10px;
     right:0;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    align-items: flex-start;
   }
 
   /* The text written on the inifinity logo in the black background */
@@ -156,7 +191,7 @@ align-items: center;
     color:white;
     text-align: center;
     position: relative;
-    top: 27%;
+    top: 22%;
     z-index: 19;
     font-size: 5vh;
     letter-spacing: 4vh;
@@ -167,6 +202,7 @@ align-items: center;
   .inf_black{
     width: 100%;
     position: absolute;
+    height: 100vh;
   }
   .inf_black_1{
     /* position: absolute; */
@@ -252,5 +288,116 @@ align-items: center;
   }
 
   .footer_section{
-    margin-top: 693vh;
+    margin-top: 25vh;
   }
+
+  .speaker_nomination{
+    margin-top: 701vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nom_heading{
+  display: block;
+  font-size: xx-large;
+}
+
+  .speaker_nom_text{
+    margin-right: 20px;
+    font-size: larger;
+    margin-block: 4px;
+  }
+  
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    margin-block: 5px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-7 {
+    background: linear-gradient(0deg, #000000 0%, red 100%);
+      line-height: 42px;
+      padding: 0;
+      border: none;
+      border-radius: 10px;
+    }
+    .btn-7 span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .btn-7:before,
+    .btn-7:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: rgba(251,75,2,1);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7:before{
+       height: 0%;
+       width: 2px;
+    }
+    .btn-7:after {
+      width: 0%;
+      height: 2px;
+    }
+    .btn-7:hover{
+      color: #ff0039;
+      background: transparent;
+    }
+    .btn-7:hover:before {
+      height: 100%;
+    }
+    .btn-7:hover:after {
+      width: 100%;
+    }
+    .btn-7 span:before,
+    .btn-7 span:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background: rgba(251,75,2,1);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7 span:before {
+      width: 2px;
+      height: 0%;
+    }
+    .btn-7 span:after {
+      height: 2px;
+      width: 0%;
+    }
+    .btn-7 span:hover:before {
+      height: 100%;
+    }
+    .btn-7 span:hover:after {
+      width: 100%;
+    }

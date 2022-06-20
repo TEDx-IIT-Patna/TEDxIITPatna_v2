@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import home from "@/views/home.vue"
 import team from "@/views/team.vue"
+import navbarpanel from "../components/navbarpanel.vue"
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     name: "team",
     component: team,
     meta: { show: false }
+  },
+  {
+    path: '/nav-panel',
+    name: 'nav-panel',
+    component: navbarpanel
   },
 ];
 

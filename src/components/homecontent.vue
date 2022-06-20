@@ -61,7 +61,7 @@ This year TEDx IITPATNA  proudly presents it’s fourth edition. In this event, 
                     <img src="..\assets\xxx_img.png" height="600" width="400" />
                 </div>
                 <div class="content content3  col ">
-                    <h1 class="heading my-2">TED<span class="letter_x">x</span> IIT Patna</h1>
+                    <h1 class="heading my-2">TED<span class="letter_x">x</span>IIT Patna</h1>
 
                     <p>
                         TEDxIITPatna has continued to be a guiding light since 2016. Three stellar editions later - we've still got more to share!
@@ -85,12 +85,13 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .main {
     box-sizing: border-box;
     position: absolute;
     margin-top: 450vh;
     margin-inline: 5vw;
+    margin-left: 13vw;
 }
 
 .info {
@@ -115,7 +116,7 @@ export default {
 .content2 {
     margin-top: 8%;
         margin-left: 5vw;
-    margin-top: 37vh;
+    margin-top: 23vh;
 }
 
 .content3 {
@@ -168,11 +169,11 @@ export default {
 
 .content2{
     position: absolute;
-    margin-left: 5vw;
+    margin-left: 1vw;
 }
 
 .image-2{
-        left: 50vw;
+        left: 39vw;
     position: absolute;
     top: 80vh;
 }

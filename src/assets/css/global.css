@@ -1,0 +1,20 @@
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+:root{
+    --red: #e62b1e
+}
+
+body {
+    margin: 0;
+    font-family: 'Gotham', sans-serif;
+}
+a{ color: black; }
+a:hover{ color: var(--red) }
+
+*, a {
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    box-sizing: border-box;
+}

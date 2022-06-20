@@ -4,13 +4,17 @@
     <section>
       <div class="first" id="first">
         <div class="timer-container">
-          <h1 id="headline" class="timer-text">live in</h1>
+          <!-- <h1 id="headline" class="timer-text">live in</h1> -->
           <div id="countdown">
-            <ul>
-              <li class="timer-li"><span id="days" class="timer"></span>days</li>
-              <li class="timer-li"><span id="hours" class="timer"></span>Hours</li>
-              <li class="timer-li"><span id="minutes" class="timer"></span>Minutes</li>
+            <ul class="timer_ul">
+              <span id="days" class="timer"></span><li class="timer-li">d</li>
+              <span id="hours" class="timer"></span><li class="timer-li">h</li>
+              <li class="timer-li" style="display: none;"><span id="minutes" class="timer"></span>Minutes</li>
               <li style="display: none" class="timer-li"><span id="seconds" class="timer"></span>Seconds</li>
+              <!-- <li class="timer-li"><span id="days" class="timer"></span>days</li>
+              <li class="timer-li"><span id="hours" class="timer"></span>Hours</li>
+              <li class="timer-li" style="display: none;"><span id="minutes" class="timer"></span>Minutes</li>
+              <li style="display: none" class="timer-li"><span id="seconds" class="timer"></span>Seconds</li> -->
             </ul>
           </div>
         </div>
@@ -18,6 +22,7 @@
           <div class="x_1_img tedx_img"></div>
           <div class="x_2_img tedx_img"></div>
           <div class="x_3_img tedx_img"></div>
+          <div class="edition04 tedx_img"></div>
           <div class="black_bg" id="black_bg">
           </div>
         </div>
@@ -31,24 +36,26 @@
       <section class="second_section">
         <div class="second second_item" id="second">
           <img v-motion :initial="{ opacity: 0, y: 0 }"
-            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-            class="inf_black inf_black_1 second_item" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 400, type: 'keyframes', ease: 'linear', } }"
+            :delay="400" class="inf_black inf_black_1 second_item" src="../assets/Infinity_Logo/Infinity_Layer_1.png" alt="" />
           <img v-motion :initial="{ opacity: 0, y: 0 }"
-            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-            :delay="300" class="inf_black inf_black_2 second_item" src="../assets/Infinity_Logo/Infinity_Layer_2.png"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 400, type: 'keyframes', ease: 'linear', } }"
+            :delay="800" class="inf_black inf_black_2 second_item" src="../assets/Infinity_Logo/Infinity_Layer_2.png"
             alt="" />
           <img v-motion :initial="{ opacity: 0, y: 0 }"
-            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-            :delay="600" class="inf_black inf_black_3 second_item" src="../assets/Infinity_Logo/Infinity_Layer_3.png"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 400, type: 'keyframes', ease: 'linear', } }"
+            :delay="1200" class="inf_black inf_black_3 second_item" src="../assets/Infinity_Logo/Infinity_Layer_3.png"
             alt="" />
           <img v-motion :initial="{ opacity: 0, y: 0 }"
-            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, type: 'keyframes', ease: 'linear', } }"
-            :delay="900" class="inf_black inf_black_4 second_item" src="../assets/Infinity_Logo/Infinity_Layer_4.png"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 400, type: 'keyframes', ease: 'linear', } }"
+            :delay="1600" class="inf_black inf_black_4 second_item" src="../assets/Infinity_Logo/Infinity_Layer_4.png"
             alt="" />
           <!-- <div class="white_infinity">
 
           </div> -->
-          <div class="inf_black_text second_item">
+          <div class="inf_black_text second_item" v-motion :initial="{ opacity: 0, y: 10 }"
+            :visible="{ opacity: 1, y: 0, scale: 1, transition: { duration: 400, type: 'keyframes', ease: 'linear', } }"
+            :delay="2000">
             <span id="inf_aff_white">INFINITE AFFINITES</span>
           </div>
         </div>
@@ -91,9 +98,15 @@
       <home_contentVue />
     </section>
 
-    <section class="footer_section">
-      <footerVue />
+    <section class="speaker_nomination">
+      <span class="nom_heading">Want to feature in the 4th edition of Tedx IITPatna</span>
+      <span class="speaker_nom_text">Click the button for register as a speaker</span>
+      <button class="custom-btn btn-7"><span>Apply Now!</span></button>
     </section>
+
+    <!-- <section class="footer_section">
+      <footerVue />
+    </section> -->
 
   </div>
 </template>
@@ -194,9 +207,10 @@ export default {
     // tl.fromTo(".x_1_img",1.5,{opacity:1,xPercent:0,yPercent:0},{opacity:0,xPercent:70,yPercent:-70, ease: Linear.easeNone},2)
     tl.fromTo(".logo", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -200, ease: Linear.easeNone }, 0)
     tl.fromTo(".navbar", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -400, ease: Linear.easeNone }, 0)
-    tl.fromTo("#countdown", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: 200, ease: Linear.easeNone }, 0)
+    tl.fromTo("#countdown", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: 400, ease: Linear.easeNone }, 0)
     tl.fromTo(".barcode", 1.5, { opacity: 1, xPercent: 0 }, { opacity: 0, xPercent: -100, ease: Linear.easeNone }, 0)
     tl.fromTo(".timer-text", 1.5, { opacity: 1, xPercent: 0 }, { opacity: 0, xPercent: -300, ease: Linear.easeNone }, 0)
+    tl.fromTo(".edition04", 0.35, { opacity: 1 }, {  opacity: 0, ease: Linear.easeNone }, 0)
 
     //Timeline for the second section
     var tl2 = new gsap.timeline()
@@ -321,3 +335,7 @@ window.addEventListener('scroll', function () {
 });
 
 </script>
+
+<style scoped>
+@import '@/assets/style/style.css';
+</style>
