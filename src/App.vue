@@ -18,3 +18,17 @@ import navbarVue from '@/components/navbar.vue'
 AOS.init();
 </script>
 
+<style scoped>
+@font-face {
+    font-family: GothamBold;
+    src: url("./assets/font-gotham/GothamBold.ttf");
+}
+@font-face {
+    font-family: GothamMedium;
+    src: url("./assets/font-gotham/GothamMedium.ttf");
+}
+@font-face {
+    font-family: GothamLight;
+    src: url("./assets/font-gotham/GothamLight.ttf");
+} 
+</style>

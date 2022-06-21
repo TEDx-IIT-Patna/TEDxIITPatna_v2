@@ -62,7 +62,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
-                                    <div class="card-name2">{{speaker.name}}</div>
+                                    <div class="card-name">{{speaker.name}}</div>
                                 </div>
 
                             </div>
@@ -173,6 +173,10 @@ export default {
 </script>
 
 <style scoped>
+.speakers {
+    background-color: black;
+    margin-top: -5%;
+}
 .carousel-control {
     transform: translate(0px, 110px);
 }
@@ -240,13 +244,9 @@ export default {
 .card-name
 {
     font-size: 20px;
-    transform: translate(-10%,-70px);
+    transform: translate(10%,-70px);
 }
-.card-name2
-{
-    font-size: 30px;
-    transform: translate(-20%,-70px);
-}
+
 .pastimg {
     max-width: 15rem;
     max-height: 15rem;

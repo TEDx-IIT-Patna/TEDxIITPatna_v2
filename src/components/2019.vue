@@ -17,7 +17,7 @@
           people and the society.
 
         </div>
-        <h1 style="transform: translate(0,140px); color: white;  text-decoration: underline red solid 10px;">SPEAKERS.
+        <h1 class="speaker-head">SPEAKERS.
         </h1>
         <!-- Window width: {{ windowwidth }} -->
       </div>
@@ -81,7 +81,12 @@ export default {
   height: 100vh;
   color: #fff;
 }
-
+.speaker-head
+{
+  text-decoration: underline red solid 10px;
+  text-align: center;
+  font-family: GothamBold;
+}
 .all {
   height: 3500px;
   background-color: black;
@@ -110,7 +115,6 @@ export default {
 
 h1 {
   font-size: 40px;
-  margin-bottom: 3vh;
   font-family: GothamMedium;
   font-weight: 700;
 }
@@ -140,7 +144,6 @@ h1 {
 
   h1 {
     font-size: 30px;
-    margin-bottom: 3vh;
     font-family: GothamMedium;
     font-weight: 700;
   }

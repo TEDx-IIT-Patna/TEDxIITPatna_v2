@@ -147,7 +147,8 @@ export default {
 .card-name
 {
     font-size: 25px;
-    transform: translate(-10%,-70px);
+    transform: translate(50px,-50px);
+    width:15rem;
 }
 .row {
     margin: 1%;

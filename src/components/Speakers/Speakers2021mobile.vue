@@ -187,7 +187,7 @@ h1 {
 
 .card-name {
     font-size: 25px;
-    transform: translate(-10%, -70px);
+    transform: translate(50px, -80px);
 }
 
 .row {

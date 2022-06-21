@@ -89,6 +89,8 @@ export default {
 .speaker-head
 {
   text-decoration: underline red solid 10px;
+  text-align: center;
+  font-family: GothamBold;
 }
 .all {
   height: 2500px;
@@ -187,7 +189,10 @@ h1 {
     overflow-x: hidden;
 
   }
-
+.speaker-head
+{
+  margin-top:-30%;
+}
 }
 
 @media screen and (min-width: 990px) and (max-width: 1200px) {

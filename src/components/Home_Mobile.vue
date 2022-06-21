@@ -35,7 +35,7 @@
     
 </template>
 
-<style>
+<style scoped>
 
 html {
   overflow-x: hidden;

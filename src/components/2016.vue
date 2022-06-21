@@ -19,7 +19,7 @@
           <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
         </div>
-        <h1 style="transform: translate(0,140px); color: white;  text-decoration: underline red solid 10px;">SPEAKERS.
+        <h1 class="speaker-head">SPEAKERS.
         </h1>
       </div>
       <section>
@@ -112,7 +112,6 @@ export default {
 
 h1 {
   font-size: 40px;
-  margin-bottom: 3vh;
   font-family: GothamMedium;
   font-weight: 700;
 }
@@ -120,7 +119,12 @@ h1 {
 .back {
   margin-bottom: 10px;
 }
-
+.speaker-head
+{
+  text-decoration: underline red solid 10px;
+  text-align: center;
+  font-family: GothamBold;
+}
 .section {
   min-height: 100vh;
 }
@@ -173,6 +177,10 @@ h1 {
     overflow-x: hidden;
 
   }
+  .speaker-head
+{
+  margin-top:-30%;
+}
 }
 
 @media screen and (min-width: 990px) and (max-width: 1200px) {

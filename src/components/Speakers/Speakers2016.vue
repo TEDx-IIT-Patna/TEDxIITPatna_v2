@@ -201,6 +201,7 @@ export default {
 <style scoped>
 .speaker {
     background-color: black;
+    margin-top: -5%;
 }
 
 .carousel-control {
@@ -251,9 +252,11 @@ export default {
     padding-right: 5%;
 }
 
-.card-name {
+.card-name
+{
+    width:15rem;
     font-size: 20px;
-    transform: translate(-10%, -70px);
+    transform: translate(10%,-70px);
 }
 
 .modal-link {
