@@ -1,6 +1,6 @@
 
 <template>
-    <img src="@/assets/footerimg.png" class="footer-img">
+    <!-- <img src="@/assets/footerimg.png" class="footer-img"> -->
     <footer class="footer">
         <!-- need to put the tedxiitpatna logo here -->
         <iframe class="Map"

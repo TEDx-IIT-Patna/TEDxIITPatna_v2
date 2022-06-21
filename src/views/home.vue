@@ -1,10 +1,10 @@
 <template>
-  <div class="wrapper" id="wrapper">
+  <div class="wrapper" id="wrapper"  v-if="screen > 1000">
 
     <section>
       <div class="first" id="first">
+        <h1 id="headline" class="timer-text"><span style="color:red;">live</span><span>in</span></h1>
         <div class="timer-container">
-          <!-- <h1 id="headline" class="timer-text">live in</h1> -->
           <div id="countdown">
             <ul class="timer_ul">
               <span id="days" class="timer"></span><li class="timer-li">d</li>
@@ -104,10 +104,13 @@
       <button class="custom-btn btn-7"><span>Apply Now!</span></button>
     </section>
 
-    <!-- <section class="footer_section">
+    <section class="footer_section">
       <footerVue />
-    </section> -->
+    </section>
 
+  </div>
+  <div class="homemobile" v-else-if="screen < 1000">
+    <homemobile/>
   </div>
 </template>
 
@@ -117,6 +120,8 @@ import home_contentVue from '@/components/homecontent.vue'
 import footerVue from '@/components/footer.vue'
 import chroma from "chroma-js"
 import gsap from "gsap"
+import { Timeline } from 'gsap/gsap-core'
+import homemobile from '@/components/Home_Mobile.vue'
 
 export default {
   name: 'home',
@@ -128,7 +133,13 @@ export default {
   components: {
     navbarVue,
     home_contentVue,
-    footerVue
+    footerVue,
+    homemobile,
+  },
+  data() {
+    return {
+      screen: screen.width,
+    };
   },
   // Logic for the parallax
   // mounted() {
@@ -209,7 +220,7 @@ export default {
     tl.fromTo(".navbar", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: -400, ease: Linear.easeNone }, 0)
     tl.fromTo("#countdown", 1.5, { opacity: 1, yPercent: 0 }, { opacity: 0, yPercent: 400, ease: Linear.easeNone }, 0)
     tl.fromTo(".barcode", 1.5, { opacity: 1, xPercent: 0 }, { opacity: 0, xPercent: -100, ease: Linear.easeNone }, 0)
-    tl.fromTo(".timer-text", 1.5, { opacity: 1, xPercent: 0 }, { opacity: 0, xPercent: -300, ease: Linear.easeNone }, 0)
+    tl.fromTo(".timer-text", 1.5, { opacity: 1, xPercent: 0 }, { opacity: 0, xPercent: -450, ease: Linear.easeNone }, 0)
     tl.fromTo(".edition04", 0.35, { opacity: 1 }, {  opacity: 0, ease: Linear.easeNone }, 0)
 
     //Timeline for the second section
@@ -245,8 +256,8 @@ export default {
     tl4.fromTo(".content2", 1.5, { xPercent: -screen.width / 4 }, { xPercent: 0, ease: Linear.easeNone }, 1)
 
     // Timeline for the third div of the content section
-    tl5.fromTo(".image-3", 1.5, { xPercent: -screen.width / 2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
-    tl5.fromTo(".content3", 1.5, { xPercent: screen.width / 2 }, { xPercent: 0, ease: Linear.easeNone }, 0)
+    tl5.fromTo(".image-3", 1.5, { xPercent: -screen.width / 8 }, { xPercent: 0, ease: Linear.easeNone }, 0)
+    tl5.fromTo(".content3", 1.5, { xPercent: screen.width / 8 }, { xPercent: 0, ease: Linear.easeNone }, 0)
 
 
 
@@ -311,9 +322,9 @@ export default {
       .addTo(controller3);
 
     var scene5 = new ScrollMagic.Scene({
-      triggerElement: ".content1",
+      triggerElement: ".content2",
       triggerHook: "onLeave",
-      duration: "100%"
+      duration: "50%"
     })
       .setTween(tl5)
       // .addIndicators({
@@ -324,7 +335,10 @@ export default {
       // })
       .addTo(controller);
 
-  }
+  },
+beforeDestroy(){
+  Timeline.killAll()
+}
 }
 
 // Used Chroma-Js library for color transition from black to white

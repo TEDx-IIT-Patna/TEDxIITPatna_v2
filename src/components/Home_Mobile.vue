@@ -1,7 +1,7 @@
 <template>
     <section>
       <nav>
-        <router-link to="/nav-panel">Navigation Panel</router-link>
+        <router-link to="/nav-mob-panel">Navigation Panel</router-link>
       </nav>
       <router-view/>
 
@@ -30,12 +30,29 @@
     <section class="inf_sec">
       <div class="images d-flex justify-content-center" id="inf_div">
         <img id="inf_img" src="../assets/Infaffinitypsd.png" alt="" />
+        <p class="text_img"> INFINTE  AFFINITIES</p>
       </div>
     </section>
-    
+    <contents_mobile/>
+   
+
+
+
+
+
+
+
+  
+    <!-- <footers/> -->
+    <section class="speaker_nomination">
+      <span class="nom_heading">Want to feature in the 4th edition of Tedx IITPatna</span>
+      <span class="speaker_nom_text">Click the button for register as a speaker</span>
+      <button class="custom-btn btn-7"><span>Apply Now!</span></button>
+    </section>
 </template>
 
-<style>
+
+<style scoped>
 
 html {
   overflow-x: hidden;
@@ -83,11 +100,11 @@ nav a.router-link-exact-active {
 }
 #x_img {
   position: absolute;
-  top: -32%;
+  top: 0%;
   z-index: 1;
-  height: 80vh;
+  height: 49vh;
   width: 70vw;
-  right: -25%;
+  right: -9%;
   
 }
 #ted_img {
@@ -98,15 +115,27 @@ nav a.router-link-exact-active {
 #inf_img {
   margin: 5rem auto;
   height: 100vh !important;
+  position: relative;
+  /* padding-left: 80px; */
+}
+.text_img
+{
+  position: absolute;
+  display: flex;
+  padding-top: 60vh;
+  letter-spacing: 10px;
+  color:white;
 }
 
 #inf_div{
   height: 200vh;
   background-color: black;
+
 }
 
 #inf_img{
   height: 100vh;
+  
 }
 .timer-container {
   /* position: absolute; */
@@ -115,6 +144,11 @@ nav a.router-link-exact-active {
   width: 100%;
   /* display: flex; */
   align-items: center;
+    font-family: gothambold;
+    width: 100%;
+    /* display: flex; */
+    align-items: center;
+    bottom: 736px;
 }
 
 /* The LIVE IN written beside the timer */
@@ -130,8 +164,9 @@ h1 {
     /* position: relative;
     left: 4rem; */
     font-weight: lighter;
-    margin-bottom: 0;
+    margin-bottom: -136px;
     letter-spacing: .125rem;
+    margin-left: -9vw;
     /* display: inline; */
     /* text-transform: uppercase; */
     /* text-align: center; */
@@ -152,6 +187,8 @@ h1 {
   #countdown {
     width: 100%;
     box-align: center;
+        margin-left: 15vw;
+    bottom: 2rem;
     /* margin-left: 4rem; */
     /* bottom: 2rem; */
     /* left: 3rem; */
@@ -172,14 +209,131 @@ h1 {
     height: 80vh;
     width: 100vw;
   }
+  .speaker_nomination{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nom_heading{
+  display: block;
+  font-size: xx-large;
+}
+
+  .speaker_nom_text{
+    margin-right: 20px;
+    font-size: larger;
+    margin-block: 4px;
+  }
+  
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    margin-block: 5px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-7 {
+    background: linear-gradient(0deg, #000000 0%, red 100%);
+      line-height: 42px;
+      padding: 0;
+      border: none;
+      border-radius: 10px;
+    }
+    .btn-7 span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .btn-7:before,
+    .btn-7:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: rgba(251,75,2,1);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7:before{
+       height: 0%;
+       width: 2px;
+    }
+    .btn-7:after {
+      width: 0%;
+      height: 2px;
+    }
+    .btn-7:hover{
+      color: #ff0039;
+      background: transparent;
+    }
+    .btn-7:hover:before {
+      height: 100%;
+    }
+    .btn-7:hover:after {
+      width: 100%;
+    }
+    .btn-7 span:before,
+    .btn-7 span:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background: rgba(251,75,2,1);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7 span:before {
+      width: 2px;
+      height: 0%;
+    }
+    .btn-7 span:after {
+      height: 2px;
+      width: 0%;
+    }
+    .btn-7 span:hover:before {
+      height: 100%;
+    }
+    .btn-7 span:hover:after {
+      width: 100%;
+    }
   
   
 </style>
 
 <script >
 import chroma from 'chroma-js'
+import footers from '../components/footers.vue'
+import contents_mobile from '../components/contents_mobile.vue'
+
 export default {
-  name: 'home_mobile',
+  name: 'home',
+  components:{
+    footers, 
+    contents_mobile, 
+  },
 
  methods: {
 
@@ -231,6 +385,7 @@ export default {
 }
 var scale = chroma.scale(['#000000', '#ffffff']).domain([333, 1362]);
 window.addEventListener('scroll', function () {
+  
   console.log(window.scrollY);
   document.getElementById('inf_div').style.backgroundColor = scale(window.pageYOffset);
 });
