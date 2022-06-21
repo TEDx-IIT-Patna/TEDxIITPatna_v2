@@ -4,11 +4,11 @@
         <img src="../assets/Barcode.png" alt="Barcode" class="barcode">
         <img src="../assets/logo.png" alt="" class="logo"/>
         <ul class="navlist">
-            <router-link to="/"><li class="navs">HOME</li></router-link>
-            <router-link to="/team"><li class="navs">TEAM</li></router-link>
-            <router-link to="#!"><li class="navs">PAST EVENTS</li></router-link>
-            <router-link to="#!"><li class="navs">PARTNERS</li></router-link>
-            <router-link to="#!"><li class="navs">ABOUT</li></router-link>
+            <router-link :key="$route.fullPath" to="/"><li class="navs">HOME</li></router-link>
+            <router-link :key="$route.fullPath" to="/team"><li class="navs">TEAM</li></router-link>
+            <router-link :key="$route.fullPath" to="/past_events"><li class="navs">PAST EVENTS</li></router-link>
+            <router-link :key="$route.fullPath" to="/partners"><li class="navs">PARTNERS</li></router-link>
+            <router-link :key="$route.fullPath" to="/about"><li class="navs">ABOUT</li></router-link>
         </ul>
     </div>
         <router-view />

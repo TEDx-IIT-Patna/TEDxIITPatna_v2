@@ -7,16 +7,19 @@
     <div class="options">
       <ul>
         <li>
-          <router-link to="/">Speakers</router-link>
+          <router-link :key="$route.fullPath" to="/">Home</router-link>
         </li>
         <li>
-          <router-link to="/">Past Events</router-link>
+          <router-link :key="$route.fullPath" to="/team">Team</router-link>
         </li>
         <li>
-          <router-link to="/">Partners</router-link>
+          <router-link :key="$route.fullPath" to="/past_events">Past Events</router-link>
         </li>
         <li>
-          <router-link to="/">About</router-link>
+          <router-link :key="$route.fullPath" to="/partners">Partners</router-link>
+        </li>
+        <li>
+          <router-link :key="$route.fullPath" to="/about">About</router-link>
         </li>
       </ul>
     </div>
@@ -44,6 +47,9 @@
   width: 100%;
   text-align: right;
   padding: 5%;
+  top: -16vh;
+  position: relative;
+  right: -12vh;
 }
 .close a{
   text-decoration: none;
@@ -57,7 +63,8 @@ ul {
 }
 .options{
   position: relative;
-  top: -10vh;
+  top: -17vh;
+  left: -5vw
 }
 .nav_div{
   position: absolute;
@@ -73,7 +80,7 @@ li a{
 
 .nav_img_container{
   position: relative;
-    top: 16vh;
-    right: -2vw;
+    top: -12vh;
+    right: -4vw;
 }
 </style>

@@ -28,6 +28,9 @@ export default {
   color: #fff;
   font-family: GothamMedium;
   background-image: url("https://drive.google.com/uc?export=view&id=1BwJtJl0VbjUZiue-dvfvuXag8M-tX5SR");
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .soon
 {

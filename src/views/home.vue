@@ -258,12 +258,12 @@ export default {
     })
       .setPin("#wrapper")
       .setTween(tl)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-        indent: 40
-      })
+      // .addIndicators({
+      //   colorTrigger: "white",
+      //   colorStart: "white",
+      //   colorEnd: "white",
+      //   indent: 40
+      // })
       .addTo(controller);
 
     var scene2 = new ScrollMagic.Scene({
@@ -273,12 +273,12 @@ export default {
     })
       .setPin(".second", { pushFollowers: true })
       .setTween(tl2)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-        indent: 40
-      })
+      // .addIndicators({
+      //   colorTrigger: "white",
+      //   colorStart: "white",
+      //   colorEnd: "white",
+      //   indent: 40
+      // })
       .addTo(controller1);
 
     // var scene3 = new ScrollMagic.Scene({
@@ -302,12 +302,12 @@ export default {
       duration: "200%"
     })
       .setTween(tl4)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-        indent: 40
-      })
+      // .addIndicators({
+      //   colorTrigger: "white",
+      //   colorStart: "white",
+      //   colorEnd: "white",
+      //   indent: 40
+      // })
       .addTo(controller3);
 
     var scene5 = new ScrollMagic.Scene({
@@ -316,12 +316,12 @@ export default {
       duration: "100%"
     })
       .setTween(tl5)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-        indent: 40
-      })
+      // .addIndicators({
+      //   colorTrigger: "white",
+      //   colorStart: "white",
+      //   colorEnd: "white",
+      //   indent: 40
+      // })
       .addTo(controller);
 
   }

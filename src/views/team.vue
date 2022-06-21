@@ -388,12 +388,12 @@ export default {
     })
       .setPin("")
       .setTween(tl)
-      .addIndicators({
-        colorTrigger: "blue",
-        colorStart: "blue",
-        colorEnd: "blue",
-        indent: 40,
-      })
+      // .addIndicators({
+      //   colorTrigger: "blue",
+      //   colorStart: "blue",
+      //   colorEnd: "blue",
+      //   indent: 40,
+      // })
       .addTo(controller);
     var scene2 = new ScrollMagic.Scene({
       triggerElement: ".top-container2",
@@ -402,12 +402,13 @@ export default {
     })
       .setPin(".bottom-number2")
       .setTween(tl2)
-      .addIndicators({
-        colorTrigger: "blue",
-        colorStart: "blue",
-        colorEnd: "blue",
-        indent: 40,
-      }).addTo(controller);
+      // .addIndicators({
+      //   colorTrigger: "blue",
+      //   colorStart: "blue",
+      //   colorEnd: "blue",
+      //   indent: 40,
+      // })
+      .addTo(controller);
     var scene3 = new ScrollMagic.Scene({
       triggerElement: ".redbox_text2",
       triggerHook: "onLeave",
@@ -416,12 +417,12 @@ export default {
     })
 
       .setTween(tl3)
-      .addIndicators({
-        colorTrigger: "blue",
-        colorStart: "blue",
-        colorEnd: "blue",
-        indent: 40,
-      });
+      // .addIndicators({
+      //   colorTrigger: "blue",
+      //   colorStart: "blue",
+      //   colorEnd: "blue",
+      //   indent: 40,
+      // });
   },
 };
 window.addEventListener('scroll', () => {
