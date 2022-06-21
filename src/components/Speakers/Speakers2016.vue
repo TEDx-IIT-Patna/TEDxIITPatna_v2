@@ -284,8 +284,8 @@ export default {
 }
 
 .modalimg {
-    margin-top: 40%;
+    margin-top: 50%;
     width: 15rem;
-    transform: translate(-60px, 0px);
+    transform: translate(-6px, 0px);
 }
 </style>

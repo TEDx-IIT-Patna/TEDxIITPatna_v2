@@ -91,7 +91,6 @@ export default {
   text-decoration: underline red solid 10px;
   text-align: center;
   font-family: GothamBold;
-  margin-top: 5%;
 }
 .all {
   height: 3200px;
