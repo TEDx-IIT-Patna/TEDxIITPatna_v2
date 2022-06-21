@@ -159,7 +159,7 @@ h1{
 }
 .speakers {
     background-color: black;
-  
+    margin-top: 20%;
 }
 .speaker-name
 {
@@ -173,7 +173,8 @@ h1{
 .card-name
 {
     font-size: 25px;
-    transform: translate(-10%,-70px);
+    transform: translate(10%,-100px);
+    width: 15rem;
 }
 .row {
     margin: 1%;

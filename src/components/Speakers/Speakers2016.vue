@@ -199,9 +199,9 @@ export default {
 </script>
 
 <style scoped>
-.speaker {
+.speakers {
     background-color: black;
-    margin-top: -5%;
+    margin-top: -15%;
 }
 
 .carousel-control {

@@ -134,6 +134,7 @@ export default {
 <style scoped>
 .speakers {
     background-color: black;
+    margin-top: 20%;
 }
 .speaker-name
 {
@@ -196,7 +197,12 @@ export default {
 
 
 .speaker-cards-section {
-    padding-bottom: 100px;
     transform: translate(0,-250px);
+}
+@media screen and (min-width: 600px) and (max-width: 990px) {
+
+.speaker-cards-section {
+    transform: translate(0,-440px);
+}
 }
 </style>

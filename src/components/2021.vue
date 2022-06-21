@@ -198,7 +198,7 @@ h1 {
 @media screen and (min-width: 990px) and (max-width: 1200px) {
   .header {
     background-image: url("https://drive.google.com/uc?export=view&id=14zw7Kcg1NQRruqxLf83VKXKzZSGSTcri");
-    width: 100%;
+    width: cover;
     height: 768px;
   }
 

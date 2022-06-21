@@ -16,7 +16,7 @@
 .container {
     color: aliceblue;
     background-color: black;
-    margin-left: 10%;
+    margin-left:12%;
 }
 
 .tab-element-box {
@@ -34,14 +34,13 @@
 h1 {
     font-family: GothamBold;
     font-size: 40px;
-    margin-left: -15px;
+    margin-left: -12%;
     margin-top:10%;
     text-decoration: underline red solid 10px;
 }
 
 @media screen and (max-width: 600px) {
     .row {
-        margin-top: 10%;
         margin-left: 10%;
         align-items: center;
     }
@@ -50,15 +49,13 @@ h1 {
         font-family: GothamBold;
         font-size: 40px;
         margin-top: 25%;
-        margin-left: 20px;
-        
     }
 
     .container {
         color: aliceblue;
         background-color: black;
-        transform: translate(0, -350px);
         margin-left: 8px;
+        margin-top: -30%;
     }
 }
 </style>

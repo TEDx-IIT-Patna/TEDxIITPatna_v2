@@ -5,7 +5,7 @@
       <div class="container-fluid header">
         <div class=" text">
           <router-link to="/past_events"><button class="btn btn-outline-danger back"> Go Back </button></router-link>
-          <h1>
+          <h1 class="main-head">
             METAMORPHOSIS | 2019
           </h1>
           Our second edition of TEDxIIT Patna depicted," change is the only constant, the only inevitable." Permanence
@@ -17,6 +17,7 @@
           people and the society.
 
         </div>
+        <br/><br/>
         <h1 class="speaker-head">SPEAKERS.
         </h1>
         <!-- Window width: {{ windowwidth }} -->
@@ -87,7 +88,6 @@ export default {
   text-decoration: underline red solid 10px;
   text-align: center;
   font-family: GothamBold;
-  margin-top: -5%;
   
 }
 .all {
@@ -131,22 +131,6 @@ h1 {
 .section {
   min-height: 100vh;
 }
-@media screen and (max-height: 750px)
-{
-  
-.speaker-head
-{
-  transform: translate(0,15vh);
-}
-}
-@media screen and (min-height: 750px)
-{
-  
-.speaker-head
-{
-  transform: translate(0,-10vh);
-}
-}
 
 @media screen and (max-width: 600px) {
   .e2021 {
@@ -170,6 +154,10 @@ h1 {
     font-size: 15px;
     padding-top: 25vh;
   }
+  .main-head
+{
+  font-size: 30px;
+}
 }
 
 @media screen and (min-width: 600px) and (max-width: 990px) {
@@ -188,10 +176,7 @@ h1 {
     overflow-x: hidden;
 
   }
-.speaker-head
-{
-  margin-top:-30%;
-}
+
 }
 
 @media screen and (min-width: 990px) and (max-width: 1200px) {
@@ -214,7 +199,3 @@ h1 {
 }
 </style>
 
-<!-- https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl"
-"https://drive.google.com/uc?export=view&id=1x7MR3YIV3lRJxHTcrwXeTyFSxNd_tqWd"
-url("https://drive.google.com/uc?export=view&id=1zfawW9dklKN0hjffh_rOpb4udmJQ0grP")
-url("https://drive.google.com/uc?export=view&id=12uO7YqP_GJWfzBuU4Wpiv2-QLoJ3GYke") -->

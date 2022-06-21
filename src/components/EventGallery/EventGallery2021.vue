@@ -47,7 +47,6 @@ h1 {
     h1 {
         font-family: GothamBold;
         font-size: 40px;
-        margin-left: 50px;
     }
 
     .gallery-card {
@@ -61,7 +60,7 @@ h1 {
         color: aliceblue;
         background-color: black;
         transform: translate(0, -350px);
-
+        
     }
 }
 </style>

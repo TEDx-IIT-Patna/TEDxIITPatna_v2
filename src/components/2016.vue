@@ -19,6 +19,7 @@
           <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
         </div>
+        <br/><br/>
         <h1 class="speaker-head">SPEAKERS.
         </h1>
       </div>
@@ -84,11 +85,20 @@ export default {
   height: 768px;
 }
 
+
+.speaker-head
+{
+  text-decoration: underline red solid 10px;
+  text-align: center;
+  font-family: GothamBold;
+  margin-top: 5%;
+}
 .all {
-  height: 2500px;
+  height: 3200px;
   background-color: black;
   width: 100vw;
   margin-left: -2%;
+  color: #fff;
 }
 
 .e2021 {
@@ -112,6 +122,7 @@ export default {
 
 h1 {
   font-size: 40px;
+  margin-bottom: 3vh;
   font-family: GothamMedium;
   font-weight: 700;
 }
@@ -119,12 +130,7 @@ h1 {
 .back {
   margin-bottom: 10px;
 }
-.speaker-head
-{
-  text-decoration: underline red solid 10px;
-  text-align: center;
-  font-family: GothamBold;
-}
+
 .section {
   min-height: 100vh;
 }
@@ -132,19 +138,6 @@ h1 {
 @media screen and (max-width: 600px) {
   .e2021 {
     background-color: black;
-    width: fit-content;
-  }
-
-  .header {
-    background-image: url("https://drive.google.com/uc?export=view&id=1qFHq-x92QmVmi9PW2vV0BzDYJqddQero");
-    height: 1000px;
-    width: 100vw;
-
-  }
-
-  .text {
-    font-size: 12px;
-    padding-top: 25vh;
   }
 
   .all {
@@ -153,12 +146,21 @@ h1 {
 
   }
 
-  h1 {
-    font-size: 30px;
-    margin-bottom: 1vh;
-    font-family: GothamMedium;
-    font-weight: 700;
+  .header {
+    background-image: url("https://drive.google.com/uc?export=view&id=1qFHq-x92QmVmi9PW2vV0BzDYJqddQero");
+    height: 1000px;
+    width: 100%;
+
   }
+
+  .text {
+    font-size: 15px;
+    padding-top: 25vh;
+  }
+  .main-head
+{
+  font-size: 30px;
+}
 }
 
 @media screen and (min-width: 600px) and (max-width: 990px) {
@@ -177,10 +179,7 @@ h1 {
     overflow-x: hidden;
 
   }
-  .speaker-head
-{
-  margin-top:-30%;
-}
+
 }
 
 @media screen and (min-width: 990px) and (max-width: 1200px) {
@@ -195,5 +194,11 @@ h1 {
     overflow-x: hidden;
 
   }
+
+  .text {
+    font-size: 15px;
+    padding-top: 25vh;
+  }
 }
 </style>
+
