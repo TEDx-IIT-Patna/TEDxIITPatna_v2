@@ -76,32 +76,37 @@ export default {
 </script>
 
 <style scoped>
-.e2019 {
-  background-color: black;
-  height: 100vh;
-  color: #fff;
+.header {
+  background-image: url("https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl");
+  height: 768px;
 }
+
+
 .speaker-head
 {
   text-decoration: underline red solid 10px;
   text-align: center;
   font-family: GothamBold;
+  margin-top: -5%;
+  
 }
 .all {
-  height: 3500px;
+  height: 2500px;
   background-color: black;
   width: 100vw;
   margin-left: -2%;
+  color: #fff;
 }
 
-.header {
-  background-image: url("https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl");
-  height: 768px;
-  width: 100vw;
+.e2021 {
+  background-color: black;
+  color: white;
+  height: 100vh;
 }
+
 
 .text {
-  height: 100vh;
+  height: 110vh;
   width: 60vw;
   padding-top: 30vh;
   padding-left: 5vw;
@@ -110,13 +115,37 @@ export default {
   font-size: 18px;
   font-family: GothamLight;
   text-align: left;
-  color: white;
 }
 
 h1 {
   font-size: 40px;
+  margin-bottom: 3vh;
   font-family: GothamMedium;
   font-weight: 700;
+}
+
+.back {
+  margin-bottom: 10px;
+}
+
+.section {
+  min-height: 100vh;
+}
+@media screen and (max-height: 750px)
+{
+  
+.speaker-head
+{
+  transform: translate(0,15vh);
+}
+}
+@media screen and (min-height: 750px)
+{
+  
+.speaker-head
+{
+  transform: translate(0,-10vh);
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -138,14 +167,8 @@ h1 {
   }
 
   .text {
-    font-size: 13px;
+    font-size: 15px;
     padding-top: 25vh;
-  }
-
-  h1 {
-    font-size: 30px;
-    font-family: GothamMedium;
-    font-weight: 700;
   }
 }
 
@@ -165,6 +188,10 @@ h1 {
     overflow-x: hidden;
 
   }
+.speaker-head
+{
+  margin-top:-30%;
+}
 }
 
 @media screen and (min-width: 990px) and (max-width: 1200px) {
@@ -179,5 +206,15 @@ h1 {
     overflow-x: hidden;
 
   }
+
+  .text {
+    font-size: 15px;
+    padding-top: 25vh;
+  }
 }
 </style>
+
+<!-- https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl"
+"https://drive.google.com/uc?export=view&id=1x7MR3YIV3lRJxHTcrwXeTyFSxNd_tqWd"
+url("https://drive.google.com/uc?export=view&id=1zfawW9dklKN0hjffh_rOpb4udmJQ0grP")
+url("https://drive.google.com/uc?export=view&id=12uO7YqP_GJWfzBuU4Wpiv2-QLoJ3GYke") -->

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 style="transform: translate(-16%,140px); color: white; margin-bottom: 10%;">GALLERY.</h1>
+        <h1 style="text-align:center">GALLERY.</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-col-lg-4 ">
             <div class="gallery-col" v-for="image in images">
                 <div class="card tab-element-box"></div>
@@ -16,7 +16,7 @@
 .container {
     color: aliceblue;
     background-color: black;
-    margin-left: 150px;
+    margin-left: -10%;
 }
 
 .tab-element-box {
@@ -34,21 +34,24 @@
 h1 {
     font-family: GothamBold;
     font-size: 40px;
-    margin-left: 190px;
+    margin-left: -150px;
+    margin-top:10%;
     text-decoration: underline red solid 10px;
 }
 
 @media screen and (max-width: 600px) {
     .row {
-        margin-top: 20%;
-        margin-left: 20px;
+        margin-top: 10%;
+        margin-left: 10%;
         align-items: center;
     }
 
     h1 {
         font-family: GothamBold;
         font-size: 40px;
-        margin-left: 50px;
+        margin-top: 25%;
+        margin-left: 20px;
+        
     }
 
     .container {
