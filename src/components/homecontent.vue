@@ -16,34 +16,46 @@
         <div class="info info-1 container">
             <div class="row">
 
-
+                <div class="content_collection">
                 <div class="image image-1 col-md-3 " style="margin-right: 0px;">
 
-                    <img src="..\assets\hand_graphics.png" style="    height: 77vh;
-    width: auto;" />
+                    <img src="..\assets\hand_graphics.png" style="    height: 77vh; width: auto;" />
                 </div>
                 <div class="content content1 col">
                     <h1 class="heading">Togetherness</h1>
 
                     <p>
-                        Isn't everyone a part of everyone else?  Like every raindrop, a part of the ocean. Like every sand particle, a part of the sand castle.We might think of our achievements and our thoughts to be of our own individual contribution but in the end, they are a sum of every relationship we have made, a string of thoughts we share with every person we meet.We believe that “Together, we are capable of anything!”
-The theme of Infinite Affinities speaks for togetherness. It signifies how people on the same journey reach their destination early if they work with harmony and integrity.
+                        Isn't everyone a part of everyone else? Like every raindrop, a part of the ocean. Like every
+                        sand particle, a part of the sand castle.We might think of our achievements and our thoughts to
+                        be of our own individual contribution but in the end, they are a sum of every relationship we
+                        have made, a string of thoughts we share with every person we meet.We believe that “Together, we
+                        are capable of anything!”
+                        The theme of Infinite Affinities speaks for togetherness. It signifies how people on the same
+                        journey reach their destination early if they work with harmony and integrity.
 
                     </p>
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- second image and content -->
+        <div class="content_collection">
         <div class="info info1 info-2 container my-3">
             <div class="row">
                 <div class="content content2 col ">
                     <h1 class="heading">What is TED<span class="letter_x">x</span>?</h1>
 
                     <p>
-                        TEDx is a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.”  
-TEDxIITPatna has continued to be a guiding light since 2016. Three stellar editions later - we've still got more to share! Going strong through Covid (with an impressive footfall of 1500+ participants), we are back with a REBOOT.
-This year TEDx IITPATNA  proudly presents it’s fourth edition. In this event, we shall highlight symbiosis and the team spirit that allows us to ascend to greater heights. Featuring diverse speakers from various walks of life, we hope to provide an enlightening experience to our community.
+                        TEDx is a grassroots initiative, created in the spirit of TED’s overall mission to research and
+                        discover “ideas worth spreading.”
+                        TEDxIITPatna has continued to be a guiding light since 2016. Three stellar editions later -
+                        we've still got more to share! Going strong through Covid (with an impressive footfall of 1500+
+                        participants), we are back with a REBOOT.
+                        This year TEDx IITPATNA proudly presents it’s fourth edition. In this event, we shall highlight
+                        symbiosis and the team spirit that allows us to ascend to greater heights. Featuring diverse
+                        speakers from various walks of life, we hope to provide an enlightening experience to our
+                        community.
 
                     </p>
                 </div>
@@ -53,28 +65,34 @@ This year TEDx IITPATNA  proudly presents it’s fourth edition. In this event, 
                 </div>
             </div>
         </div>
+        </div>
         <!-- third image and content -->
-
+        <div class="content_collection">
         <div class="info info-3 container ">
             <div class="row my-5">
                 <div class="image image-3 col-3">
                     <img src="..\assets\xxx_img.png" height="600" width="400" />
                 </div>
                 <div class="content content3  col ">
-                    <h1 class="heading my-2">TED<span class="letter_x">x</span>IIT Patna</h1>
+                    <h1 class="heading my-2">TED<span class="letter_x">x</span>IITPatna</h1>
 
                     <p>
-                        TEDxIITPatna has continued to be a guiding light since 2016. Three stellar editions later - we've still got more to share!
+                        TEDxIITPatna has continued to be a guiding light since 2016. Three stellar editions later -
+                        we've still got more to share!
 
-Going strong through Covid (with an impressive footfall of 1500+ participants), we are back with a REBOOT. 
+                        Going strong through Covid (with an impressive footfall of 1500+ participants), we are back with
+                        a REBOOT.
 
-This year TEDx IITPATNA presents the fourth edition of its Tedx Conference.
-In this event, we shall highlight symbiosis and the team spirit that allows us to ascend to greater heights.
-Featuring diverse speakers from various walks of life, we hope to provide an enlightening experience to our community.
+                        This year TEDx IITPATNA presents the fourth edition of its Tedx Conference.
+                        In this event, we shall highlight symbiosis and the team spirit that allows us to ascend to
+                        greater heights.
+                        Featuring diverse speakers from various walks of life, we hope to provide an enlightening
+                        experience to our community.
                     </p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -96,6 +114,7 @@ export default {
 
 .info {
     display: flex;
+    margin-bottom: 9vh;
 }
 
 .heading {
@@ -103,6 +122,9 @@ export default {
     text-align: center;
 }
 
+p{
+    font-family: gothamlight;
+}
 
 .content {
     font-family: Arial, Helvetica, sans-serif;
@@ -115,7 +137,7 @@ export default {
 
 .content2 {
     margin-top: 8%;
-        margin-left: 5vw;
+    margin-left: 5vw;
     margin-top: 23vh;
 }
 
@@ -159,33 +181,34 @@ export default {
     
     /* background-image: linear-gradient(to right, red , white); */
 /* margin-left: 10%; */
-.image{
+.image {
     position: absolute;
 }
-.image-1{
-    position:absolute;
+
+.image-1 {
+    position: absolute;
     margin-right: 0px;
 }
 
-.content2{
+.content2 {
     position: absolute;
     margin-left: 1vw;
 }
 
-.image-2{
-        left: 39vw;
+.image-2 {
+    left: 39vw;
     position: absolute;
-    top: 80vh;
+    top: 95vh;
 }
 
-.image-3{
-        position: absolute;
-    top: 157vh;
+.image-3 {
+    position: absolute;
+    top: 189vh;
 }
 
-.content3{
-        position: absolute;
-    top: 151vh;
+.content3 {
+    position: absolute;
+    top: 176vh;
     left: 25vw;
 }
 </style>

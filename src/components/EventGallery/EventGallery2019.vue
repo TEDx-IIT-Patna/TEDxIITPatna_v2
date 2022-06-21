@@ -16,7 +16,7 @@
 .container {
     color: aliceblue;
     background-color: black;
-    margin-left: -10%;
+    margin-left: 10%;
 }
 
 .tab-element-box {
@@ -34,7 +34,7 @@
 h1 {
     font-family: GothamBold;
     font-size: 40px;
-    margin-left: -150px;
+    margin-left: -15px;
     margin-top:10%;
     text-decoration: underline red solid 10px;
 }

@@ -91,7 +91,7 @@ export default {
   
 }
 .all {
-  height: 2500px;
+  height: 3200px;
   background-color: black;
   width: 100vw;
   margin-left: -2%;

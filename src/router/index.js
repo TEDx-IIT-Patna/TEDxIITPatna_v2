@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import home from "@/views/home.vue"
 import team from "@/views/team.vue"
 import navbarpanel from "../components/navbarpanel.vue"
+import navbarpanel_mobile from "../components/navbarpanel_mobile.vue"
 import PastEvents from '../views/PastEvents.vue'
 import events2021 from '../components/2021.vue'
 import events2019 from '../components/2019.vue'
@@ -26,6 +27,11 @@ const routes = [
     path: '/nav-panel',
     name: 'nav-panel',
     component: navbarpanel
+  },
+  {
+    path: '/nav-mob-panel',
+    name: 'nav-mob-panel',
+    component: navbarpanel_mobile
   },
   {
     path: '/past_events',
