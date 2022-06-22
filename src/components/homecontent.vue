@@ -129,7 +129,7 @@ p{
 .content {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    width: 50%;
+    width: 56%;
     margin-left: 31vw;
     margin-top: 13vh;
     font-size: larger;
@@ -144,7 +144,7 @@ p{
 .content3 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    width: 50%;
+    width: 56%;
     margin-left: 10%;
     margin-top: 10%;
     font-size: larger;
@@ -188,11 +188,14 @@ p{
 .image-1 {
     position: absolute;
     margin-right: 0px;
+    margin-left: 0px;
+    left: -7vw;
 }
 
 .content2 {
     position: absolute;
-    margin-left: 1vw;
+    margin-left: -5vw;
+    margin-top: 33vh;
 }
 
 .image-2 {
@@ -204,11 +207,12 @@ p{
 .image-3 {
     position: absolute;
     top: 189vh;
+    margin-left: -10vw;
 }
 
 .content3 {
     position: absolute;
-    top: 176vh;
-    left: 25vw;
+    top: 183vh;
+    left: 19vw;
 }
 </style>

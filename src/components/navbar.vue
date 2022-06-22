@@ -59,6 +59,9 @@ a{
     letter-spacing: 6px;
   }
 
+.navs:hover{
+    color: red;
+}
 .navlist{
     margin-left: auto;
     margin-right: 18vh;
@@ -69,5 +72,8 @@ a{
     background-color: red;
 }
 
+li.active:hover{
+    color: red;
+}
 
 </style>
