@@ -10,6 +10,7 @@
     <div class="links">
       <router-link to="/"><span>Home</span></router-link>
       <router-link to="/pastevents"><span>Past Events</span></router-link>
+      <router-link to="/team"><span>Team</span></router-link>
       <router-link to="/partners"><span>Partners</span></router-link>
       <router-link to="/about"><span>About</span></router-link>
     </div>

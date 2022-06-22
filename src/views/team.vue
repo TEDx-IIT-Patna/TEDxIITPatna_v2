@@ -284,6 +284,9 @@
         <span class="bottom_number2">2.8</span>
       </div>
     </section>
+    <section class="footer_section">
+      <footerVue />
+    </section>
   </section>
   <section class="main2" v-else-if="screen < 1000">
     <team_mobile />
@@ -297,12 +300,13 @@ import { TweenMax, TimelineMax } from "gsap";
 // import ScrollMagic from "scrollmagic";
 import team_mobile from "@/components/team_mobile.vue";
 import Nav from '@/components/navbarpanel.vue';
+import footerVue from '@/components/footer.vue';
 // import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
 // ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 export default {
   name: "team",
-  components: { team_mobile, Nav },
+  components: { team_mobile, Nav, footerVue },
   data() {
     return {
       screen: screen.width,

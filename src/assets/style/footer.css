@@ -11,6 +11,8 @@
     padding: 5% 8%;
     color: white;
     background-color: black;
+    padding-top: 10vh;
+    height: 105vh;
     /* margin-top: 693vh; */
 }
 
@@ -21,7 +23,7 @@
     min-width: 360px;
     max-width: 600px;
     aspect-ratio: 16 / 9;
-    margin-bottom: 2.5rem;
+    margin-block: 2.5rem;
 }
 
 .footer-links {

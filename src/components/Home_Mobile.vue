@@ -1,4 +1,5 @@
 <template>
+<section class="wrapper_home">
     <section>
       <nav>
         <router-link to="/nav-mob-panel">Navigation Panel</router-link>
@@ -46,14 +47,18 @@
     <!-- <footers/> -->
     <section class="speaker_nomination">
       <span class="nom_heading">Want to feature in the 4th edition of Tedx IITPatna</span>
-      <span class="speaker_nom_text">Click the button for register as a speaker</span>
-      <button class="custom-btn btn-7"><span>Apply Now!</span></button>
+      <!-- <span class="speaker_nom_text">Click the button for register as a speaker</span> -->
+      <button class="custom-btn btn-7"><span>Nominate Yourself!</span></button>
+    </section>
+    <section class="footer_section">
+      <footerVue />
+    </section>
     </section>
 </template>
 
 <style scoped>
 
-html {
+.wrappe_home {
   overflow-x: hidden;
 }
 
@@ -62,9 +67,12 @@ body {
 }
 
 nav {
-  padding: 5%;
-  position: relative;
-  left: 25%;
+      /* padding: 5%; */
+    position: relative;
+    /* left: 68vw; */
+    /* width: 29%; */
+    text-align: end;
+    margin-right: 2vw;
 }
 
 nav a {
@@ -83,6 +91,11 @@ nav a.router-link-exact-active {
 .images {
     display: flex;
     justify-content: middle;
+}
+
+.heading{
+  margin-inline: 5vw !important;
+  margin-left: 5vw !important;
 }
 #x_div {
   background-color: #D82148;
@@ -108,7 +121,7 @@ nav a.router-link-exact-active {
 }
 #ted_img {
   margin-top: 20%;
-  width: 20vw;
+  width: auto;
   height: 10vh;
 }
 #inf_img {
@@ -127,7 +140,7 @@ nav a.router-link-exact-active {
 }
 
 #inf_div{
-  height: 200vh;
+  height: 112vh;
   background-color: black;
 
 }
@@ -218,12 +231,14 @@ h1 {
 .nom_heading{
   display: block;
   font-size: xx-large;
+  margin-inline: 5vw;
 }
 
   .speaker_nom_text{
     margin-right: 20px;
     font-size: larger;
     margin-block: 4px;
+    margin-inline: 5vw;
   }
   
   .custom-btn {
@@ -246,11 +261,13 @@ h1 {
     outline: none;
   }
   .btn-7 {
-    background: linear-gradient(0deg, #000000 0%, red 100%);
+    background: linear-gradient(0deg, #ff0039 0%, #ff0039 100%);
       line-height: 42px;
-      padding: 0;
+      padding: 4px;
       border: none;
       border-radius: 10px;
+      width: 80vw;
+      height: 7vh;
     }
     .btn-7 span {
       position: relative;
@@ -324,13 +341,13 @@ h1 {
 
 <script >
 import chroma from 'chroma-js'
-import footers from '../components/footers.vue'
+import footerVue from '../components/footer_mobile.vue'
 import contents_mobile from '../components/contents_mobile.vue'
 
 export default {
   name: 'home',
   components:{
-    footers, 
+    footerVue, 
     contents_mobile, 
   },
 
@@ -382,7 +399,7 @@ export default {
     this.function();
   }
 }
-var scale = chroma.scale(['#000000', '#ffffff']).domain([333, 1362]);
+var scale = chroma.scale(['#000000', '#ffffff']).domain([333, 960]);
 window.addEventListener('scroll', function () {
   
   console.log(window.scrollY);
