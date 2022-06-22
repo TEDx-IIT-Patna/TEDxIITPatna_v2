@@ -185,7 +185,8 @@ h1 {
     transform: translate(-9px, 120px);
 }
 
-.card-name {
+.card-name  
+{
     font-size: 25px;
     transform: translate(50px, -80px);
 }
@@ -207,7 +208,7 @@ h1 {
 }
 
 .speaker-card:hover {
-    background-color: #fff;
+    background-color: red; cursor:pointer;
 }
 
 .speaker-card {

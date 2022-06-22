@@ -238,12 +238,16 @@ export default {
 }
 
 .speaker-card:hover {
-    background-color: #fff;
+    background-color: red; cursor:pointer;
 }
-.card-name
-{
+.card-name {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, .05) 10%, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, .75) 75%, rgba(0, 0, 0, 1) 100%) repeat scroll 0 0;
+    position: relative;
+    height: 60px;
+    width: 15rem;
+    padding-left: 4%;
     font-size: 20px;
-    transform: translate(10%,-70px);
+    transform: translate(8%,-70px);
 }
 
 .pastimg {

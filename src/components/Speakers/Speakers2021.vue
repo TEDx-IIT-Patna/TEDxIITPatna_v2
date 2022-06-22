@@ -19,7 +19,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
-                                    <div class="card-name">{{speaker.name}}</div>
+                                    <div class="card-name">{{ speaker.name }}</div>
                                 </div>
 
                             </div>
@@ -64,7 +64,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
-                                    <div class="card-name">{{speaker.name}}</div>
+                                    <div class="card-name">{{ speaker.name }}</div>
                                 </div>
 
                             </div>
@@ -110,7 +110,7 @@
                                     <div class="card speaker-card" style="width: 15rem;">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
-                                    <div class="card-name">{{speaker.name}}</div>
+                                    <div class="card-name">{{ speaker.name }}</div>
                                 </div>
 
                             </div>
@@ -121,8 +121,7 @@
                                             <div class="card modal-card">
                                                 <div class="container modal-body">
                                                     <div class="row">
-                                                        <button class="btn-close"
-                                                            @click="show = !show"></button>
+                                                        <button class="btn-close" @click="show = !show"></button>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col"><img class="modalimg"
@@ -148,7 +147,7 @@
                 </div>
             </div>
 
-             <button class="carousel-control-prev carousel-control" type="button"
+            <button class="carousel-control-prev carousel-control" type="button"
                 data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -157,8 +156,8 @@
                 data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button> 
-          
+            </button>
+
 
         </div>
     </section>
@@ -188,7 +187,7 @@ export default {
                 {
                     id: 1,
                     name: " Rahul Aggarwal ",
-                    position:"Founder at Mission Oxygen",
+                    position: "Founder at Mission Oxygen",
                     image: "https://drive.google.com/uc?export=view&id=1BEH2r8QFo057eShBRJL8jwxpo-tetVPY",
 
                     text: " He was our second speaker, founder of Mission Oxygen and Co - founder of India 's first graphic design platform - Designhill.One of India 's youngest entrepreneurs, Rahul, is a passionate investor and marketer who acts as a startup advisor.",
@@ -198,7 +197,7 @@ export default {
                 {
                     id: 2,
                     name: "Dr Rishi Raj",
-                    position:"Associate Professor - IIT Patna",
+                    position: "Associate Professor - IIT Patna",
                     image: "https://drive.google.com/uc?export=view&id=1rYyIbiNFXAbDAuVbeIllGBm4mNOLtfkZ ",
                     text: "He was our third speaker. He is a magnificent professor at IIT Patna. With five patents and more than 50 research papers, Dr Rishi has also worked as a Postdoctoral Associate at the Massachusetts Institute of Technology.",
                     linkactive: true,
@@ -209,7 +208,7 @@ export default {
                 {
                     id: 0,
                     name: " Vivek Ram",
-                    position:"Senapati at Vaanarsena Studios",
+                    position: "Senapati at Vaanarsena Studios",
                     image: "https://drive.google.com/uc?export=view&id=1FXg2TLjzRl4bIHZpLaZATVTZUxswU2Ar ",
                     text: "He is a well-known CG and VFX artist and has worked on many international feature films, including Fast and Furious 3, The Incredible Hulk, Night at the Museum and many more. As the founder of Vanarsena studios, he is exceptionally passionate about mythical stories.",
                     linkactive: true,
@@ -218,7 +217,7 @@ export default {
                 {
                     id: 1,
                     name: "Yusra Mardini",
-                    position:"Swimmer, Olympian",
+                    position: "Swimmer, Olympian",
                     image: "https://drive.google.com/uc?export=view&id=1ZKWNUBzAh8FPYmSAvBBZ1cNxk0490YZF",
                     text: "She is an Olympic swimmer and is the youngest ever Goodwill Ambassador for UNHCR, the UN Refugee Agency. A Syrian refugee herself, she advocates for refugees globally and has become a powerful voice for the forcibly displaced across the world. Yusra's incredible story is told in her memoir 'Butterfly: From Refugee to Olympian - My Story of Rescue, Hope and Triumph'",
                     linkactive: true,
@@ -229,7 +228,7 @@ export default {
                 {
                     id: 0,
                     name: "Rupesh Mahore",
-                    position:"Researcher and Innovator",
+                    position: "Researcher and Innovator",
                     image: "https://drive.google.com/uc?export=view&id=1auY98XRy40uwzb-7keGNDTLz4-lQIJJs",
 
                     text: "Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics. This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients. Having worked with Padma Shri Prof. H.C.Verma, he has also worked on a project used in the Chandrayan-2.",
@@ -240,7 +239,7 @@ export default {
                 {
                     id: 1,
                     name: "Zoya Agarwal",
-                    position:"Aircraft Pilot, UN Spokesperson",
+                    position: "Aircraft Pilot, UN Spokesperson",
                     image: "https://drive.google.com/uc?export=view&id=1w3Jx2yq2JQCQ-rNtMW-pu-_tFBFPq9LT",
 
                     text: "The youngest female pilot to fly a Boeing 777,  Captain Zoya turned a page in Indian aviation history when she commanded an all-female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world's longest non-stop commercial trip. Zoya is also the spokesperson of Generation Equality by the UN.",
@@ -275,10 +274,14 @@ export default {
     background-color: #410c14;
 }
 
-.card-name
-{
-    font-size: 30px;
-    transform: translate(5%,-70px);
+.card-name {
+    font-size: 25px;
+    transform: translate(8%, -65px);
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, .05) 10%, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, .75) 75%, rgba(0, 0, 0, 1) 100%) repeat scroll 0 0;
+    position: relative;
+    height: 50px;
+    width: 15rem;
+    padding-left: 4%;
 }
 
 .modal-card {
@@ -301,12 +304,14 @@ export default {
     padding-bottom: 2%;
     text-align: left;
 }
+
 .modal-head2 {
     font-size: 20px;
     font-weight: 300;
     padding-bottom: 2%;
     text-align: left;
 }
+
 .modal-body {
     border-radius: 20px;
     background-image: url("https://drive.google.com/uc?export=view&id=1DQzR9pKIv_5zL41FlxG1XBpRPFFhAq8J");
@@ -332,7 +337,9 @@ export default {
 }
 
 .speaker-card:hover {
-    background-color: #fff;
+    background-color: red;
+    cursor: pointer;
+
 }
 
 .pastimg {
