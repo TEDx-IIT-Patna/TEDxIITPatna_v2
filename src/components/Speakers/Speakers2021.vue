@@ -19,7 +19,7 @@
                             <div class="col" v-for="speaker in speakers1">
                                 <div @click="n = speaker.id; show = !show">
                                     <div class="card tab-element-box"></div>
-                                    <div class="card speaker-card" style="width: 15rem;">
+                                    <div class="card speaker-card">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
                                     <div class="card-name">{{ speaker.name }}</div>
@@ -64,7 +64,7 @@
                             <div class="col" v-for="speaker in speakers2">
                                 <div @click="n = speaker.id; show = !show">
                                     <div class="card tab-element-box"></div>
-                                    <div class="card speaker-card" style="width: 15rem;">
+                                    <div class="card speaker-card">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
                                     <div class="card-name">{{ speaker.name }}</div>
@@ -110,7 +110,7 @@
                             <div class="col" v-for="speaker in speakers3">
                                 <div @click="n = speaker.id; show = !show">
                                     <div class="card tab-element-box"></div>
-                                    <div class="card speaker-card" style="width: 15rem;">
+                                    <div class="card speaker-card">
                                         <div><img class="pastimg" v-bind:src="speaker.image"></div>
                                     </div>
                                     <div class="card-name">{{ speaker.name }}</div>
@@ -291,6 +291,10 @@ export default {
 {
     margin-top: -15%;
 }
+.speaker-card
+{
+    width: 15rem;
+}
 .speaker-head {
     text-decoration: underline red solid 10px;
     text-align: center;
@@ -363,5 +367,35 @@ export default {
     margin-top: 25%;
     width: 15rem;
     transform: translate(-6px, 0px);
+}
+
+@media screen and (min-width: 1400px) and (max-width:3000px) 
+{
+    .speakers{
+        padding-top: 5%;
+        background-color: black;
+        min-height: 50vh;
+        background-size: cover;
+    }
+    .speaker-card-section
+{
+    margin-top: 10%;
+    padding-bottom: 15%;
+}
+.tab-element-box {
+    display: none;
+}
+ .speaker-head{
+    font-size: 4vw;
+  }
+  .speaker-card
+{
+    width: 10vw;
+}
+.pastimg
+{
+    min-width: 12vw;
+    min-height: 12vw;
+}
 }
 </style>

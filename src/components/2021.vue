@@ -96,6 +96,7 @@ export default {
   background-color: black;
   width: 100vw;
   margin-left: -2%;
+  overflow-x: hidden;
 }
 
 .e2021 {
@@ -210,6 +211,39 @@ h1 {
   .text {
     font-size: 15px;
     padding-top: 25vh;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width:3000px) 
+{
+  .header {
+    background-image: url("https://drive.google.com/uc?export=view&id=14zw7Kcg1NQRruqxLf83VKXKzZSGSTcri");
+    background-size: cover ;
+    height: 100vh;
+    background-repeat: no-repeat;
+		background-color: black;
+  }
+  .e2021{
+    background-color: black;
+    font-size: 2vw;
+    overflow-x: hidden;
+  }
+  .text{
+    font-size: 2vw;
+  }
+  h1
+  {
+    font-size: 3vw;
+  }
+  button
+  {
+    font-size: 2vw;
+  }
+  section{
+    background-color: black;
+    margin-top: -10vh;
+  }
+  .all{
+    overflow-x: hidden;
   }
 }
 </style>

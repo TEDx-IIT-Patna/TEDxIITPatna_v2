@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid">
         <h1 style="text-align: center;">GALLERY.</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-col-lg-4 ">
             <div class="gallery-col" v-for="image in images">
@@ -13,11 +13,13 @@
 </template>
 
 <style scoped>
-.container {
+.container-fluid {
     color: aliceblue;
     background-color: black;
     margin-left: 12%;
     margin-top: 10%;
+    align-items: center;
+    padding-bottom: 10%;
 }
 
 .tab-element-box {
@@ -56,6 +58,19 @@ h1 {
         margin-top: 10%;
     }
 }
+@media screen and (min-width: 1400px) and (max-width:3000px) 
+{
+    .pastimg
+{
+    min-width: 15vw;
+    min-height: 7vw;
+}
+h1
+{
+    font-size: 4vw;
+}
+}
+
 </style>
 
 <script>

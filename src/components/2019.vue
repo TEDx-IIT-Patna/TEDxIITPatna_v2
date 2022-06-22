@@ -8,8 +8,7 @@
           <h1 class="main-head">
             METAMORPHOSIS | 2019
           </h1>
-          Our second edition of TEDxIIT Patna depicted," change is the only constant, the only inevitable." Permanence
-          is an illusion, and whether it is nature transitioning from one season to another. The same applies to the pain that man is agonises over. The darkness today will have to change into
+          Our second edition of TEDxIIT Patna depicted," change is the only constant, the only inevitable." The same applies to the pain that man is agonises over. The darkness today will have to change into
           the brightest light tomorrow. Hence, going with "Metamorphosis" as the theme, the idea is to hear from the
           experts themselves on how change has affected today's technology, entertainment and most importantly, the
           people and the society.
@@ -92,6 +91,7 @@ export default {
   width: 100vw;
   margin-left: -2%;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .e2021 {
@@ -191,6 +191,38 @@ h1 {
   .text {
     font-size: 15px;
     padding-top: 25vh;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width:3000px) 
+{
+  .header {
+    background-size: cover ;
+    height: 100vh;
+    background-repeat: no-repeat;
+		background-color: black;
+  }
+  .e2021{
+    background-color: black;
+    font-size: 2vw;
+    overflow-x: hidden;
+  }
+  .text{
+    font-size: 2vw;
+  }
+  h1
+  {
+    font-size: 3vw;
+  }
+  button
+  {
+    font-size: 2vw;
+  }
+  section{
+    background-color: black;
+    margin-top: -10vh;
+  }
+  .all{
+    overflow-x: hidden;
   }
 }
 </style>
