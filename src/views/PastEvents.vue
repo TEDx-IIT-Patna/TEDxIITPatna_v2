@@ -7,7 +7,8 @@
 			<div class="text">
 				<h1 class="main-head" ><span class="highlight">P</span>ast Events.</h1>
 			</div>
-			<div class="container theme-group">
+			<br/>
+			<div class="container-fluid theme-group">
 				<div class="row">
 					<div class="col-md">
 						<div class="card tab-element-box"></div>
@@ -75,9 +76,15 @@ export default {
 	font-family: GothamMedium;
 	height: 100vh;
 }
+.theme-group
+{
+	margin-left: 10vw;
+}
 .main-head
 {
 	padding-left: 20%;
+	text-align: center;
+	margin-bottom: 10%;
 }
 .tab-group {
 	height: 768px;
@@ -94,7 +101,7 @@ export default {
 }
 
 .text {
-	width: 40vw;
+	width: 50vw;
 	transform: translate(0px, 200px);
 
 }
@@ -144,6 +151,7 @@ h1 {
 
 	.highlight {
 		color: black;
+		text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
 	}
 
 	.tab-element-box {
@@ -168,6 +176,32 @@ h1 {
 }
 .col23{
 	margin-left: 0;
+}
+.text{
+	text-align: center;
+	width: 100vw;
+}
+}
+@media screen and (min-width: 1300px) and (max-width:3000px)
+{
+	.tab-group{
+		background-size: cover;
+		height:100vh;
+		background-repeat: no-repeat;
+		overflow-y: hidden;
+	}
+	.tab-element-box {
+	display: none;
+}
+.theme
+{
+	width:15vw;
+	height:15vw;
+	margin-right: 30vw;
+	margin-top: 30vh;
+}
+h1{
+	font-size: 5vw;
 }
 }
 </style>

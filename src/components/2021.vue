@@ -92,7 +92,7 @@ export default {
   font-family: GothamBold;
 }
 .all {
-  height: 2500px;
+  height: 2000px;
   background-color: black;
   width: 100vw;
   margin-left: -2%;

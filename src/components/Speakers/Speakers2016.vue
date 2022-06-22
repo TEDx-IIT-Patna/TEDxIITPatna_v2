@@ -176,7 +176,7 @@ export default {
                     id: 1,
                     name: "Dr. Satyajit Singh",
                     position: "Doctor, Urologist",
-                    image: "",
+                    image: "https://drive.google.com/uc?export=view&id=1Kvy548QukaUn0lYkMMYC6CWrJ8xOzIek",
                     text: "Dr. Satyajit Singh is a consultant Urologist associated with Ruban Memorial Hospital, Patna. He served as a registrar, consultant and lecturer in various countries like UK, Scotland and Saudi Arabia.  ",
                     linkactive: false,
                     link: ""
