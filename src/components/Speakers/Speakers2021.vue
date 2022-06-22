@@ -1,5 +1,8 @@
 <template>
-    <section class="speakers">
+    <section class="speakers container-fluid">
+        <h1 class="speaker-head">SPEAKERS.
+        </h1>
+        <div class="speaker-card-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -160,6 +163,7 @@
 
 
         </div>
+        </div>
     </section>
 </template>
 
@@ -260,7 +264,7 @@ export default {
 <style scoped>
 .speakers {
     background-color: black;
-    margin-top: -5%;
+    margin-top: 5%;
 }
 
 .carousel-control {
@@ -283,7 +287,15 @@ export default {
     width: 15rem;
     padding-left: 4%;
 }
-
+.speaker-card-section
+{
+    margin-top: -15%;
+}
+.speaker-head {
+    text-decoration: underline red solid 10px;
+    text-align: center;
+    font-family: GothamBold;
+}
 .modal-card {
     height: 300px;
     width: 800px;

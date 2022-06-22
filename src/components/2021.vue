@@ -20,8 +20,7 @@
           <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
         </div>
-        <h1 class="speaker-head">SPEAKERS.</h1>
-
+        <h1 class="speaker-head" v-if="windowwidth < 600">SPEAKERS.</h1>
       </div>
       <section>
         <Speakers v-if="windowwidth > 990" />

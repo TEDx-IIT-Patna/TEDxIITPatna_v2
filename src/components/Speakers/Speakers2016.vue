@@ -1,119 +1,123 @@
 <template>
-    <section class="speakers">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+    <section class="speakers container-fluid">
+        <h1 class="speaker-head">SPEAKERS.
+        </h1>
+        <div class="speaker-card-section">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
 
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col" v-for="speaker in speakers1">
-                                <div @click="n = speaker.id; show = !show">
-                                    <div class="card tab-element-box"></div>
-                                    <div class="card speaker-card" style="width: 15rem;">
-                                        <div><img class="pastimg" v-bind:src="speaker.image"></div>
-                                    </div>
-                                    <div class="card-name">{{ speaker.name }}</div>
-                                </div>
-
-                            </div>
-                            <div v-for="speaker in speakers1">
-                                <div v-if="speaker.id === n">
-                                    <div v-if="show">
-                                        <Transition>
-                                            <div class="card modal-card">
-                                                <div class="container modal-body">
-                                                    <div class="row">
-                                                        <button class="btn-close modal-close"
-                                                            @click="show = !show"></button>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col"><img class="modalimg"
-                                                                v-bind:src="speaker.image"></div>
-                                                        <div class="col">
-                                                            <div class="modal-head">{{ speaker.name }}</div>
-                                                            <div class="modal-head2">{{ speaker.position }}</div>
-                                                            <div class="modal-text">{{ speaker.text }}</div>
-                                                            <br />
-                                                            <div class="container"><a :href=speaker.link
-                                                                    class="modal-link">Talk </a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </Transition>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="carousel-item ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col" v-for="speaker in speakers2">
-                                <div @click="n = speaker.id; show = !show">
-                                    <div class="card tab-element-box"></div>
-                                    <div class="card speaker-card" style="width: 15rem;">
-                                        <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col" v-for="speaker in speakers1">
+                                    <div @click="n = speaker.id; show = !show">
+                                        <div class="card tab-element-box"></div>
+                                        <div class="card speaker-card" style="width: 15rem;">
+                                            <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                                        </div>
+                                        <div class="card-name">{{ speaker.name }}</div>
                                     </div>
-                                    <div class="card-name">{{ speaker.name }}</div>
-                                </div>
 
-                            </div>
-                            <div v-for="speaker in speakers2">
-                                <div v-if="speaker.id === n">
-                                    <div v-if="show">
-                                        <Transition>
-                                            <div class="card modal-card">
-                                                <div class="container modal-body">
-                                                    <div class="row">
-                                                        <button class="btn-close modal-close"
-                                                            @click="show = !show"></button>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col"><img class="modalimg"
-                                                                v-bind:src="speaker.image"></div>
-                                                        <div class="col">
-                                                            <div class="modal-head">{{ speaker.name }}</div>
-                                                            <div class="modal-head2">{{ speaker.position }}</div>
-                                                            <div class="modal-text">{{ speaker.text }}</div>
-                                                            <br />
-                                                            <div class="container" v-if="speaker.linkactive === true"><a
-                                                                    :href=speaker.link class="modal-link">Talk </a>
+                                </div>
+                                <div v-for="speaker in speakers1">
+                                    <div v-if="speaker.id === n">
+                                        <div v-if="show">
+                                            <Transition>
+                                                <div class="card modal-card">
+                                                    <div class="container modal-body">
+                                                        <div class="row">
+                                                            <button class="btn-close modal-close"
+                                                                @click="show = !show"></button>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col"><img class="modalimg"
+                                                                    v-bind:src="speaker.image"></div>
+                                                            <div class="col">
+                                                                <div class="modal-head">{{ speaker.name }}</div>
+                                                                <div class="modal-head2">{{ speaker.position }}</div>
+                                                                <div class="modal-text">{{ speaker.text }}</div>
+                                                                <br />
+                                                                <div class="container"><a :href=speaker.link
+                                                                        class="modal-link">Talk </a></div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                            </div>
-                                        </Transition>
+                                                </div>
+                                            </Transition>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-item ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col" v-for="speaker in speakers2">
+                                    <div @click="n = speaker.id; show = !show">
+                                        <div class="card tab-element-box"></div>
+                                        <div class="card speaker-card" style="width: 15rem;">
+                                            <div><img class="pastimg" v-bind:src="speaker.image"></div>
+                                        </div>
+                                        <div class="card-name">{{ speaker.name }}</div>
+                                    </div>
+
+                                </div>
+                                <div v-for="speaker in speakers2">
+                                    <div v-if="speaker.id === n">
+                                        <div v-if="show">
+                                            <Transition>
+                                                <div class="card modal-card">
+                                                    <div class="container modal-body">
+                                                        <div class="row">
+                                                            <button class="btn-close modal-close"
+                                                                @click="show = !show"></button>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col"><img class="modalimg"
+                                                                    v-bind:src="speaker.image"></div>
+                                                            <div class="col">
+                                                                <div class="modal-head">{{ speaker.name }}</div>
+                                                                <div class="modal-head2">{{ speaker.position }}</div>
+                                                                <div class="modal-text">{{ speaker.text }}</div>
+                                                                <br />
+                                                                <div class="container" v-if="speaker.linkactive === true"><a
+                                                                        :href=speaker.link class="modal-link">Talk </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </Transition>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
-
+                <button class="carousel-control-prev carousel-control" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next carousel-control" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <button class="carousel-control-prev carousel-control" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next carousel-control" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </section>
 </template>
@@ -201,7 +205,7 @@ export default {
 <style scoped>
 .speakers {
     background-color: black;
-    margin-top: -15%;
+    margin-top: 5%;
 }
 
 .carousel-control {
@@ -253,14 +257,23 @@ export default {
 }
 
 .card-name {
-    
+
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, .05) 10%, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, .75) 75%, rgba(0, 0, 0, 1) 100%) repeat scroll 0 0;
     position: relative;
     height: 60px;
     width: 15rem;
     padding-left: 4%;
     font-size: 20px;
-    transform: translate(8%,-70px);
+    transform: translate(8%, -70px);
+}
+.speaker-card-section
+{
+    margin-top: -10%;
+}
+.speaker-head {
+    text-decoration: underline red solid 10px;
+    text-align: center;
+    font-family: GothamBold;
 }
 
 .modal-link {

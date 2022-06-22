@@ -10,17 +10,14 @@
             SHEDDING OFF FEATHERS | 2016
           </h1>
           Our very first edition in 2016 was kick started with the theme of Shedding Off Feathers.
-          "The secret of change is to focus all your energy not on fighting the old, but on building the new"
           Just as birds shed their feathers allowing the new ones to embrace them taking them afresh to infinite skies,
           bringing out change is an inevitable part of one's life to keep walking the course of life. 'Shedding off
-          feathers' basically reflects the same urge to always keep our arms open to change. Change within us to become
-          a better person or to this society to make this a better place to live in.
+          feathers' basically reflects the same urge to always keep our arms open to change. 
 
           <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
         </div>
-        <br/><br/>
-        <h1 class="speaker-head">SPEAKERS.
+        <h1 class="speaker-head" v-if="windowwidth < 600">SPEAKERS.
         </h1>
       </div>
       <section>
@@ -88,6 +85,7 @@ export default {
 
 .speaker-head
 {
+  margin-top: 15%;
   text-decoration: underline red solid 10px;
   text-align: center;
   font-family: GothamBold;

@@ -1,5 +1,7 @@
 <template>
     <section class="speakers">
+        <h1 class="speaker-head">SPEAKERS.
+        </h1>
         <div class="speaker-cards-section">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding-left: 7vw;">
                 
@@ -146,14 +148,13 @@ export default {
     transform: translate(-9px, 120px);
 }
 .card-name {
-    transform: translate(8%, -65px);
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, .05) 10%, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, .75) 75%, rgba(0, 0, 0, 1) 100%) repeat scroll 0 0;
     position: relative;
-    height: 50px;
+    height: 60px;
     width: 15rem;
     padding-left: 4%;
     font-size: 25px;
-    transform: translate(50px,-50px);
+    transform: translate(30px,-70px);
     width:15rem;
 }
 .row {
@@ -202,12 +203,26 @@ export default {
 
 
 .speaker-cards-section {
-    transform: translate(0,-250px);
+    padding-bottom: 100px;
+    transform: translate(0,-20%);
 }
-@media screen and (min-width: 600px) and (max-width: 990px) {
-
-.speaker-cards-section {
-    transform: translate(0,-440px);
+.speaker-head
+{
+    text-decoration: underline red solid 10px;
+  text-align: center;
+  font-family: GothamBold;
+}
+@media all and (max-width: 600px) {
+.speaker-head
+{
+    display: none;
+}
+}
+@media all and (min-width: 600px) {
+.speakers
+{
+    height:60vh;
+    margin-top: 10%;
 }
 }
 </style>
