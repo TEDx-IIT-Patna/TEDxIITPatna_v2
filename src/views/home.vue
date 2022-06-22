@@ -100,8 +100,8 @@
 
     <section class="speaker_nomination">
       <span class="nom_heading">Want to feature in the 4th edition of Tedx IITPatna</span>
-      <span class="speaker_nom_text">Click the button for register as a speaker</span>
-      <button class="custom-btn btn-7"><span>Apply Now!</span></button>
+      <!-- <span class="speaker_nom_text">Click the button for register as a speaker</span> -->
+      <button class="custom-btn btn-7"><span>Nominate Yourself!</span></button>
     </section>
 
     <section class="footer_section">
@@ -342,7 +342,7 @@ beforeDestroy(){
 }
 
 // Used Chroma-Js library for color transition from black to white
-var scale = chroma.scale(['#000000', '#ffffff']).domain([3120, 3900]);
+var scale = chroma.scale(['#000000', '#ffffff']).domain([screen.height*4.2, screen.height*4.7]);
 window.addEventListener('scroll', function () {
   console.log(window.scrollY);
   document.getElementById('second').style.backgroundColor = scale(window.pageYOffset);

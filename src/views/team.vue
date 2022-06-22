@@ -3,7 +3,7 @@
     <section class="section1">
       <section class="navbar_mobile" >
       <nav>
-        <router-link to="/nav-panel">Navigation Panel</router-link>
+        <router-link style="color:black;" to="/nav-panel">Navigation Panel</router-link>
       </nav>
       <router-view/>
       </section>
