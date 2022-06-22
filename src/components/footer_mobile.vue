@@ -1,17 +1,17 @@
 
 <template>
-    <!-- <img src="@/assets/footerimg.png" class="footer-img"> -->
+    <img src="@/assets/footerimg.png" class="footer-img">
     <footer class="footer">
         <!-- need to put the tedxiitpatna logo here -->
         <iframe class="Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.080990562473!2d84.84695271665835!3d25.53567897977689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed577f6954a4ab%3A0x6ce8f1b9fc2aa02a!2sIndian%20Institute%20Of%20Technology%E2%80%93Patna%20(IIT%E2%80%93Patna)!5e0!3m2!1sen!2sin!4v1654531203276!5m2!1sen!2sin"
-            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="footer-links">
+            style="border:0; min-width: 343px; width: 50%;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer-links" style="left: -0.5vw; position: relative; width: 100vw;">
             <div class="pages">
                 <router-link to="/"><span>Home</span></router-link>
                 <router-link to="/about"><span>About</span></router-link>
                 <router-link to="/past_events"><span>Past Events</span></router-link>
-                <router-link to="/partners"><span>Our Partners</span></router-link>
+                <router-link to="/partners"><span>Partners</span></router-link>
             </div>
             <span class="sep"></span>
             <div class="misc">
@@ -77,7 +77,7 @@
 
 <script>
 export default {
-    name: 'footer'
+    name: 'footer_mobile'
 
 }
 </script>

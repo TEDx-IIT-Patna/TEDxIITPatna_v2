@@ -35,6 +35,7 @@ Featuring diverse speakers from various walks of life, we hope to provide an enl
 .heading{
     /* margin-left: 5%; */
     margin-top: 10%;
+    margin-left: 5%;
 }
 .content{
     display: flex;
