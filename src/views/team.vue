@@ -2,8 +2,11 @@
     <section class="main" v-if="screen > 1000">
     <section class="section1">
       <section class="navbar_mobile" >
-      <nav>
+      <!-- <nav>
         <router-link to="/nav-panel">Navigation Panel</router-link>
+      </nav> -->
+      <nav class="navbar_team">
+      <Nav />
       </nav>
       <router-view/>
       </section>
@@ -293,12 +296,13 @@ import gsap from "gsap";
 import { TweenMax, TimelineMax } from "gsap";
 // import ScrollMagic from "scrollmagic";
 import team_mobile from "@/components/team_mobile.vue";
+import Nav from '@/components/navbarpanel.vue';
 // import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
 // ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 export default {
   name: "team",
-  components: { team_mobile },
+  components: { team_mobile, Nav },
   data() {
     return {
       screen: screen.width,

@@ -29,6 +29,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    left: 0.5vw;
+    position: relative;
 }
 
 .footer-links > * > * {
@@ -62,13 +64,16 @@
 .sep{
     display: block;
     width: 2px;
-    height: 21vh;
+    height: 21vh !important;
     background-color: grey;
     margin: 0 1rem;
 }
 
 .socials{
     margin: 2rem 0;
+    text-align: center;
+    align-content: center;
+    margin-left: 2vh;
 }
 
 .socials .email{
@@ -92,4 +97,8 @@
 
 .socials > a{
     color: white;
+}
+
+.social_icons{
+    margin-right: 4vw;
 }

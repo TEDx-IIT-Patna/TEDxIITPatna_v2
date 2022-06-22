@@ -1,86 +1,33 @@
 <template>
-  <div class="nav">
-    <div class="close">
-      <router-link to="/team">Close</router-link>
-      <router-view/>
+  <span class="show-panel" style="top: 0rem;
+    right: 1rem;" @click="this.state = 'show'">
+    <div class="menu">
+      <i id="bar" class="fa fa-bars"></i>
     </div>
-    <div class="options">
-      <ul>
-        <li>
-          <router-link :key="$route.fullPath" to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link :key="$route.fullPath" to="/team">Team</router-link>
-        </li>
-        <li>
-          <router-link :key="$route.fullPath" to="/past_events">Past Events</router-link>
-        </li>
-        <li>
-          <router-link :key="$route.fullPath" to="/partners">Partners</router-link>
-        </li>
-        <li>
-          <router-link :key="$route.fullPath" to="/about">About</router-link>
-        </li>
-      </ul>
+  </span>
+  <nav :class="['nav', this.state]">
+    <div class="close" @click="this.state = 'hidden'">Close</div>
+    <div class="links">
+      <router-link to="/"><span>Home</span></router-link>
+      <router-link to="/pastevents"><span>Past Events</span></router-link>
+      <router-link to="/partners"><span>Partners</span></router-link>
+      <router-link to="/about"><span>About</span></router-link>
     </div>
-    <div class="nav_img_container">
-      <div class="d-flex justify-content-center" id="nav_div">
-        <img id="nav_img" src="../assets/navpicture.png" height="400" width="350" />
-      </div>
-    </div>
-  </div>
-  
+    <img src="@/assets/images/Flower-cropped.png" class="flower">
+  </nav>
 </template>
 
+<script>
+export default {
+  name: "Nav",
+  data() {
+    return {
+      state: 'hidden'
+    }
+  }
+}
+</script>
+
 <style scoped>
-
-.nav {
-  background-color: black;
-  height: 100vh;
-  overflow: hidden;
-  width: 50vw;
-  margin-left: 50vw;
-}
-
-.close{
-  display: block;
-  width: 100%;
-  text-align: right;
-  padding: 5%;
-  top: -16vh;
-  position: relative;
-  right: -12vh;
-}
-.close a{
-  text-decoration: none;
-  color: white;
-
-}
-ul {
-  margin-top: 1rem;
-  list-style: none;
-  text-align: center;
-}
-.options{
-  position: relative;
-  top: -17vh;
-  left: -5vw
-}
-.nav_div{
-  position: absolute;
-}
-li a{
-  text-decoration: none;
-  color: white;
-  font-size: 150%;
-}
-#nav_img {
-  width: 38vw;
-}
-
-.nav_img_container{
-  position: relative;
-    top: -12vh;
-    right: -4vw;
-}
+@import '@/assets/css/nav.css'
 </style>

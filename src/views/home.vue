@@ -94,14 +94,14 @@
       <!-- </section> -->
     </section>
 
-    <section class="homepage_conent">
+    <section class="homepage_con`ent">
       <home_contentVue />
     </section>
 
     <section class="speaker_nomination">
-      <span class="nom_heading">Want to feature in the 4th edition of Tedx IITPatna</span>
-      <span class="speaker_nom_text">Click the button for register as a speaker</span>
-      <button class="custom-btn btn-7"><span>Apply Now!</span></button>
+      <span class="nom_heading">Want to feature in the 4th edition of Tedx IITPatna?</span>
+      <!-- <span class="speaker_nom_text">Click the button for register as a speaker</span> -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUgMii_jdiUM2yOeLj9ieFwIrI0Mb5PSNo9JJMmUxx8V3hvw/viewform" target="blank"><button class="custom-btn btn-7"><span>Nominate Yourself!</span></button></a>
     </section>
 
     <section class="footer_section">

@@ -8,18 +8,23 @@
             style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="footer-links">
             <div class="pages">
-                <router-link to="/about"><span>Home</span></router-link>
+                <router-link to="/"><span>Home</span></router-link>
                 <router-link to="/about"><span>About</span></router-link>
-                <router-link to="/pastevents"><span>Past Events</span></router-link>
+                <router-link to="/past_events"><span>Past Events</span></router-link>
                 <router-link to="/partners"><span>Our Partners</span></router-link>
             </div>
             <span class="sep"></span>
             <div class="misc">
                 <a href="#" class="link">Subscribe to our<br>mailing list!</a>
-                <a href="#" class="link">Speaker Applications</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUgMii_jdiUM2yOeLj9ieFwIrI0Mb5PSNo9JJMmUxx8V3hvw/viewform" target="_blank" class="link">Speaker Applications</a>
             </div>
         </div>
         <div class="socials">
+            <a href="https://www.facebook.com/tedxiitpatna/" target="_blank" rel="noopener noreferrer"><i  class="social_icons fa-lg fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/tedxiitpatna?utm_medium=copy_link" target="_blank" rel="noopener noreferrer"><i  class="social_icons fa-lg fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/tedxiitpatna/" target="_blank" rel="noopener noreferrer"><i  class="social_icons fa-lg fa-brands fa-linkedin"></i></a>
+            <a href="https://m.youtube.com/user/tedxtalks" target="_blank" rel="noopener noreferrer"><i  class="social_icons fa-lg fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com/tedxiitpatna/" target="_blank" rel="noopener noreferrer"><i  class="social_icons fa-lg fa-brands fa-twitter"></i></a><br/><br/>
             <a href="mailto:tedxiitpatna@gmail.com" class="email">tedxiitpatna@gmail.com</a>
             <div class="links">
 

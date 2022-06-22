@@ -58,6 +58,7 @@
                         community.
 
                     </p>
+                    <a href="http://www.ted.com" target="_blank" rel="noopener noreferrer"><span class="ted_off_site">Want to know more click here</span></a>
                 </div>
 
                 <div class="image image-2 col-5">
@@ -122,6 +123,23 @@ export default {
     text-align: center;
 }
 
+.ted_off_site{
+    color: black;
+    text-decoration: none;
+}
+.ted_off_site:hover{
+    color: red;
+    text-decoration: none;
+}
+
+a{
+    text-decoration-color: black;
+}
+
+a:hover{
+    text-decoration-color: black;
+}
+
 p{
     font-family: gothamlight;
 }
@@ -137,7 +155,7 @@ p{
 
 .content2 {
     margin-top: 8%;
-    margin-left: 5vw;
+    margin-left: -7vw;
     margin-top: 23vh;
 }
 
@@ -199,7 +217,7 @@ p{
 }
 
 .image-2 {
-    left: 39vw;
+    left: 47vw;
     position: absolute;
     top: 95vh;
 }
