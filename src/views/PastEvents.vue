@@ -40,22 +40,26 @@
 							</div>
 						</router-link>
 					</div>
+					
 				</div>
+				
 			</div>
 		</section>
 
 
 
 	</div>
+	<Footer/>
 </template>
 
 <script>
 import Nav from '@/components/Nav.vue';
+import Footer from '@/components/footer.vue';
 // @ is an alias to /src
 
 export default {
 	name: "PastEvents",
-	components: { Nav },
+	components: { Nav, Footer },
 	mounted() {
     if (localStorage.getItem('reloaded')) {
         // The page was just reloaded. Clear the value from local storage
@@ -87,11 +91,12 @@ export default {
 	margin-bottom: 10%;
 }
 .tab-group {
-	height: 768px;
+	height: 100vh;
 	max-width: 100vw;
 	/* background-image: url("https://drive.google.com/uc?export=view&id=1zv7nWao1g5nDkSRThT4SOOTDqkK_KJ8p"); */
 	background-image: url("https://drive.google.com/uc?export=view&id=1VnCqBNliFLv74ipW9ElyASII-Pe4fCJA");
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .tab-element-box {
