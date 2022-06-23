@@ -1,0 +1,137 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 8%;
+    transition: all 0.5s 0s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.nav.hidden {
+    width: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.nav.show {
+    width: min(100vw, 600px);
+    pointer-events: all;
+    opacity: 1;
+}
+
+.nav::before { --order: 1 }
+.nav::after { --order: 2 }
+
+.nav::before,
+.nav::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s calc(var(--order) * 0.1s);
+    z-index: -1;
+}
+
+.nav.hidden::before,
+.nav.hidden::after {
+    width: 0%;
+    background-color: transparent;
+}
+
+.nav.show::before,
+.nav.show::after {
+    width: 100%;
+    background-color: var(--red);
+    transition: all 0.5s calc(var(--order) * 0.1s);
+}
+.nav.show::after {
+    background-color: #000000;
+}
+
+.show-panel {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    text-align: right;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav .close{
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s calc(var(--order) * 0.1s);
+}
+
+.nav.hidden .close {
+    pointer-events: none;
+    opacity: 0;
+}
+.nav.show .close {
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+.nav .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1rem;
+    align-items: left;
+    --order: 3;
+}
+.nav.hidden .links{
+    transition: all 0.2s 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+.nav.show .links {
+    transition: all 0.2s calc(var(--order) * 0.1s);
+    pointer-events: all;
+    opacity: 1;
+}
+
+.nav .links a {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    letter-spacing: 0.4rem;
+    color: white;
+    text-align: left;
+    font-family: 'Gotham', sans-serif;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+.nav .links a:hover {
+    color: var(--red)
+}
+
+.nav .flower{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: clamp(35vh, max(35vw, 35vh), 400px);
+    transition: all 0.2s calc(var(--order) * 0.1s);
+
+    --order: 3;
+}
+.nav.hidden .flower {
+    opacity: 0;
+    pointer-events: none;
+}
+.nav.show .flower {
+    pointer-events: all;
+    opacity: 1;
+}

@@ -1,0 +1,47 @@
+/* custom navbar for web-view homapage */
+.navbar-web{
+    display: inline-flex;
+    position: absolute;
+    left: 50vw;
+    bottom: 0;
+    padding: 0;
+    margin-left: 10vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+    transform-origin: 0 100%;
+    transform: rotate(-90deg) translate(0, calc(-100% - 10rem));
+    
+    font-family: 'Gotham';
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.4rem;
+}
+.navbar-web a{
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    width: max-content;
+    transition: color 0.2s;
+    text-transform: uppercase;
+}
+.navbar-web a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: transparent;
+    transition: all 0.5s;
+    z-index: -1;
+}
+.navbar-web a:hover{
+    color: white;
+}
+.navbar-web a:hover::before{
+    background-color: var(--red-l1);
+    width: 500px;
+}
