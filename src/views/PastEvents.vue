@@ -91,6 +91,7 @@ export default {
 	max-width: 100vw;
 	/* background-image: url("https://drive.google.com/uc?export=view&id=1zv7nWao1g5nDkSRThT4SOOTDqkK_KJ8p"); */
 	background-image: url("https://drive.google.com/uc?export=view&id=1VnCqBNliFLv74ipW9ElyASII-Pe4fCJA");
+	overflow-x: hidden;
 }
 
 .tab-element-box {
@@ -162,6 +163,10 @@ h1 {
 		width: 10rem;
 		margin-bottom: 10%;
 	}
+	.main-head
+{
+	padding-left: 0%;
+}
 }
 
 @media screen and (min-width: 600px) and (max-width:1120px) {
@@ -173,6 +178,7 @@ h1 {
 .main-head
 {
 	padding-left: 0%;
+	margin-left: -15vw;
 }
 .col23{
 	margin-left: 0;
