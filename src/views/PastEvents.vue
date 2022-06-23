@@ -47,9 +47,9 @@
 		</section>
 
 
-
+<Footer/>
 	</div>
-	<Footer/>
+	
 </template>
 
 <script>
@@ -141,6 +141,7 @@ h1 {
 
 	.theme-group {
 		padding-top: 40%;
+		height: 150vh;
 
 	}
 
