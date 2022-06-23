@@ -2,7 +2,7 @@
 <section class="wrapper_home">
     <section>
       <nav>
-        <router-link to="/nav-mob-panel">Navigation Panel</router-link>
+        <router-link to="/nav-mob-panel"><span class="nav_span">Navigation Panel</span></router-link>
       </nav>
       <router-view/>
 
@@ -76,11 +76,11 @@ nav {
 }
 
 nav a {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   font-weight: bold;
   font-family: gothambold;
   text-decoration: none;
-  color: #2c3e50;
+  color: black;
 }
 
 nav a.router-link-exact-active {
