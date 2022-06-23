@@ -41,7 +41,11 @@
                                                             <div class="col">
                                                                 <div class="modal-head">{{ speaker.name }}</div>
                                                                 <div class="modal-head2">{{ speaker.position }}</div>
-                                                                <div class="modal-text">{{ speaker.text }}</div>
+                                                                <div class="modal-text">{{ speaker.text }}
+                                                                <br/><br/>
+                                                                <a :href=speaker.link
+                                                                        class="modal-link2">Talk </a>
+                                                                </div>
                                                                 <br />
                                                                 <div class="container"><a :href=speaker.link
                                                                         class="modal-link">Talk </a></div>
@@ -86,7 +90,11 @@
                                                             <div class="col">
                                                                 <div class="modal-head">{{ speaker.name }}</div>
                                                                 <div class="modal-head2">{{ speaker.position }}</div>
-                                                                <div class="modal-text">{{ speaker.text }}</div>
+                                                                <div class="modal-text">{{ speaker.text }}
+                                                                <br/><br/>
+                                                                <a :href=speaker.link
+                                                                        class="modal-link2">Talk </a>
+                                                                </div>
                                                                 <br />
                                                                 <div class="container" v-if="speaker.linkactive === true"><a
                                                                         :href=speaker.link class="modal-link">Talk </a>
@@ -287,7 +295,9 @@ export default {
     text-align: right;
     margin-left: 150px;
 }
-
+.modal-link2 {
+    display: none;
+}
 .speaker-card {
     background-color: black;
     margin: 5%;
@@ -335,6 +345,49 @@ export default {
 {
     min-width: 12vw;
     min-height: 12vw;
+}
+.modal-text {
+    text-align: left;
+    padding-right: 5%;
+    font-size: 2vh;
+    margin-bottom: -25vh;
+}
+.modal-card {
+    min-height: 35vw;
+    min-width: 60vw;
+    transform: translate(-0vw, -30vh);
+    color: black;
+    padding-bottom: 0%;
+    background-color: rgba(0, 0, 0, 0);
+}
+.modal-close {
+    transform: translate(0, 0);
+}
+.modal-head {
+    font-size: 5vh;
+    font-weight: 600;
+    padding-bottom: 2%;
+    text-align: left;
+}
+.modal-head2 {
+    font-size: 3vh;
+    font-weight: 300;
+    padding-bottom: 2%;
+    text-align: left;
+}
+.modalimg {
+    margin-top: 70%;
+    width: 15vw;
+    transform: translate(-6px, 0px);
+}
+.modal-link {
+    display: none;
+}
+.modal-link2 {
+    text-decoration: none;
+    color: red;
+    display: contents;
+    margin-top: 10%;
 }
 }
 </style>
