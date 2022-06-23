@@ -44,7 +44,7 @@ h1 {
 
 @media screen and (max-width: 600px) {
     .row {
-        margin-left: 10%;
+        margin-left: 6%;
         align-items: center;
     }
 
@@ -54,7 +54,7 @@ h1 {
         margin-top: 25%;
     }
 
-    .container {
+    .container-fluid {
         color: aliceblue;
         background-color: black;
         margin-left: 8px;
@@ -65,12 +65,16 @@ h1 {
 {
     .pastimg
 {
-    min-width: 15vw;
-    min-height: 7vw;
+    min-width: 19vw;
+    min-height: 8vw;
+    margin-right: 2%;
 }
 h1
 {
     font-size: 4vw;
+}
+.container-fluid{
+   transform: translate(-5%);
 }
 }
 

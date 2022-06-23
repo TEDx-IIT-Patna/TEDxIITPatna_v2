@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <h1 style="text-align: center;">GALLERY.</h1>
+        <h1>GALLERY.</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-col-lg-4 ">
             <div class="gallery-col" v-for="image in images">
                 <div class="card tab-element-box"></div>
@@ -38,11 +38,12 @@ h1 {
     font-size: 40px;
     margin-left: -12%;
     text-decoration: underline red solid 10px;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {
     .row {
-        margin-left: 22px;
+        margin-left: 6%;
         align-items: center;
     }
 
@@ -52,7 +53,7 @@ h1 {
         margin-left: 0px;
     }
 
-    .container {
+    .container-fluid {
         transform: translate(0, -350px);
         margin-left: 8px;
         margin-top: 10%;
@@ -62,8 +63,12 @@ h1 {
 {
     .pastimg
 {
-    min-width: 15vw;
-    min-height: 7vw;
+    min-width: 19vw;
+    min-height: 8vw;
+    margin-right: 2%;
+}
+.container-fluid{
+   transform: translate(-5%);
 }
 h1
 {
