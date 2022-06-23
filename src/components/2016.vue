@@ -29,7 +29,7 @@
       <section>
         <EventGallery />
       </section>
-
+    <Footer/>
     </div>
   </div>
 </template>
@@ -40,6 +40,7 @@ import Speakers from './Speakers/Speakers2016';
 import EventGallery from './EventGallery/EventGallery2016.vue';
 import Speakers2 from './Speakers/Speakers2016mobile';
 import NavVue from './Nav.vue';
+import Footer from './footer.vue';
 export default {
   name: '2016',
 
@@ -69,9 +70,12 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2, NavVue
-
-  }
+    Speakers,
+    EventGallery,
+    Speakers2,
+    NavVue,
+    Footer
+}
 
 }
 </script>

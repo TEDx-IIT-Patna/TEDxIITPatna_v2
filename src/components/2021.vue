@@ -32,6 +32,7 @@
       <section>
         <EventGallery />
       </section>
+      <Footer/>
     </div>
   </div>
 
@@ -43,6 +44,7 @@ import Speakers from './Speakers/Speakers2021';
 import Speakers2 from './Speakers/Speakers2021mobile';
 import EventGallery from './EventGallery/EventGallery2021.vue';
 import NavVue from './Nav.vue';
+import Footer from './footer.vue';
 export default {
   name: '2021',
 
@@ -71,9 +73,12 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2, NavVue
-
-  }
+    Speakers,
+    EventGallery,
+    Speakers2,
+    NavVue,
+    Footer
+}
 
 }
 </script>

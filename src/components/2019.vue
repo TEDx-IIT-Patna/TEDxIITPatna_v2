@@ -26,8 +26,11 @@
       <section>
         <EventGallery />
       </section>
+      <Footer/>
     </div>
+     
   </div>
+ 
 </template>
 
 <script>
@@ -36,6 +39,7 @@ import Speakers from './Speakers/Speakers2019';
 import Speakers2 from './Speakers/Speakers2019mobile';
 import EventGallery from './EventGallery/EventGallery2019.vue';
 import NavVue from './Nav.vue';
+import Footer from './footer.vue';
 export default {
   name: '2021',
 
@@ -64,7 +68,7 @@ export default {
   },
   components:
   {
-    Speakers, EventGallery, Speakers2, NavVue
+    Speakers, EventGallery, Speakers2, NavVue, Footer
 
   }
 
@@ -75,6 +79,7 @@ export default {
 .header {
   background-image: url("https://drive.google.com/uc?export=view&id=1Y9yh01LAt2rb734XIeB74fx74NT5KbOl");
   height: 768px;
+  color: #fff;
 }
 
 
@@ -94,7 +99,7 @@ export default {
   overflow-x: hidden;
 }
 
-.e2021 {
+.e2019 {
   background-color: black;
   color: white;
   height: 100vh;
