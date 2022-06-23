@@ -1,5 +1,9 @@
 <template>
   <section>
+    <nav>
+        <router-link to="/nav-mob-panel"><span class="nav_span">Navigation Panel</span></router-link>
+      </nav>
+      <router-view/>
     <div class="top-teams"><span style="margin-right: 1.5vh">Team</span></div>
     <div class="faculty">
       <h1 class="faculty_text">Faculty</h1>
@@ -21,7 +25,7 @@
                   Dr. Sujoy K. Samanta<br />Professor In-Charge
                 </div>
                 <div class="col-4 d-flex align-items-center">
-                  <svg
+                  <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
                     height="30"
@@ -32,7 +36,8 @@
                     <path
                       d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
                     /></svg
-                  ><svg
+                  ><svg -->
+                    <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
                     height="30"
@@ -48,7 +53,7 @@
               </div>
             </div>
           </div>
-          <div class="card" style="width: 15rem">
+          <!-- <div class="card" style="width: 15rem">
             <img src="../assets/org.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <div class="card-text row">
@@ -82,7 +87,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -189,10 +194,14 @@
       <span style="margin-right: 1.5vh">2.8</span>
     </div>
   </section>
+  <section class="footer_section">
+      <footerVue />
+    </section>
 </template>
 
 <script>
   import team from "../assets/team.json"
+  import footerVue from "../components/footer_mobile.vue"
 export default {
   name: "team_mobile",
 data () {
@@ -200,6 +209,9 @@ data () {
       team: team,
     }
   },
+  components: {
+    footerVue,
+  }
 };
 </script>
 
@@ -210,6 +222,23 @@ data () {
   border: 0;
 }
 
+nav{
+      text-align: end;
+    margin-right: 2vw;
+}
+
+a{
+  text-decoration-color: black;
+}
+a:hover{
+  text-decoration-color: black;
+}
+.nav_span{
+  color: black;
+}
+.nav_span:hover{
+  color: red;
+}
 .faculty {
   width: 100%;
   text-align: center;
