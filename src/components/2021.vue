@@ -229,11 +229,11 @@ h1 {
   }
   .e2021{
     background-color: black;
-    font-size: 2vw;
+    font-size: 1vw;
     overflow-x: hidden;
   }
   .text{
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   h1
   {

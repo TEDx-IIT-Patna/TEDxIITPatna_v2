@@ -216,7 +216,7 @@ h1 {
     overflow-x: hidden;
   }
   .text{
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   h1
   {

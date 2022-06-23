@@ -1,8 +1,9 @@
 <template>
 
 	<div class="pastevents">
-		<Nav />
+		
 		<section class="tab-group">
+			<Nav />
 			<!-- <img class="pastimgs" v-bind:src="illustrations[0]" alt=""> -->
 			<div class="text">
 				<h1 class="main-head" ><span class="highlight">P</span>ast Events.</h1>
@@ -91,7 +92,7 @@ export default {
 	margin-bottom: 10%;
 }
 .tab-group {
-	height: 100vh;
+	max-height: 100vh;
 	max-width: 100vw;
 	/* background-image: url("https://drive.google.com/uc?export=view&id=1zv7nWao1g5nDkSRThT4SOOTDqkK_KJ8p"); */
 	background-image: url("https://drive.google.com/uc?export=view&id=1VnCqBNliFLv74ipW9ElyASII-Pe4fCJA");
