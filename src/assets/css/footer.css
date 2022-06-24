@@ -17,7 +17,7 @@
     background-color: black;
 }
 
-.footer .logo{
+.footer .logo {
     grid-area: logo;
     display: flex;
     justify-content: center;
@@ -28,7 +28,8 @@
     max-height: 50px;
     /* border: 1px solid red; */
 }
-.footer .logo img{
+
+.footer .logo img {
     height: 100%;
 }
 
@@ -45,7 +46,6 @@
 .Map iframe {
     border-radius: 5px;
     width: 100%;
-    min-width: 360px;
     max-width: 500px;
     aspect-ratio: 16 / 9;
 }
@@ -58,6 +58,7 @@
         "nav misc"
         "socials socials"
     ;
+    grid-gap: 1rem;
     grid-template-rows: auto;
 }
 
@@ -75,9 +76,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1rem;
 
-    font-size: 0.9rem;
+    font-size: calc(50 * (clamp(250px, 50vw, 300px) / 1080));
     font-weight: 500;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
@@ -90,7 +90,11 @@
 
 .socials {
     grid-area: socials;
+    display: flex;
     padding: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .socials .email {
@@ -118,12 +122,15 @@
     background-color: white;
     border-radius: 100px;
 }
-.socials .link+.link{
+
+.socials .link+.link {
     margin-left: 1rem;
 }
-.socials .link .icon{
+
+.socials .link .icon {
     width: 100%;
 }
+
 .socials .link .name {
     position: absolute;
     top: -100%;
@@ -137,14 +144,51 @@
     pointer-events: none;
     opacity: 0;
 }
-.socials .link:hover .name{
+
+.socials .link:hover .name {
     opacity: 1;
     transform: translate(-50%, 0px);
 }
 
-.disclaimer{
+.disclaimer {
     grid-area: disclaimer;
     text-align: center;
     padding: 5%;
     text-transform: capitalize;
+}
+
+/* mobile view */
+@media only screen and (max-width: 1000px) {
+    .footer {
+        grid-template-areas:
+            "logo logo"
+            "map map"
+            "links links"
+            "disclaimer disclaimer"
+        ;
+        padding: 0 5%;
+        place-content: center;
+    }
+    .Map{
+        justify-content: center;
+    }
+    .Map iframe{
+        width: 90%;
+        min-width: unset;
+        max-width: unset;
+        height: 25vh;
+        aspect-ratio: unset;
+    }
+    .left-wrapper{
+        margin-top: 3rem;
+        grid-template-columns: auto auto;
+        place-content: center;
+    }
+    .nav-links{
+        align-items: flex-end;
+        text-align: right;
+    }
+    .socials{
+        align-items: center;
+    }
 }

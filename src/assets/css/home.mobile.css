@@ -1,0 +1,103 @@
+.landing.mobile{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    padding-bottom: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing.mobile .countdown-container{
+    position: static;
+    text-align: center;
+}
+.landing.mobile .countdown-container .title{
+    width: 100%;
+    margin: 0;
+    font-size: calc(22 * (clamp(380px, 70vw, 580px) / 1080));
+    font-weight: 500;
+}
+.landing.mobile .countdown-container .countdown,
+.landing.mobile .countdown-container .countdown span{
+    margin-top: 1ch;
+    margin-bottom: 4ch;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: calc(28 * (clamp(380px, 70vw, 580px) / 1080));
+    letter-spacing: calc(28 * (clamp(380px, 70vw, 580px) / 1080));
+}
+
+.landing.mobile .strokex{
+    position: relative;
+    width: 80vw;
+    max-width: min(400px, calc(40vh));
+}
+.landing.mobile .strokex::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 90%;
+    background-color: var(--red-l2);
+    transform: translate(-5%, 0);
+    z-index: -1;
+}
+.landing.mobile .strokex img{
+    width: 100%;
+}
+
+.landing.mobile .iitp-logo{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 35vw;
+    max-width: 200px;
+    transform: translate(-50%, -50%);
+}
+
+/* theme graphic section */
+.landing.mobile + .theme.infaff .bg{
+    margin: 10rem 0;
+}
+.theme.infaff.mobile .bg{
+    width: unset;
+    height: 100vh;
+}
+
+/* text section */
+.content-wrapper:nth-child(odd) .content,
+.content-wrapper:nth-child(even) .content{
+    margin: 0;
+}
+.content-wrapper.mobile .title{
+    text-align: center;
+}
+.content-wrapper.mobile .graphic{
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+}
+.content-wrapper.mobile .graphic::before{
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    min-height: 300px;
+    opacity: 0.6;
+}
+.content-wrapper.mobile .graphic img{
+    opacity: 0.2;
+}
+
+/* speaker application button */
+.speaker-application.mobile{
+    padding: 0;
+}
+.speaker-application.mobile .title{
+    width: 90%;
+}

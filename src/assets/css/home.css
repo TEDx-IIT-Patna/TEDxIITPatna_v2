@@ -64,7 +64,7 @@
 
 .countdown-container .countdown{
     font-size: calc(100 * (100vw / 1080));
-    color: #a0a0a0
+    color: var(--white-d1);
 }
 .countdown-container .countdown span{
     color: black;
@@ -75,9 +75,8 @@
 .theme.infaff{
     display: grid;
     position: relative;
-    height: 100vh;
-    overflow: visible;
     place-content: center;
+    overflow: hidden;
 }
 .theme.infaff .bg{
     width: 100%;
@@ -91,14 +90,16 @@
     
     text-align: center;
     text-transform: uppercase;
-    font-size: calc(50 * (clamp(300px, 80vw, 600px) / 1080));
-    font-weight: 500;
-    letter-spacing: calc(60 * (clamp(300px, 80vw, 600px) / 1080));
+    font-size: calc(80 * (clamp(100px, 30vw, 300px) / 1080));
+    font-weight: 700;
+    letter-spacing: calc(100 * (clamp(100px, 30vw, 300px) / 1080));
 }
 
 /* text sections */
 .content-wrapper{
     display: flex;
+    width: 100%;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     padding: 5% 15%;
@@ -112,10 +113,10 @@
 }
 
 /* default styles for even children */
-.graphic{
+.content-wrapper .graphic{
     position: relative;
 }
-.graphic::before{
+.content-wrapper .graphic::before{
     content: '';
     display: block;
     position: absolute;
@@ -123,22 +124,29 @@
     left: 0;
     width: 80%;
     height: 50vh;
+    max-height: calc(9/16 * 100vw);
     transform: translate(0, -50%);
     background-color: var(--red-l1);
     z-index: -1;
 }
 
-.graphic#a img{
-    width: 22vw;
-    max-width: 300px;
-    min-width: 250px;
+.content-wrapper .graphic#a::before{
+    width: 100%;
 }
-.graphic#b img{
+.content-wrapper .graphic#a{
+    margin-left: 5%;
+}
+.content-wrapper .graphic#a img{
+    width: 22vw;
+    max-width: 200px;
+    min-width: 150px;
+}
+.content-wrapper .graphic#b img{
     width: 30vw;
     max-width: 300px;
-    min-width: 250px;
+    min-width: 200px;
 }
-.graphic#c img{
+.content-wrapper .graphic#c img{
     width: 30vw;
     max-width: 300px;
     min-width: 250px;
@@ -152,7 +160,7 @@
 .content-wrapper .content .title{
     text-align: left;
     max-width: 600px;
-    font-size: calc(220 * ((min(74vw, 800px) - 400px) / 1080));
+    font-size: calc(150 * (clamp(250px, 36vw, 580px) / 1080));
     font-weight: 700;
 }
 
@@ -160,16 +168,18 @@
     max-width: 600px;
     margin-top: 2.5rem;
     text-align: justify;
-    font-size: calc(47 * ((min(74vw, 800px) - 400px) / 1080));
+    font-size: calc(35 * (clamp(500px, 36vw, 580px) / 1080));
     font-weight: 400;
-    line-height: calc(75 * ((min(74vw, 800px) - 400px) / 1080));
+    line-height: calc(50 * (clamp(500px, 36vw, 580px) / 1080));
 }
 
 .content-wrapper .content .link{
     float: right;
+    max-width: 50%;
+    text-align: right;
     margin: 1rem 0;
     color: var(--red);
-    font-size: calc(47 * ((min(74vw, 800px) - 400px) / 1080));
+    font-size: calc(35 * (clamp(500px, 36vw, 580px) / 1080));
     font-weight: 500;
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -186,11 +196,11 @@
 
 /* style for odd children */
 .content-wrapper:nth-child(odd) .content{
-    margin: 0 8rem 0 2rem
+    margin: 0 4rem 0 2rem
 }
 
 .content-wrapper:nth-child(odd) .graphic::before{
-    left: auto;
+    left: unset;
     right: 0;
 }
 
@@ -219,6 +229,7 @@
     padding: 1rem 2rem;
     color: var(--red);
     font-weight: 500;
+    text-align: center;
     border: 1px solid var(--red);
     transition: color 0.2s;
     border-radius: 100px;
@@ -241,6 +252,10 @@
 }
 .speaker-application .link:hover::before{
     background-color: var(--red);
+}
+
+.disclaimer{
+    font-size: calc(50 * (clamp(250px, 80vw, 300px) / 1080));
 }
 
 /* need some extra padding here before footer */

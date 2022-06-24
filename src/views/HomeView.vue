@@ -19,18 +19,30 @@
       <HomeNav v-if="this.showWebView" />
     </div>
   </section>
+  <section class="landing mobile full" v-else>
+    <div class="countdown-container">
+      <div class="title">Live in</div>
+      <div class="countdown">
+        <span id="days">{{ this.formatTime(this.displayDays) }}</span> days,
+        <span id="hrs">{{ this.formatTime(this.displayHours) }}</span> hours
+      </div>
+    </div>
+    <div class="strokex">
+      <img src="@/assets/images/cross_stroke.png">
+    </div>
+    <img src="@/assets/images/tedxiitpatna_logo-1B.png" class="iitp-logo">
+  </section>
 
-  <!-- <section class="ladning mobile full">
-
-  </section> -->
-
-  <section class="theme infaff full">
-    <img src="@/assets/images/infinity-logo.png" class="bg">
+  <section :class="['theme', 'infaff', this.screenWidth > this.screenHeight * 1.1 ? 'web' : 'mobile']">
+    <img src="@/assets/images/infinity-logo.png" class="bg" v-if="this.screenWidth > this.screenHeight * 1.1">
+    <img src="@/assets/images/infinity-logo-vertical.png" class="bg" v-else>
     <span class="title">Infinite Affinities</span>
   </section>
 
-  <section class="content-wrapper full">
-    <div class="graphic" id="a"><img src="@/assets/images/Flower.png"></div>
+  <section :class="['content-wrapper', 'full', this.screenWidth > 1000 ? 'web' : 'mobile']">
+    <div class="graphic" id="a">
+      <img src="@/assets/images/hands.png">
+    </div>
     <div class="content">
       <div class="title">Togetherness.</div>
       <div class="text">We at TEDxIITPatna believe that dreams can become reality when everyone works together. We are
@@ -42,7 +54,7 @@
     </div>
   </section>
 
-  <section class="content-wrapper full">
+  <section :class="['content-wrapper', 'full', this.screenWidth > 1000 ? 'web' : 'mobile']">
     <div class="graphic" id="b"><img src="@/assets/images/question_mark.png"></div>
     <div class="content">
       <div class="title">What is TEDx?</div>
@@ -56,7 +68,7 @@
     </div>
   </section>
 
-  <section class="content-wrapper full">
+  <section :class="['content-wrapper', 'full', this.screenWidth > 1000 ? 'web' : 'mobile']">
     <div class="graphic" id="c"><img src="@/assets/images/cross_stroke.png"></div>
     <div class="content">
       <div class="title">TEDxIITPatna</div>
@@ -71,7 +83,7 @@
     </div>
   </section>
 
-  <section class="speaker-application">
+  <section :class="['speaker-application', this.screenWidth > 560 ? 'web' : 'mobile']">
     <div class="title">Interested in becoming a speaker?</div>
     <a href="https://forms.gle/jhDwBQmSFid4jjPZ6" target="_blank" class="link">Speaker Applications →</a>
   </section>
@@ -95,6 +107,7 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
       showWebView: window.innerWidth >= (1.51 * window.innerHeight),
       countdownTarget: new Date("2022-09-03T00:00:00.000+05:30"),
       displayDays: 0,
@@ -106,6 +119,7 @@ export default {
   methods: {
     onResize() {
       this.screenWidth = window.innerWidth
+      this.screenHeight = window.innerHeight
       this.showWebView = window.innerWidth >= (1.51 * window.innerHeight)
     },
     formatTime(val) {
@@ -149,4 +163,5 @@ export default {
 
 <style>
 @import '@/assets/css/home.css';
+@import '@/assets/css/home.mobile.css';
 </style>

@@ -3,9 +3,10 @@
 :root {
   --red: #e62b1e;
   --red-l1: #ff0039;
+  --red-l2: #ff1f51;
   --grey: #444;
   --grey-l1: #777;
-  --white-d1: #a1a1a1;
+  --white-d1: #a0a0a0;
 }
 
 body {
