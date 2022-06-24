@@ -5,10 +5,11 @@
     height: 150px;
     transform: translate(20%, 0);
 }
+
 .theme-bg{
     position: fixed;
-    bottom: 0;
-    right: 0;
+    /* bottom: 0;
+    right: 0; */
     width: 100%;
     height: 100%;
     background-color: black;
@@ -49,6 +50,18 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+.intro-wrapper .catchphrase{
+    text-align: left;
+    padding-left: calc(10 * (clamp(300px, 60vw, 500px) / 1080));
+    color: var(--white-d1);
+    font-weight: 400;
+    font-size: calc(40 * (clamp(300px, 60vw, 500px) / 1080));
+    text-transform: uppercase;
+    letter-spacing: calc(10 * (clamp(300px, 60vw, 500px) / 1080));
+}
+.intro-wrapper .catchphrase + .year{
+    margin-top: 1rem;
+}
 .intro-wrapper .year{
     text-align: left;
     padding-left: calc(10 * (clamp(300px, 60vw, 500px) / 1080));
@@ -61,8 +74,9 @@
     margin-top: 2rem;
     padding-left: calc(10 * (clamp(300px, 60vw, 500px) / 1080));
     font-size: calc(35 * (clamp(300px, 60vw, 500px) / 1080));
-    line-height: calc(50 * (clamp(300px, 60vw, 500px) / 1080));
+    line-height: calc(55 * (clamp(300px, 60vw, 500px) / 1080));
     font-weight: 100;
+    letter-spacing: 0.1rem;
 }
 
 .intro-wrapper .quote{
@@ -70,10 +84,15 @@
     padding: 0 2rem;
 }
 .intro-wrapper .quote .text{
+    font-family: 'Times New Roman', Times, serif;
     font-style: italic;
+    font-size: 1.2rem;
 }
 .intro-wrapper .quote .name{
+    font-family: 'Times New Roman', Times, serif;
     text-align: right;
+    font-style: italic;
+    font-size: 1rem;
 }
 
 /* speakers section + gallery section */

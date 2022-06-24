@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" v-if="this.showModal">
+    <div class="speaker-modal-wrapper" v-if="this.showModal">
         <div class="overlay"></div>
         <!-- <div class="image" :style="{ 'background-image': `url(${imageSrc})`, 'color': 'white' }">
         {{name}} {{title}} {{content}}
@@ -12,8 +12,8 @@
                     <div class="title">{{ title }}</div>
                 </div>
                 <div class="desc">
-                    {{ content }}
-                    <a :href="talkLink" target="_blank" class="talk">Talk</a>
+                    <span v-html="content"></span>
+                    <a :href="talkLink" target="_blank" class="talk" v-if="talkLink">Talk</a>
                 </div>
             </div>
         </div>

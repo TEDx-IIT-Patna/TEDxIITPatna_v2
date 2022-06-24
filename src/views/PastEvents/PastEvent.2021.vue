@@ -1,6 +1,8 @@
 <template>
   <Nav open_button_color="white" />
 
+  <BackButton />
+  
   <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark">
   <div class="theme-bg"><img src="@/assets/past_events/poster-bg/poster-bg-2021.png"></div>
 
@@ -8,8 +10,14 @@
     <div class="bg"></div>
     <div class="content">
       <div class="title">Roar</div>
+      <div class="catchphrase">The Acoustic of Strength</div>
       <div class="year">2021</div>
-      <div class="intro">The 3rd Edition of TEDxIIT Patna, Roar- The Acoustic of Strength celebrated the spirit of resilience and inner strength. Nothing can silence the sound that roars from within - the stronger one's will, the greater is their innate power. The moment we rise above our fear of being judged and take control of our thoughts, we become capable of summoning the strength needed to face the most significant adversities. Unleash the roar of freedom, call upon spiritual power and join us on the path towards a better, stronger mindset.
+      <div class="intro">The 3rd Edition of TEDxIIT Patna, Roar- The Acoustic of Strength celebrated the spirit of
+        resilience and inner strength. Nothing can silence the sound that roars from within - <span
+          style="font-style: italic">the stronger one's will, the greater is their innate power</span>. The moment we
+        rise above our fear of being judged and take control of our thoughts, we become capable of summoning the
+        strength needed to face the most significant adversities. Unleash the roar of freedom, call upon spiritual power
+        and join us on the path towards a better, stronger mindset.
       </div>
     </div>
   </section>
@@ -18,7 +26,7 @@
     <div class="content">
       <div class="title">Speakers.</div>
       <div class="speakers">
-        <div class="speaker" v-for="speaker in this.speakerDetails" @click="this.configureSpeakerModal(speaker)">
+        <div class="speaker" v-for="speaker in this.speakerDetails" :key="speaker" @click="this.configureSpeakerModal(speaker)">
           <img :src="speaker.imageSrc">
         </div>
       </div>
@@ -47,12 +55,13 @@
       :talkLink="this.speakerTalkLink" />
   </TransitionGroup>
 
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
-<script>
+<script scoped>
 import Nav from '@/components/Nav.vue'
-import Footer from '@/components/Footer.vue'
+// import Footer from '@/components/Footer.vue'
+import BackButton from '@/components/BackButton.vue'
 import ImageModal from '@/components/GalleryImageModal.vue'
 import SpeakerModal from '@/components/GallerySpeakerModal.vue'
 
@@ -60,7 +69,8 @@ export default {
   name: "PastEventsView.2021",
   components: {
     Nav,
-    Footer,
+    // Footer,
+    BackButton,
     ImageModal,
     SpeakerModal,
   },
@@ -80,7 +90,7 @@ export default {
           name: "Darren Hood",
           title: "Principle UX Designer",
           imageSrc: require('@/assets/past_events/speaker-images/2021/DarrenHood.png'),
-          content: "He was our first speaker who is not only a UX Designer but also a UX Experience Architect. He has worked on projects for the Fortune 50 and is the host of The World of UX Podcast on CX of M radio via Michigan State University.",
+          content: "He was our first speaker who is not only a <strong>UX Designer</strong> but also a <strong>UX Experience Architect</strong>. He has worked on projects for the <strong>Fortune 50</strong> and is the host of The World of UX Podcast on CX of M radio via Michigan State University.",
           speakerTalkLink: "https://youtu.be/6INnG61FLag"
         },
         {
@@ -121,7 +131,7 @@ export default {
         {
           name: "Zoya Agarwal",
           title: "Aircraft Pilot, UN Spokesperson",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/YusraMardini.png'),
+          imageSrc: require('@/assets/past_events/speaker-images/2021/CaptainZoyaAgarwal.png'),
           content: "The youngest female pilot to fly a Boeing 777,  Captain Zoya turned a page in Indian aviation history when she commanded an all-female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world's longest non-stop commercial trip. Zoya is also the spokesperson of Generation Equality by the UN.",
           speakerTalkLink: ""
         },
@@ -147,15 +157,22 @@ export default {
     closeAllModals() {
       this.showImageModal = false
       this.showSpeakerModal = false
+    },
+    closeAllModalsOnKeyPress(e) {
+      if (e.key === "Escape") {
+        this.closeAllModals();
+      }
     }
   },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
+      window.addEventListener('keydown', this.closeAllModals)
     })
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
+    window.removeEventListener('keydown', this.closeAllModals)
   }
 }
 </script>

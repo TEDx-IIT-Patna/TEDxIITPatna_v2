@@ -1,6 +1,8 @@
 <template>
   <Nav open_button_color="white" />
 
+  <BackButton />
+  
   <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark">
   <div class="theme-bg"><img src="@/assets/past_events/poster-bg/poster-bg-2019.png"></div>
 
@@ -9,13 +11,11 @@
     <div class="content">
       <div class="title">Metamorphosis</div>
       <div class="year">2019</div>
-      <div class="intro">Our 2nd edition of TEDxIIT Patna depicted, "change is the only constant, the only
-        inevitable." Permanence is an illusion, and whether it is nature transitioning from one season to another, the
-        transformation of a caterpillar to a beautiful butterfly, or the evolution of man, everything in this universe
-        is susceptible to change. The same applies to the pain that man is agonises over. The darkness today will have
-        to change into the brightest light tomorrow. Hence, going with "Metamorphosis" as the theme, the idea is to hear
-        from the experts themselves on how change has affected today's technology, entertainment and most importantly,
-        the people and the society.
+      <div class="intro">The 2nd Edition of TEDxIITPatna, Metamorphosis, put forth the ideology that permanence is an
+        illusion, and everything in this universe is susceptible to change. Change is not always bad- it often brings
+        opportunities to transform into something better. While change is inevitable, it is upon us to grow and adapt to
+        the evolution of our surroundings. We had experts discuss the effects of rapid and drastic changes on
+        technology, entertainment, but most importantly, on people and societal values.
       </div>
     </div>
   </section>
@@ -24,7 +24,7 @@
     <div class="content">
       <div class="title">Speakers.</div>
       <div class="speakers">
-        <div class="speaker" v-for="speaker in this.speakerDetails" @click="this.configureSpeakerModal(speaker)">
+        <div class="speaker" v-for="speaker in this.speakerDetails" :key="speaker" @click="this.configureSpeakerModal(speaker)">
           <img :src="speaker.imageSrc">
         </div>
       </div>
@@ -54,12 +54,13 @@
       :talkLink="this.speakerTalkLink" />
   </TransitionGroup>
 
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <script>
 import Nav from '@/components/Nav.vue'
-import Footer from '@/components/Footer.vue'
+// import Footer from '@/components/Footer.vue'
+import BackButton from '@/components/BackButton.vue'
 import ImageModal from '@/components/GalleryImageModal.vue'
 import SpeakerModal from '@/components/GallerySpeakerModal.vue'
 
@@ -67,7 +68,8 @@ export default {
   name: "PastEventsView.2019",
   components: {
     Nav,
-    Footer,
+    // Footer,
+    BackButton,
     ImageModal,
     SpeakerModal,
   },
@@ -84,10 +86,10 @@ export default {
       speakerTalkLink: null,
       speakerDetails: [
         {
-          name: "Dr. Prashant Jha",
-          title: "Director BMJ innovations",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/PrashantJha.png'),
-          content: "He graduated with MBBS and studied Family Medicine for his post-graduation. He trained as a Physician in India and then as a GP with RCGP, London. He is a significant influencer and wants to put India as the leader in medical sciences.",
+          name: "Kaushalendra Kumar",
+          title: "Executive Director, Kaushalya Foundation",
+          imageSrc: require('@/assets/past_events/speaker-images/2019/Kaushalendra.png'),
+          content: "He is a social entrepreneur and founder of Kaushalya Foundation and KNIDS GREEN. His work wasn't only appreciated by society but by nations worldwide. He is an Ashoka Fellow and is included in the 256 future heroes of India, published by India Today.",
           speakerTalkLink: ""
         },
         {
@@ -99,16 +101,16 @@ export default {
         },
         {
           name: "Tanvi Bhardwaj",
-          titel: "CTO and Co-founder, MishiPay",
+          title: "CTO and Co-founder, MishiPay",
           imageSrc: require('@/assets/past_events/speaker-images/2019/Tanvi.png'),
           content: "She graduated from the University of Manchester with a First Class Honours degree in Computer Systems Engineering. She is now the co-founder and CTO of multi-award-winning retail technology company MishiPay, based in London and Banglore.",
           speakerTalkLink: ""
         },
         {
-          name: "Kaushalendra Kumar",
-          title: "Executive Director, Kaushalya Foundation",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/Kaushalendra.png'),
-          content: "He is a social entrepreneur and founder of Kaushalya Foundation and KNIDS GREEN. His work wasn't only appreciated by society but by nations worldwide. He is an Ashoka Fellow and is included in the 256 future heroes of India, published by India Today",
+          name: "Dr. Prashant Jha",
+          title: "Director BMJ innovations",
+          imageSrc: require('@/assets/past_events/speaker-images/2019/PrashantJha.png'),
+          content: "He graduated with MBBS and studied Family Medicine for his post-graduation. He trained as a Physician in India and then as a GP with RCGP, London. He is a significant influencer and wants to put India as the leader in medical sciences.",
           speakerTalkLink: ""
         },
         {
@@ -140,15 +142,22 @@ export default {
     closeAllModals() {
       this.showImageModal = false
       this.showSpeakerModal = false
+    },
+    closeAllModalsOnKeyPress(e) {
+      if (e.key === "Escape") {
+        this.closeAllModals();
+      }
     }
   },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
+      window.addEventListener('keydown', this.closeAllModals)
     })
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
+    window.removeEventListener('keydown', this.closeAllModals)
   }
 }
 </script>

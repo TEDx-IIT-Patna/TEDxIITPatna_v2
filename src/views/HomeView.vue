@@ -1,7 +1,7 @@
 <template>
-  <Nav v-if="this.screenWidth < 1500" />
+  <Nav v-if="!this.showWebView" />
 
-  <section class="landing full" v-if="this.screenWidth >= 1500">
+  <section class="landing full" v-if="this.showWebView">
     <div class="black-bg"></div>
     <div class="countdown-container">
       <div class="title">Live in</div>
@@ -16,9 +16,13 @@
     <div class="logo-container">
       <img src="@/assets/images/barcode.png" class="barcode">
       <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo">
-      <HomeNav v-if="this.screenWidth >= 1500" />
+      <HomeNav v-if="this.showWebView" />
     </div>
   </section>
+
+  <!-- <section class="ladning mobile full">
+
+  </section> -->
 
   <section class="theme infaff full">
     <img src="@/assets/images/infinity-logo.png" class="bg">
@@ -29,13 +33,11 @@
     <div class="graphic" id="a"><img src="@/assets/images/Flower.png"></div>
     <div class="content">
       <div class="title">Togetherness.</div>
-      <div class="text">Like every raindrop is a part of the ocean. Like every sand particle is a part of the sand
-        castle, everyone is a part of one another. <br>
-        When we delve deeper, we discover that we are a sum of every relationship we have made - a string of thoughts we
-        share with every person we connect with. We at TEDxIITPatna truly believe that “Together, we are better”
-        <br><br>
-        Thus, through Infinite affinities, TEDxIITPatna celebrates unity and the spirit of togetherness. Let us join
-        hands with the idea of, I am, because WE ALL ARE
+      <div class="text">We at TEDxIITPatna believe that dreams can become reality when everyone works together. We are
+        an amalgamation of ideas - intertwined by the bonds we share. Through Infinite Affinities, we celebrate unity
+        and the spirit of togetherness. We are human only through the humanity of others. If we are to accomplish
+        anything- it will, in equal measure, be due to the work and achievements of the entire community. We all have a
+        role to play and its vital that our actions inspire others to want to be a part of a better and brighter future.
       </div>
     </div>
   </section>
@@ -58,11 +60,12 @@
     <div class="graphic" id="c"><img src="@/assets/images/cross_stroke.png"></div>
     <div class="content">
       <div class="title">TEDxIITPatna</div>
-      <div class="text">TEDxIITPatna has continued to be a guiding light since 2016. Three stellar editions later -
-        we've still got more to share! Going strong through Covid (with an impressive footfall of 1500+ participants),
-        we are back with a REBOOT. <br><br> This year TEDx IITPATNA proudly presents it’s fourth edition. In this event,
-        we shall highlight symbiosis and the team spirit that allows us to ascend to greater heights. Featuring diverse
-        speakers from various walks of life, we hope to provide an enlightening experience to our community.
+      <div class="text">Since 2016 TEDxIITPatna has strived to establish momentous and unforgettable events with
+        discussions that have a long-term impact. With a footfall of 1500+ participants in our past events, we have
+        continued to promote creativity and spark conversations even amid a global pandemic.<br><br>
+        As we reach a semblance of normalcy, this year, we present our fourth edition - "Infinite Affinities." We
+        celebrate symbiosis and the independent yet collaborative spirit that allows us to reach new heights. Featuring
+        diverse speakers from various walks of life, we hope to provide an enlightening experience to our community.
       </div>
       <router-link to="/about" class="link">About</router-link>
     </div>
@@ -70,7 +73,7 @@
 
   <section class="speaker-application">
     <div class="title">Interested in becoming a speaker?</div>
-    <a href="#" class="link">Speaker Applications →</a>
+    <a href="https://forms.gle/jhDwBQmSFid4jjPZ6" target="_blank" class="link">Speaker Applications →</a>
   </section>
 
   <Footer />
@@ -92,6 +95,7 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
+      showWebView: window.innerWidth >= (1.51 * window.innerHeight),
       countdownTarget: new Date("2022-09-03T00:00:00.000+05:30"),
       displayDays: 0,
       displayHours: 0,
@@ -102,6 +106,7 @@ export default {
   methods: {
     onResize() {
       this.screenWidth = window.innerWidth
+      this.showWebView = window.innerWidth >= (1.51 * window.innerHeight)
     },
     formatTime(val) {
       if (val >= 10) {

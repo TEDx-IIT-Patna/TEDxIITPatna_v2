@@ -1,4 +1,4 @@
-.wrapper {
+.speaker-modal-wrapper {
     display: grid;
     position: fixed;
     top: 0;
@@ -80,21 +80,23 @@
     font-weight: 700;
 }
 .container .title{
+    margin-top: 0.3rem;
     font-size: calc(40 * (clamp(300px, 80vw, 600px) / 1080));
     font-weight: 400;
+    color: var(--grey-l1);
 }
 
 .container .desc{
     text-align: justify;
-    font-size: calc(40 * (clamp(300px, 80vw, 600px) / 1080));
+    font-size: calc(35 * (clamp(300px, 80vw, 600px) / 1080));
     line-height: calc(55 * (clamp(300px, 80vw, 600px) / 1080));
-    font-weight: 100;
+    font-weight: 400;
 }
 .container .desc .talk{
     display: block;
     color: var(--red);
     text-align: right;
-    font-weight: 400;
+    font-weight: 500;
     font-size: calc(35 * (clamp(300px, 80vw, 600px) / 1080));
     text-decoration: underline;
     text-decoration-color: transparent;

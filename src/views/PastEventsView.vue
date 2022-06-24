@@ -1,7 +1,8 @@
 <template>
-  <Nav />
+  <Nav open_button_color="white" />
+  <BackButton />
   <section class="wrapper full">
-    <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo watermark">
+    <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo watermark" v-if="screenWidth > 1300">
     <div class="paintedx"></div>
     <div class="pastevents-wrapper">
       <div class="title">Past Events.</div>
@@ -31,11 +32,13 @@
 
 <script>
 import Nav from '@/components/Nav.vue'
+import BackButton from '@/components/BackButton.vue'
 
 export default {
   name: "PastEventsView",
   components: {
     Nav,
+    BackButton,
   },
   data() {
     return {

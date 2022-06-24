@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" v-if="this.showModal">
+    <div class="gallery-modal-wrapper" v-if="this.showModal">
         <div class="overlay"></div>
         <div class="image" :style="{ 'background-image': `url(${imageSrc})`, 'color': 'white' }"></div>
     </div>

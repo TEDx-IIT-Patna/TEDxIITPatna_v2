@@ -11,7 +11,7 @@
     align-items: flex-start;
     /* border: 1px solid red; */
     transform-origin: 0 100%;
-    transform: rotate(-90deg) translate(0, calc(-100% - 10rem));
+    transform: rotate(-90deg) translate(0, calc(-100% - 13rem));
     
     font-family: 'Gotham';
     font-weight: 700;

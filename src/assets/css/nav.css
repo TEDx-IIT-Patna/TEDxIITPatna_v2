@@ -4,7 +4,7 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    padding: 8rem 7rem;
+    padding: 8rem 5rem;
     transition: all 0.3s 0s;
     /* overflow: hidden; */
     z-index: 2;
@@ -49,8 +49,10 @@
 .nav.show::before,
 .nav.show::after {
     right: 0;
-    background-color: var(--red);
     transition: all 0.3s calc(var(--order) * 0.1s);
+}
+.nav.show::before {
+    background-color: var(--red);
 }
 .nav.show::after {
     background-color: #000000;
@@ -62,6 +64,7 @@
     right: 4rem;
     text-align: right;
     cursor: pointer;
+    transition: all 0.2s;
     z-index: 1;
 
     text-transform: uppercase;
