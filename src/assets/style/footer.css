@@ -104,3 +104,11 @@
 .social_icons{
     margin-right: 4vw;
 }
+.social_icons:hover{
+    color: red;
+    font-size: 1.75rem;
+}
+.page_nav:hover{
+    color: red;
+    text-decoration-color: red;
+}

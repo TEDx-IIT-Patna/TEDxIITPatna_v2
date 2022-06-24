@@ -83,8 +83,8 @@
 
 .nav.show .close {
     position: fixed;
-    top: 3rem;
-    right: 4rem;
+    top: 1rem;
+    right: 1rem;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
@@ -115,7 +115,7 @@
 .links span {
     display: inline-block;
     color: white;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center;
     font-family: 'Gotham', sans-serif;
     text-transform: uppercase;

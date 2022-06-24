@@ -5,7 +5,7 @@
     </div>
   </span>
   <nav :class="['nav', this.state]">
-    <div class="close" @click="this.state = 'hidden'">Close</div>
+    <div class="close" @click="this.state = 'hidden'" style="top: -3rem; left: -1rem;">Close</div>
     <div class="links">
       <router-link to="/"><span>Home</span></router-link>
       <router-link to="/pastevents"><span>Past Events</span></router-link>
