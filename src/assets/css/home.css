@@ -72,8 +72,28 @@
 }
 
 /* theme section */
-section.theme{
-    background-color: black;
+.theme.infaff{
+    display: grid;
+    position: relative;
+    height: 100vh;
+    overflow: visible;
+    place-content: center;
+}
+.theme.infaff .bg{
+    width: 100%;
+}
+.theme.infaff .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-size: calc(50 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 500;
+    letter-spacing: calc(60 * (clamp(300px, 80vw, 600px) / 1080));
 }
 
 /* text sections */
@@ -102,7 +122,7 @@ section.theme{
     top: 50%;
     left: 0;
     width: 80%;
-    height: 60vh;
+    height: 50vh;
     transform: translate(0, -50%);
     background-color: var(--red-l1);
     z-index: -1;
@@ -125,18 +145,18 @@ section.theme{
     transform: translate(4%, 0);
 }
 
-.content{
+.content-wrapper .content{
     margin: 0 2rem 0 4rem;
 }
 
-.content .title{
+.content-wrapper .content .title{
     text-align: left;
     max-width: 600px;
     font-size: calc(220 * ((min(74vw, 800px) - 400px) / 1080));
     font-weight: 700;
 }
 
-.content .text{
+.content-wrapper .content .text{
     max-width: 600px;
     margin-top: 2.5rem;
     text-align: justify;
@@ -145,7 +165,7 @@ section.theme{
     line-height: calc(75 * ((min(74vw, 800px) - 400px) / 1080));
 }
 
-.content .link{
+.content-wrapper .content .link{
     float: right;
     margin: 1rem 0;
     color: var(--red);
@@ -155,10 +175,10 @@ section.theme{
     text-decoration-color: transparent;
     transition: text-decoration-color 0.2s;
 }
-.content .link:hover{
+.content-wrapper .content .link:hover{
     text-decoration-color: var(--red);
 }
-.content .link::after{
+.content-wrapper .content .link::after{
     content: '→';
     display: inline-block;
     margin-left: 1ch;

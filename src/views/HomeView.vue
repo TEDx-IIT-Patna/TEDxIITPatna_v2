@@ -6,9 +6,8 @@
     <div class="countdown-container">
       <div class="title">Live in</div>
       <div class="countdown">
-        <span id="days">{{ this.formatTime(this.displayDays) }}</span>d <span id="hrs">{{
-            this.formatTime(this.displayHours)
-        }}</span>h
+        <span id="days">{{ this.formatTime(this.displayDays) }}</span>d
+        <span id="hrs">{{ this.formatTime(this.displayHours) }}</span>h
       </div>
     </div>
     <div class="paintedx">
@@ -21,8 +20,8 @@
     </div>
   </section>
 
-  <section class="theme full">
-    <img src="" class="bg">
+  <section class="theme infaff full">
+    <img src="@/assets/images/infinity-logo.png" class="bg">
     <span class="title">Infinite Affinities</span>
   </section>
 

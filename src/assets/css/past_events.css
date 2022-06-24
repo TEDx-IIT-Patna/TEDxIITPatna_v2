@@ -1,0 +1,120 @@
+.wrapper {
+    position: relative;
+}
+
+/* painted X */
+.wrapper .paintedx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    background-image: url('@/assets/images/paintedx.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    transform: scaleX(-1);
+}
+
+.wrapper .logo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    transform: translate(20%, 0);
+    z-index: -1;
+}
+
+.pastevents-wrapper{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    width: 100%;
+    padding: 5% 10%;
+    transform: translate(-50%, -50%);
+}
+
+.pastevents-wrapper .title{
+    width: 100%;
+    margin-bottom: 4rem;
+    text-align: left;
+    font-size: calc(160 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 700;
+}
+
+.event-scroller{
+    display: flex;
+    width: 100%;
+    padding: 1ch;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event .thumbnail{
+    position: relative;
+    width: 30vw;
+    min-width: 150px;
+    max-width: 250px;
+    margin: 0 1rem;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+.event .thumbnail img{
+    width: 100%;
+    transition: all 0.2s ease-out;
+}
+.event .thumbnail::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: all 0.2s ease-out;
+}
+
+.event .thumbnail:hover{
+    transform: translate(-5px, -5px);
+}
+.event .thumbnail:hover img{
+    box-shadow: 8px 12px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.event .thumbnail:hover::before{
+    top: 10px;
+    left: 15px;
+    background-color: var(--red-l1);
+}
+
+.event .year{
+    width: max-content;
+    margin: 1ch 0;
+    text-align: center;
+    padding-left: calc(20 * (clamp(300px, 80vw, 600px) / 1080));
+    font-size: calc(40 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 700;
+    letter-spacing: calc(20 * (clamp(300px, 80vw, 600px) / 1080));
+    transition: all 0.2s;
+    color: white;
+    background-color: var(--red-l1);
+    pointer-events: none;
+    opacity: 0;
+}
+.event .thumbnail:hover+.year{
+    opacity: 1;
+}

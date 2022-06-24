@@ -1,11 +1,11 @@
-.wrapper{
+.comingsoon-wrapper{
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
 
-/* background image */
+/* background image */.comingsoon-wrapper 
 .banner {
     width: 100vw;
     height: 100vh;
@@ -13,26 +13,26 @@
     background-repeat: no-repeat;
 }
 
-.banner.web {
+.comingsoon-wrapper .banner.web {
     background-image: url('@/assets/images/coming-soon-banner-web.png');
     background-size: cover;
     background-position: left top;
 }
 
-.banner.mobile {
+.comingsoon-wrapper .banner.mobile {
     background-image: url('@/assets/images/coming-soon-banner-mobile.png');
     background-size: cover;
     background-position: center top;
 }
 
 @media only screen and (max-width: calc(0.5 * 100vh)) {
-    .banner.mobile{
+    .comingsoon-wrapper .banner.mobile{
         background-size: auto 100%;
     }
 }
 
 /* coming soon text */
-.coming-soon{
+.comingsoon-wrapper .coming-soon{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,7 +49,7 @@
 }
 
 /* small text */
-.text{
+.comingsoon-wrapper .text{
     position: absolute;
     left: 50%;
     bottom: 10%;

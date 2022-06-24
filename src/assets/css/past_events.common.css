@@ -1,0 +1,224 @@
+.logo.watermark{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    transform: translate(20%, 0);
+}
+.theme-bg{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    z-index: -1;
+}
+.theme-bg img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    transform: translate(0, -50%);
+}
+
+.intro-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5% 8%;
+    color: white;
+}
+.intro-wrapper .content{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 800px;
+    height: max-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate(-75%, -50%);
+}
+
+.intro-wrapper .title{
+    text-align: left;
+    font-size: calc(130 * (clamp(300px, 60vw, 600px) / 1080));
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.intro-wrapper .year{
+    text-align: left;
+    padding-left: calc(10 * (clamp(300px, 60vw, 500px) / 1080));
+    font-size: calc(40 * (clamp(300px, 60vw, 500px) / 1080));
+    font-weight: 400;
+    letter-spacing: 1rem;
+}
+.intro-wrapper .intro{
+    text-align: justify;
+    margin-top: 2rem;
+    padding-left: calc(10 * (clamp(300px, 60vw, 500px) / 1080));
+    font-size: calc(35 * (clamp(300px, 60vw, 500px) / 1080));
+    line-height: calc(50 * (clamp(300px, 60vw, 500px) / 1080));
+    font-weight: 100;
+}
+
+.intro-wrapper .quote{
+    margin: 1rem 0;
+    padding: 0 2rem;
+}
+.intro-wrapper .quote .text{
+    font-style: italic;
+}
+.intro-wrapper .quote .name{
+    text-align: right;
+}
+
+/* speakers section + gallery section */
+.speakers-wrapper,
+.gallery-wrapper{
+    position: relative;
+    color: white;
+}
+.speakers-wrapper .content,
+.gallery-wrapper .content {
+    display: flex;
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    width: 100%;
+    height: 100%;
+    padding: 10% 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* transform: translate(-50%, -50%); */
+}
+
+.speakers-wrapper .content .title,
+.gallery-wrapper .content .title{
+    position: relative;
+    text-align: left;
+    font-size: calc(120 * (clamp(300px, 60vw, 500px) / 1080));
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+.speakers-wrapper .content .title::after,
+.gallery-wrapper .content .title::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    height: 1rem;
+    background-color: var(--red-l1);
+    transform: translate(-50%, 0);
+}
+
+.speakers,
+.gallery{
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+.speaker,
+.gallery-image{
+    width: 150px;
+    height: 150px;
+    margin: 2rem 1rem;
+    border-radius: 100px;
+    transition: all 0.2s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.speaker img,
+.gallery-image img{
+    height: 100%;
+}
+
+.speaker:hover,
+.gallery-image:hover{
+    background-color: var(--red-l1);
+}
+
+/* gallery specific changes */
+.gallery{
+    max-width: unset;
+    justify-content: center;
+}
+.gallery-image{
+    display: flex;
+    position: relative;
+    width: clamp(150px, 30vw, 250px);
+    height: calc(3/4 * clamp(150px, 30vw, 250px));
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    border-radius: 8px;
+}
+.speaker img,
+.gallery-image img{
+    width: auto;
+    height: 100%;
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+.speaker:hover img,
+.gallery-image:hover img{
+    transform: scale(1.2);
+}
+
+/* modal close button */
+.modal-close-btn {
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+}
+.gg-close {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    border: 2px solid transparent;
+    border-radius: 40px
+}
+
+.gg-close::after,
+.gg-close::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: clamp(30px, 5vw, 50px);
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 1px
+}
+
+.gg-close::after {
+    transform: rotate(-45deg)
+}
+
+/* needed some extra padding above footer */
+.footer{
+    margin-top: 20vh;
+}

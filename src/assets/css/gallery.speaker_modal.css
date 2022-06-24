@@ -1,0 +1,111 @@
+.wrapper {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    place-content: center;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+    width: 90vw;
+    max-width: 1300px;
+    height: calc(9/16 * 90vw);
+    max-height: 80vh;
+    color: black;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 3;
+}
+.container::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 5%;
+    min-width: 50px;
+    height: 100%;
+    background-color: var(--red-l1);
+    z-index: -1;
+}
+
+.container .pic{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70%;
+    transform: translate(-10%, 5%);
+}
+
+.container .content{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    padding: 10% 12% 5% 5%;
+    float: right;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container .name-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.container .name{
+    margin-left: -5px;
+    font-size: calc(120 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 700;
+}
+.container .title{
+    font-size: calc(40 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 400;
+}
+
+.container .desc{
+    text-align: justify;
+    font-size: calc(40 * (clamp(300px, 80vw, 600px) / 1080));
+    line-height: calc(55 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 100;
+}
+.container .desc .talk{
+    display: block;
+    color: var(--red);
+    text-align: right;
+    font-weight: 400;
+    font-size: calc(35 * (clamp(300px, 80vw, 600px) / 1080));
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s;
+    cursor: pointer;
+}
+.container .desc .talk:hover{
+    text-decoration-color: var(--red);
+}
+.container .desc .talk::after{
+    content: '→';
+    display: inline-block;
+    margin-left: 1ch;
+}

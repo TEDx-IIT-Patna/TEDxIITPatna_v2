@@ -8,9 +8,11 @@
     grid-template-areas:
         "logo logo"
         "links map"
+        "disclaimer disclaimer"
     ;
     width: 100%;
-    padding: 0% 8% 5% 8%;
+    padding: 0% 8%;
+    margin: 0;
     color: white;
     background-color: black;
 }
@@ -60,11 +62,11 @@
 }
 
 .nav-links {
-    grid-area: nav
+    grid-area: nav;
 }
 
 .misc-links {
-    grid-area: misc
+    grid-area: misc;
 }
 
 .nav-links,
@@ -138,4 +140,11 @@
 .socials .link:hover .name{
     opacity: 1;
     transform: translate(-50%, 0px);
+}
+
+.disclaimer{
+    grid-area: disclaimer;
+    text-align: center;
+    padding: 5%;
+    text-transform: capitalize;
 }

@@ -4,14 +4,14 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    padding: 8%;
-    transition: all 0.5s 0s;
-    overflow: hidden;
+    padding: 8rem 7rem;
+    transition: all 0.3s 0s;
+    /* overflow: hidden; */
     z-index: 2;
 }
 
 .nav.hidden {
-    width: 0;
+    width: min(100vw, 600px);
     pointer-events: none;
     opacity: 0;
 }
@@ -31,47 +31,62 @@
     position: absolute;
     display: block;
     top: 0;
-    right: 0;
-    width: 0%;
+    right: -100%;
+    width: 100%;
     height: 100%;
-    transition: all 0.5s calc(var(--order) * 0.1s);
+    transition: all 0.3s calc(var(--order) * 0.1s);
     z-index: -1;
+}
+.nav::before{
+    width: calc(100% + 10px);
 }
 
 .nav.hidden::before,
 .nav.hidden::after {
-    width: 0%;
     background-color: transparent;
 }
 
 .nav.show::before,
 .nav.show::after {
-    width: 100%;
+    right: 0;
     background-color: var(--red);
-    transition: all 0.5s calc(var(--order) * 0.1s);
+    transition: all 0.3s calc(var(--order) * 0.1s);
 }
 .nav.show::after {
     background-color: #000000;
 }
 
 .show-panel {
-    position: absolute;
+    position: fixed;
     top: 3rem;
     right: 4rem;
     text-align: right;
-    text-transform: uppercase;
     cursor: pointer;
     z-index: 1;
+
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Gotham', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .nav .close{
+    --order: 4;
     position: fixed;
     top: 3rem;
     right: 4rem;
     color: white;
-    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.2s calc(var(--order) * 0.1s);
+    transition: opacity 0.2s calc(var(--order) * 0.1s), all 0.2s;
+    
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.nav .close:hover{
+    color: var(--red-l1);
 }
 
 .nav.hidden .close {
@@ -105,14 +120,15 @@
 
 .nav .links a {
     display: inline-block;
-    font-size: 2rem;
-    margin: 0.5rem 0;
-    letter-spacing: 0.4rem;
+    margin: 0.7rem 0;
+    transition: color 0.2s;
+    
     color: white;
     text-align: left;
-    font-family: 'Gotham', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    transition: color 0.2s;
+    letter-spacing: 0.1rem;
 }
 .nav .links a:hover {
     color: var(--red)

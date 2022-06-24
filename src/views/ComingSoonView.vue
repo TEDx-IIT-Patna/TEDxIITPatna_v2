@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="comingsoon-wrapper">
     <div class="banner web" v-if="this.screenWidth > 460"></div>
     <div class="banner mobile" v-if="this.screenWidth <= 460"></div>
     <div class="coming-soon">Coming Soon</div>
