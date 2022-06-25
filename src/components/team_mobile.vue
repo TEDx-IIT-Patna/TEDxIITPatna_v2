@@ -616,7 +616,7 @@
             </div>
           </div>
           <div class="card" style="width: 15rem">
-            <img src="../assets/Hardik_MPR.jpg" class="card-img-top" alt="..." />
+            <!-- <img src="../assets/Hardik_MPR.JPG" class="card-img-top" alt="..." /> -->
             <div class="card-body">
               <div class="card-text row">
                 <div class="col-8">
