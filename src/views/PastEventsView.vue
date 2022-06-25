@@ -1,6 +1,6 @@
 <template>
   <Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="text" />
-  <BackButton v-if="this.showWebView" />
+  <BackButton />
 
   <section class="wrapper full" v-if="this.showWebView">
     <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo watermark" v-if="screenWidth > 1300">

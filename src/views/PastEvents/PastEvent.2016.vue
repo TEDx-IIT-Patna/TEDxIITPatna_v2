@@ -73,7 +73,7 @@ import ImageModal from '@/components/GalleryImageModal.vue'
 import SpeakerModal from '@/components/SpeakerDetailModal.vue'
 
 export default {
-  name: "PastEventsView.2019",
+  name: "PastEventsView.2016",
   components: {
     Nav,
     // Footer,
@@ -84,6 +84,7 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
       showImageModal: false,
       imageModalSrc: null,
       showSpeakerModal: false,
@@ -134,6 +135,7 @@ export default {
   methods: {
     onResize() {
       this.screenWidth = window.innerWidth
+      this.screenHeight = window.innerHeight
     },
     configureImageModal(i) {
       this.imageModalSrc = require(`@/assets/gallery-images/2016/${i}.jpg`)

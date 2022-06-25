@@ -76,6 +76,7 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
       showImageModal: false,
       imageModalSrc: null,
       showSpeakerModal: false,
@@ -126,6 +127,7 @@ export default {
   methods: {
     onResize() {
       this.screenWidth = window.innerWidth
+      this.screenHeight = window.innerHeight
     },
     configureImageModal(i) {
       this.imageModalSrc = require(`@/assets/gallery-images/2019/${i}.png`)
