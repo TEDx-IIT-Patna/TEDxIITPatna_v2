@@ -40,6 +40,7 @@ Featuring diverse speakers from various walks of life, we hope to provide an enl
 .content{
     display: flex;
 justify-content: start;
+font-family: gothamlight;
 }
 .letter_x{
     color: red;

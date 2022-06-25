@@ -216,6 +216,11 @@ h1 {
     /* transform: scale(1, 1.5); */
     transform: scaleY(1.6);
   }
+
+  .nav_span{
+    position: fixed;
+    right: 1vw;
+  }
   
   #inf_img {
     height: 80vh;
@@ -343,6 +348,9 @@ h1 {
 import chroma from 'chroma-js'
 import footerVue from '../components/footer_mobile.vue'
 import contents_mobile from '../components/contents_mobile.vue'
+import gsap from 'gsap'
+import { Timeline } from 'gsap/gsap-core'
+
 
 export default {
   name: 'home',
@@ -397,7 +405,32 @@ export default {
   },
   beforeMount() {
     this.function();
-  }
+  },
+  mounted() {
+
+    var controller = new ScrollMagic.Controller();
+    // Timeline for first section
+    var tl = new gsap.timeline()
+    tl.fromTo(".black_bg", 1.5, { width: screen.width / 2 }, { width: 2 * screen.width, ease: Linear.easeNone }, 0);
+    tl.fromTo(".x_3_img", 1.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    tl.fromTo(".x_2_img", 1.5, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, 0)
+    tl.fromTo(".x_1_img", 1.5, { xPercent: 0, opacity: 1 }, { xPercent: 50, opacity: 0, ease: Linear.easeNone }, 0)
+
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: "#wrapper",
+      triggerHook: "onLeave",
+      duration: "300%"
+    })
+      .setPin("#wrapper")
+      .setTween(tl)
+      // .addIndicators({
+      //   colorTrigger: "white",
+      //   colorStart: "white",
+      //   colorEnd: "white",
+      //   indent: 40
+      // })
+      .addTo(controller);
+}
 }
 var scale = chroma.scale(['#000000', '#ffffff']).domain([333, 960]);
 window.addEventListener('scroll', function () {

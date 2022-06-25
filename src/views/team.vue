@@ -237,7 +237,7 @@
               </div>
 
               <div class="row-4 row-4a image5_img image6_img" id="row-6">
-                <img class="row4_photo image2" src="../assets/Khushi_Editorial_.jpg" alt="Deepshikha (1).jpeg" />
+                <img class="row4_photo image2" src="../assets/Khushi_Editorial.jpg" alt="Deepshikha (1).jpeg" />
                 <div class="image5_text img_text">
                   Khushi Shah<br />
                   Editorial <br />
