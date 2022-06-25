@@ -3,21 +3,21 @@
     width: 90vw;
     height: 90vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 10% 15%;
+    padding: 15% 15%;
     overflow: auto;
 }
 .speaker-modal-wrapper.mobile .container::before{
     /* display: none; */
-    left: 15%;
+    left: 17%;
     height: 20%;
 }
 .speaker-modal-wrapper .container::after{
     content: '';
     display: block;
     position: absolute;
-    left: 15%;
+    left: 17%;
     bottom: 0;
     width: 5%;
     /* min-width: 30px; */
