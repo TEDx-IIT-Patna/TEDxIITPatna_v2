@@ -1,9 +1,9 @@
 <!-- there are separate nav elements in Homepage and Footer -->
 <template>
-  <span class="show-panel" v-if="open_button_style === 'text'" @click="this.state = 'show'"
+  <span id="nav-panel-show-button" class="show-panel" v-if="open_button_style === 'text'" @click="this.state = 'show'"
     :style="{ 'color': open_button_color, 'background-color': open_button_background }">Navigation<br>Panel</span>
 
-  <span class="show-panel" v-if="open_button_style === 'icon'" @click="this.state = 'show'"
+  <span id="nav-panel-show-button" class="show-panel" v-if="open_button_style === 'icon'" @click="this.state = 'show'"
     :style="{ 'color': open_button_color, 'background-color': open_button_background, 'transform': 'translate(-50%, 0)' }"><i
       class="gg-menu-left-alt"></i></span>
 
@@ -40,8 +40,20 @@ export default {
   },
   data() {
     return {
-      state: 'hidden'
+      state: 'hidden',
+      lastScrollPos: 0,
     }
+  },
+  mounted(){
+    window.addEventListener('scroll', (e) => {
+      const newScrollPos = window.scrollY
+      if(newScrollPos > this.lastScrollPos){
+        document.getElementById('nav-panel-show-button').style.opacity = 0;
+      }else if(newScrollPos < this.lastScrollPos){
+        document.getElementById('nav-panel-show-button').style.opacity = 1;
+      }
+      this.lastScrollPos = newScrollPos
+    })
   }
 }
 </script>
