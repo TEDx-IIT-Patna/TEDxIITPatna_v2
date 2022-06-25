@@ -86,7 +86,7 @@
     padding-left: calc(10 * (clamp(400px, 80vw, 500px) / 1080));
     font-size: calc(35 * (clamp(400px, 80vw, 500px) / 1080));
     line-height: calc(55 * (clamp(400px, 80vw, 500px) / 1080));
-    font-weight: 100;
+    font-weight: 400;
     letter-spacing: 0.1rem;
 }
 
