@@ -41,7 +41,7 @@
 
   <section :class="['content-wrapper', 'full', this.screenWidth > 1000 ? 'web' : 'mobile']">
     <div class="graphic" id="a">
-      <img src="@/assets/images/hands.png">
+      <img src="@/assets/images/hands-red-string.png">
     </div>
     <div class="content">
       <div class="title">Togetherness.</div>
@@ -64,7 +64,7 @@
         speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides
         general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</div>
       <a href="https://www.ted.com/about/programs-initiatives/tedx-program" target="_blank" class="link"
-        rel="noopener noreferrer">More about <strong>TEDx Program</strong></a>
+        rel="noopener noreferrer">More about TEDx Program</a>
     </div>
   </section>
 

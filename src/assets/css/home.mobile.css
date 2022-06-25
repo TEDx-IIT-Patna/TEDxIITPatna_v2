@@ -67,6 +67,9 @@
     width: unset;
     height: 100vh;
 }
+.theme.infaff.mobile .title{
+    background-color: rgba(255, 255, 255, 0.7);
+}
 
 /* text section */
 .content-wrapper:nth-child(odd) .content,
@@ -82,6 +85,7 @@
     z-index: -1;
 }
 .content-wrapper.mobile .graphic::before{
+    display: none;
     width: 100%;
     top: 50%;
     left: 50%;

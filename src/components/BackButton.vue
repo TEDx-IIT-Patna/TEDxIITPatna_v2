@@ -13,8 +13,8 @@ export default {
 <style scoped>
 .back-button{
     position: fixed;
-    top: 3rem;
-    left: 3.5rem;
+    top: 5%;
+    left: 5%;
     cursor: pointer;
     color: var(--red-l1);
     transition: all 0.2s;

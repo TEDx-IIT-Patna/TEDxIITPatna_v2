@@ -88,7 +88,6 @@ section.full {
   display: block;
   width: 20px;
   height: 15px;
-  transform: scale(var(--ggs,1.5))
 }
 .gg-menu-left-alt::after,
 .gg-menu-left-alt::before {

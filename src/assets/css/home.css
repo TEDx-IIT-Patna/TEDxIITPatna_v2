@@ -85,14 +85,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 80%;
     transform: translate(-50%, -50%);
     
     text-align: center;
     text-transform: uppercase;
-    font-size: calc(80 * (clamp(100px, 30vw, 300px) / 1080));
+    font-size: calc(80 * (clamp(200px, 30vw, 300px) / 1080));
+    line-height: calc(200 * (clamp(200px, 30vw, 300px) / 1080));
     font-weight: 700;
-    letter-spacing: calc(100 * (clamp(100px, 30vw, 300px) / 1080));
+    letter-spacing: calc(100 * (clamp(200px, 30vw, 300px) / 1080));
 }
 
 /* text sections */

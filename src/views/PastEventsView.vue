@@ -1,5 +1,5 @@
 <template>
-  <Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="icon" />
+  <Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="text" />
   <BackButton v-if="this.showWebView" />
 
   <section class="wrapper full" v-if="this.showWebView">
