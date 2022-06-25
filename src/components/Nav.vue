@@ -8,7 +8,7 @@
     <div class="close" @click="this.state = 'hidden'" style="top: -3rem; left: -1rem;">Close</div>
     <div class="links">
       <router-link to="/"><span>Home</span></router-link>
-      <router-link to="/pastevents"><span>Past Events</span></router-link>
+      <router-link to="/past_events"><span>Past Events</span></router-link>
       <router-link to="/team"><span>Team</span></router-link>
       <router-link to="/partners"><span>Partners</span></router-link>
       <router-link to="/about"><span>About</span></router-link>

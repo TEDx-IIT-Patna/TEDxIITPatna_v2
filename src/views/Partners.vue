@@ -1,4 +1,7 @@
 <template>
+<nav class="navbar_team" style="color: white; top: 2vh; right: 2vw;">
+      <Nav />
+      </nav>
   <div class="partners">
   <div class="soon">
   COMING SOON
@@ -12,11 +15,12 @@
 </template>
 
 <script>
+import Nav from '@/components/navbarpanel.vue';
 export default {
   name: 'partners',
   components:
   {
-    
+    Nav
 },
 mounted() {
     if (localStorage.getItem('reloaded')) {

@@ -92,7 +92,7 @@ export default {
 	margin-bottom: 10%;
 }
 .tab-group {
-	max-height: 100vh;
+	max-height: 158vh;
 	max-width: 100vw;
 	/* background-image: url("https://drive.google.com/uc?export=view&id=1zv7nWao1g5nDkSRThT4SOOTDqkK_KJ8p"); */
 	background-image: url("https://drive.google.com/uc?export=view&id=1VnCqBNliFLv74ipW9ElyASII-Pe4fCJA");
@@ -202,6 +202,7 @@ h1 {
 		height:100vh;
 		background-repeat: no-repeat;
 		overflow-y: hidden;
+		height: 115vh;
 	}
 	.tab-element-box {
 	display: none;
