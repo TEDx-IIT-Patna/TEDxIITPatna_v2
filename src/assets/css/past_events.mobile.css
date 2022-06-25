@@ -25,7 +25,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 70vh;
+    width: clamp(35vh, max(35vw, 35vh), 400px);
     pointer-events: none;
     opacity: 0.4;
     z-index: -1;

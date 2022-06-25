@@ -21,5 +21,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/gallery.image_modal.css';
+@import '@/assets/css/gallery_image_modal.css';
 </style>

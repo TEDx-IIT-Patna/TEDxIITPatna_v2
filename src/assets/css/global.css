@@ -47,3 +47,68 @@ section.full {
 .fade-leave-to {
   opacity: 0;
 }
+
+/* css.gg */
+
+/* close icon */
+.gg-close {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: clamp(30px, 5vw, 50px);
+  height: clamp(30px, 5vw, 50px);
+  border: 2px solid transparent;
+  border-radius: 40px
+}
+
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: clamp(30px, 5vw, 50px);
+  height: 2px;
+  background: currentColor;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.gg-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* menu icon */
+.gg-menu-left-alt {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 15px;
+  transform: scale(var(--ggs,1.5))
+}
+.gg-menu-left-alt::after,
+.gg-menu-left-alt::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  height: 2px;
+  border-radius: 4px;
+  background: currentColor;
+  transition: all 0.2s;
+}
+.gg-menu-left-alt::before {
+  width: 100%;
+  box-shadow: 0 12px 0
+}
+.gg-menu-left-alt::after {
+  width: 10px;
+  top: 6px
+}
+.gg-menu-left-alt:hover::after{
+  width: 100%;
+}

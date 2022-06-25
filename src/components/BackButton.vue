@@ -14,7 +14,7 @@ export default {
 .back-button{
     position: fixed;
     top: 3rem;
-    left: 6rem;
+    left: 3.5rem;
     cursor: pointer;
     color: var(--red-l1);
     transition: all 0.2s;

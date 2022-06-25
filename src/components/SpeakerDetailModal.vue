@@ -1,10 +1,8 @@
 <template>
-    <div class="speaker-modal-wrapper" v-if="this.showModal">
+    <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']" v-if="this.showModal">
         <div class="overlay"></div>
-        <!-- <div class="image" :style="{ 'background-image': `url(${imageSrc})`, 'color': 'white' }">
-        {{name}} {{title}} {{content}}
-        </div> -->
         <div class="container">
+            <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
             <img :src="imageSrc" class="pic">
             <div class="content">
                 <div class="name-wrapper">
@@ -43,11 +41,32 @@ export default {
         'talkLink': {
             type: String,
             default: ""
-        } 
+        }
     },
+    data() {
+        return {
+            screenWidth: window.innerWidth,
+            screenHeight: window.innerHeight,
+        }
+    },
+    methods: {
+        onResize() {
+            this.screenWidth = window.innerWidth
+            this.screenHeight = window.innerHeight
+        },
+    },
+    mounted() {
+        this.$nextTick(() => {
+            window.addEventListener('resize', this.onResize)
+        })
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.onResize)
+    }
 }
 </script>
 
 <style scoped>
-@import '@/assets/css/gallery.speaker_modal.css';
+@import '@/assets/css/speaker_detail_modal.css';
+@import '@/assets/css/speaker_detail_modal.mobile.css';
 </style>

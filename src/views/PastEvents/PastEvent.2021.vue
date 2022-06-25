@@ -1,10 +1,10 @@
 <template>
-  <Nav open_button_color="white" />
+  <Nav open_button_color="white" open_button_style="icon" />
 
   <BackButton />
   
-  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark">
-  <div class="theme-bg"><img src="@/assets/past_events/poster-bg/poster-bg-2021.png"></div>
+  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark" v-if="this.screenWidth > this.screenHeight * 1.3">
+  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']"><img src="@/assets/past_events/poster-bg/poster-bg-2021.png"></div>
 
   <section class="intro-wrapper full">
     <div class="bg"></div>
@@ -22,7 +22,7 @@
     </div>
   </section>
 
-  <section class="speakers-wrapper full">
+  <section :class="['speakers-wrapper', this.screenWidth > 1.4 * this.screenHeight ? 'full' : '']">
     <div class="content">
       <div class="title">Speakers.</div>
       <div class="speakers">
@@ -45,14 +45,14 @@
   </section>
 
   <TransitionGroup tag="div" name="fade">
-    <div class="modal-close-btn" v-if="this.showImageModal || this.showSpeakerModal" @click="this.closeAllModals()"><i
-        class="gg-close"></i>
+    <div class="modal-close-btn" v-if="this.showImageModal" @click="this.closeAllModals()">
+    <i class="gg-close"></i>
     </div>
 
     <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc" />
     <SpeakerModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :imageSrc="this.speakerModalSrc"
       :name="this.speakerName" :title="this.speakerTitle" :content="this.speakerContent"
-      :talkLink="this.speakerTalkLink" />
+      :talkLink="this.speakerTalkLink" @closeSpeakerModal="this.closeAllModals" />
   </TransitionGroup>
 
   <!-- <Footer /> -->
@@ -63,7 +63,7 @@ import Nav from '@/components/Nav.vue'
 // import Footer from '@/components/Footer.vue'
 import BackButton from '@/components/BackButton.vue'
 import ImageModal from '@/components/GalleryImageModal.vue'
-import SpeakerModal from '@/components/GallerySpeakerModal.vue'
+import SpeakerModal from '@/components/SpeakerDetailModal.vue'
 
 export default {
   name: "PastEventsView.2021",
@@ -77,6 +77,7 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
       showImageModal: false,
       imageModalSrc: null,
       showSpeakerModal: false,
@@ -141,6 +142,7 @@ export default {
   methods: {
     onResize() {
       this.screenWidth = window.innerWidth
+      this.screenHeight = window.innerHeight
     },
     configureImageModal(i) {
       this.imageModalSrc = require(`@/assets/gallery-images/2021/${i}.png`)
@@ -167,16 +169,21 @@ export default {
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
-      window.addEventListener('keydown', this.closeAllModals)
+      window.addEventListener('keydown', this.closeAllModalsOnKeyPress)
     })
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
-    window.removeEventListener('keydown', this.closeAllModals)
+    window.removeEventListener('keydown', this.closeAllModalsOnKeyPress)
   }
 }
 </script>
 
 <style scoped>
 @import '@/assets/css/past_events.common.css';
+
+.theme-bg.mobile img{
+    transform: translate(17%, -50%);
+    opacity: 0.6;
+}
 </style>

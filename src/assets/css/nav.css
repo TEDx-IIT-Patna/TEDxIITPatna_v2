@@ -11,13 +11,13 @@
 }
 
 .nav.hidden {
-    width: min(100vw, 600px);
+    width: min(100vw, 550px);
     pointer-events: none;
     opacity: 0;
 }
 
 .nav.show {
-    width: min(100vw, 600px);
+    width: min(100vw, 550px);
     pointer-events: all;
     opacity: 1;
 }
@@ -106,7 +106,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    font-size: 1rem;
+    font-size: calc(35 * (clamp(450px, 30vw, 500px) / 1080));
     align-items: left;
     --order: 3;
 }
@@ -128,7 +128,7 @@
     
     color: white;
     text-align: left;
-    font-size: 1rem;
+    font-size: calc(35 * (clamp(450px, 30vw, 500px) / 1080));
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
