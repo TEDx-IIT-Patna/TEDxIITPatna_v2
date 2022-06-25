@@ -8,10 +8,11 @@
           <h1 class="main-head">
             METAMORPHOSIS | 2019
           </h1>
-          Our second edition of TEDxIIT Patna depicted," change is the only constant, the only inevitable." The same applies to the pain that man is agonises over. The darkness today will have to change into
-          the brightest light tomorrow. Hence, going with "Metamorphosis" as the theme, the idea is to hear from the
-          experts themselves on how change has affected today's technology, entertainment and most importantly, the
-          people and the society.
+          The second edition of TEDxIIT Patna was called "Metamorphosis” which depicted that change is the only constant. 
+          The idea is to hear from the experts themselves on how change has affected today's technology, entertainment and most importantly, the people and the society. 
+          Nature's transitions from one season to another, the transformation of a caterpillar to a beautiful butterfly, or the evolution of man from apes, 
+          everything in this universe is susceptible to change. 
+          The same applies to the various pains in life that man is agonised over.
 
         </div>
         <h1 class="speaker-head" v-if="windowwidth < 600">SPEAKERS.</h1>

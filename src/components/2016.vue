@@ -1,5 +1,5 @@
 <template>
-  <div class="e2021 container-fluid">
+  <div class="e2016 container-fluid">
     <NavVue />
     <div class="all container-fluid">
       <div class="header container-fluid">
@@ -9,10 +9,11 @@
           <h1>
             SHEDDING OFF FEATHERS | 2016
           </h1>
-          Our very first edition in 2016 was kick started with the theme of Shedding Off Feathers.
-          Just as birds shed their feathers allowing the new ones to embrace them taking them afresh to infinite skies,
-          bringing out change is an inevitable part of one's life to keep walking the course of life. 'Shedding off
-          feathers' basically reflects the same urge to always keep our arms open to change. 
+          As Socrates said, the secret of change is to focus all your energy not on fighting the old but on building the new, 
+          our first edition of TEDxIITPatna told us that making anything unique is possible only when we let go of the old. 
+          Just as birds shed their feathers, allowing the new ones to embrace. 
+          Bringing out change is an inevitable part of one's life to keep walking the course of life. 
+          This theme reflected the urge to keep our arms open to change. 
 
           <!-- <br> Window width: {{ windowwidth }} <br/> -->
 
@@ -103,7 +104,7 @@ export default {
   overflow-x: hidden;
 }
 
-.e2021 {
+.e2016 {
   background-color: black;
   color: white;
   height: 100vh;
@@ -212,7 +213,7 @@ h1 {
   }
   .e2021{
     background-color: black;
-    font-size: 2vw;
+    font-size: 1vw;
     overflow-x: hidden;
   }
   .text{

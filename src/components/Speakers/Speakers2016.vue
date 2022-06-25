@@ -146,7 +146,7 @@ export default {
                     name: "Ashok Krish",
                     position: "Head of Social Media & Workplace Reimagination Practice at TCS Digital Enterprise at Tata Consultancy Services",
                     image: "https://drive.google.com/uc?export=view&id=1h1UtKUzwfC3GuxjpEVEh3jiCKLuspXHE",
-                    text: "Ashok Krish is a multi faceted and dynamic leader he is a lifelong technology geek, an open source enthusiast and a talented musician.He is a classical violinist and a guitarist, an amateur cellist, columnist for various newspapers, and used to be a Radio Jockey. A strong believer in technology's ability to solve any problem, at TCS he brings this ideology to his work.",
+                    text: "A multi-faceted and dynamic leader, a lifelong technology geek, an open-source enthusiast and a talented musician, he is specialised in the 'Human cloud', which describes the architecture of social technologies and their interplay between people and technology.",
                     linkactive: true,
                     link: "https://youtu.be/MiSbmP_VA38"
 
@@ -156,7 +156,7 @@ export default {
                     name: "Dr. George Puthuran",
                     position: "Doctor, Ophthalmologist",
                     image: "https://drive.google.com/uc?export=view&id=1QChaPv175Blqm39-Y6VKOJltsHlLCcic",
-                    text: "Dr. George V Puthuran hailing from Kochi, Kerala. He currently heads the department of Glaucoma at Aravind Eye Hospital, Madurai. Dr George is the South Zone representative of the present executive committee of the Glaucoma Society Of India. He has presented at various international forums, is an editor of a textbook on Practical Perimetry published by Jaypee Medical Publishers. ",
+                    text: "Currently heads the department of Glaucoma at Aravind Eye Hospital, Madurai; Dr George is the South Zone representative of the present executive committee of the Glaucoma Society Of India. His video, Evolution Of An Affordable Aqueous Drainage Implant – The Indian Story, was one of the three winning films at the World Glaucoma Congress 2013 held in Vancouver. ",
                     linkactive: true,
                     link: "https://youtu.be/MhhvNLztZKI "
                 },
@@ -165,7 +165,7 @@ export default {
                     name: "Dr. Mohan Kameswaran",
                     position: "Doctor, Otorhinolaryngologist",
                     image: "https://drive.google.com/uc?export=view&id=12LQYodl5b_9YKH4Uk7Nt1Jfjn-NWfik3",
-                    text: "Dr. Mohan Kameswaran is an Indian otorhinolaryngologist, medical academic and the founder of MERF Institute of Speech and Hearing, a Chennai-based institution providing advanced training in audiology and speech-language pathology. The Government of India awarded him the fourth highest civilian honour of the Padma Shri, in 2006, for his contributions to Indian medicine.",
+                    text: "Being the founder of the MERF Institute of Speech and Hearing, Dr Mohan Kameswaran has many firsts to his credit, such as the performance of the first auditory brain stem implantation surgery, the first pediatric brain stem implantation surgery etc. He was awarded the fourth highest civilian honour of the Padma Shri, in 2006, for his contributions to Indian medicine. ",
                     linkactive: false,
                     link: ""
                 },
@@ -176,7 +176,7 @@ export default {
                     name: "Dr. Pushpak Bhattacharyya",
                     position: "Professor, Computer Science and Engineering",
                     image: "https://drive.google.com/uc?export=view&id=14csUm5fhmscBx8hhqxKVznxlKZS7630l",
-                    text: "Dr. Pushpak Bhattacharyya has made seminal contributions in NLP and ML, working in these fields for last 25 years. In addition to being Professor at Dept. of CSE in IIT Bombay, he has been a visiting Professor at Stanford University (2004), Distinguished lecturer at University of Houston, USA (2012), and Visiting Scholar- MIT (1990). ",
+                    text: "Being president of ACL, the international apex body of NLP, he has made seminal contributions in NLP and ML, working in these fields for the last 25 years. Being a professor at the Dept. of CSE in IIT Bombay, he has written a textbook called 'Machine Translation', published by CRC Press, the USA, which brings foundational light points on the translation of Indian languages.",
                     linkactive: false,
                     link: ""
                 },
@@ -231,8 +231,8 @@ export default {
 }
 
 .modal-card {
-    height: 300px;
-    width: 800px;
+    max-height: 15vw;
+    max-width: 60vw;
     transform: translate(12vw, -60vh);
     color: black;
     padding-bottom: 5%;
@@ -244,14 +244,14 @@ export default {
 }
 
 .modal-head {
-    font-size: 40px;
+    font-size: 5vh;
     font-weight: 600;
     padding-bottom: 2%;
     text-align: left;
 }
 
 .modal-head2 {
-    font-size: 20px;
+    font-size: 3.2vh;
     font-weight: 300;
     padding-bottom: 2%;
     text-align: left;
@@ -265,6 +265,7 @@ export default {
 .modal-text {
     text-align: left;
     padding-right: 5%;
+    font-size: 2.2vh;
 }
 
 .card-name {
@@ -314,12 +315,16 @@ export default {
 }
 
 .modalimg {
-    margin-top: 50%;
+    margin-top: 30%;
     width: 15rem;
     transform: translate(-6px, 0px);
 }
 @media screen and (min-width: 1400px) and (max-width:3000px) 
 {
+    .carousel-control
+    {
+        transform: translate(0,0);
+    }
     .speakers{
         padding-top: 5%;
         background-color: black;
@@ -353,9 +358,9 @@ export default {
     margin-bottom: -25vh;
 }
 .modal-card {
-    min-height: 35vw;
-    min-width: 60vw;
-    transform: translate(-0vw, -30vh);
+    min-height: 50vh;
+    min-width: 50vw;
+    transform: translate(10vw, -40vh);
     color: black;
     padding-bottom: 0%;
     background-color: rgba(0, 0, 0, 0);
@@ -376,7 +381,7 @@ export default {
     text-align: left;
 }
 .modalimg {
-    margin-top: 70%;
+    margin-top: 40%;
     width: 15vw;
     transform: translate(-6px, 0px);
 }
