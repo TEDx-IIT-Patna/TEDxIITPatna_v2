@@ -1,5 +1,5 @@
 <template>
-  <Nav v-if="!this.showWebView" />
+  <Nav v-if="!this.showWebView" open_button_style="icon" />
 
   <section class="landing full" v-if="this.showWebView">
     <div class="black-bg"></div>
