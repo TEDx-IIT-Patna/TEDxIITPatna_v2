@@ -61,7 +61,7 @@
 .show-panel {
     position: fixed;
     top: 3rem;
-    right: 4rem;
+    right: 3.5rem;
     text-align: right;
     cursor: pointer;
     transition: all 0.2s;
@@ -105,7 +105,7 @@
 .nav .links{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     font-size: 1rem;
     align-items: left;
     --order: 3;

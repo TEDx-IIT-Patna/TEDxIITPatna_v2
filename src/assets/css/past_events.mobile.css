@@ -1,0 +1,90 @@
+.wrapper.mobile{
+    position: relative;
+    padding: 0 0 0 10%;
+    place-content: unset;
+}
+.wrapper.mobile::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 6vw;
+    min-width: 10px;
+    max-width: 46px;
+    height: 100%;
+    background-color: var(--red-l1);
+    z-index: -1;
+}
+
+.wrapper.mobile .logo{
+    display: none;
+}
+
+.wrapper.mobile .flower{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 70vh;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.wrapper.mobile .pastevents-wrapper {
+    /* padding: max(10vh, 5rem) 0; */
+    width: 100%;
+    padding: 0;
+    margin-top: calc(min(20vh, 150px) + calc(120 * (clamp(300px, 80vw, 600px) / 1080)) + 2rem);
+    height: calc(100vh - min(20vh, 150px) - calc(120 * (clamp(300px, 80vw, 600px) / 1080)) - 2rem);
+    overflow: auto;
+}
+
+.wrapper.mobile .pastevents-wrapper .title{
+    position: fixed;
+    top: min(20vh, 150px);
+    padding-left: 5vw;
+    font-size: calc(120 * (clamp(300px, 80vw, 600px) / 1080));
+}
+
+.wrapper.mobile .event-scroller{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-bottom: 40vh;
+}
+
+.wrapper.mobile .event{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.wrapper.mobile .event .thumbnail{
+    width: 30vw;
+    max-width: 250px;
+    min-width: 200px;
+}
+
+.wrapper.mobile .event .year{
+    display: flex;
+    position: relative;
+    margin-right: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    background-color: white;
+    opacity: 1;
+}
+.wrapper.mobile .event .year::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: calc(100% + 5px);
+    width: 25px;
+    height: 2px;
+    background-color: var(--red-l1);
+}

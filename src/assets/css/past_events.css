@@ -1,5 +1,7 @@
 .wrapper {
+    display: grid;
     position: relative;
+    place-content: center;
 }
 
 /* painted X */
@@ -29,12 +31,8 @@
 }
 
 .pastevents-wrapper{
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    width: 100%;
-    padding: 5% 10%;
-    transform: translate(-50%, -50%);
+    width: 80vw;
+    padding: 5% 0;
 }
 
 .pastevents-wrapper .title{
