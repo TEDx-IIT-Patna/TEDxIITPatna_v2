@@ -119,7 +119,8 @@ export default {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       showWebView: window.innerWidth >= (1.51 * window.innerHeight),
-      countdownTarget: new Date("2022-09-03T00:00:00.000+05:30"),
+      
+      countdownTarget: new Date("2022-09-03T00:00:00.000+05:30"), // target date for countdown
       displayDays: 0,
       displayHours: 0,
       _days: 60 * 60 * 24,
@@ -133,16 +134,11 @@ export default {
       this.showWebView = window.innerWidth >= (1.51 * window.innerHeight)
     },
     formatTime(val) {
-      if (val >= 10) {
-        return String(val)
-      }
-      else {
-        return "0" + String(val)
-      }
+      return val >= 10 ? String(val) : "0" + String(val)
     },
     countdownLogic(interval) {
       const now = new Date()
-      const deltaT = Math.trunc((this.countdownTarget.getTime() - now.getTime()) / 1000) // in seconds\
+      const deltaT = Math.trunc((this.countdownTarget.getTime() - now.getTime()) / 1000) // in seconds
 
       if (deltaT < 0) {
         closeInterval(interval)

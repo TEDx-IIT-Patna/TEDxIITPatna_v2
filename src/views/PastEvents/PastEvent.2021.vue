@@ -83,14 +83,17 @@ export default {
     return {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
+      
       showImageModal: false,
       imageModalSrc: null,
+
       showSpeakerModal: false,
       speakerModalSrc: null,
       speakerName: null,
       speakerTitle: null,
       speakerContent: null,
       speakerTalkLink: null,
+
       speakerDetails: [
         {
           name: "Darren Hood",
