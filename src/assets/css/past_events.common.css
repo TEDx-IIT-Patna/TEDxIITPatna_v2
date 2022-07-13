@@ -231,16 +231,6 @@
     transform: scale(1.2);
 }
 
-/* modal close button */
-.modal-close-btn {
-    position: fixed;
-    top: 4rem;
-    right: 3rem;
-    color: white;
-    z-index: 2;
-    cursor: pointer;
-}
-
 /* needed some extra padding above footer */
 .footer {
     margin-top: 20vh;

@@ -19,6 +19,15 @@
     z-index: 2;
 }
 
+.modal-close-btn {
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    color: white;
+    z-index: 3;
+    cursor: pointer;
+}
+
 .image {
     width: 90vw;
     height: calc(9/16 * 90vw);

@@ -45,11 +45,8 @@
   </section>
 
   <TransitionGroup tag="div" name="fade">
-    <div class="modal-close-btn" v-if="this.showImageModal" @click="this.closeAllModals()">
-    <i class="gg-close"></i>
-    </div>
-
-    <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc" />
+    <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc"
+      @closeImageModal="this.closeAllModals" />
     <SpeakerModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :imageSrc="this.speakerModalSrc"
       :name="this.speakerName" :title="this.speakerTitle" :content="this.speakerContent"
       :talkLink="this.speakerTalkLink" @closeSpeakerModal="this.closeAllModals" />

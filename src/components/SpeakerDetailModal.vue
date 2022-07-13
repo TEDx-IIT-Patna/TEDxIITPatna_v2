@@ -5,9 +5,10 @@
     Usage:
     <template>
         ...
-        <SpeakerModal showModal="true","false" imageSrc="/absolute/path/to/image"
-            name="speaker_name" title="speaker_title_aka_designation" content="speaker_details"
-            talkLink="link_to_speakers_talk" @closeSpeakerModal="this.callback_function_when_close_button_is_clicked_in_modal" />
+        <SpeakerModal showModal="true","false"
+            imageSrc="/absolute/path/to/image" name="speaker_name" title="speaker_title_aka_designation"
+            content="speaker_details" talkLink="link_to_speakers_talk"
+            @closeSpeakerModal="this.callback_function_when_close_button_is_clicked_in_modal" />
         ...
     </template>
     <script scoped>
@@ -23,12 +24,19 @@
             },
             methods: {
                 callback_function_when_close_button_is_clicked_in_modal() {
-                    // code to close the modal
+                    // code to hide the modal
                 }
             },
             ...
         }
     </script>
+-->
+<!--
+    NOTE: We are not writing the code to close the modal inside the component
+    itself because we are passing the show and hide states as props to the
+    component. And component props are mutable in nature, ie, cannot be changed.
+    Therefore, we have to define the code to close the modals in the parent views/components
+    where the this component is used
 -->
 <!--
     NOTE: When passing the imageSrc prop, you can pass require('@/relative/path/to/image')
@@ -83,6 +91,9 @@ export default {
             default: ""
         }
     },
+    emits: [
+        'closeSpeakerModal'
+    ],
     data() {
         return {
             screenWidth: window.innerWidth,

@@ -5,10 +5,8 @@
     Usage:
     <template>
         ...
-        <div class="modal-close-btn" @click="this.callback_function_when_close_button_is_clicked">
-            <i class="gg-close"></i>
-        </div>
-        <ImageModal showModal="true","false" imageSrc="/absolute/path/to/image" />
+        <ImageModal showModal="true","false" imageSrc="/absolute/path/to/image"
+            @closeImageModal="this.callback_function_when_close_button_is_clicked" />
         ...
     </template>
     <script scoped>
@@ -30,11 +28,13 @@
             ...
         }
     </script>
-    <style scoped>
-        .modal-close-btn{
-            /* styles */
-        }
-    </style>
+-->
+<!--
+    NOTE: We are not writing the code to close the modal inside the component
+    itself because we are passing the show and hide states as props to the
+    component. And component props are mutable in nature, ie, cannot be changed.
+    Therefore, we have to define the code to close the modals in the parent views/components
+    where the this component is used
 -->
 <!--
     NOTE: When passing the imageSrc prop, you can pass require('@/relative/path/to/image')
@@ -45,6 +45,9 @@
 
 <template>
     <div class="gallery-modal-wrapper" v-if="this.showModal">
+        <div class="modal-close-btn" @click="this.$emit('closeImageModal')">
+            <i class="gg-close"></i>
+        </div>
         <div class="overlay"></div>
         <div class="image" :style="{ 'background-image': `url(${imageSrc})`, 'color': 'white' }"></div>
     </div>
@@ -62,6 +65,9 @@ export default {
             default: false
         }
     },
+    emits: [
+        'closeImageModal'
+    ],
 }
 </script>
 

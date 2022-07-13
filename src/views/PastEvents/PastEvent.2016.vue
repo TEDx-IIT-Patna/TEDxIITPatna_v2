@@ -1,10 +1,12 @@
 <template>
   <Nav open_button_color="white" open_button_style="icon" />
-  
+
   <BackButton />
 
-  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark" v-if="this.screenWidth > this.screenHeight * 1.3">
-  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']"><img src="@/assets/past_events/poster-bg/poster-bg-2016.png"></div>
+  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark"
+    v-if="this.screenWidth > this.screenHeight * 1.3">
+  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']"><img
+      src="@/assets/past_events/poster-bg/poster-bg-2016.png"></div>
 
   <section class="intro-wrapper full">
     <div class="bg"></div>
@@ -28,12 +30,13 @@
       </div>
     </div>
   </section>
-  
+
   <section class="speakers-wrapper full">
     <div class="content">
       <div class="title">Speakers.</div>
       <div class="speakers">
-        <div class="speaker" v-for="speaker in this.speakerDetails" :key="speaker" @click="this.configureSpeakerModal(speaker)">
+        <div class="speaker" v-for="speaker in this.speakerDetails" :key="speaker"
+          @click="this.configureSpeakerModal(speaker)">
           <img :src="speaker.imageSrc">
         </div>
       </div>
@@ -52,11 +55,8 @@
   </section>
 
   <TransitionGroup tag="div" name="fade">
-    <div class="modal-close-btn" v-if="this.showImageModal" @click="this.closeAllModals()"><i
-        class="gg-close"></i>
-    </div>
-
-    <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc" />
+    <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc"
+      @closeImageModal="this.closeAllModals" />
     <SpeakerModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :imageSrc="this.speakerModalSrc"
       :name="this.speakerName" :title="this.speakerTitle" :content="this.speakerContent"
       :talkLink="this.speakerTalkLink" @closeSpeakerModal="this.closeAllModals" />
@@ -175,8 +175,8 @@ export default {
 <style scoped>
 @import '@/assets/css/past_events.common.css';
 
-.theme-bg.mobile img{
-    transform: translate(10%, -50%);
-    opacity: 0.6;
+.theme-bg.mobile img {
+  transform: translate(10%, -50%);
+  opacity: 0.6;
 }
 </style>
