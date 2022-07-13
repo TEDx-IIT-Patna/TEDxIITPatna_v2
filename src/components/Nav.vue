@@ -34,18 +34,20 @@
   <nav :class="['nav', this.state]">
     <div class="close" @click="this.state = 'hidden'">Close</div>
     <div class="links">
-      <router-link to="/">Home</router-link>
-      <router-link to="/pastevents">Past Events</router-link>
-      <router-link to="/partners">Partners</router-link>
-      <router-link to="/about">About</router-link>
+      <NavLinks />
     </div>
     <img src="@/assets/images/Flower-cropped.png" class="flower" style="opacity: 0.7">
   </nav>
 </template>
 
 <script>
+import NavLinks from '@/components/NavLinks.vue'
+
 export default {
   name: "Nav",
+  components: {
+    NavLinks,
+  },
   props: {
     'open_button_color': {
       type: String,

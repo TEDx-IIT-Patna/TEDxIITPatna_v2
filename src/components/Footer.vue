@@ -33,10 +33,7 @@
 
     <div class="left-wrapper">
       <div class="nav-links">
-        <router-link to="/">Home</router-link>
-        <router-link to="/pastevents">Past Events</router-link>
-        <router-link to="/partners">Partners</router-link>
-        <router-link to="/about">About</router-link>
+        <NavLinks />
       </div>
 
       <div class="misc-links">
@@ -79,6 +76,17 @@
 
   </footer>
 </template>
+
+<script>
+import NavLinks from '@/components/NavLinks.vue'
+
+export default {
+    name: "Footer",
+    components: {
+        NavLinks,
+    }
+}
+</script>
 
 <style scoped>
 @import '@/assets/css/footer.css';

@@ -26,15 +26,18 @@
 
 <template>
     <nav class="navbar-web">
-        <router-link to="/pastevents">Past Events</router-link>
-        <router-link to="/partners">Partners</router-link>
-        <router-link to="/about">About</router-link>
+        <NavLinks />
     </nav>
 </template>
 
 <script>
+import NavLinks from '@/components/NavLinks.vue'
+
 export default {
     name: "Home.Nav",
+    components: {
+        NavLinks,
+    }
 }
 </script>
 
