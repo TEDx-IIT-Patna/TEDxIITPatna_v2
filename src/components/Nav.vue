@@ -1,4 +1,3 @@
-<!-- there are separate nav elements in Homepage and Footer -->
 <!--
   Navigation panel
   "open nav panel" and "close" text included
