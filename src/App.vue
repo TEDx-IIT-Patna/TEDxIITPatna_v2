@@ -23,5 +23,5 @@ export default {
 
 <style>
 /* these are applied on all pages. You might want to read Vue Router documentation (https://router.vuejs.org/) */
-@import '@/assets/css/global.css';
+@import '@/assets/css/_global.css';
 </style>
