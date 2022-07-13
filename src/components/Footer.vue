@@ -41,7 +41,7 @@
 
       <div class="misc-links">
         <a href="#" class="link">Subscribe to our<br>mailing list!</a>
-        <a href="#" class="link">Speaker Applications</a>
+        <a href="https://forms.gle/jhDwBQmSFid4jjPZ6" target="_blank" class="link">Speaker Applications</a>
       </div>
 
       <div class="socials">
