@@ -6,6 +6,7 @@
     transform: translate(20%, 0);
 }
 
+/* .theme-bg == the backround image basically */
 .theme-bg {
     position: fixed;
     bottom: 0;
@@ -26,6 +27,7 @@
     transform: translate(0, -50%);
 }
 
+/* intro paragraph */
 .intro-wrapper {
     /* display: flex; */
     position: relative;
@@ -90,6 +92,7 @@
     letter-spacing: 0.1rem;
 }
 
+/* formatting for quotes */
 .intro-wrapper .quote {
     margin: 1rem 0;
     padding: 0 2rem;
@@ -108,7 +111,7 @@
     font-size: 1rem;
 }
 
-/* speakers section + gallery section */
+/* speakers section + gallery section (common styles) */
 .speakers-wrapper,
 .gallery-wrapper {
     position: relative;
@@ -190,7 +193,7 @@
     background-color: var(--red-l1);
 }
 
-/* gallery specific changes */
+/* gallery specific styles */
 .gallery {
     max-width: unset;
     justify-content: center;

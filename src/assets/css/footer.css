@@ -50,6 +50,7 @@
     aspect-ratio: 16 / 9;
 }
 
+/* the links on the left-side in web-view */
 .left-wrapper {
     grid-area: links;
     display: grid;
@@ -62,10 +63,12 @@
     grid-template-rows: auto;
 }
 
+/* .nav-links are links to other pages in site */
 .nav-links {
     grid-area: nav;
 }
 
+/* .nav-links are external links and all */
 .misc-links {
     grid-area: misc;
 }
@@ -88,6 +91,7 @@
     margin: 0.6ch 1ch;
 }
 
+/* social buttons + email */
 .socials {
     grid-area: socials;
     display: flex;
