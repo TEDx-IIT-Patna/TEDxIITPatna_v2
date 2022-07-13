@@ -6,7 +6,7 @@
   <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark"
     v-if="this.screenWidth > this.screenHeight * 1.3">
   <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']">
-    <img src="@/assets/past_events/poster-bg/poster-bg-2021.png">
+    <img src="@/assets/past-events/poster-bg/poster-bg-2021.png">
   </div>
   <!-- eyeballed these 1.3 and 1.51 coefficients -->
 
@@ -98,49 +98,49 @@ export default {
         {
           name: "Darren Hood",
           title: "Principle UX Designer",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/DarrenHood.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/DarrenHood.png'),
           content: "He was our first speaker who is not only a <strong>UX Designer</strong> but also a <strong>UX Experience Architect</strong>. He has worked on projects for the <strong>Fortune 50</strong> and is the host of The World of UX Podcast on CX of M radio via Michigan State University.",
           speakerTalkLink: "https://youtu.be/6INnG61FLag"
         },
         {
           name: "Rahul Aggarwal",
           title: "Founder at Mission Oxygen",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/RahulAggarwal.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/RahulAggarwal.png'),
           content: "He was our second speaker, founder of Mission Oxygen and Co-founder of India's first graphic design platform- Designhill. One of India's youngest entrepreneurs, Rahul, is a passionate investor and marketer who acts as a startup advisor.",
           speakerTalkLink: ""
         },
         {
           name: "Rishi Raj",
           title: "Associate Professor – IIT Patna",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/RishiRaj.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/RishiRaj.png'),
           content: "He was our third speaker. He is a magnificent professor at IIT Patna. With five patents and more than 50 research papers, Dr Rishi has also worked as a Postdoctoral Associate at the Massachusetts Institute of Technology.",
           speakerTalkLink: "https://youtu.be/HMvYMLkoShg"
         },
         {
           name: "Vivek Ram",
           title: "Senapati at Vaanarsena Studios",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/VivekRam.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/VivekRam.png'),
           content: "He is a well-known CG and VFX artist and has worked on many international feature films, including Fast and Furious 3, The Incredible Hulk, Night at the Museum and many more. As the founder of Vanarsena studios, he is exceptionally passionate about mythical stories.",
           speakerTalkLink: "https://youtu.be/bG4VLt6uVUc"
         },
         {
           name: "Yusra Mardini",
           title: "Swimmer, Olympian",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/YusraMardini.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/YusraMardini.png'),
           content: "She is an Olympic swimmer and is the youngest ever Goodwill Ambassador for UNHCR, the UN Refugee Agency. A Syrian refugee herself, she advocates for refugees globally and has become a powerful voice for the forcibly displaced across the world. Yusra's incredible story is told in her memoir 'Butterfly: From Refugee to Olympian - My Story of Rescue, Hope and Triumph'",
           speakerTalkLink: "https://youtu.be/xQ3gAIX6a7E"
         },
         {
           name: "Rupesh Mahore",
           title: "Researcher and Innovator",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/RupeshMahore.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/RupeshMahore.png'),
           content: "Currently working as a remote research intern at Harvard University, Rupesh is deeply interested in physics. This brilliant personality is the mind behind OxyServe, a monitoring device that could save the lives of covid 19 patients. Having worked with Padma Shri Prof. H.C.Verma, he has also worked on a project used in the Chandrayan-2.",
           speakerTalkLink: ""
         },
         {
           name: "Zoya Agarwal",
           title: "Aircraft Pilot, UN Spokesperson",
-          imageSrc: require('@/assets/past_events/speaker-images/2021/CaptainZoyaAgarwal.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2021/CaptainZoyaAgarwal.png'),
           content: "The youngest female pilot to fly a Boeing 777,  Captain Zoya turned a page in Indian aviation history when she commanded an all-female cockpit crew that went over the North Pole from San Francisco to Bengaluru on the world's longest non-stop commercial trip. Zoya is also the spokesperson of Generation Equality by the UN.",
           speakerTalkLink: ""
         },
