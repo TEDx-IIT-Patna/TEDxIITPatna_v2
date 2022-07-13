@@ -1,4 +1,28 @@
 <!-- there are separate nav elements in Homepage and Footer -->
+<!--
+  Navigation panel
+  "open nav panel" and "close" text included
+-->
+<!--
+  Usage:
+  <template>
+    <Nav [open_button_color="black","white"] [open_button_background="any_color_code"] [open_button_style="text","icon"] />
+  </template>
+  <script scoped>
+    ...
+    import Nav from '@/components/Nav.vue'
+    ...
+    export default {
+      ...
+      components: {
+        ...
+        Nav,
+        ...
+      }
+      ...
+    }
+  </script>
+-->
 <template>
   <span id="nav-panel-show-button" class="show-panel" v-if="open_button_style === 'text'" @click="this.state = 'show'"
     :style="{ 'color': open_button_color, 'background-color': open_button_background }">Navigation<br>Panel</span>

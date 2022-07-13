@@ -1,5 +1,45 @@
+<!--
+    Modal to display individual speaker details
+-->
+<!--
+    Usage:
+    <template>
+        ...
+        <SpeakerModal showModal="true","false" imageSrc="/absolute/path/to/image"
+            name="speaker_name" title="speaker_title_aka_designation" content="speaker_details"
+            talkLink="link_to_speakers_talk" @closeSpeakerModal="this.callback_function_when_close_button_is_clicked_in_modal" />
+        ...
+    </template>
+    <script scoped>
+        ...
+        import SpeakerModal from '@/components/SpeakerDetailModal.vue'
+        ...
+        export default {
+            ...
+            components: {
+                ...
+                SpeakerModal,
+                ...
+            },
+            methods: {
+                callback_function_when_close_button_is_clicked_in_modal() {
+                    // code to close the modal
+                }
+            },
+            ...
+        }
+    </script>
+-->
+<!--
+    NOTE: When passing the imageSrc prop, you can pass require('@/relative/path/to/image')
+    to use relative paths instead.
+
+    This is the recommended method.
+-->
+
 <template>
-    <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']" v-if="this.showModal">
+    <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']"
+        v-if="this.showModal">
         <div class="overlay"></div>
         <div class="container">
             <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
