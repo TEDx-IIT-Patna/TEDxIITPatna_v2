@@ -3,8 +3,12 @@
 
   <BackButton />
   
-  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark" v-if="this.screenWidth > this.screenHeight * 1.3">
-  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']"><img src="@/assets/past_events/poster-bg/poster-bg-2019.png"></div>
+  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark"
+    v-if="this.screenWidth > this.screenHeight * 1.3">
+  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']">
+    <img src="@/assets/past_events/poster-bg/poster-bg-2019.png">
+  </div>
+  <!-- eyeballed these 1.3 and 1.51 coefficients -->
 
   <section class="intro-wrapper full">
     <div class="bg"></div>
@@ -44,11 +48,15 @@
 
 
   <TransitionGroup tag="div" name="fade">
+    <!-- transition group for fade-in and fade-out effects -->
+
     <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc"
       @closeImageModal="this.closeAllModals" />
+    
     <SpeakerModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :imageSrc="this.speakerModalSrc"
       :name="this.speakerName" :title="this.speakerTitle" :content="this.speakerContent"
       :talkLink="this.speakerTalkLink" @closeSpeakerModal="this.closeAllModals" />
+
   </TransitionGroup>
 
   <!-- <Footer /> -->
