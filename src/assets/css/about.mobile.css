@@ -1,0 +1,34 @@
+.mob_card_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    flex-direction: column;
+}
+.faculty_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.mob_redbox{
+    background-color: red;
+    height: 7vh;
+    width: 80vw;
+
+}
+
+.team_text_mobile{
+    position: absolute;
+    float: left !important;
+}
+.team_text_mobile h1{
+    position: sticky;
+    top: 0px;
+    text-align: start;
+    margin-left: 12px;
+}
+.footer_mob{
+    margin-top: 40px;
+}

@@ -37,20 +37,13 @@ const routes = [
     },
   },
 
+  
   {
     path: '/about',
     name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ComingSoonView.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
     meta: {
-      title: "Coming Soon"
-    },
-  },
-  {
-    path: '/team',
-    name: 'team',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TeamView.vue'),
-    meta: {
-      title: "Team Page"
+      title: "About | Team"
     },
   },
 
