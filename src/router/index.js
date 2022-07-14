@@ -1,6 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+// only the home view is loaded at first. all other routes are lazy-loaded when called.
+// this is done simply to cut down on network usage and speed up loading a bit on initial landing.
+// but i'm not sure whether this is the right thing to do.
+
+// NOTE: when using lazy loading feature, be sure to add the webpackChunkName directives (yes, it's not random comments)
 const routes = [
   {
     path: '/',
@@ -10,6 +15,7 @@ const routes = [
       title: "Home"
     },
   },
+
   {
     path: '/pastevents',
     name: 'pastevents',
@@ -21,6 +27,7 @@ const routes = [
       title: "Past Events"
     },
   },
+
   {
     path: '/partners',
     name: 'partners',
@@ -29,6 +36,7 @@ const routes = [
       title: "Coming Soon"
     },
   },
+
   {
     path: '/about',
     name: 'about',
@@ -55,6 +63,7 @@ const routes = [
       title: "Roar, 2021"
     },
   },
+
   {
     path: '/pastevents/2019',
     name: 'pastevent_2019',
@@ -63,6 +72,7 @@ const routes = [
       title: "Metamorphosis, 2019"
     },
   },
+
   {
     path: '/pastevents/2016',
     name: 'pastevent_2016',
@@ -71,6 +81,8 @@ const routes = [
       title: "Shedding Off Feathers, 2016"
     },
   },
+
+  // *** Error404 path. This needs to be created.
   // {
   //   path: '*',
   //   name: 'error404',

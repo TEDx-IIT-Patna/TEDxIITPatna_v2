@@ -1,8 +1,10 @@
 <template>
   <Nav v-if="!this.showWebView" open_button_style="icon" />
 
+  <!-- web-view landing -->
   <section class="landing full" v-if="this.showWebView">
     <div class="black-bg"></div>
+
     <div class="countdown-container">
       <div class="title">Live in</div>
       <div class="countdown">
@@ -10,15 +12,19 @@
         <span id="hrs">{{ this.formatTime(this.displayHours) }}</span>h
       </div>
     </div>
+
     <div class="paintedx">
       <img src="@/assets/images/paintedx.png">
     </div>
+
     <div class="logo-container">
       <img src="@/assets/images/barcode.png" class="barcode">
       <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo">
       <HomeNav v-if="this.showWebView" />
     </div>
   </section>
+
+  <!-- mobile-view landing -->
   <section class="landing mobile full" v-else>
     <div class="countdown-container">
       <div class="title">Live in</div>
@@ -27,18 +33,22 @@
         <span id="hrs">{{ this.formatTime(this.displayHours) }}</span> hours
       </div>
     </div>
+
     <div class="strokex">
       <img src="@/assets/images/cross_stroke.png">
     </div>
+
     <img src="@/assets/images/tedxiitpatna_logo-1B.png" class="iitp-logo">
   </section>
 
+  <!-- web+mobile view of the theme banner -->
   <section :class="['theme', 'infaff', this.screenWidth > this.screenHeight * 1.1 ? 'web' : 'mobile']">
     <img src="@/assets/images/infinity-logo.png" class="bg" v-if="this.screenWidth > this.screenHeight * 1.1">
     <img src="@/assets/images/infinity-logo-vertical.png" class="bg" v-else>
     <span class="title">Infinite Affinities</span>
   </section>
 
+  <!-- web+mobile view of the contents -->
   <section :class="['content-wrapper', 'full', this.screenWidth > 1000 ? 'web' : 'mobile']">
     <div class="graphic" id="a">
       <img src="@/assets/images/hands-red-string.png">
@@ -109,7 +119,8 @@ export default {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       showWebView: window.innerWidth >= (1.51 * window.innerHeight),
-      countdownTarget: new Date("2022-09-03T00:00:00.000+05:30"),
+      
+      countdownTarget: new Date("2022-09-03T00:00:00.000+05:30"), // target date for countdown
       displayDays: 0,
       displayHours: 0,
       _days: 60 * 60 * 24,
@@ -123,16 +134,11 @@ export default {
       this.showWebView = window.innerWidth >= (1.51 * window.innerHeight)
     },
     formatTime(val) {
-      if (val >= 10) {
-        return String(val)
-      }
-      else {
-        return "0" + String(val)
-      }
+      return val >= 10 ? String(val) : "0" + String(val)
     },
     countdownLogic(interval) {
       const now = new Date()
-      const deltaT = Math.trunc((this.countdownTarget.getTime() - now.getTime()) / 1000) // in seconds\
+      const deltaT = Math.trunc((this.countdownTarget.getTime() - now.getTime()) / 1000) // in seconds
 
       if (deltaT < 0) {
         closeInterval(interval)

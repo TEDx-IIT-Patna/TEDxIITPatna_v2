@@ -3,8 +3,12 @@
 
   <BackButton />
   
-  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark" v-if="this.screenWidth > this.screenHeight * 1.3">
-  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']"><img src="@/assets/past_events/poster-bg/poster-bg-2019.png"></div>
+  <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark"
+    v-if="this.screenWidth > this.screenHeight * 1.3">
+  <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']">
+    <img src="@/assets/past-events/poster-bg/poster-bg-2019.png">
+  </div>
+  <!-- eyeballed these 1.3 and 1.51 coefficients -->
 
   <section class="intro-wrapper full">
     <div class="bg"></div>
@@ -44,14 +48,15 @@
 
 
   <TransitionGroup tag="div" name="fade">
-    <div class="modal-close-btn" v-if="this.showImageModal" @click="this.closeAllModals()"><i
-        class="gg-close"></i>
-    </div>
+    <!-- transition group for fade-in and fade-out effects -->
 
-    <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc" />
+    <ImageModal v-if="this.showImageModal" :showModal="this.showImageModal" :imageSrc="this.imageModalSrc"
+      @closeImageModal="this.closeAllModals" />
+    
     <SpeakerModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :imageSrc="this.speakerModalSrc"
       :name="this.speakerName" :title="this.speakerTitle" :content="this.speakerContent"
       :talkLink="this.speakerTalkLink" @closeSpeakerModal="this.closeAllModals" />
+
   </TransitionGroup>
 
   <!-- <Footer /> -->
@@ -77,47 +82,50 @@ export default {
     return {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
+
       showImageModal: false,
       imageModalSrc: null,
+
       showSpeakerModal: false,
       speakerModalSrc: null,
       speakerName: null,
       speakerTitle: null,
       speakerContent: null,
       speakerTalkLink: null,
+      
       speakerDetails: [
         {
           name: "Kaushalendra Kumar",
           title: "Executive Director, Kaushalya Foundation",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/Kaushalendra.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2019/Kaushalendra.png'),
           content: "He is a social entrepreneur and founder of Kaushalya Foundation and KNIDS GREEN. His work wasn't only appreciated by society but by nations worldwide. He is an Ashoka Fellow and is included in the 256 future heroes of India, published by India Today.",
           speakerTalkLink: ""
         },
         {
           name: "Anupam Jalote",
           title: "CEO, iCreate",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/AnupamJalote.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2019/AnupamJalote.png'),
           content: "He is an innovator, leader and mentors with domain expertise in startup ecosystems, institute buildings, promotion and funding of startups, driving international collaborations, renewable energy, telecom, customer experience and customer value management and strategic consulting. He is currently CEO at iCreate.",
           speakerTalkLink: ""
         },
         {
           name: "Tanvi Bhardwaj",
           title: "CTO and Co-founder, MishiPay",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/Tanvi.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2019/Tanvi.png'),
           content: "She graduated from the University of Manchester with a First Class Honours degree in Computer Systems Engineering. She is now the co-founder and CTO of multi-award-winning retail technology company MishiPay, based in London and Banglore.",
           speakerTalkLink: ""
         },
         {
           name: "Dr. Prashant Jha",
           title: "Director BMJ innovations",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/PrashantJha.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2019/PrashantJha.png'),
           content: "He graduated with MBBS and studied Family Medicine for his post-graduation. He trained as a Physician in India and then as a GP with RCGP, London. He is a significant influencer and wants to put India as the leader in medical sciences.",
           speakerTalkLink: ""
         },
         {
           name: "Shams Aalam",
           title: "Paralympic Swimmer",
-          imageSrc: require('@/assets/past_events/speaker-images/2019/ShamsAalam.png'),
+          imageSrc: require('@/assets/past-events/speaker-images/2019/ShamsAalam.png'),
           content: "He is a true exemplification that the strength of their desire measures the size of one's success. He was awarded best emerging leader in disability sports and sports diplomacy by the US Department of State Global Sports Mentoring Program 2018.",
           speakerTalkLink: "https://www.youtube.com/watch?v=LjuAimWKBjs"
         },
