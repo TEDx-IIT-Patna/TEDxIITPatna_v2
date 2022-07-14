@@ -37,6 +37,14 @@ const routes = [
       title: "Coming Soon"
     },
   },
+  {
+    path: '/team',
+    name: 'team',
+    component: () => import(/* webpackChunkName: "about" */ '../views/TeamView.vue'),
+    meta: {
+      title: "Team Page"
+    },
+  },
 
   // past events
   {
