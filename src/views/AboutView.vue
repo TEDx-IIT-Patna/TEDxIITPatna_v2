@@ -1,589 +1,426 @@
 <template>
 	<section class="webview" v-if="screen > 1000">
 		<section class="nav_section">
-			<Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="text" />
+			<Nav :open_button_color="this.showWebView ? 'black' : 'white'" open_button_style="text" />
 			<BackButton />
 		</section>
-		<section class="top_text">
-			<div class="team_text">
-				<h1>Team</h1>
+		<section class="about_section about1">
+			<div class="about_redbox" id="about_redbox"><span id="redbox_text">About.</span></div>
+			<h5>ABOUT</h5>
+			<h1>IIT Patna</h1>
+			<div class="about_text">Indian Institute of Technology Patna is one of the new IITs established by an Act of
+				the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
+				post-doctoral degrees, it is one of the fastest developing colleges in India.<br /><br />
+				Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres. Many
+				inquisitive minds, eager to expand their technical prowess, are ably supported by astute professors and
+				state-of-the-art laboratories.<br /><br />
+				As the site for vibrant fests – Nebula, Reverberance, Celesta, Anwesha, Infinito– IIT Patna sees
+				overwhelming participation from all over the country. TEDxIITPatna is one of the more formal events in
+				this Institute of National Importance. IIT Patna is committed to providing the nation with well-rounded
+				individuals with professional and scientific competence of the highest degree.</div>
+			<div class="tedx_pic"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+		<section class="about_section about2">
+			<!-- <div class="about_redbox">About.</div> -->
+			<h5>ABOUT</h5>
+			<h1>TED</h1>
+			<div class="about_text2">
+				TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
+				California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual
+				TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of
+				these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane
+				Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala,
+				Sal Khan and Daniel Kahneman.<br /><br />
+				The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media
+				initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides
+				subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational
+				initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to
+				funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals
+				or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows
+				program, helping world-changing innovators from around the globe to amplify the impact of their
+				remarkable projects and activities.<br /><br />
+				Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on
+				Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
 			</div>
 		</section>
 
-
-		<section class="faculty_card">
-			<div class="red_box1">
-				<h1 class="faculty">Prof. InCharge</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container">
-						<img src="../assets/images/Team_Image/prof.png" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>Dr. Sujoy Kumar Samanta</h5>
-								<p>PIC: Cultural & Technical Affairs</p>
+		<!-- NOTE: Faculty -->
+		<section class="about_section about3">
+			<div class="team_redbox" id="team_redbox"><span id="redbox_text1">Team.</span></div>
+			<h5>TEAM</h5>
+			<h1>Faculty</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card" style="width: 18vw;">
+					<img src="../assets/images/Team_Image/prof.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								Dr.Sujoy Kumar Samanta
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
 						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="faculty_card">
-			<div class="red_box2">
-				<h1 class="faculty">Organizers</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Organisers" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+						<div class="row post">
+							<div class="col">
+								Professor-In-Charge<br />(PIC)
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
 						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="faculty_card">
-			<div class="red_box1">
-				<h1 class="faculty">Planning and Curation</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in PnC" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+						<div class="row icon">
+							<div class="col">
+								<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a href="#" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box2">
-				<h1 class="faculty">Hospitality</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Hosp" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Organizers -->
+		<section class="about_section about3">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Organizers</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Organisers" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box1">
-				<h1 class="faculty">WebnApp</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Webnapp" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Planning and Curation -->
+		<section class="about_section about4">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Planning and Curation</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in PnC" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box2">
-				<h1 class="faculty">Media and Public Relations</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in MPR" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Hospitality -->
+		<section class="about_section about5">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Hospitality</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Hosp" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box1">
-				<h1 class="faculty">Editorial</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Editorial" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: WebnApp -->
+		<section class="about_section about6">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Web&App</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Webnapp" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box2">
-				<h1 class="faculty">Registration</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center" style="width: 63vw;">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Registration" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Media and Public Relations -->
+		<section class="about_section about7">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Media and Public Relations</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in MPR" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box1">
-				<h1 class="faculty">Production</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Prod" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Editorial -->
+		<section class="about_section about8">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Editorial</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Editorial" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box2">
-				<h1 class="faculty">Creative and Designing</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center" style="width: 63vw;">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in CnD" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Registrations -->
+		<section class="about_section about9">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Registration</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Registration" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
 
-		<section class="faculty_card">
-			<div class="red_box1">
-				<h1 class="faculty">Sponsor<br/>ship</h1>
-			</div>
-			<div class="container container2">
-				<div class="row vh-100 d-flex justify-content-center align-items-center"
-					style="width: 60vw;float: right;margin-left: -20vw;">
-					<div class="col-lg-4 col-12 my-3 card-container" v-for="person in Spons" :key="person.index">
-						<img :src="person.Path" class="card-img-top" alt="...">
-						<div class="card-body hoverbox">
-							<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-							<div class="box-desc">
-								<h5>{{ person.Name }}</h5>
-								<p> {{ person.Committee }}</p>
+		<!-- NOTE: Production -->
+		<section class="about_section about10">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Production</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Prod" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
 							</div>
-							<ul class="social">
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-facebook-f"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a href="#"><i
-											class="fab fa-instagram"></i></a></li>
-								<li class="mx-1" style="text-align: center;"><a :href="person.Linkedin"><i
-											class="fab fa-linkedin"></i></a></li>
-							</ul>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
 		</section>
+
+		<!-- NOTE: Creative and Designing -->
+		<section class="about_section about11">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Creative and Designing</h1>
+			<div class="hr"></div>
+			<div class="about_text">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in CnD" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Sponsorship -->
+		<section class="about_section about12">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Sponsorship</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_3">
+				<div class="card mx-3" style="width: 18vw;" v-for="person in Spons" :key="person.index">
+				<div class="card-image">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					</div>
+					<div class="card-body">
+						<div class="row name">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
 		
-		<div class="footer_class">
-		<Footer />
-	</div>
+		<!-- <Teamweb /> -->
 	</section>
 
-	
+
 
 
 	<section class="mobileview" v-else-if="screen < 1000">
-		<section class="nav_section">
-			<Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="text" />
-			<BackButton />
-		</section>
-		<section class="top_text">
-			<div class="team_text team_text-mobile">
-				<h1>Team</h1>
-			</div>
-		</section>
-		<section class="faculty_text">
-			<h1>Prof. InCharge</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;">
-				<img src="../assets/images/Team_Image/prof.png" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>Dr. Sujoy Kumar Samanta</h5>
-							<p>PIC: Cultural & Technical Affairs</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Organizers</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Organisers" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Planning and Curation</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in PnC" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Sponsorship</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Spons" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>WebnApp</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Webnapp" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Hospitality</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Hosp" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Media and Public Relations</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in MPR" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Editorial</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Editorial" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Registration</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Registration" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Production</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in Prod" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="faculty_text">
-			<h1>Creative and Designing</h1>
-			<div class="mob_redbox"></div>
-		</section>
-		<div class="mob_card_container">
-			<div class="card" style="width: 18rem;" v-for="person in CnD" :key="person.index">
-				<img :src="person.Path" class="card-img-top" alt="...">
-				<div class="card-body">
-					<div class="row">
-						<div class="col">
-							<h5>{{ person.Name }}</h5>
-							<p> {{ person.Committee }}</p>
-						</div>
-						<div class="col">
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-facebook-f"></i></a>
-							<a class="mx-2" href="#"><i class="fab fa-xl fa-instagram"></i></a>
-							<a class="mx-2" :href="person.Linkedin"><i class="fab fa-xl fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer_mob">
-		<Footer />
-	</div>
+		<AboutmobileVue />
 	</section>
 
 
@@ -613,7 +450,7 @@
 		</div>
 	</div>
 	</section> -->
-	
+
 </template>
 
 
@@ -621,11 +458,13 @@
 import Nav from '@/components/Nav.vue'
 import BackButton from '@/components/BackButton.vue'
 import Footer from '@/components/Footer.vue'
+import AboutmobileVue from '@/components/Aboutmobile.vue'
+import Teamweb from '@/components/Teamweb.vue'
 export default {
 	name: 'team',
 	data() {
 		return {
-			
+
 			Organisers: [
 				{ index: "1", Name: "Palak Totala", "Committee": "Organiser", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/1.jpg'), Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/" },
 				{ index: "2", Name: "Nischal Jain", "Committee": "Co-organiser", Roll: "2001ME41", Path: require('@/assets/images/Team_Image/2.jpg'), Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/" },
@@ -671,11 +510,34 @@ export default {
 		Nav,
 		BackButton,
 		Footer,
+		AboutmobileVue,
+		Teamweb,
+	},
+	mounted(){
+		window.onscroll = function() {
+			console.log(window.pageYOffset);
+    var redbox = document.getElementById('about_redbox');
+    // var redbox_text = document.getElementById('redbox_text');
+    var redbox1 = document.getElementById('team_redbox');
+    // var redbox_text1 = document.getElementById('redbox_text1');
+    if ( window.pageYOffset > 1400 ) {
+		redbox.classList.add("none");
+        // redbox_text.classList.remove("removed-none");
+        redbox1.classList.remove("none");
+        // redbox_text1.classList.add("removed-none");
+    } else {
+		redbox.classList.remove("none");
+        // redbox_text.classList.add("removed-none");
+		redbox1.classList.add("none");
+        // redbox_text1.classList.remove("removed-none");
+    }
+}
 	}
 }
 </script>
 
 <style scoped>
 @import '@/assets/css/about.css';
+@import '@/assets/css/about.content.css';
 @import '@/assets/css/about.mobile.css';
 </style>

@@ -1,34 +1,189 @@
-.mob_card_container{
+.nav{
+    z-index: 15 !important;
+}
+
+ .team_mob{
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .team_mob div:not(:nth-child(1)){
+    top: -50px;
+}
+.team_mob div:nth-child(1){
+    top: 70px;
+}  */
+
+/* .team_mob div:first-child{
+    top: 50px !important;
+} */
+
+.about_IITP h5, .team_mob h5{
+    position: relative;
+    top: 16vh;
+    z-index: 1;
+    color: #9B9B9B;
+    font-size: 4vw;
+    margin-bottom: -4px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.about_IITP h1, .team_mob h1{
+    position: relative;
+    top: 16vh;
+    z-index: 1;
+    color: #000000;
+    width: 100vw;
+    font-size: 12vw;
+    font-size: 9vw;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.about-text{
+    padding-top: 24vw;
+    padding-bottom: 4vw;
+    padding-inline: 14vw;
+    text-align: justify;
+    line-height: 21px;
+}
+
+.tedx-pic{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+    background-color: white;
+    z-index: 10;
+    /* height: 10vh; */
+    padding-top: 2vh;
+    padding-bottom: 3.2vh;
+}
+
+.tedx-pic img{
+    width: 25vw;
+}
+
+#more {display: none;}
+#more2 {display: none;}
+
+.mybtn{
+    display: block;
+    text-align: center;
+    color: #FF0039;
+    /* line-height: 60px; */
+    line-height: 36px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.expand-hr{
+    background-color: black;
+    width: 40vw;
+    height: 0.1vh;
+    margin-top: 24px;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: auto;
+    margin-top: 49px;
+}
+
+.card_mob{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55px;
+    transform: scale(0.65);
+    background-color: transparent;
+    height: 42vh;
+}
+
+.card-img-top-mob{
+    width: 64%;
+    border-radius: 64%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.8);
+    /* background-repeat: no-repeat; */
+    /* border-radius: 10px;
+    border: 1px solid #FF0039;
+    box-shadow: 0px 0px 10px #FF0039; */
+    width: 266px;
+}
+
+.name-mob{
+    font-size: 4.2vw !important;
+}
+
+.card-body-mob{
+    transform: scale(1.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-mob{
+    width: 50vw;
+    font-family: 500 !important;
+}
+
+.about-bg{
+    height: 100vh;
+    width: 27vw;
+    position: fixed;
+    top: -52px;
+    left: -14vw;
+    z-index: -1;
+    float: left;
+    writing-mode: vertical-lr;
+    font-size: 38vw;
+    font-style: normal;
+    font-weight: 700;
+    text-align: end;
+    color: #FFF4F4;
+}
+.team-bg{
+    height: 100vh;
+    width: 27vw;
+    position: fixed;
+    top: 66px;
+    left: -14vw;
+    z-index: -1;
+    float: left;
+    writing-mode: vertical-lr;
+    font-size: 38vw;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF4F4;
+}
+
+.none{
+    display: none;
+}
+
+.card-img-modal{
+    border-radius: 0% !important;
+}
+
+/* .modal{
+    display: flex;
+    justify-content: center;
+} */
+
+.modal-dialog-centered{
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
-    flex-direction: column;
-}
-.faculty_text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2vh;
 }
 
-.mob_redbox{
-    background-color: red;
-    height: 7vh;
-    width: 80vw;
-
-}
-
-.team_text_mobile{
-    position: absolute;
-    float: left !important;
-}
-.team_text_mobile h1{
-    position: sticky;
-    top: 0px;
-    text-align: start;
-    margin-left: 12px;
-}
-.footer_mob{
-    margin-top: 40px;
+.last_team_mob{
+    margin-bottom: 25vh;
 }
