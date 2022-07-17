@@ -20,7 +20,7 @@
 				this Institute of National Importance. IIT Patna is committed to providing the nation with well-rounded
 				individuals with professional and scientific competence of the highest degree.</span>
 			<div class="expand-hr"></div>
-			<a @click="myFunction()" class="mybtn" id="myBtn">EXPAND <i class="fa-solid fa-chevron-down"></i></a>
+			<a @click="myFunction()" class="mybtn" id="myBtn">EXPAND <i class="fa-solid fa-chevron-down fa-xs"></i></a>
 		</div>
 		<div class="tedx-pic"><img src="../assets/images/tedxiitpatna_logo-1B.png" alt="">
 		</div>
@@ -47,7 +47,7 @@
 				Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on
 				Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.</span>
 			<div class="expand-hr"></div>
-			<a @click="myFunction2()" class="mybtn" id="myBtn2">EXPAND <i class="fa-solid fa-chevron-down"></i></a>
+			<a @click="myFunction2()" class="mybtn" id="myBtn2">EXPAND <i class="fa-solid fa-chevron-down fa-xs"></i></a>
 		</div>
 		<div class="tedx-pic"><img src="../assets/images/tedxiitpatna_logo-1B.png" alt="">
 		</div>
@@ -57,7 +57,7 @@
 		<h5>Team</h5>
 		<h1>Faculty</h1>
 		<div class="team-bg" id="team_bg">Team.</div>
-		<div class="card card_mob">
+		<div class="card card_mob card_mob_fac">
 			<img src="../assets/images/Team_Image/prof.png" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob" data-bs-toggle="modal" data-bs-target="#facultyModal">
 				<div class="row name name-mob">
@@ -102,7 +102,7 @@
 		<h1>Organizers</h1>
 		<div class="card card_mob" v-for="person in Organisers" :key="person.index" >
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
-			<div class="card-body card-body-mob" data-bs-toggle="modal" :data-bs-target="'#'+person.Name">
+			<div class="card-body card-body-mob" @click="this.configureSpeakerModal(person)">
 				<div class="row name name-mob">
 					<div class="col">
 						{{ person.Name }}
@@ -123,10 +123,9 @@
 		</div>
 	</section>
 
-	<div v-for="person in Organisers" :key="person.index">
+	<!-- <div v-for="person in Organisers" :key="person.index">
 	<div class="modal fade" :id="person.Name" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
 		<div class="modal-dialog modal-dialog-centered">
-			<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
 			<div class="card" style="width: 18rem;">
 				<img :src="person.Path" class="card-img-modal" alt="...">
 				<div class="card-body">
@@ -138,7 +137,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+	</div> -->
 
 	<section class="team_mob">
 		<h5>Team</h5>
@@ -376,13 +375,16 @@
 	<br />
 	<br />
 	<br />
-
+	 <AboutModal v-if="this.showAboutModal" :showModal="this.showAboutModal" :Path="this.speakerModalSrc"
+      :Name="this.speakerName" :Committee="this.speakerTitle"
+      :linkedin="this.speakerTalkLink" />
 </template>
 
 <script scoped>
 import Nav from '@/components/Nav.vue'
 import BackButton from '@/components/BackButton.vue'
 import Footer from '@/components/Footer.vue'
+import AboutModal from '@/components/AboutMobileModal.vue'
 export default {
 	name: 'team-mobile',
 	data() {
@@ -427,12 +429,19 @@ export default {
 
 			],
 			screen: screen.width,
+			showAboutModal: false,
+      		speakerModalSrc: null,
+      		speakerName: null,
+      		speakerTitle: null,
+      		speakerContent: null,
+      		speakerTalkLink: null,
 		}
 	},
 	components: {
 		Nav,
 		BackButton,
 		Footer,
+		AboutModal,
 	},
 	mounted() {
 		window.onscroll = function () {
@@ -442,7 +451,7 @@ export default {
 			// var redbox_text = document.getElementById('redbox_text');
 			var redbox1 = document.getElementById('team_bg');
 			// var redbox_text1 = document.getElementById('redbox_text1');
-			if (window.pageYOffset > 1320) {
+			if (window.pageYOffset > 1250) {
 				redbox.classList.add("none");
 				// redbox_text.classList.remove("removed-none");
 				redbox1.classList.remove("none");
@@ -463,11 +472,11 @@ export default {
 
 			if (dots.style.display === "none") {
 				dots.style.display = "inline";
-				btnText.innerHTML = "EXPAND <i class='fa-solid fa-chevron-down'></i>";
+				btnText.innerHTML = "EXPAND <i class='fa-solid fa-chevron-down fa-xs'></i>";
 				moreText.style.display = "none";
 			} else {
 				dots.style.display = "none";
-				btnText.innerHTML = "COLLAPSE <i class='fa-solid fa-chevron-up'></i>";
+				btnText.innerHTML = "COLLAPSE <i class='fa-solid fa-chevron-up fa-xs'></i>";
 				moreText.style.display = "inline";
 			}
 		},
@@ -478,17 +487,35 @@ export default {
 
 			if (dots.style.display === "none") {
 				dots.style.display = "inline";
-				btnText.innerHTML = "EXPAND <i class='fa-solid fa-chevron-down'></i>";
+				btnText.innerHTML = "EXPAND <i class='fa-solid fa-chevron-down fa-xs'></i>";
 				moreText.style.display = "none";
 			} else {
 				dots.style.display = "none";
-				btnText.innerHTML = "COLLAPSE <i class='fa-solid fa-chevron-up'></i>";
+				btnText.innerHTML = "COLLAPSE <i class='fa-solid fa-chevron-up fa-xs'></i>";
 				moreText.style.display = "inline";
 			}
+		},
+		configureSpeakerModal(speaker) {
+      this.speakerModalSrc = speaker.Path
+      this.speakerName = speaker.Name
+      this.speakerTitle = speaker.Committee
+    //   this.speakerContent = speaker.content
+      this.speakerTalkLink = speaker.Linkedin
+      this.showSpeakerModal = true
+    },
+	    closeAllModals() {
+    //   this.showImageModal = false
+      this.showSpeakerModal = false
+    },
+    closeAllModalsOnKeyPress(e) {
+      if (e.key === "Escape") {
+        this.closeAllModals();
+      }
+    }
 		}
 	}
 
-}
+
 </script>
 
 <style scoped>
