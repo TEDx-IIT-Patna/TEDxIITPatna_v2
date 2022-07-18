@@ -403,7 +403,7 @@
 	<br />
 	 <AboutModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :Path="this.speakerModalSrc"
       :Name="this.speakerName" :Committee="this.speakerTitle" @closeSpeakerModal="this.closeAllModals"
-      :linkedin="this.speakerTalkLink" />
+      :Linkedin="this.speakerTalkLink" />
 </template>
 
 <script scoped>
@@ -473,12 +473,18 @@ export default {
 	mounted() {
 		window.onscroll = function () {
 			// console.log(screen.height);
-			console.log(window.pageYOffset);
+			var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+					   var print = height/window.pageYOffset;
+			console.log(print);
 			var redbox = document.getElementById('about_bg');
 			// var redbox_text = document.getElementById('redbox_text');
 			var redbox1 = document.getElementById('team_bg');
 			// var redbox_text1 = document.getElementById('redbox_text1');
-			if (window.pageYOffset > 1290) {
+			if (window.pageYOffset > height/6.9) {
 				redbox.classList.add("none");
 				// redbox_text.classList.remove("removed-none");
 				redbox1.classList.remove("none");

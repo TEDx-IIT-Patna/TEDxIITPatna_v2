@@ -48,7 +48,7 @@
 <template>
     <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']"
         v-if="this.showModal">
-        <div class="overlay"></div>
+        <div class="overlay" @click="this.$emit('closeSpeakerModal')"></div>
         <div class="container">
             <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
             <div class="modal_image">
@@ -91,7 +91,7 @@ export default {
         },
         'Linkedin': {
             type: String,
-            default: ""
+            // default: ""
         }
     },
     emits: [
