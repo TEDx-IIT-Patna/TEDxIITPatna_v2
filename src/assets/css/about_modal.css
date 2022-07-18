@@ -1,0 +1,135 @@
+.speaker-modal-wrapper {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    place-content: center;
+    z-index: 1;
+}
+
+.speaker-modal-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.speaker-modal-wrapper .container {
+    position: relative;
+    width: 90vw;
+    max-width: 1300px;
+    height: calc(9/16 * 90vw);
+    max-height: 80vh;
+    color: black;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.speaker-modal-wrapper .container::after{
+    display: none;
+}
+
+/* close button */
+.speaker-modal-wrapper .container .close-btn{
+    position: absolute;
+    display: grid;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 21px;
+    height: 20px;
+    place-content: center;
+    border-radius: 100%;
+    border: 2px solid black;
+    cursor: pointer;
+    z-index: 3;
+}
+.speaker-modal-wrapper .container .close-btn .gg-close::before,
+.speaker-modal-wrapper .container .close-btn .gg-close::after{
+    width: 40%;
+    min-width: 15px;
+}
+
+.speaker-modal-wrapper .container .pic{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70%;
+    transform: translate(-10%, 5%);
+}
+
+.speaker-modal-wrapper .container .content{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    padding: clamp(4rem, 7vh, 10rem) 12% clamp(6rem, 10vh, 10rem) 5%;
+    float: right;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.speaker-modal-wrapper .container .name-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* margin-bottom: calc(50 * (clamp(350px, 50vw, 600px) / 1080));*/
+}
+
+.speaker-modal-wrapper .container .name{
+    margin-left: -5px;
+    font-size: calc(85 * (clamp(330px, 50vw, 600px) / 1080));
+    font-weight: 700;
+    line-height: 1;
+}
+.speaker-modal-wrapper .container .title{
+    /* margin-top: 0.3rem; */
+    font-size: calc(45 * (clamp(330px, 50vw, 600px) / 1080));
+    font-weight: 500;
+    color: var(--grey-l1);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.speaker-modal-wrapper .container .desc{
+    text-align: justify;
+    font-size: calc(35 * (clamp(400px, 50vw, 600px) / 1080));
+    line-height: calc(55 * (clamp(400px, 50vw, 600px) / 1080));
+    font-weight: 400;
+    margin-top: -9px;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    margin-left: -7px;
+}
+.speaker-modal-wrapper .container .desc .talk{
+    display: block;
+    color: var(--red);
+    text-align: right;
+    font-weight: 500;
+    margin-top: 1rem;
+    font-size: calc(35 * (clamp(400px, 50vw, 600px) / 1080));
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s;
+    cursor: pointer;
+}
+.speaker-modal-wrapper .container .desc .talk:hover{
+    text-decoration-color: var(--red);
+}
+.speaker-modal-wrapper .container .desc .talk::after{
+    content: '→';
+    display: inline-block;
+    margin-left: 1ch;
+}

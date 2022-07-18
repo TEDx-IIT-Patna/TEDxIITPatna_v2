@@ -48,20 +48,27 @@
 <template>
     <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']"
         v-if="this.showModal">
-        <!-- <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
-        <!-- <div class="modal-dialog modal-dialog-centered"> -->
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-            <div class="card" style="width: 18rem;">
-                <img :src="Path" class="card-img-modal" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ Name }}</h5>
-                    <p class="card-text">{{ Committee }}</p>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-                    <a :href="Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
+            <div class="modal_image">
+            <img :src="Path" class="pic">
+            </div>
+            <div class="content">
+                <div class="name-wrapper">
+                    <div class="name">{{ Name }}</div>
+                    <div class="title">{{ Committee }}</div>
+                </div>
+                <div class="desc">
+                    <div class="row icon">
+					<div class="col">
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-2 fa-xl"></i></a>
+						<a :href="Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-2 fa-xl"></i></a>
+					</div>
+				</div>
                 </div>
             </div>
-            <!-- </div> -->
-        <!-- </div> -->
+        </div>
     </div>
 </template>
 
@@ -87,6 +94,9 @@ export default {
             default: ""
         }
     },
+    emits: [
+        'closeSpeakerModal'
+    ],
     data() {
         return {
             screenWidth: window.innerWidth,
@@ -111,6 +121,6 @@ export default {
 </script>
 
 <style scoped>
-/* @import '@/assets/css/speaker_detail_modal.css'; */
-/* @import '@/assets/css/speaker_detail_modal.mobile.css'; */
+@import '@/assets/css/about_modal.css';
+@import '@/assets/css/about_modal_mobile.css';
 </style>

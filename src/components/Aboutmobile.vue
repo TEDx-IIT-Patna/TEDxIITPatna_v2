@@ -57,52 +57,52 @@
 		<h5>Team</h5>
 		<h1>Faculty</h1>
 		<div class="team-bg" id="team_bg">Team.</div>
-		<div class="card card_mob card_mob_fac">
+		<div class="card card_mob card_mob_fac" v-for="person in Prof"  :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img src="../assets/images/Team_Image/prof.png" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob" data-bs-toggle="modal" data-bs-target="#facultyModal">
 				<div class="row name name-mob">
 					<div class="col">
-						Dr.Sujoy Kumar Samanta
+						Dr. Sujoy Kumar Samanta
 					</div>
 				</div>
-				<div class="row post post-mob">
+				<div class="row post post-mob post-mob-fac">
 					<div class="col">
 						Professor-In-Charge<br />(PIC)
 					</div>
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a href="#" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="modal fade" id="facultyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- <div class="modal fade" id="facultyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
-			<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="card" style="width: 18rem;">
 				<img src="../assets/images/Team_Image/prof.png" class="card-img-modal" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">Dr.Sujoy Kumar Samanta</h5>
 					<p class="card-text">Professor-In-Charge(PIC)</p>
-					<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-					<a href="#" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+					<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+					<a href="#" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 
-	<section class="team_mob">
+	<!-- <section class="team_mob">
 		<h5>Team</h5>
-		<h1>Organizers</h1>
-		<div class="card card_mob" v-for="person in Organisers" :key="person.index" >
+		<h1>Faculty</h1>
+		<div class="card card_mob" v-for="person in Prof"  :key="person.index" @click="this.configureSpeakerModal(person)" >
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
-			<div class="card-body card-body-mob" @click="this.configureSpeakerModal(person)">
+			<div class="card-body card-body-mob card_mob_fac">
 				<div class="row name name-mob">
 					<div class="col">
 						{{ person.Name }}
@@ -115,15 +115,41 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<section class="team_mob">
+		<h5>Team</h5>
+		<h1>Organizers</h1>
+		<div class="card card_mob" v-for="person in Organisers" :key="person.index" @click="this.configureSpeakerModal(person)" >
+			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
+			<div class="card-body card-body-mob">
+				<div class="row name name-mob">
+					<div class="col">
+						{{ person.Name }}
+					</div>
+				</div>
+				<div class="row post post-mob">
+					<div class="col">
+						{{ person.Committee }}
+					</div>
+				</div>
+				<div class="row icon">
+					<div class="col">
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- <div v-for="person in Organisers" :key="person.index">
+	<!-- <div v-for="person in Organisers" :key="person.index" @click="this.configureSpeakerModal(person)">
 	<div class="modal fade" :id="person.Name" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="card" style="width: 18rem;">
@@ -131,8 +157,8 @@
 				<div class="card-body">
 					<h5 class="card-title">{{ person.Name }}</h5>
 					<p class="card-text">{{ person.Committee }}</p>
-					<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-					<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+					<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+					<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 				</div>
 			</div>
 		</div>
@@ -142,7 +168,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Planning and Curation</h1>
-		<div class="card card_mob" v-for="person in PnC" :key="person.index">
+		<div class="card card_mob" v-for="person in PnC" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -157,8 +183,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -168,7 +194,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Hospitality</h1>
-		<div class="card card_mob" v-for="person in Hosp" :key="person.index">
+		<div class="card card_mob" v-for="person in Hosp" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -183,8 +209,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -194,7 +220,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Web&App</h1>
-		<div class="card card_mob" v-for="person in Webnapp" :key="person.index">
+		<div class="card card_mob" v-for="person in Webnapp" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -209,8 +235,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -220,7 +246,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Media and Public Relations</h1>
-		<div class="card card_mob" v-for="person in MPR" :key="person.index">
+		<div class="card card_mob" v-for="person in MPR" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -235,8 +261,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -246,7 +272,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Editorial</h1>
-		<div class="card card_mob" v-for="person in Editorial" :key="person.index">
+		<div class="card card_mob" v-for="person in Editorial" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -261,8 +287,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -272,7 +298,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Registration</h1>
-		<div class="card card_mob" v-for="person in Registration" :key="person.index">
+		<div class="card card_mob" v-for="person in Registration" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -287,8 +313,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -298,7 +324,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Production</h1>
-		<div class="card card_mob" v-for="person in Prod" :key="person.index">
+		<div class="card card_mob" v-for="person in Prod" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -313,8 +339,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -324,7 +350,7 @@
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Creative and Designing</h1>
-		<div class="card card_mob" v-for="person in CnD" :key="person.index">
+		<div class="card card_mob" v-for="person in CnD" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -339,8 +365,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -350,7 +376,7 @@
 	<section class="team_mob last_team_mob">
 		<h5>Team</h5>
 		<h1>Sponsorship</h1>
-		<div class="card card_mob" v-for="person in Spons" :key="person.index">
+		<div class="card card_mob" v-for="person in Spons" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -365,8 +391,8 @@
 				</div>
 				<div class="row icon">
 					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
 					</div>
 				</div>
 			</div>
@@ -375,8 +401,8 @@
 	<br />
 	<br />
 	<br />
-	 <AboutModal v-if="this.showAboutModal" :showModal="this.showAboutModal" :Path="this.speakerModalSrc"
-      :Name="this.speakerName" :Committee="this.speakerTitle"
+	 <AboutModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :Path="this.speakerModalSrc"
+      :Name="this.speakerName" :Committee="this.speakerTitle" @closeSpeakerModal="this.closeAllModals"
       :linkedin="this.speakerTalkLink" />
 </template>
 
@@ -389,14 +415,16 @@ export default {
 	name: 'team-mobile',
 	data() {
 		return {
-
+			Prof:[
+				{ index: "#17", Name: "Dr. S.K. Samanta", "Committee": "Professor-In-Charge", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/prof.png'), Linkedin: "https://www.linkedin.com/in/sujoy-kumar-samanta-a0bb91238/" },
+			],
 			Organisers: [
 				{ index: "#1", Name: "Palak Totala", "Committee": "Organiser", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/1.jpg'), Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/" },
 				{ index: "#2", Name: "Nischal Jain", "Committee": "Co-organiser", Roll: "2001ME41", Path: require('@/assets/images/Team_Image/2.jpg'), Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/" },
 			],
 			Webnapp: [
-				{ index: "3", Name: "Pratyush Kumar", "Committee": "WebnApp", Roll: "2001ME51", Path: require('@/assets/images/Team_Image/3_1.jpg'), Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/" },
-				{ index: "4", Name: "Suyog Vinod Chaudhari", "Committee": "WebnApp", Roll: "2001EE77", Path: require('@/assets/images/Team_Image/4.jpg'), Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/" },
+				{ index: "3", Name: "Pratyush Kumar", "Committee": "Web&App", Roll: "2001ME51", Path: require('@/assets/images/Team_Image/3_1.jpg'), Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/" },
+				{ index: "4", Name: "Suyog Vinod Chaudhari", "Committee": "Web&App", Roll: "2001EE77", Path: require('@/assets/images/Team_Image/4.jpg'), Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/" },
 			],
 			Spons: [
 				{ index: "7", Name: "Sai Nandan", "Committee": "Sponsorship", Roll: "2001CB46", Path: require('@/assets/images/Team_Image/7.jpg'), Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/" },
@@ -429,11 +457,10 @@ export default {
 
 			],
 			screen: screen.width,
-			showAboutModal: false,
+			showSpeakerModal: false,
       		speakerModalSrc: null,
       		speakerName: null,
       		speakerTitle: null,
-      		speakerContent: null,
       		speakerTalkLink: null,
 		}
 	},
@@ -451,7 +478,7 @@ export default {
 			// var redbox_text = document.getElementById('redbox_text');
 			var redbox1 = document.getElementById('team_bg');
 			// var redbox_text1 = document.getElementById('redbox_text1');
-			if (window.pageYOffset > 1250) {
+			if (window.pageYOffset > 1290) {
 				redbox.classList.add("none");
 				// redbox_text.classList.remove("removed-none");
 				redbox1.classList.remove("none");
@@ -462,8 +489,13 @@ export default {
 				redbox1.classList.add("none");
 				// redbox_text1.classList.remove("removed-none");
 			}
-		}
+		},
+		window.addEventListener('keydown', this.closeAllModalsOnKeyPress)
 	},
+  beforeDestroy() {
+    // window.removeEventListener('resize', this.onResize)
+    window.removeEventListener('keydown', this.closeAllModalsOnKeyPress)
+  },
 	methods: {
 		myFunction() {
 			var dots = document.getElementById("dots");

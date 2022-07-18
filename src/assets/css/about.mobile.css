@@ -23,7 +23,8 @@
 .about_IITP h5, .team_mob h5{
     position: relative;
     top: 16vh;
-    z-index: 1;
+    z-index: 0.5;
+    /* z-index: 1; */
     color: #9B9B9B;
     font-size: 13.41px;
     margin-bottom: -4px;
@@ -34,7 +35,8 @@
 .about_IITP h1, .team_mob h1{
     position: relative;
     top: 16vh;
-    z-index: 1;
+    z-index: 0.5;
+    /* z-index: 1; */
     color: #000000;
     width: 100vw;
     font-size: 12vw;
@@ -62,7 +64,8 @@
     bottom: 0px;
     left: 12vw;
     background-color: white;
-    z-index: 10;
+    z-index: 1;
+    /* z-index: 10; */
     /* height: 10vh; */
     padding-top: 0.8vh;
     padding-bottom: 3.2vh;
@@ -128,6 +131,7 @@
 
 .name-mob{
     font-size: 4.2vw !important;
+    line-height: 2.5 !important;
 }
 
 .card-body-mob{
@@ -139,7 +143,7 @@
 
 .post-mob{
     width: 50vw;
-    font-family: 500 !important;
+    font-weight: 450 !important;
 }
 
 .about-bg{
@@ -196,4 +200,9 @@
 
 .last_team_mob{
     margin-bottom: 25vh;
+}
+
+.post-mob-fac{
+    width: 58vw;
+    line-height: 1.1;
 }
