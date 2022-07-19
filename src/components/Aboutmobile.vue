@@ -53,6 +53,7 @@
 		</div>
 	</section>
 
+<!-- NOTE: PIC -->
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Faculty</h1>
@@ -80,49 +81,7 @@
 		</div>
 	</section>
 
-	<!-- <div class="modal fade" id="facultyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			<div class="card" style="width: 18rem;">
-				<img src="../assets/images/Team_Image/prof.png" class="card-img-modal" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Dr.Sujoy Kumar Samanta</h5>
-					<p class="card-text">Professor-In-Charge(PIC)</p>
-					<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
-					<a href="#" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-
-
-	<!-- <section class="team_mob">
-		<h5>Team</h5>
-		<h1>Faculty</h1>
-		<div class="card card_mob" v-for="person in Prof"  :key="person.index" @click="this.configureSpeakerModal(person)" >
-			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
-			<div class="card-body card-body-mob card_mob_fac">
-				<div class="row name name-mob">
-					<div class="col">
-						{{ person.Name }}
-					</div>
-				</div>
-				<div class="row post post-mob">
-					<div class="col">
-						{{ person.Committee }}
-					</div>
-				</div>
-				<div class="row icon">
-					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
+<!-- NOTE: Organizers -->
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Organizers</h1>
@@ -149,22 +108,7 @@
 		</div>
 	</section>
 
-	<!-- <div v-for="person in Organisers" :key="person.index" @click="this.configureSpeakerModal(person)">
-	<div class="modal fade" :id="person.Name" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="card" style="width: 18rem;">
-				<img :src="person.Path" class="card-img-modal" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">{{ person.Name }}</h5>
-					<p class="card-text">{{ person.Committee }}</p>
-					<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
-					<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div> -->
-
+<!-- NOTE: Planning and Curation-->
 	<section class="team_mob last_team_mob">
 		<h5>Team</h5>
 		<h1>Planning and Curation</h1>
@@ -191,10 +135,11 @@
 		</div>
 	</section>
 
-	<section class="team_mob">
+<!-- NOTE: Sponsorship -->
+	<section class="team_mob last_team_mob">
 		<h5>Team</h5>
-		<h1>Hospitality</h1>
-		<div class="card card_mob" v-for="person in Hosp" :key="person.index" @click="this.configureSpeakerModal(person)">
+		<h1>Sponsorship</h1>
+		<div class="card card_mob" v-for="person in Spons" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -216,7 +161,34 @@
 			</div>
 		</div>
 	</section>
-
+<!-- NOTE: Production -->
+	<section class="team_mob last_team_mob">
+		<h5>Team</h5>
+		<h1>Production</h1>
+		<div class="card card_mob" v-for="person in Prod" :key="person.index" @click="this.configureSpeakerModal(person)">
+			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
+			<div class="card-body card-body-mob">
+				<div class="row name name-mob">
+					<div class="col">
+						{{ person.Name }}
+					</div>
+				</div>
+				<div class="row post post-mob">
+					<div class="col">
+						{{ person.Committee }}
+					</div>
+				</div>
+				<div class="row icon">
+					<div class="col">
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<!-- NOTE: Webnapp -->
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Web&App</h1>
@@ -243,6 +215,7 @@
 		</div>
 	</section>
 
+<!-- NOTE: Media and Public Relations-->
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Media and Public Relations</h1>
@@ -269,32 +242,7 @@
 		</div>
 	</section>
 
-	<section class="team_mob">
-		<h5>Team</h5>
-		<h1>Editorial</h1>
-		<div class="card card_mob" v-for="person in Editorial" :key="person.index" @click="this.configureSpeakerModal(person)">
-			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
-			<div class="card-body card-body-mob">
-				<div class="row name name-mob">
-					<div class="col">
-						{{ person.Name }}
-					</div>
-				</div>
-				<div class="row post post-mob">
-					<div class="col">
-						{{ person.Committee }}
-					</div>
-				</div>
-				<div class="row icon">
-					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
+<!-- NOTE: Registration -->
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Registration</h1>
@@ -321,10 +269,11 @@
 		</div>
 	</section>
 
-	<section class="team_mob last_team_mob">
+<!-- NOTE: Editorial -->
+	<section class="team_mob">
 		<h5>Team</h5>
-		<h1>Production</h1>
-		<div class="card card_mob" v-for="person in Prod" :key="person.index" @click="this.configureSpeakerModal(person)">
+		<h1>Editorial</h1>
+		<div class="card card_mob" v-for="person in Editorial" :key="person.index" @click="this.configureSpeakerModal(person)">
 			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
 			<div class="card-body card-body-mob">
 				<div class="row name name-mob">
@@ -347,6 +296,34 @@
 		</div>
 	</section>
 
+<!-- NOTE: Hospitality -->
+	<section class="team_mob">
+		<h5>Team</h5>
+		<h1>Hospitality</h1>
+		<div class="card card_mob" v-for="person in Hosp" :key="person.index" @click="this.configureSpeakerModal(person)">
+			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
+			<div class="card-body card-body-mob">
+				<div class="row name name-mob">
+					<div class="col">
+						{{ person.Name }}
+					</div>
+				</div>
+				<div class="row post post-mob">
+					<div class="col">
+						{{ person.Committee }}
+					</div>
+				</div>
+				<div class="row icon">
+					<div class="col">
+						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
+						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- NOTE: Creative and Designing -->
 	<section class="team_mob">
 		<h5>Team</h5>
 		<h1>Creative and Designing</h1>
@@ -373,32 +350,7 @@
 		</div>
 	</section>
 
-	<section class="team_mob last_team_mob">
-		<h5>Team</h5>
-		<h1>Sponsorship</h1>
-		<div class="card card_mob" v-for="person in Spons" :key="person.index" @click="this.configureSpeakerModal(person)">
-			<img :src="person.Path" class="card-img-top card-img-top-mob" alt="...">
-			<div class="card-body card-body-mob">
-				<div class="row name name-mob">
-					<div class="col">
-						{{ person.Name }}
-					</div>
-				</div>
-				<div class="row post post-mob">
-					<div class="col">
-						{{ person.Committee }}
-					</div>
-				</div>
-				<div class="row icon">
-					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-3 "></i></a>
-						<a :href="person.Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-3"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
+<!-- NOTE: Convener -->
 	<section class="team_mob last_team_mob">
 		<h5>Team</h5>
 		<h1>Conveners</h1>
@@ -424,6 +376,7 @@
 			</div>
 		</div>
 	</section>
+
 	<br />
 	<br />
 	<br />
