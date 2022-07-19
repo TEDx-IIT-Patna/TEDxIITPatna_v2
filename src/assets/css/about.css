@@ -213,3 +213,39 @@ ul.social li a {
 	height: 100 !important;
 	width: auto !important;
 } */
+
+.card-web{
+	transform: scale(0.65);
+}
+
+.card-fac{
+	transform: scale(0.75);
+}
+
+.post-web{
+	margin-bottom: 9px
+}
+
+.name-web .col{
+	margin-bottom: 8px;
+}
+
+.icon{
+	color: black !important;
+}
+
+.about_text_web{
+	width: calc(100vw - 27vw);
+    position: relative;
+    top: 18vh;
+    /* left: 13vw; */
+    z-index: 1;
+    color: #000000;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 400;
+    font-size: 1.1vw;
+    display: flex;
+    float: left;
+    justify-content: center;
+}

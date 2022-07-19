@@ -64,10 +64,10 @@
 }
 
 .about_text{
-    width: calc(100% - 49vw);
+    width: calc(100vw - 27vw);
     position: relative;
     top: 18vh;
-    left: 13vw;
+    /* left: 13vw; */
     z-index: 1;
     color: #000000;
     text-align: justify;
@@ -184,5 +184,5 @@
 
 .about_text_3{
     width: 80vw;
-    left: 3vw;
+    left: -4vw;
 }

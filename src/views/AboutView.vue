@@ -8,7 +8,7 @@
 			<div class="about_redbox" id="about_redbox"><span id="redbox_text">About.</span></div>
 			<h5>ABOUT</h5>
 			<h1>IIT Patna</h1>
-			<div class="about_text">Indian Institute of Technology Patna is one of the new IITs established by an Act of
+			<div class="about_text2 about_text_web">Indian Institute of Technology Patna is one of the new IITs established by an Act of
 				the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
 				post-doctoral degrees, it is one of the fastest developing colleges in India.<br /><br />
 				Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres. Many
@@ -25,7 +25,7 @@
 			<!-- <div class="about_redbox">About.</div> -->
 			<h5>ABOUT</h5>
 			<h1>TED</h1>
-			<div class="about_text2">
+			<div class="about_text2 about_text_web2">
 				TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
 				California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual
 				TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of
@@ -53,16 +53,16 @@
 			<h5>TEAM</h5>
 			<h1>Faculty</h1>
 			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card" style="width: 18vw;">
+			<div class="about_text about_text_web">
+				<div class="card card-fac" style="width: 18vw;">
 					<img src="../assets/images/Team_Image/prof.png" class="card-img-top" alt="...">
 					<div class="card-body">
-						<div class="row name">
+						<div class="row name name-web">
 							<div class="col">
 								Dr.Sujoy Kumar Samanta
 							</div>
 						</div>
-						<div class="row post">
+						<div class="row post post-web">
 							<div class="col">
 								Professor-In-Charge<br />(PIC)
 							</div>
@@ -86,16 +86,16 @@
 			<h5>TEAM</h5>
 			<h1>Organizers</h1>
 			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Organisers" :key="person.index">
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Organisers" :key="person.index">
 					<img :src="person.Path" class="card-img-top" alt="...">
 					<div class="card-body">
-						<div class="row name">
+						<div class="row name name-web">
 							<div class="col">
 								{{person.Name}}
 							</div>
 						</div>
-						<div class="row post">
+						<div class="row post post-web">
 							<div class="col">
 								{{person.Committee}}
 							</div>
@@ -119,247 +119,16 @@
 			<h5>TEAM</h5>
 			<h1>Planning and Curation</h1>
 			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in PnC" :key="person.index">
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in PnC" :key="person.index">
 					<img :src="person.Path" class="card-img-top" alt="...">
 					<div class="card-body">
-						<div class="row name">
+						<div class="row name name-web">
 							<div class="col">
 								{{person.Name}}
 							</div>
 						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Hospitality -->
-		<section class="about_section about5">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Hospitality</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Hosp" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: WebnApp -->
-		<section class="about_section about6">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Web&App</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Webnapp" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Media and Public Relations -->
-		<section class="about_section about7">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Media and Public Relations</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in MPR" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Editorial -->
-		<section class="about_section about8">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Editorial</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Editorial" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Registrations -->
-		<section class="about_section about9">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Registration</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Registration" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Production -->
-		<section class="about_section about10">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Production</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Prod" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
-							<div class="col">
-								{{person.Committee}}
-							</div>
-						</div>
-						<div class="row icon">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Creative and Designing -->
-		<section class="about_section about11">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Creative and Designing</h1>
-			<div class="hr"></div>
-			<div class="about_text">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in CnD" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name">
-							<div class="col">
-								{{person.Name}}
-							</div>
-						</div>
-						<div class="row post">
+						<div class="row post post-web">
 							<div class="col">
 								{{person.Committee}}
 							</div>
@@ -383,18 +152,18 @@
 			<h5>TEAM</h5>
 			<h1>Sponsorship</h1>
 			<div class="hr"></div>
-			<div class="about_text about_text_3">
-				<div class="card mx-3" style="width: 18vw;" v-for="person in Spons" :key="person.index">
+			<div class="about_text about_text_web about_text_3">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Spons" :key="person.index">
 				<div class="card-image">
 					<img :src="person.Path" class="card-img-top" alt="...">
 					</div>
 					<div class="card-body">
-						<div class="row name">
+						<div class="row name name-web">
 							<div class="col">
 								{{person.Name}}
 							</div>
 						</div>
-						<div class="row post">
+						<div class="row post post-web">
 							<div class="col">
 								{{person.Committee}}
 							</div>
@@ -412,6 +181,271 @@
 			</div>
 		</section>
 
+		<!-- NOTE: WebnApp -->
+		<section class="about_section about6">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Web&App</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Webnapp" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Media and Public Relations -->
+		<section class="about_section about7">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Media and Public Relations</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in MPR" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Editorial -->
+		<section class="about_section about8">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Editorial</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Editorial" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Registrations -->
+		<section class="about_section about9">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Registration</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Registration" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Production -->
+		<section class="about_section about10">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Production</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Prod" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Creative and Designing -->
+		<section class="about_section about11">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Creative and Designing</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in CnD" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		
+
+		<!-- NOTE: Hospitality -->
+		<section class="about_section about5">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Hospitality</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Hosp" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
+
+		<!-- NOTE: Convener -->
+		<section class="about_section about5">
+			<!-- <div class="team_redbox">Team.</div> -->
+			<h5>TEAM</h5>
+			<h1>Conveners</h1>
+			<div class="hr"></div>
+			<div class="about_text about_text_web">
+				<div class="card card-web mx-3" style="width: 18vw;" v-for="person in Convener" :key="person.index">
+					<img :src="person.Path" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="row name name-web">
+							<div class="col">
+								{{person.Name}}
+							</div>
+						</div>
+						<div class="row post post-web">
+							<div class="col">
+								{{person.Committee}}
+							</div>
+						</div>
+						<div class="row icon">
+							<div class="col">
+								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
+								<a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+			</div>
+		</section>
 		
 		<!-- <Teamweb /> -->
 	</section>
@@ -480,6 +514,8 @@ export default {
 			],
 			Prod: [
 				{ index: "9", Name: "Devna Srivastava", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/9.jpg'), Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/" },
+				{ index: "18", Name: "Abhimanyu Singh Bisht", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/18.jpg'), Linkedin: "https://www.linkedin.com/in/abhimanyu-singh-bisht-91b3b0200/" },
+				{ index: "19", Name: "Yash Ajitsaria", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/19.jpg'), Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/" },
 			],
 			Registration: [
 				{ index: "10", Name: "Abhinav Mishra", "Committee": "Registration", Roll: "2001MM01", Path: require('@/assets/images/Team_Image/10.jpg'), Linkedin: "https://www.linkedin.com/in/abhinav2901/" },
@@ -492,9 +528,14 @@ export default {
 				{ index: "13", Name: "Hardik Tiwari", "Committee": "MPR", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/13.jpg'), Linkedin: "https://www.linkedin.com/in/hardiktiwari/" },
 				{ index: "15", Name: "Aarav Arya", "Committee": "MPR", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/15.jpg'), Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/" }
 			],
+			Convener: [
+				{ index: "21", Name: "Deepshikha", "Committee": "Convener", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/21.jpg'), Linkedin: "https://www.linkedin.com/in/deepshikha-1234/" },
+				{ index: "22", Name: "Sajal Kumar", "Committee": "Convener", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/22.jpg'), Linkedin: "https://www.linkedin.com/in/sajalkumar247/" }
+			],
 			PnC: [
 				{ index: "6", Name: "Pradipti Mondal", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/6.jpg'), Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/" },
 				{ index: "16", Name: "Ashfaq Ahmed", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/16.jpg'), Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/" },
+				{ index: "20", Name: "Shaheer tanveer", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/20.jpg'), Linkedin: "https://www.linkedin.com/in/shaheertanveer/" },
 			],
 			Hosp: [
 				{ index: "5", Name: "Vani Grover", "Committee": "Hospitality", Roll: "2001CE68", Path: require('@/assets/images/Team_Image/5.jpg'), Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/" },
