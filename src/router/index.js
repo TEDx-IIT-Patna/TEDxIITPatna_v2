@@ -79,9 +79,20 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "qrcode" */ '../views/Qrcode.vue'),
+    function: () => import(/* webpackChunkName: "qrcode" */ '../views/Qrcode.vue'),
     meta: {
       title: "Qrcode"
+    },
+  },
+  {
+    path: '/comingsoon',
+    name: 'comingsoon',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    function: () => import(/* webpackChunkName: "commingsoon" */ '../views/ComingSoonView'),
+    meta: {
+      title: "Coming Soon"
     },
   },
   // *** Error404 path. This needs to be created.
