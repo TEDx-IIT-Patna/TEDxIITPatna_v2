@@ -48,11 +48,11 @@
 <template>
     <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']"
         v-if="this.showModal">
-            <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
+        <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
         <div class="overlay" @click="this.$emit('closeSpeakerModal')"></div>
         <div class="container">
             <div class="modal_image">
-            <img :src="Path" class="pic">
+                <img :src="Path" class="pic">
             </div>
             <div class="content">
                 <div class="name-wrapper">
@@ -61,11 +61,11 @@
                 </div>
                 <div class="desc">
                     <div class="row icon">
-					<div class="col">
-						<a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-2 fa-xl"></i></a>
-						<a :href="Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-2 fa-xl"></i></a>
-					</div>
-				</div>
+                        <div class="col">
+                            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-2 fa-xl"></i></a>
+                            <a :href="Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-2 fa-xl"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

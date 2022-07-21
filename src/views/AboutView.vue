@@ -23,7 +23,6 @@
 			</div>
 		</section>
 		<section class="about_section about2">
-			<!-- <div class="about_redbox">About.</div> -->
 			<h5>ABOUT</h5>
 			<h1>TED</h1>
 			<div class="about_text2 about_text_web2">
@@ -81,14 +80,13 @@
 			</div>
 		</section>
 
-		<!-- NOTE: Organizers -->
-		<section class="about_section about3">
-			<!-- <div class="team_redbox">Team.</div> -->
+		<!-- NOTE: Cards of Coordinators-->
+		<section class="about_section about3" v-for="(items, name) in team" :key="items">
 			<h5>TEAM</h5>
-			<h1>Organizers</h1>
+			<h1>{{ name }}</h1>
 			<div class="hr"></div>
 			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Organisers" :key="person.index">
+				<div class="card card-web max-3" style="width: 18vw;" v-for="person in items" :key="person.index">
 					<img :src="person.Path" class="card-img-top" alt="...">
 					<div class="card-body">
 						<div class="row name name-web">
@@ -114,389 +112,13 @@
 			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
 			</div>
 		</section>
-
-		<!-- NOTE: Planning and Curation -->
-		<section class="about_section about4">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Planning and Curation</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in PnC" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Sponsorship -->
-		<section class="about_section about12">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Sponsorship</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web about_text_3">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Spons" :key="person.index">
-					<div class="card-image">
-						<img :src="person.Path" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Production -->
-		<section class="about_section about10">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Production</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Prod" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: WebnApp -->
-		<section class="about_section about6">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Web&App</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Webnapp" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Media and Public Relations -->
-		<section class="about_section about7">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Media and Public Relations</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in MPR" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Registrations -->
-		<section class="about_section about9">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Registration</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Registration" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-
-		<!-- NOTE: Editorial -->
-		<section class="about_section about8">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Editorial</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Editorial" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Creative and Designing -->
-		<section class="about_section about11">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Creative and Designing</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in CnD" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-
-
-		<!-- NOTE: Hospitality -->
-		<section class="about_section about5">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Hospitality</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Hosp" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- NOTE: Convener -->
-		<section class="about_section about5">
-			<!-- <div class="team_redbox">Team.</div> -->
-			<h5>TEAM</h5>
-			<h1>Conveners</h1>
-			<div class="hr"></div>
-			<div class="about_text about_text_web">
-				<div class="card card-web max-3" style="width: 18vw;" v-for="person in Convener" :key="person.index">
-					<img :src="person.Path" class="card-img-top" alt="...">
-					<div class="card-body">
-						<div class="row name name-web">
-							<div class="col">
-								{{ person.Name }}
-							</div>
-						</div>
-						<div class="row post post-web">
-							<div class="col">
-								Co-ordinator
-							</div>
-						</div>
-						<div class="row icon icon-web">
-							<div class="col">
-								<a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-								<a target="__blank" :href="person.Linkedin"><i
-										class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-			</div>
-		</section>
-
-		<!-- <Teamweb /> -->
 	</section>
-
-
-
 
 	<section class="mobileview" v-else-if="screen < 1000">
 		<AboutmobileVue />
 	</section>
 
-
 	<Footer />
-	<!-- <section class="team_cards">
-		<div :class="['red_box', this.screenWidth > 1000 ? 'redbox_web' : 'redbox_mobile']" >
-			<h1 class="coords">Co-Ordinators</h1>
-		</div>
-    <div class="container container-1">
-		<div class="row vh-100 d-flex justify-content-around" >
-			<div class="col-sm-6 col-md-4 col-lg-3 my-3" v-for="person in team_members" :key="person.index">
-				<div class="box shadow-sm p-4">
-					<div class="image-wrapper mb-3">
-						<img class="img-fluid" :src="person.Path" alt="..." />
-					</div>
-					<div class="box-desc">
-						<h5>{{person.Name}}</h5>
-						<p> {{person.Committee}}</p>
-					</div>
-					<ul class="social">
-						<li class="mx-1"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="mx-1"><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li class="mx-1"><a :href="person.Linkedin"><i class="fab fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</section> -->
 
 </template>
 
@@ -511,80 +133,74 @@ export default {
 	name: 'team',
 	data() {
 		return {
-
-			Organisers: [
-				{ index: "1", Name: "Palak Totala", "Committee": "Organiser", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/1.jpg'), Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/" },
-				{ index: "2", Name: "Nischal Jain", "Committee": "Co-organiser", Roll: "2001ME41", Path: require('@/assets/images/Team_Image/2.jpg'), Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/" },
-			],
-			Webnapp: [
-				{ index: "3", Name: "Pratyush Kumar", "Committee": "WebnApp", Roll: "2001ME51", Path: require('@/assets/images/Team_Image/3.jpg'), Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/" },
-				{ index: "4", Name: "Suyog Chaudhari", "Committee": "WebnApp", Roll: "2001EE77", Path: require('@/assets/images/Team_Image/4.jpg'), Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/" },
-			],
-			Spons: [
-				{ index: "7", Name: "Sai Nandan", "Committee": "Sponsorship", Roll: "2001CB46", Path: require('@/assets/images/Team_Image/7.jpg'), Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/" },
-				{ index: "8", Name: "Athul Krishna K", "Committee": "Sponsorship", Roll: "2001ME85", Path: require('@/assets/images/Team_Image/8.jpg'), Linkedin: "https://www.linkedin.com/in/athul-krishna-k-688262223/" },
-				{ index: "14", Name: "Rohit Sinha", "Committee": "Sponsorship", Roll: "2001MM26", Path: require('@/assets/images/Team_Image/14.jpg'), Linkedin: "https://www.linkedin.com/in/rohit-sinha-1282a821b/" },
-			],
-			Prod: [
-				{ index: "9", Name: "Devna Srivastava", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/9.jpg'), Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/" },
-				{ index: "18", Name: "Abhimanyu Singh", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/18.jpg'), Linkedin: "https://www.linkedin.com/in/abhimanyu-singh-bisht-91b3b0200/" },
-				{ index: "19", Name: "Yash Ajitsaria", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/19.jpg'), Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/" },
-			],
-			Registration: [
-				{ index: "10", Name: "Abhinav Mishra", "Committee": "Registration", Roll: "2001MM01", Path: require('@/assets/images/Team_Image/10.jpg'), Linkedin: "https://www.linkedin.com/in/abhinav2901/" },
-				{ index: "11", Name: "M.L.N. Keertana", "Committee": "Registration", Roll: "2001CS47", Path: require('@/assets/images/Team_Image/11.jpg'), Linkedin: "https://www.linkedin.com/in/mln-keertana-5aab50217/" },
-			],
-			Editorial: [
-				{ index: "12", Name: "Khushi Shah", "Committee": "Editorial", Roll: "2001EE91", Path: require('@/assets/images/Team_Image/12.jpg'), Linkedin: "https://www.linkedin.com/in/khushishah8221/" },
-			],
-			MPR: [
-				{ index: "13", Name: "Hardik Tiwari", "Committee": "MPR", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/13.jpg'), Linkedin: "https://www.linkedin.com/in/hardiktiwari/" },
-				{ index: "15", Name: "Aarav Arya", "Committee": "MPR", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/15.jpg'), Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/" }
-			],
-			Convener: [
-				{ index: "21", Name: "Deepshikha", "Committee": "Convener", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/21.jpg'), Linkedin: "https://www.linkedin.com/in/deepshikha-1234/" },
-				{ index: "22", Name: "Sajal Kumar", "Committee": "Convener", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/22.jpg'), Linkedin: "https://www.linkedin.com/in/sajalkumar247/" }
-			],
-			PnC: [
-				{ index: "6", Name: "Pradipti Mondal", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/6.jpg'), Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/" },
-				{ index: "16", Name: "Ashfaq Ahmed", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/16.jpg'), Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/" },
-				{ index: "20", Name: "Shaheer tanveer", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/20.jpg'), Linkedin: "https://www.linkedin.com/in/shaheertanveer/" },
-			],
-			Hosp: [
-				{ index: "5", Name: "Vani Grover", "Committee": "Hospitality", Roll: "2001CE68", Path: require('@/assets/images/Team_Image/5.jpg'), Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/" },
-			],
-			CnD: [
-				{ index: "17", Name: "Farhaan Alam", "Committee": "CnD", Roll: "2001ME25", Path: require('@/assets/images/Team_Image/17.jpg'), Linkedin: "https://www.linkedin.com/in/farhaan-alam/" },
-
-			],
+			team: {
+				Organisers: [
+					{ index: "1", Name: "Palak Totala", "Committee": "Organiser", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/1.jpg'), Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/" },
+					{ index: "2", Name: "Nischal Jain", "Committee": "Co-organiser", Roll: "2001ME41", Path: require('@/assets/images/Team_Image/2.jpg'), Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/" },
+				],
+				PnC: [
+					{ index: "6", Name: "Pradipti Mondal", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/6.jpg'), Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/" },
+					{ index: "16", Name: "Ashfaq Ahmed", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/16.jpg'), Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/" },
+					{ index: "20", Name: "Shaheer tanveer", "Committee": "PnC", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/20.jpg'), Linkedin: "https://www.linkedin.com/in/shaheertanveer/" },
+				],
+				Sponsorship: [
+					{ index: "7", Name: "Sai Nandan", "Committee": "Sponsorship", Roll: "2001CB46", Path: require('@/assets/images/Team_Image/7.jpg'), Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/" },
+					{ index: "8", Name: "Athul Krishna K", "Committee": "Sponsorship", Roll: "2001ME85", Path: require('@/assets/images/Team_Image/8.jpg'), Linkedin: "https://www.linkedin.com/in/athul-krishna-k-688262223/" },
+					{ index: "14", Name: "Rohit Sinha", "Committee": "Sponsorship", Roll: "2001MM26", Path: require('@/assets/images/Team_Image/14.jpg'), Linkedin: "https://www.linkedin.com/in/rohit-sinha-1282a821b/" },
+				],
+				Production: [
+					{ index: "9", Name: "Devna Srivastava", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/9.jpg'), Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/" },
+					{ index: "18", Name: "Abhimanyu Singh", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/18.jpg'), Linkedin: "https://www.linkedin.com/in/abhimanyu-singh-bisht-91b3b0200/" },
+					{ index: "19", Name: "Yash Ajitsaria", "Committee": "Prod", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/19.jpg'), Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/" },
+				],
+				Webnapp: [
+					{ index: "3", Name: "Pratyush Kumar", "Committee": "WebnApp", Roll: "2001ME51", Path: require('@/assets/images/Team_Image/3.jpg'), Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/" },
+					{ index: "4", Name: "Suyog Chaudhari", "Committee": "WebnApp", Roll: "2001EE77", Path: require('@/assets/images/Team_Image/4.jpg'), Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/" },
+				],
+				Registration: [
+					{ index: "10", Name: "Abhinav Mishra", "Committee": "Registration", Roll: "2001MM01", Path: require('@/assets/images/Team_Image/10.jpg'), Linkedin: "https://www.linkedin.com/in/abhinav2901/" },
+					{ index: "11", Name: "M.L.N. Keertana", "Committee": "Registration", Roll: "2001CS47", Path: require('@/assets/images/Team_Image/11.jpg'), Linkedin: "https://www.linkedin.com/in/mln-keertana-5aab50217/" },
+				],
+				MPR: [
+					{ index: "13", Name: "Hardik Tiwari", "Committee": "MPR", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/13.jpg'), Linkedin: "https://www.linkedin.com/in/hardiktiwari/" },
+					{ index: "15", Name: "Aarav Arya", "Committee": "MPR", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/15.jpg'), Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/" }
+				],
+				Editorial: [
+					{ index: "12", Name: "Khushi Shah", "Committee": "Editorial", Roll: "2001EE91", Path: require('@/assets/images/Team_Image/12.jpg'), Linkedin: "https://www.linkedin.com/in/khushishah8221/" },
+				],
+				Hospitality: [
+					{ index: "5", Name: "Vani Grover", "Committee": "Hospitality", Roll: "2001CE68", Path: require('@/assets/images/Team_Image/5.jpg'), Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/" },
+				],
+				CnD: [
+					{ index: "17", Name: "Farhaan Alam", "Committee": "CnD", Roll: "2001ME25", Path: require('@/assets/images/Team_Image/17.jpg'), Linkedin: "https://www.linkedin.com/in/farhaan-alam/" },
+				],
+				Convener: [
+					{ index: "21", Name: "Deepshikha", "Committee": "Convener", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/21.jpg'), Linkedin: "https://www.linkedin.com/in/deepshikha-1234/" },
+					{ index: "22", Name: "Sajal Kumar", "Committee": "Convener", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/22.jpg'), Linkedin: "https://www.linkedin.com/in/sajalkumar247/" }
+				]
+			},
 			screen: screen.width,
 		}
 	},
 	components: {
-    Nav,
-    BackButton,
-    Footer,
-    AboutmobileVue,
-    Teamweb,
-    Footer
-},
+		Nav,
+		BackButton,
+		Footer,
+		AboutmobileVue,
+		Teamweb,
+		Footer
+	},
 	mounted() {
 		window.onscroll = function () {
 			console.log(window.pageYOffset);
 			var redbox = document.getElementById('about_redbox');
-			// var redbox_text = document.getElementById('redbox_text');
 			var redbox1 = document.getElementById('team_redbox');
-			// var redbox_text1 = document.getElementById('redbox_text1');
 			if (window.pageYOffset > 1400) {
 				redbox.classList.add("none");
-				// redbox_text.classList.remove("removed-none");
 				redbox1.classList.remove("none");
-				// redbox_text1.classList.add("removed-none");
 			} else {
 				redbox.classList.remove("none");
-				// redbox_text.classList.add("removed-none");
 				redbox1.classList.add("none");
-				// redbox_text1.classList.remove("removed-none");
 			}
 		}
 	}

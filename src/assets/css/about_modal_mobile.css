@@ -9,12 +9,12 @@
     overflow: hidden;
 }
 
-.modal_image{
+.modal_image {
     width: 82vw;
     height: 28vh;
 }
 
-.speaker-modal-wrapper.mobile .container .pic{
+.speaker-modal-wrapper.mobile .container .pic {
     position: static;
     width: 70vw;
     /* max-width: 200px; */
