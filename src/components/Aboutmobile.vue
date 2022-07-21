@@ -1,6 +1,6 @@
 <template>
 	<section class="nav_section">
-		<Nav :open_button_color="this.showWebView ? 'black' : 'black'" open_button_style="icon" />
+		<Nav :open_button_color="black" open_button_style="icon" />
 		<BackButton />
 	</section>
 	<section class="about_IITP">
@@ -469,7 +469,7 @@ var height = Math.max( body.scrollHeight, body.offsetHeight,
 			// var redbox_text = document.getElementById('redbox_text');
 			var redbox1 = document.getElementById('team_bg');
 			// var redbox_text1 = document.getElementById('redbox_text1');
-			if (window.pageYOffset > height/7) {
+			if (window.pageYOffset > height/8.78) {
 				redbox.classList.add("none");
 				// redbox_text.classList.remove("removed-none");
 				redbox1.classList.remove("none");

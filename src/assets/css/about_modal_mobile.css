@@ -43,3 +43,12 @@
     margin-left: 13vw;
     /* margin-bottom: 0vh;*/
 }
+
+.close-btn {
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    color: white;
+    z-index: 3;
+    cursor: pointer;
+}
