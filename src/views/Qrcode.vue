@@ -3,14 +3,11 @@
 </template>
 
 <script>
-
 export default {
   name: "Qrcode",
+created()
+{
+  window.location.href = '/comingsoon';
 }
-// window.location.href = 'https://www.google.com/';
-window.location.href = '/comingsoon';
+}
 </script>
-
-<style scoped>
-
-</style>

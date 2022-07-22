@@ -76,9 +76,6 @@ const routes = [
   {
     path: '/qrcode',
     name: 'qrcode',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "qrcode" */ '../views/Qrcode.vue'),
     meta: {
       title: "Redirect"
@@ -87,9 +84,6 @@ const routes = [
   {
     path: '/comingsoon',
     name: 'comingsoon',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "commingsoon" */ '../views/ComingSoonView.vue'),
     meta: {
       title: "Coming Soon"
