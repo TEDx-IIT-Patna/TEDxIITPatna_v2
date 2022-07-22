@@ -73,7 +73,22 @@ const routes = [
       title: "Shedding Off Feathers, 2016"
     },
   },
-
+  {
+    path: '/qrcode',
+    name: 'qrcode',
+    component: () => import(/* webpackChunkName: "qrcode" */ '../views/Qrcode.vue'),
+    meta: {
+      title: "Redirect"
+    },
+  },
+  {
+    path: '/comingsoon',
+    name: 'comingsoon',
+    component: () => import(/* webpackChunkName: "commingsoon" */ '../views/ComingSoonView.vue'),
+    meta: {
+      title: "Coming Soon"
+    },
+  },
   // *** Error404 path. This needs to be created.
   // {
   //   path: '*',
