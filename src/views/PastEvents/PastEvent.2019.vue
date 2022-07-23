@@ -4,7 +4,7 @@
   <BackButton />
   
   <img src="@/assets/images/tedxiitpatna_logo-2W.png" class="logo watermark"
-    v-if="this.screenWidth > this.screenHeight * 1.3">
+    v-if="this.screenWidth > 1000 && this.screenWidth > this.screenHeight * 1.3">
   <div :class="['theme-bg', (this.screenWidth > this.screenHeight * 1.51) ? 'web' : 'mobile']">
     <img src="@/assets/past-events/poster-bg/poster-bg-2019.png">
   </div>
