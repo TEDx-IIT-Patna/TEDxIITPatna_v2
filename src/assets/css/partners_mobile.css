@@ -1,0 +1,56 @@
+.wrapper.mobile{
+    position: relative;
+    padding: 0 0 0 10%;
+    place-content: unset;
+}
+.wrapper.mobile::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 20vw;
+    min-width: 10px;
+    max-width: 30px;
+    height: 100%;
+    background-color: var(--red-l3);
+    z-index: -1;
+}
+
+.wrapper.mobile .logo{
+    display: none;
+}
+
+
+.wrapper.mobile .partners-wrapper {
+    /* padding: max(10vh, 5rem) 0; */
+    width: 100%;
+    padding: 0;
+    margin-top: calc(min(20vh, 150px) + calc(120 * (clamp(300px, 80vw, 600px) / 1080)) + 2rem);
+    height: calc(100vh - min(20vh, 150px) - calc(120 * (clamp(300px, 80vw, 600px) / 1080)) - 2rem);
+    overflow: auto;
+}
+
+.wrapper.mobile .partners-wrapper .title{
+    position: fixed;
+    top: min(10vh, 150px);
+    padding-left: 5vw;
+    font-size: calc(120 * (clamp(300px, 60vw, 600px) / 1080));
+}
+
+
+.wrapper.mobile .partners-images{
+    margin: 1vw 0;
+}
+
+.wrapper.mobile .partners-images .thumbnail{
+    width: 30vw;
+    max-width: 250px;
+    min-width: 50px;
+}
+.wrapper.mobile .partner-scroller
+{
+    display: flex;
+    justify-content: flex-start;
+    width:auto
+}

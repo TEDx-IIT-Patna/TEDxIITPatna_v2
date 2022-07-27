@@ -31,9 +31,9 @@ const routes = [
   {
     path: '/partners',
     name: 'partners',
-    component: () => import(/* webpackChunkName: "partners" */ '../views/ComingSoonView.vue'),
+    component: () => import(/* webpackChunkName: "partners" */ '../views/Partners.vue'),
     meta: {
-      title: "Coming Soon"
+      title: "Partners"
     },
   },
 
