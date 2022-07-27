@@ -2,7 +2,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 150px;
+    height: var(--watermark-logo-size);
     transform: translate(20%, 0);
 }
 
@@ -34,7 +34,7 @@
     /* align-items: center; */
     width: 100%;
     height: 100%;
-    padding: max(20vh, 250px) min(15vw, 150px);
+    padding: max(20vh, 250px) min(15vw, 200px);
     color: white;
 }
 

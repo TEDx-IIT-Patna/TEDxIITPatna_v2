@@ -8,6 +8,8 @@
   --grey: #444;
   --grey-l1: #777;
   --white-d1: #a0a0a0;
+
+  --watermark-logo-size: 120px;
 }
 
 body {

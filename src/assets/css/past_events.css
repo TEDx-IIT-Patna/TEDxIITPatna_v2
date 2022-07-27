@@ -25,7 +25,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 150px;
+    height: var(--watermark-logo-size);
     transform: translate(20%, 0);
     z-index: -1;
 }
