@@ -52,5 +52,6 @@
 {
     display: flex;
     justify-content: flex-start;
-    width:auto
+    width:auto;
+    margin-left: 12vw;
 }

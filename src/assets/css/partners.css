@@ -27,7 +27,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 120px;
+    height: var(--watermark-logo-size);
     transform: translate(20%, 0);
     z-index: -1;
 }
@@ -54,7 +54,6 @@
     flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
-    margin-left: 12vw;
 }
 
 .partners-images{
@@ -62,12 +61,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2%;
 }
 
 .partners-images .thumbnail{
-    width: 30vw;
-    min-width: 150px;
-    max-width: 250px;
+    width: var(40vw);
+   max-width: 220px;
     margin: 8 2rem;
 }
 .partners-images .thumbnail img{
@@ -84,5 +83,4 @@
 
 .partners-images{
     width: max-content;
-    margin-left: 10px;
-}
+    }
