@@ -42,6 +42,14 @@
     font-size: calc(160 * (clamp(300px, 80vw, 600px) / 1080));
     font-weight: 700;
     margin-top: 10%;
+    position:relative;
+    margin-left: 1vw;
+    align-items: center;
+}
+
+.partners-wrapper .title::before{
+    position:absolute;
+    width: calc(3ch + 10vw) ;
 }
 
 .partner-scroller{
@@ -49,7 +57,7 @@
     display: flex;
     width: 100%;
     padding: 1ch;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     overflow-x: auto;
@@ -64,15 +72,15 @@
     margin: 2%;
 }
 
-.partners-images .thumbnail{
+.partners-images{
     width: var(40vw);
    max-width: 220px;
     margin: 8 2rem;
 }
-.partners-images .thumbnail img{
-    width: 80%;
+.partners-images img{
+    width: 60%;
 }
-.partners-images .thumbnail::before{
+.partners-images::before{
     display: block;
     position: absolute;
     top: 0;

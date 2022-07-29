@@ -12,9 +12,7 @@
       <div class="partner-scroller">
 
         <div class="partners-images" v-for="partner in this.partner_images">
-          <div class="thumbnail" >
             <img :src="partner"/>
-          </div>
         </div>
       </div>
     </div>
@@ -30,9 +28,7 @@
       <div class="partner-scroller">
 
         <div class="partners-images" v-for="partner in this.partner_images">
-          <div class="thumbnail" >
-            <img :src="partner"/>
-          </div>
+          <img :src="partner"/>
         </div>
 
         
@@ -55,14 +51,22 @@ export default {
     return {
       screenWidth: window.innerWidth,
       showWebView: window.innerWidth >= 830,
-      partner_images:[require('@/assets/images/partners/anton paar_ silver .jpg'),require('@/assets/images/partners/Elsevier logo_bronze.gif')
-      ,require('@/assets/images/partners/gatan_logo_silver.png'),require('@/assets/images/partners/gdi.png'),
-      require('@/assets/images/partners/maurya_gold.png'),require('@/assets/images/partners/merimeet.png'),
-      require('@/assets/images/partners/santosh.png'),require('@/assets/images/partners/sd.png'),
-      require('@/assets/images/partners/zwick_roell_logo_bronze.png'),require('@/assets/images/partners/ruban.png'),
-      require('@/assets/images/partners/indianoil.png'),require('@/assets/images/partners/4.png'),
+      partner_images:[
+      require('@/assets/images/partners/anton paar_ silver .jpg'),
+      require('@/assets/images/partners/Elsevier logo_bronze.gif'),
+      require('@/assets/images/partners/gatan_logo_silver.png'),
+      require('@/assets/images/partners/gdi.png'),
+      require('@/assets/images/partners/maurya_gold.png'),
+      require('@/assets/images/partners/merimeet.png'),
+      require('@/assets/images/partners/santosh.png'),
+      require('@/assets/images/partners/sd.png'),
+      require('@/assets/images/partners/zwick_roell_logo_bronze.png'),
+      require('@/assets/images/partners/ruban.png'),
+      require('@/assets/images/partners/indianoil.png'),
+      require('@/assets/images/partners/4.png'),
       require('@/assets/images/partners/varta.png'),
-      require('@/assets/images/partners/ic.png'),require('@/assets/images/partners/pataliputra.png',)
+      require('@/assets/images/partners/ic.png'),
+      require('@/assets/images/partners/pataliputra.png',)
       ]
     }
   },
@@ -85,5 +89,5 @@ export default {
 
 <style scoped>
 @import '@/assets/css/partners.css';
-@import '@/assets/css/partners_mobile.css';
+@import '@/assets/css/partners.mobile.css';
 </style>
