@@ -7,6 +7,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* padding: 10% 0; */
+}
+
+.orgs {
+    padding-bottom: 20vh;
 }
 
 .about_IITP h5,
@@ -182,8 +187,13 @@
 }
 
 .last_team_mob {
-    margin-bottom: 41vh;
-    margin-top: 147px;
+    margin-bottom: 50vh;
+    margin-top: 140px;
+}
+
+.duo_team {
+    padding-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 
 .post-mob-fac {

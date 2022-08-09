@@ -18,12 +18,18 @@
     z-index: -1;
     float: right;
     writing-mode: vertical-lr;
-    font-size: 13vw;
+    font-size: 10vw;
     font-style: normal;
     font-weight: 700;
     line-height: 256px;
     text-align: right;
     color: #FF5C5C;
+}
+
+.about_redbox span {
+    padding-bottom: 10%;
+    position: relative;
+    right: 2vw;
 }
 
 .about_section h5 {
@@ -48,12 +54,12 @@
 }
 
 .hr {
-    width: 53vw;
+    width: 47vw;
     height: 9px;
     border: 2px solid #FF0039;
     position: relative;
     top: 16vh;
-    left: 10vw;
+    left: 13vw;
     box-sizing: border-box;
     border-bottom-color: transparent
 }
@@ -88,7 +94,7 @@
     position: fixed;
     top: 82vh;
     left: 2vw;
-    z-index: 5;
+    z-index: -5;
     width: 71vw;
     background-color: white;
 }
@@ -112,12 +118,18 @@
     z-index: -1;
     float: right;
     writing-mode: vertical-lr;
-    font-size: 13vw;
+    font-size: 10vw;
     font-style: normal;
     font-weight: 700;
     line-height: 256px;
     text-align: right;
     color: #FF5C5C;
+}
+
+.team_redbox span {
+    padding-bottom: 10%;
+    position: relative;
+    right: 2vw;
 }
 
 .card {
@@ -160,11 +172,22 @@
     height: 110vh;
 }
 
-.none {
+.none1 {
     display: none;
+    /* animation: fade-out 500ms linear; */
+
 }
+
+/* @keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+} */
 
 .about_text_3 {
     width: 80vw;
     left: -4vw;
+}
+
+.about3 {
+    min-height: 100vh;
 }

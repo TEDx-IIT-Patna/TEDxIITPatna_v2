@@ -1,7 +1,7 @@
 <template>
   <section class="webview" v-if="screen > 1000">
     <section class="nav_section">
-      <Nav :open_button_color="'white'" open_button_style="text" />
+      <Nav :open_button_color="'white'" open_button_style="icon" />
       <BackButton />
     </section>
     <section class="about_section about1">
@@ -346,13 +346,14 @@ export default {
       var redbox = document.getElementById('about_redbox');
       var redbox1 = document.getElementById('team_redbox');
       if (window.pageYOffset > 1400) {
-        redbox.classList.add("none");
-        redbox1.classList.remove("none");
+        redbox.classList.add("none1");
+        redbox1.classList.remove("none1");
       } else {
-        redbox.classList.remove("none");
-        redbox1.classList.add("none");
+        redbox.classList.remove("none1");
+        redbox1.classList.add("none1");
       }
-    }
+    };
+    
   }
 }
 </script>

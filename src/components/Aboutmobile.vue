@@ -6,7 +6,7 @@
 	<section class="about_IITP">
 		<h5>ABOUT</h5>
 		<h1>IIT Patna</h1>
-		<div class="about-bg" id="about_bg">About.</div>
+		<div class="about-bg" id="about_bg"><span class="about_word" id="about_word">About.</span></div>
 		<div class="about-text">
 			Indian Institute of Technology Patna is one of the new IITs established by an Act of
 			the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
@@ -57,9 +57,9 @@
 
 	<!-- NOTE: PIC -->
 	<section class="team_mob">
-		<h5>Team</h5>
+		<h5>TEAM</h5>
 		<h1>Faculty</h1>
-		<div class="team-bg" id="team_bg">Team.</div>
+		<div class="team-bg" id="team_bg"><span class="team_word" id="team_word">Team.</span></div>
 		<div class="card card_mob card_mob_fac" v-for="person in Prof" :key="person.index"
 			@click="this.configureSpeakerModal(person)">
 			<img src="../assets/images/Team_Image/prof.png" class="card-img-top card-img-top-mob" alt="...">
@@ -85,8 +85,8 @@
 	</section>
 
 	<!-- NOTE: Organizers -->
-	<section class="team_mob ">
-		<h5>Team</h5>
+	<section class="team_mob orgs">
+		<h5>TEAM</h5>
 		<h1>Organisers</h1>
 		<div class="card card_mob" v-for="person in Organisers" :key="person.index"
 			@click="this.configureSpeakerModal(person)">
@@ -114,7 +114,7 @@
 
 	<!-- NOTE: Team containing 3 members -->
 	<section class="team_mob last_team_mob" v-for="(items, name) in team3" :key="items">
-		<h5>Team</h5>
+		<h5>TEAM</h5>
 		<h1>{{ name }}</h1>
 		<div class="card card_mob" v-for="person in items" :key="person.index"
 			@click="this.configureSpeakerModal(person)">
@@ -127,7 +127,8 @@
 				</div>
 				<div class="row post post-mob">
 					<div class="col">
-						{{ person.Committee }}
+						<!-- {{ person.Committee }} -->
+						Co-ordinator
 					</div>
 				</div>
 				<div class="row icon">
@@ -141,8 +142,8 @@
 	</section>
 
 	<!-- NOTE: Rest of the team -->
-	<section class="team_mob" v-for="(items, name) in team" :key="items">
-		<h5>Team</h5>
+	<section class="team_mob duo_team" v-for="(items, name) in team" :key="items">
+		<h5>TEAM</h5>
 		<h1>{{ name }}</h1>
 		<div class="card card_mob" v-for="person in items" :key="person.index"
 			@click="this.configureSpeakerModal(person)">
@@ -155,7 +156,8 @@
 				</div>
 				<div class="row post post-mob">
 					<div class="col">
-						{{ person.Committee }}
+						<!-- {{ person.Committee }} -->
+						Co-ordinator
 					</div>
 				</div>
 				<div class="row icon">
@@ -244,6 +246,7 @@ export default {
 			speakerName: null,
 			speakerTitle: null,
 			speakerTalkLink: null,
+			
 		}
 	},
 	components: {
@@ -263,9 +266,11 @@ export default {
 			console.log(print);
 			var redbox = document.getElementById('about_bg');
 			var redbox1 = document.getElementById('team_bg');
-			if (window.pageYOffset > height / 8.78) {
+			if (window.pageYOffset > height / 10.41) {
 				redbox.classList.add("none");
 				redbox1.classList.remove("none");
+
+				// document.querySelector(".team_word").innerHTML="Team."
 			} else {
 				redbox.classList.remove("none");
 				redbox1.classList.add("none");
