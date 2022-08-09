@@ -7,17 +7,13 @@
 }
 
 .wrapper::before{
-    position: absolute;
     margin-top: 7%;
     overflow: hidden;
-    z-index: -1;
     content: '';
     display: block;
     position: absolute;
     left: 0%;
-    width: 26vw;
-    min-width: 350px;
-    max-width: 420px;
+    width: calc( 100% - 90vw + 160 * 2.7 * (clamp(300px, 80vw, 600px) / 1080));
     height: 14%;
     background-color: var(--red-l3);
     z-index: -1;
