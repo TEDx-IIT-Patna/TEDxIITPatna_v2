@@ -14,7 +14,7 @@
     position: absolute;
     left: 0%;
     width: calc( 100% - 90vw + 160 * 2.7 * (clamp(300px, 80vw, 600px) / 1080));
-    height: 14%;
+    height: calc(160 * (clamp(300px, 80vw , 850px) / 1080));;
     background-color: var(--red-l3);
     z-index: -1;
 }
@@ -54,7 +54,7 @@
     display: flex;
     width: 100%;
     padding: 1ch;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     overflow-x: auto;
