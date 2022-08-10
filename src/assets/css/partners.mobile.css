@@ -8,7 +8,7 @@
     display: block;
     position: absolute;
     top: 0;
-    left: 15%;
+    left: 14.5%;
     width: clamp(5px, calc(120 * (clamp(300px, 60vw, 600px) / 1080)), 50px);
     height: 100%;
     background-color: var(--red-l3);
@@ -31,12 +31,15 @@
 
 .wrapper.mobile .partners-wrapper .title{
     position: fixed;
-    top: min(10vh, 150px);
+    top: min(5vh, 150px);
     padding-left: 5vw;
     font-size: calc(120 * (clamp(300px, 60vw, 600px) / 1080));
+    
 }
 
-
+.wrapper.mobile .partners-wrapper .title::before{
+    display:none;
+}
 .wrapper.mobile .partners-images{
     margin: 1vw 0;
 }

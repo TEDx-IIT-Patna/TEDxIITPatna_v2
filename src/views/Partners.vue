@@ -1,5 +1,5 @@
 <template>
-  <Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="icon" />
+  <Nav :open_button_color='black' open_button_style="icon" />
   <BackButton />
 
   <!-- web-view -->
@@ -10,7 +10,7 @@
       <div class="title"><span style="color: white" class="box">OUR</span> PARTNERS.</div>
 
       <div class="partner-scroller">
-
+        
         <div class="partners-images" v-for="partner in this.partner_images">
             <img :src="partner"/>
         </div>
