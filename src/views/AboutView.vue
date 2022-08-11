@@ -95,6 +95,7 @@
               </div>
             </div>
             <div class="row post post-web">
+
               <div class="col">
                 {{ person.Committee }}
               </div>
@@ -156,7 +157,7 @@ export default {
           {
             index: "6",
             Name: "Pradipti Mondal",
-            Committee: "PnC",
+            Committee: "Co-ordinator",
             Roll: "2001EE44",
             Path: require('@/assets/images/Team_Image/6.jpg'),
             Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/"
@@ -164,7 +165,7 @@ export default {
           {
             index: "16",
             Name: "Ashfaq Ahmed",
-            Committee: "PnC",
+            Committee: "Co-ordinator",
             Roll: "2001EE44",
             Path: require('@/assets/images/Team_Image/16.jpg'),
             Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/"
@@ -172,7 +173,7 @@ export default {
           {
             index: "20",
             Name: "Shaheer tanveer",
-            Committee: "PnC",
+            Committee: "Co-ordinator",
             Roll: "2001EE44",
             Path: require('@/assets/images/Team_Image/20.jpg'),
             Linkedin: "https://www.linkedin.com/in/shaheertanveer/"
@@ -182,7 +183,7 @@ export default {
           {
             index: "7",
             Name: "Sai Nandan",
-            Committee: "Sponsorship",
+            Committee: "Co-ordinator",
             Roll: "2001CB46",
             Path: require('@/assets/images/Team_Image/7.jpg'),
             Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/"
@@ -190,7 +191,7 @@ export default {
           {
             index: "8",
             Name: "Athul Krishna K",
-            Committee: "Sponsorship",
+            Committee: "Co-ordinator",
             Roll: "2001ME85",
             Path: require('@/assets/images/Team_Image/8.jpg'),
             Linkedin: "https://www.linkedin.com/in/athul-krishna-k-688262223/"
@@ -198,7 +199,7 @@ export default {
           {
             index: "14",
             Name: "Rohit Sinha",
-            Committee: "Sponsorship",
+            Committee: "Co-ordinator",
             Roll: "2001MM26",
             Path: require('@/assets/images/Team_Image/14.jpg'),
             Linkedin: "https://www.linkedin.com/in/rohit-sinha-1282a821b/"
@@ -208,7 +209,7 @@ export default {
           {
             index: "9",
             Name: "Devna Srivastava",
-            Committee: "Prod",
+            Committee: "Co-ordinator",
             Roll: "2001MM13",
             Path: require('@/assets/images/Team_Image/9.jpg'),
             Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/"
@@ -224,7 +225,7 @@ export default {
           {
             index: "19",
             Name: "Yash Ajitsaria",
-            Committee: "Prod",
+            Committee: "Co-ordinator",
             Roll: "2001MM13",
             Path: require('@/assets/images/Team_Image/19.jpg'),
             Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/"
@@ -234,7 +235,7 @@ export default {
           {
             index: "3",
             Name: "Pratyush Kumar",
-            Committee: "WebnApp",
+            Committee: "Co-ordinator",
             Roll: "2001ME51",
             Path: require('@/assets/images/Team_Image/3.jpg'),
             Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/"
@@ -242,7 +243,7 @@ export default {
           {
             index: "4",
             Name: "Suyog Chaudhari",
-            Committee: "WebnApp",
+            Committee: "Co-ordinator",
             Roll: "2001EE77",
             Path: require('@/assets/images/Team_Image/4.jpg'),
             Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/"
@@ -252,7 +253,7 @@ export default {
           {
             index: "10",
             Name: "Abhinav Mishra",
-            Committee: "Registration",
+            Committee: "Co-ordinator",
             Roll: "2001MM01",
             Path: require('@/assets/images/Team_Image/10.jpg'),
             Linkedin: "https://www.linkedin.com/in/abhinav2901/"
@@ -260,7 +261,7 @@ export default {
           {
             index: "11",
             Name: "M.L.N. Keertana",
-            Committee: "Registration",
+            Committee: "Co-ordinator",
             Roll: "2001CS47",
             Path: require('@/assets/images/Team_Image/11.jpg'),
             Linkedin: "https://www.linkedin.com/in/mln-keertana-5aab50217/"
@@ -270,7 +271,7 @@ export default {
           {
             index: "13",
             Name: "Hardik Tiwari",
-            Committee: "MPR",
+            Committee: "Co-ordinator",
             Roll: "2001MM15",
             Path: require('@/assets/images/Team_Image/13.jpg'),
             Linkedin: "https://www.linkedin.com/in/hardiktiwari/"
@@ -278,7 +279,7 @@ export default {
           {
             index: "15",
             Name: "Aarav Arya",
-            Committee: "MPR",
+            Committee: "Co-ordinator",
             Roll: "2001ME01",
             Path: require('@/assets/images/Team_Image/15.jpg'),
             Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/"
@@ -288,7 +289,7 @@ export default {
           {
           index: "12",
           Name: "Khushi Shah",
-          Committee: "Editorial",
+          Committee: "Co-ordinator",
           Roll: "2001EE91",
           Path: require('@/assets/images/Team_Image/12.jpg'),
           Linkedin: "https://www.linkedin.com/in/khushishah8221/"
@@ -297,7 +298,7 @@ export default {
           {
           index: "5",
           Name: "Vani Grover",
-          Committee: "Hospitality",
+          Committee: "Co-ordinator",
           Roll: "2001CE68",
           Path: require('@/assets/images/Team_Image/5.jpg'),
           Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/"
@@ -306,7 +307,7 @@ export default {
           {
           index: "17",
           Name: "Farhaan Alam",
-          Committee: "CnD",
+          Committee: "Co-ordinator",
           Roll: "2001ME25",
           Path: require('@/assets/images/Team_Image/17.jpg'),
           Linkedin: "https://www.linkedin.com/in/farhaan-alam/"
@@ -345,7 +346,10 @@ export default {
     window.onscroll = function () {
       var redbox = document.getElementById('about_redbox');
       var redbox1 = document.getElementById('team_redbox');
-      if (window.pageYOffset > 1400) {
+      var height1 = document.querySelector(".about1").clientHeight;
+      var height2 = document.querySelector(".about2").clientHeight; 
+      console.log(height1);
+      if (window.pageYOffset > (height1 + height2)) {
         redbox.classList.add("none1");
         redbox1.classList.remove("none1");
       } else {

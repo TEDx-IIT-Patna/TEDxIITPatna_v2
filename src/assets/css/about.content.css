@@ -4,8 +4,9 @@
 
 
 .about_section {
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
+    padding-bottom: 50vh;
 }
 
 .about_redbox {
@@ -87,7 +88,7 @@
     text-align: justify;
     text-justify: inter-word;
     font-weight: 400;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
 }
 
 .tedx_pic {
@@ -133,11 +134,12 @@
 }
 
 .card {
-    border: 0 !important;
+    border: 0 ;
 }
 
 .card-img-top {
-    border-radius: 50%;
+    border-radius: 10%;
+    height: 35vh;
 }
 
 .card-body {
@@ -190,4 +192,5 @@
 
 .about3 {
     min-height: 100vh;
+    padding-bottom: 50vh;
 }
