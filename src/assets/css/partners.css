@@ -27,7 +27,7 @@
     font-weight: 700;
     position:relative;
     align-items: center;
-    margin-top: clamp(100px,10%,160px);
+    margin-top: clamp(120px,10%,160px);
 
 }
 
@@ -44,7 +44,6 @@
 }
 
 .partner-scroller{
-    margin-top: 10%;
     display: grid;
     width: 100%;
     justify-items: center;
@@ -52,8 +51,9 @@
     flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
+    max-width: 80vw;
     grid-template-columns: repeat(
-    auto-fit, minmax(260px, 1fr));
+    auto-fit, minmax(220px, 1fr));
 }
 
 .partners-images{

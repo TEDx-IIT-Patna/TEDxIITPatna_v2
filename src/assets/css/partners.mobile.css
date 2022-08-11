@@ -51,8 +51,15 @@
 }
 .wrapper.mobile .partner-scroller
 {
-    display: flex;
-    justify-content: flex-start;
-    width:auto;
-    margin-left: 12vw;
+    margin-left: 14%;;
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 60vw;
+    grid-template-columns: repeat(
+    auto-fit, minmax(220px, 1fr));
 }
