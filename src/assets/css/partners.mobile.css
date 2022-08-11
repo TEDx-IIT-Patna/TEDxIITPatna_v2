@@ -27,6 +27,7 @@
     margin-top: calc(min(20vh, 150px) + calc(120 * (clamp(300px, 80vw, 600px) / 1080)) + 2rem);
     height: calc(100vh - min(20vh, 150px) - calc(120 * (clamp(300px, 80vw, 600px) / 1080)) - 2rem);
     overflow: auto;
+    min-height:auto;
 }
 
 .wrapper.mobile .partners-wrapper .title{
@@ -61,5 +62,5 @@
     overflow-y: hidden;
     max-width: 60vw;
     grid-template-columns: repeat(
-    auto-fit, minmax(220px, 1fr));
+    auto-fit, minmax(150px, 1fr));
 }

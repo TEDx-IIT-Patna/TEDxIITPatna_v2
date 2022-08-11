@@ -16,7 +16,8 @@
     z-index: -1;
 }
 .partners-wrapper{
-    width: 80vw;  
+    width: 80vw; 
+    min-height: 100vh;
 }
 
 .partners-wrapper .title{
@@ -51,8 +52,8 @@
     flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
-    max-width: 80vw;
-    grid-template-columns: repeat(
+    max-width: 1200px;
+    grid-template-columns: repeat( 
     auto-fit, minmax(220px, 1fr));
 }
 
