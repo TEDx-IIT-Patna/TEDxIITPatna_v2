@@ -29,7 +29,8 @@
     position:relative;
     align-items: center;
     margin-top: clamp(120px,10%,160px);
-
+    left:50%;
+    transform: translate(-50%,0);
 }
 
 .partners-wrapper .title::before{
@@ -49,10 +50,9 @@
     width: 100%;
     justify-items: center;
     align-items: center;
-    flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
-    max-width: 1200px;
+    max-width: 1500px;
     grid-template-columns: repeat( 
     auto-fit, minmax(220px, 1fr));
 }
