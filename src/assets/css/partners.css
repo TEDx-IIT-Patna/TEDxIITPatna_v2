@@ -20,7 +20,7 @@
     min-height: 100vh;
 }
 
-.partners-wrapper .title{
+ .title{
     width: 100%;
     margin-bottom: 4rem;
     text-align: left;
@@ -33,7 +33,7 @@
     transform: translate(-50%,0);
 }
 
-.partners-wrapper .title::before{
+ .title::before{
     width: calc(3.5ch + 10vw) ;
     content: '';
     display: block;
