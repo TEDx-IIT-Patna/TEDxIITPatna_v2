@@ -35,7 +35,7 @@
     top: min(5vh, 150px);
     padding-left: 5vw;
     font-size: calc(120 * (clamp(300px, 60vw, 600px) / 1080));
-    
+    transform: translate(-40%,0);
 }
 
 .wrapper.mobile .partners-wrapper .title::before{
