@@ -63,8 +63,8 @@
 }
 
 @media only screen and (max-width: 335px) {
-    .wrapper.mobile .partners-wrapper {
-        padding-top: 3rem;
-        
+    
+    .wrapper.mobile .title{
+        margin-top: 25%;
     }
   }
