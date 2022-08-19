@@ -6,7 +6,7 @@
 export default {
   name: "Qrcode",
   created() {
-    window.location.href = '/comingsoon'
+    window.location.href = 'https://www.instagram.com/tedxiitpatna/'
   }
 }
 </script>
