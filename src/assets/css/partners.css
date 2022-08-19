@@ -1,11 +1,10 @@
 .wrapper {
-    display: grid;
+    display: flex;
     position: relative;
-    place-content: center;
+    flex-direction: column;
+    padding: 0 10vw;
     overflow: hidden;
-    
 }
-
 
 .wrapper .logo {
     position: fixed;
@@ -16,8 +15,7 @@
     z-index: -1;
 }
 .partners-wrapper{
-    width: 80vw; 
-    min-height: 100vh;
+    width: 80vw;
 }
 
  .title{
@@ -28,8 +26,9 @@
     font-weight: 700;
     position:relative;
     align-items: center;
-    margin-top: clamp(120px,10%,160px);
-    left:50%;
+    margin-top: calc(10vh + 22px);
+    /* 22px is the height of back button. need to fix this hard-coding */
+    left: 50%;
     transform: translate(-50%,0);
 }
 
@@ -47,14 +46,16 @@
 
 .partner-scroller{
     display: grid;
+    position: relative;
+    left: 50%;
     width: 100%;
+    max-width: 1500px;
     justify-items: center;
     align-items: center;
+    transform: translate(-50%, 0);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     overflow-x: auto;
     overflow-y: hidden;
-    max-width: 1500px;
-    grid-template-columns: repeat( 
-    auto-fit, minmax(220px, 1fr));
 }
 
 .partners-images{

@@ -31,7 +31,6 @@
           <img :src="partner"/>
         </div>
 
-        
       </div>
     </div>
   </section>
@@ -52,21 +51,21 @@ export default {
       screenWidth: window.innerWidth,
       showWebView: window.innerWidth >= 830,
       partner_images:[
-      require('@/assets/images/partners/anton paar_ silver .jpg'),
-      require('@/assets/images/partners/Elsevier logo_bronze.gif'),
-      require('@/assets/images/partners/gatan_logo_silver.png'),
-      require('@/assets/images/partners/gdi.png'),
-      require('@/assets/images/partners/maurya_gold.png'),
-      require('@/assets/images/partners/merimeet.png'),
-      require('@/assets/images/partners/santosh.png'),
-      require('@/assets/images/partners/sd.png'),
-      require('@/assets/images/partners/zwick_roell_logo_bronze.png'),
-      require('@/assets/images/partners/ruban.png'),
-      require('@/assets/images/partners/indianoil.png'),
-      require('@/assets/images/partners/4.png'),
-      require('@/assets/images/partners/varta.png'),
-      require('@/assets/images/partners/ic.png'),
-      require('@/assets/images/partners/pataliputra.png',)
+        require('@/assets/images/partners/anton paar_ silver .jpg'),
+        require('@/assets/images/partners/Elsevier logo_bronze.gif'),
+        require('@/assets/images/partners/gatan_logo_silver.png'),
+        require('@/assets/images/partners/gdi.png'),
+        require('@/assets/images/partners/maurya_gold.png'),
+        require('@/assets/images/partners/merimeet.png'),
+        require('@/assets/images/partners/santosh.png'),
+        require('@/assets/images/partners/sd.png'),
+        require('@/assets/images/partners/zwick_roell_logo_bronze.png'),
+        require('@/assets/images/partners/ruban.png'),
+        require('@/assets/images/partners/indianoil.png'),
+        require('@/assets/images/partners/4.png'),
+        require('@/assets/images/partners/varta.png'),
+        require('@/assets/images/partners/ic.png'),
+        require('@/assets/images/partners/pataliputra.png',)
       ]
     }
   },
