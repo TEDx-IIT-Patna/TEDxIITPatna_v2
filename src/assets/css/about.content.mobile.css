@@ -16,7 +16,7 @@ section.about.mobile{
 }
 
 section.about.mobile .text-wrapper{
-    padding-top: 25vh;
+    padding: 25vh 15vw;
 }
 
 section.about.mobile .text-wrapper .content{

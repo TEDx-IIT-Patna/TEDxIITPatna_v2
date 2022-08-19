@@ -32,8 +32,7 @@ section.about{
 .text-wrapper {
     width: 100%;
     min-height: 100vh;
-    padding: 0 15vw;
-    padding-top: 20vh;
+    padding: 20vh 15vw;
 }
 
 .text-wrapper .content{
