@@ -2,7 +2,7 @@
   <Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="icon" />
   <BackButton />
   
-  <div :class="['section-title', this.showWebView ? '' : 'mobile']">
+  <div :class="['section-title', !this.showWebView ? 'mobile' : '']">
     <span class="text">{{ sectionTitle }}</span>
   </div>
 
@@ -109,11 +109,31 @@
     
   </section>
 
-  <section class="webview" v-if="false">
+  <!-- Team Section - web view -->
+  <section :class="['team', !this.showWebView ? 'mobile' : '']">
+    <!-- NOTE: Cards of Coordinators-->
+    <div class="group" v-for="(items, name) in team" :key="items">
+      <div class="content">
+        <div class="sub-heading">Team</div>
+        <div class="heading">{{ name }}</div>
+        <!-- <div class="hr"></div> -->
 
+        <div class="card-container">
+          <div class="card" v-for="(person, index) in items" :key="index">
+            <div class="image"><img :src="person.Path" alt="..."></div>
+            <div class="name"> {{ person.Name }} </div>
+            <div class="post"> {{ person.Post }} </div>
+            <div class="socials">
+              <a target="__blank" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt=""></div> -->
+    </div>
     <!-- NOTE: Faculty -->
-    <section class="about_section about3">
-      <!-- <div class="team_redbox" id="team_redbox"><span id="redbox_text1">Team.</span></div> -->
+    <!-- <section class="about_section about3">
       <h5>TEAM</h5>
       <h1>Faculty</h1>
       <div class="hr"></div>
@@ -142,41 +162,11 @@
       </div>
       <div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
       </div>
-    </section>
+    </section> -->
 
-    <!-- NOTE: Cards of Coordinators-->
-    <section class="about_section about3" v-for="(items, name) in team" :key="items">
-      <h5>TEAM</h5>
-      <h1>{{ name }}</h1>
-      <div class="hr"></div>
-      <div class="about_text about_text_web">
-        <div class="card card-web max-3" style="width: 18vw;" v-for="person in items" :key="person.index">
-          <img :src="person.Path" class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="row name name-web">
-              <div class="col">
-                {{ person.Name }}
-              </div>
-            </div>
-            <div class="row post post-web">
-
-              <div class="col">
-                {{ person.Committee }}
-              </div>
-            </div>
-            <div class="row icon icon-web">
-              <div class="col">
-                <a target="__blank" href="#"><i class="fa-brands fa-facebook-f mx-3 fa-xl"></i></a>
-                <a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin mx-3 fa-xl"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
-      </div>
-    </section>
+    
   </section>
+
 
   <section v-if="false">
     <section class="nav_section">
@@ -279,7 +269,7 @@
 				</div>
 				<div class="row post post-mob">
 					<div class="col">
-						{{ person.Committee }}
+						{{ person.Post }}
 					</div>
 				</div>
 				<div class="row icon">
@@ -307,7 +297,7 @@
 				</div>
 				<div class="row post post-mob">
 					<div class="col">
-						{{person.Committee}}
+						{{person.Post}}
 					</div>
 				</div>
 				<div class="row icon">
@@ -334,9 +324,7 @@
 					</div>
 				</div>
 				<div class="row post post-mob">
-					<div class="col">
-						{{person.Committee}}
-					</div>
+						{{person.Post}}
 				</div>
 				<div class="row icon">
 					<div class="col">
@@ -351,10 +339,11 @@
 	<br />
 	<br />
 	<br />
-	<AboutModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :Path="this.speakerModalSrc"
-		:Name="this.speakerName" :Committee="this.speakerTitle" @closeSpeakerModal="this.closeAllModals"
-		:Linkedin="this.speakerTalkLink" />
   </section>
+  
+	<AboutModal v-if="this.showSpeakerModal" :showModal="this.showSpeakerModal" :Path="this.speakerModalSrc"
+		:Name="this.speakerName" :Post="this.speakerTitle" @closeSpeakerModal="this.closeAllModals"
+		:Linkedin="this.speakerTalkLink" />
 
   <Footer />
 
@@ -364,8 +353,6 @@
 <script scoped>
 import Nav from '@/components/Nav.vue'
 import BackButton from '@/components/BackButton.vue'
-// import Teamweb from '@/components/Teamweb.vue'
-// import AboutmobileVue from '@/components/Aboutmobile.vue'
 import Footer from '@/components/Footer.vue'
 import AboutModal from '@/components/AboutMobileModal.vue'
 
@@ -374,9 +361,6 @@ export default {
   components: {
     Nav,
     BackButton,
-    Footer,
-    // AboutmobileVue,
-    // Teamweb,
     Footer,
     AboutModal,
   },
@@ -392,7 +376,7 @@ export default {
           {
             index: "1",
             Name: "Palak Totala",
-            Committee: "Organiser",
+            Post: "Organiser",
             Roll: "2001CS84",
             Path: require('@/assets/images/Team_Image/1.jpg'),
             Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/"
@@ -400,7 +384,7 @@ export default {
           {
             index: "2",
             Name: "Nischal Jain",
-            Committee: "Co-organiser",
+            Post: "Co-organiser",
             Roll: "2001ME41",
             Path: require('@/assets/images/Team_Image/2.jpg'),
             Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/"
@@ -410,7 +394,7 @@ export default {
           {
             index: "6",
             Name: "Pradipti Mondal",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001EE44",
             Path: require('@/assets/images/Team_Image/6.jpg'),
             Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/"
@@ -418,7 +402,7 @@ export default {
           {
             index: "16",
             Name: "Ashfaq Ahmed",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001EE44",
             Path: require('@/assets/images/Team_Image/16.jpg'),
             Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/"
@@ -426,7 +410,7 @@ export default {
           {
             index: "20",
             Name: "Shaheer tanveer",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001EE44",
             Path: require('@/assets/images/Team_Image/20.jpg'),
             Linkedin: "https://www.linkedin.com/in/shaheertanveer/"
@@ -436,7 +420,7 @@ export default {
           {
             index: "7",
             Name: "Sai Nandan",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001CB46",
             Path: require('@/assets/images/Team_Image/7.jpg'),
             Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/"
@@ -444,7 +428,7 @@ export default {
           {
             index: "8",
             Name: "Athul Krishna K",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001ME85",
             Path: require('@/assets/images/Team_Image/8.jpg'),
             Linkedin: "https://www.linkedin.com/in/athul-krishna-k-688262223/"
@@ -452,7 +436,7 @@ export default {
           {
             index: "14",
             Name: "Rohit Sinha",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001MM26",
             Path: require('@/assets/images/Team_Image/14.jpg'),
             Linkedin: "https://www.linkedin.com/in/rohit-sinha-1282a821b/"
@@ -462,7 +446,7 @@ export default {
           {
             index: "9",
             Name: "Devna Srivastava",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001MM13",
             Path: require('@/assets/images/Team_Image/9.jpg'),
             Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/"
@@ -470,7 +454,7 @@ export default {
           {
             index: "18",
             Name: "Abhimanyu Singh",
-            Committee: "Prod",
+            Post: "Prod",
             Roll: "2001MM13",
             Path: require('@/assets/images/Team_Image/18.jpg'),
             Linkedin: "https://www.linkedin.com/in/abhimanyu-singh-bisht-91b3b0200/"
@@ -478,7 +462,7 @@ export default {
           {
             index: "19",
             Name: "Yash Ajitsaria",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001MM13",
             Path: require('@/assets/images/Team_Image/19.jpg'),
             Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/"
@@ -488,7 +472,7 @@ export default {
           {
             index: "3",
             Name: "Pratyush Kumar",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001ME51",
             Path: require('@/assets/images/Team_Image/3.jpg'),
             Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/"
@@ -496,7 +480,7 @@ export default {
           {
             index: "4",
             Name: "Suyog Chaudhari",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001EE77",
             Path: require('@/assets/images/Team_Image/4.jpg'),
             Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/"
@@ -506,7 +490,7 @@ export default {
           {
             index: "10",
             Name: "Abhinav Mishra",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001MM01",
             Path: require('@/assets/images/Team_Image/10.jpg'),
             Linkedin: "https://www.linkedin.com/in/abhinav2901/"
@@ -514,7 +498,7 @@ export default {
           {
             index: "11",
             Name: "M.L.N. Keertana",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001CS47",
             Path: require('@/assets/images/Team_Image/11.jpg'),
             Linkedin: "https://www.linkedin.com/in/mln-keertana-5aab50217/"
@@ -524,7 +508,7 @@ export default {
           {
             index: "13",
             Name: "Hardik Tiwari",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001MM15",
             Path: require('@/assets/images/Team_Image/13.jpg'),
             Linkedin: "https://www.linkedin.com/in/hardiktiwari/"
@@ -532,7 +516,7 @@ export default {
           {
             index: "15",
             Name: "Aarav Arya",
-            Committee: "Co-ordinator",
+            Post: "Co-ordinator",
             Roll: "2001ME01",
             Path: require('@/assets/images/Team_Image/15.jpg'),
             Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/"
@@ -542,7 +526,7 @@ export default {
           {
           index: "12",
           Name: "Khushi Shah",
-          Committee: "Co-ordinator",
+          Post: "Co-ordinator",
           Roll: "2001EE91",
           Path: require('@/assets/images/Team_Image/12.jpg'),
           Linkedin: "https://www.linkedin.com/in/khushishah8221/"
@@ -551,7 +535,7 @@ export default {
           {
           index: "5",
           Name: "Vani Grover",
-          Committee: "Co-ordinator",
+          Post: "Co-ordinator",
           Roll: "2001CE68",
           Path: require('@/assets/images/Team_Image/5.jpg'),
           Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/"
@@ -560,7 +544,7 @@ export default {
           {
           index: "17",
           Name: "Farhaan Alam",
-          Committee: "Co-ordinator",
+          Post: "Co-ordinator",
           Roll: "2001ME25",
           Path: require('@/assets/images/Team_Image/17.jpg'),
           Linkedin: "https://www.linkedin.com/in/farhaan-alam/"
@@ -569,7 +553,7 @@ export default {
           {
             index: "21",
             Name: "Deepshikha",
-            Committee: "Convener",
+            Post: "Convener",
             Roll: "2001MM15",
             Path: require('@/assets/images/Team_Image/21.jpg'),
             Linkedin: "https://www.linkedin.com/in/deepshikha-1234/"
@@ -577,7 +561,7 @@ export default {
           {
             index: "22",
             Name: "Sajal Kumar",
-            Committee: "Convener",
+            Post: "Convener",
             Roll: "2001ME01",
             Path: require('@/assets/images/Team_Image/22.jpg'),
             Linkedin: "https://www.linkedin.com/in/sajalkumar247/"
@@ -586,55 +570,55 @@ export default {
       },
 
       Prof: [
-				{ index: "#17", Name: "Dr. S.K. Samanta", "Committee": "Professor-In-Charge", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/prof.png'), Linkedin: "https://www.linkedin.com/in/sujoy-kumar-samanta-a0bb91238/" },
+				{ index: "#17", Name: "Dr. S.K. Samanta", "Post": "Professor-In-Charge", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/prof.png'), Linkedin: "https://www.linkedin.com/in/sujoy-kumar-samanta-a0bb91238/" },
 			],
 
 			Organisers: [
-				{ index: "1", Name: "Palak Totala", "Committee": "Organiser", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/1.jpg'), Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/" },
-				{ index: "2", Name: "Nischal Jain", "Committee": "Co-organiser", Roll: "2001ME41", Path: require('@/assets/images/Team_Image/2.jpg'), Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/" },
+				{ index: "1", Name: "Palak Totala", "Post": "Organiser", Roll: "2001CS84", Path: require('@/assets/images/Team_Image/1.jpg'), Linkedin: "https://www.linkedin.com/in/palak-totala-510875203/" },
+				{ index: "2", Name: "Nischal Jain", "Post": "Co-organiser", Roll: "2001ME41", Path: require('@/assets/images/Team_Image/2.jpg'), Linkedin: "https://www.linkedin.com/in/nischal-jain-4ab036195/" },
 			],
 			team3: {
 				PnC: [
-					{ index: "6", Name: "Pradipti Mondal", "Committee": "Co-ordinator", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/6.jpg'), Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/" },
-					{ index: "16", Name: "Ashfaq Ahmed", "Committee": "Co-ordinator", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/16.jpg'), Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/" },
-					{ index: "20", Name: "Shaheer tanveer", "Committee": "Co-ordinator", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/20.jpg'), Linkedin: "https://www.linkedin.com/in/shaheertanveer/" },
+					{ index: "6", Name: "Pradipti Mondal", "Post": "Co-ordinator", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/6.jpg'), Linkedin: "https://www.linkedin.com/in/pradipti-mondal-3146ac/" },
+					{ index: "16", Name: "Ashfaq Ahmed", "Post": "Co-ordinator", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/16.jpg'), Linkedin: "https://www.linkedin.com/in/ashfaq-iitp/" },
+					{ index: "20", Name: "Shaheer tanveer", "Post": "Co-ordinator", Roll: "2001EE44", Path: require('@/assets/images/Team_Image/20.jpg'), Linkedin: "https://www.linkedin.com/in/shaheertanveer/" },
 				],
 				Sponsorship: [
-					{ index: "7", Name: "Sai Nandan", "Committee": "Co-ordinator", Roll: "2001CB46", Path: require('@/assets/images/Team_Image/7.jpg'), Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/" },
-					{ index: "8", Name: "Athul Krishna K", "Committee": "Co-ordinator", Roll: "2001ME85", Path: require('@/assets/images/Team_Image/8.jpg'), Linkedin: "https://www.linkedin.com/in/athul-krishna-k-688262223/" },
-					{ index: "14", Name: "Rohit Sinha", "Committee": "Co-ordinator", Roll: "2001MM26", Path: require('@/assets/images/Team_Image/14.jpg'), Linkedin: "https://www.linkedin.com/in/rohit-sinha-1282a821b/" },
+					{ index: "7", Name: "Sai Nandan", "Post": "Co-ordinator", Roll: "2001CB46", Path: require('@/assets/images/Team_Image/7.jpg'), Linkedin: "https://www.linkedin.com/in/sai-nandan-panigrahy/" },
+					{ index: "8", Name: "Athul Krishna K", "Post": "Co-ordinator", Roll: "2001ME85", Path: require('@/assets/images/Team_Image/8.jpg'), Linkedin: "https://www.linkedin.com/in/athul-krishna-k-688262223/" },
+					{ index: "14", Name: "Rohit Sinha", "Post": "Co-ordinator", Roll: "2001MM26", Path: require('@/assets/images/Team_Image/14.jpg'), Linkedin: "https://www.linkedin.com/in/rohit-sinha-1282a821b/" },
 				],
 				Production: [
-					{ index: "9", Name: "Devna Srivastava", "Committee": "Co-ordinator", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/9.jpg'), Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/" },
-					{ index: "18", Name: "Abhimanyu Singh", "Committee": "Co-ordinator", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/18.jpg'), Linkedin: "https://www.linkedin.com/in/abhimanyu-singh-bisht-91b3b0200/" },
-					{ index: "19", Name: "Yash Ajitsaria", "Committee": "Co-ordinator", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/19.jpg'), Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/" },
+					{ index: "9", Name: "Devna Srivastava", "Post": "Co-ordinator", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/9.jpg'), Linkedin: "https://www.linkedin.com/in/devna-srivastava-58040621a/" },
+					{ index: "18", Name: "Abhimanyu Singh", "Post": "Co-ordinator", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/18.jpg'), Linkedin: "https://www.linkedin.com/in/abhimanyu-singh-bisht-91b3b0200/" },
+					{ index: "19", Name: "Yash Ajitsaria", "Post": "Co-ordinator", Roll: "2001MM13", Path: require('@/assets/images/Team_Image/19.jpg'), Linkedin: "https://www.linkedin.com/in/yash-ajitsaria-0b56a11bb/" },
 				]
 			},
 			team2: {
 				Webnapp: [
-					{ index: "3", Name: "Pratyush Kumar", "Committee": "Co-ordinator", Roll: "2001ME51", Path: require('@/assets/images/Team_Image/3.jpg'), Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/" },
-					{ index: "4", Name: "Suyog Chaudhari", "Committee": "Co-ordinator", Roll: "2001EE77", Path: require('@/assets/images/Team_Image/4.jpg'), Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/" },
+					{ index: "3", Name: "Pratyush Kumar", "Post": "Co-ordinator", Roll: "2001ME51", Path: require('@/assets/images/Team_Image/3.jpg'), Linkedin: "https://www.linkedin.com/in/pratyushkumar1032/" },
+					{ index: "4", Name: "Suyog Chaudhari", "Post": "Co-ordinator", Roll: "2001EE77", Path: require('@/assets/images/Team_Image/4.jpg'), Linkedin: "https://www.linkedin.com/in/suyog-chaudhari-5b95021b9/" },
 				],
 				Registration: [
-					{ index: "10", Name: "Abhinav Mishra", "Committee": "Co-ordinator", Roll: "2001MM01", Path: require('@/assets/images/Team_Image/10.jpg'), Linkedin: "https://www.linkedin.com/in/abhinav2901/" },
-					{ index: "11", Name: "M.L.N. Keertana", "Committee": "Co-ordinator", Roll: "2001CS47", Path: require('@/assets/images/Team_Image/11.jpg'), Linkedin: "https://www.linkedin.com/in/mln-keertana-5aab50217/" },
+					{ index: "10", Name: "Abhinav Mishra", "Post": "Co-ordinator", Roll: "2001MM01", Path: require('@/assets/images/Team_Image/10.jpg'), Linkedin: "https://www.linkedin.com/in/abhinav2901/" },
+					{ index: "11", Name: "M.L.N. Keertana", "Post": "Co-ordinator", Roll: "2001CS47", Path: require('@/assets/images/Team_Image/11.jpg'), Linkedin: "https://www.linkedin.com/in/mln-keertana-5aab50217/" },
 				],
 				MPR: [
-					{ index: "13", Name: "Hardik Tiwari", "Committee": "Co-ordinator", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/13.jpg'), Linkedin: "https://www.linkedin.com/in/hardiktiwari/" },
-					{ index: "15", Name: "Aarav Arya", "Committee": "Co-ordinator", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/15.jpg'), Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/" }
+					{ index: "13", Name: "Hardik Tiwari", "Post": "Co-ordinator", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/13.jpg'), Linkedin: "https://www.linkedin.com/in/hardiktiwari/" },
+					{ index: "15", Name: "Aarav Arya", "Post": "Co-ordinator", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/15.jpg'), Linkedin: "https://www.linkedin.com/in/aarav-arya-b80909239/" }
 				],
 				Editorial: [
-					{ index: "12", Name: "Khushi Shah", "Committee": "Co-ordinator", Roll: "2001EE91", Path: require('@/assets/images/Team_Image/12.jpg'), Linkedin: "https://www.linkedin.com/in/khushishah8221/" },
+					{ index: "12", Name: "Khushi Shah", "Post": "Co-ordinator", Roll: "2001EE91", Path: require('@/assets/images/Team_Image/12.jpg'), Linkedin: "https://www.linkedin.com/in/khushishah8221/" },
 				],
 				Hospitality: [
-					{ index: "5", Name: "Vani Grover", "Committee": "Co-ordinator", Roll: "2001CE68", Path: require('@/assets/images/Team_Image/5.jpg'), Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/" },
+					{ index: "5", Name: "Vani Grover", "Post": "Co-ordinator", Roll: "2001CE68", Path: require('@/assets/images/Team_Image/5.jpg'), Linkedin: "https://www.linkedin.com/in/vani-grover-77078a207/" },
 				],
 				CnD: [
-					{ index: "17", Name: "Farhaan Alam", "Committee": "Co-ordinator", Roll: "2001ME25", Path: require('@/assets/images/Team_Image/17.jpg'), Linkedin: "https://www.linkedin.com/in/farhaan-alam/" },
+					{ index: "17", Name: "Farhaan Alam", "Post": "Co-ordinator", Roll: "2001ME25", Path: require('@/assets/images/Team_Image/17.jpg'), Linkedin: "https://www.linkedin.com/in/farhaan-alam/" },
 				],
 				Convener: [
-					{ index: "21", Name: "Deepshikha", "Committee": "Convener", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/21.jpg'), Linkedin: "https://www.linkedin.com/in/deepshikha-1234/" },
-					{ index: "22", Name: "Sajal Kumar", "Committee": "Convener", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/22.jpg'), Linkedin: "https://www.linkedin.com/in/sajalkumar247/" }
+					{ index: "21", Name: "Deepshikha", "Post": "Convener", Roll: "2001MM15", Path: require('@/assets/images/Team_Image/21.jpg'), Linkedin: "https://www.linkedin.com/in/deepshikha-1234/" },
+					{ index: "22", Name: "Sajal Kumar", "Post": "Convener", Roll: "2001ME01", Path: require('@/assets/images/Team_Image/22.jpg'), Linkedin: "https://www.linkedin.com/in/sajalkumar247/" }
 				]
 			},
 			
@@ -650,41 +634,9 @@ export default {
   },
   mounted() {
     window.onscroll = () => {
-      //Web-view variables
-      // var redbox = document.getElementById('about_redbox');
-      // var redbox1 = document.getElementById('team_redbox');
-      // var height1 = document.querySelector(".about1").clientHeight;
-      // var height2 = document.querySelector(".about2").clientHeight; 
-      var height = document.querySelector("section.about").clientHeight; 
-      if (window.pageYOffset > (height)) {
-        // redbox.classList.add("none1");
-        // redbox1.classList.remove("none1");
-        this.sectionTitle = "Team.";
-      } else {
-        // redbox.classList.remove("none1");
-        // redbox1.classList.add("none1");
-        this.sectionTitle = "About.";
-      }
-
-    // // Mobile-view variables
-    //   var body = document.body,
-		// 		html = document.documentElement;
-
-		// 	var height = Math.max(body.scrollHeight, body.offsetHeight,
-		// 		html.clientHeight, html.scrollHeight, html.offsetHeight);
-		// 	var print = height / window.pageYOffset;
-		// 	console.log(print);
-		// 	var redbox = document.getElementById('about_bg');
-		// 	var redbox1 = document.getElementById('team_bg');
-		// 	if (window.pageYOffset > height / 10.4) {
-		// 		redbox.classList.add("none");
-		// 		redbox1.classList.remove("none");
-        
-		// 		// document.querySelector(".team_word").innerHTML="Team."
-		// 	} else {
-		// 		redbox.classList.remove("none");
-		// 		redbox1.classList.add("none");
-		// 	}
+      const height = document.querySelector("section.about").clientHeight; 
+      if (window.pageYOffset > height){ this.sectionTitle = "Team." }
+      else { this.sectionTitle = "About." }
     };
     window.addEventListener('keydown', this.closeAllModalsOnKeyPress)
 
@@ -737,7 +689,7 @@ export default {
 		configureSpeakerModal(speaker) {
 			this.speakerModalSrc = speaker.Path
 			this.speakerName = speaker.Name
-			this.speakerTitle = speaker.Committee
+			this.speakerTitle = speaker.Post
 			this.speakerTalkLink = speaker.Linkedin
 			this.showSpeakerModal = true
 		},
@@ -754,8 +706,11 @@ export default {
 </script>
 
 <style scoped>
-/* @import '@/assets/css/about.css'; */
+/* Text section */
 @import '@/assets/css/about.content.css';
 @import '@/assets/css/about.content.mobile.css';
-/* @import '@/assets/css/about.mobile.css'; */
+
+/* Team section */
+@import '@/assets/css/about.team.css';
+@import '@/assets/css/about.team.mobile.css';
 </style>

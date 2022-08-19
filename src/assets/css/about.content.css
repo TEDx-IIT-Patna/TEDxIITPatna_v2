@@ -32,7 +32,7 @@ section.about{
 .text-wrapper {
     width: 100%;
     min-height: 100vh;
-    padding: 20vh 15vw;
+    padding: 20vh 10vw;
 }
 
 .text-wrapper .content{
@@ -48,7 +48,6 @@ section.about{
 }
 
 .text-wrapper .heading{
-    margin-top: -10px;
     margin-bottom: 2rem;
     font-size: calc(105 * (clamp(400px, 70vw, 550px) / 1080));
     font-weight: 700;

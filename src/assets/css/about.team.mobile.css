@@ -1,0 +1,16 @@
+section.team.mobile{
+    padding-right: 0;
+}
+
+section.team.mobile .group .sub-heading,
+section.team.mobile .group .heading{
+    text-align: center;
+}
+
+section.team.mobile .group .heading::after{
+    display: none;
+}
+
+section.team.mobile .card-container .card{
+    margin: 1.5rem;
+}

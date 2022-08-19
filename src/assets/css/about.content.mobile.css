@@ -12,11 +12,11 @@ section.about.mobile{
 }
 .section-title.mobile span{
     padding-bottom: 5%;
-    right: 0.4ch;
+    right: 0.2ch;
 }
 
 section.about.mobile .text-wrapper{
-    padding: 25vh 15vw;
+    padding: 25vh 10vw;
 }
 
 section.about.mobile .text-wrapper .content{
