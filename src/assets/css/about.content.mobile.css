@@ -1,0 +1,70 @@
+section.about.mobile{
+    padding-right: 0;
+}
+
+.section-title.mobile{
+    right: auto;
+    left: 0;
+    width: 100vw;
+    color: var(--grey-l2);
+    font-size: calc(400 * (60vh / 1080));
+    background-color: transparent;
+}
+.section-title.mobile span{
+    padding-bottom: 5%;
+    right: 0.4ch;
+}
+
+section.about.mobile .text-wrapper{
+    padding-top: 25vh;
+}
+
+section.about.mobile .text-wrapper .content{
+    position: relative;
+    left: 50%;
+    max-width: 400px;
+    transform: translate(-50%, 0);
+}
+
+section.about.mobile .text-wrapper .sub-heading,
+section.about.mobile .text-wrapper .heading{
+    text-align: center;
+}
+
+section.about.mobile .text-wrapper .heading{
+    margin-top: 0;
+}
+
+#more {
+    display: none;
+}
+
+#more2 {
+    display: none;
+}
+
+.expand-btn {
+    display: inline-block;
+    position: relative;
+    top: 2rem;
+    left: 50%;
+    text-align: center;
+    color: var(--red-l1);
+    line-height: 36px;
+    font-size: calc(28 * (clamp(500px, 70vw, 550px) / 1080));
+    letter-spacing: calc(10 * (clamp(500px, 70vw, 550px) / 1080));
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+
+.expand-btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    width: 120%;
+    height: 1px;
+    background-color: var(--red-l1);
+    transform: translate(-50%, 0);
+}

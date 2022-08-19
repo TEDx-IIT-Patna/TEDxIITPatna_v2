@@ -1,59 +1,66 @@
-.nav {
-    z-index: 10;
+section.about{
+    padding-right: 30vw;
+    text-align: justify;
 }
 
-
-.about_section {
-    /* height: 100vh; */
-    overflow: hidden;
-    padding-bottom: 50vh;
-}
-
-.about_redbox {
-    background: #FF0039;
-    height: 100vh;
-    width: 27vw;
+.section-title {
     position: fixed;
     top: 0;
-    left: 73vw;
+    right: 0;
+    height: 100vh;
+    width: 30vw;
+    color: #FF5C5C;
+    background-color: var(--red-l1);
     z-index: -1;
-    float: right;
+
     writing-mode: vertical-lr;
-    font-size: 10vw;
+    /* font-size: 10vw; */
+    font-size: calc(400 * (60vh / 1080));
     font-style: normal;
     font-weight: 700;
-    line-height: 256px;
+    /* line-height: 256px; */
     text-align: right;
-    color: #FF5C5C;
 }
 
-.about_redbox span {
-    padding-bottom: 10%;
+.section-title span {
+    padding-bottom: 5%;
     position: relative;
-    right: 2vw;
+    right: 0.2ch;
+    /* left: calc(0vw + 0rem); */
 }
 
-.about_section h5 {
-    position: relative;
-    top: 16vh;
-    left: 13vw;
-    z-index: 1;
+.text-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 15vw;
+    padding-top: 20vh;
+}
+
+.text-wrapper .content{
+    max-width: 800px;
+}
+
+.text-wrapper .sub-heading{
     color: #9B9B9B;
-    font-size: 1.5vw;
-    margin-bottom: -4px;
+    font-size: calc(35 * (clamp(400px, 70vw, 550px) / 1080));
+    letter-spacing: calc(20 * (clamp(400px, 70vw, 550px) / 1080));
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.about_section h1 {
-    position: relative;
-    top: 16vh;
-    left: 13vw;
-    z-index: 1;
-    color: #000000;
-    width: 100vw;
-    font-size: 4vw;
-    font-weight: 600;
+.text-wrapper .heading{
+    margin-top: -10px;
+    margin-bottom: 2rem;
+    font-size: calc(105 * (clamp(400px, 70vw, 550px) / 1080));
+    font-weight: 700;
 }
 
+.text-wrapper .text{
+    font-size: calc(35 * (clamp(500px, 70vw, 550px) / 1080));
+    line-height: calc(55 * (clamp(500px, 70vw, 550px) / 1080));
+    font-weight: 400;
+}
+/* 
 .hr {
     width: 47vw;
     height: 9px;
@@ -63,32 +70,6 @@
     left: 13vw;
     box-sizing: border-box;
     border-bottom-color: transparent
-}
-
-.about_text {
-    width: calc(100vw - 27vw);
-    position: relative;
-    top: 18vh;
-    z-index: 1;
-    color: #000000;
-    text-align: justify;
-    text-justify: inter-word;
-    font-weight: 400;
-    font-size: 1.1vw;
-    display: flex;
-}
-
-.about_text2 {
-    width: calc(100% - 49vw);
-    position: relative;
-    top: 18vh;
-    left: 13vw;
-    z-index: 1;
-    color: #000000;
-    text-align: justify;
-    text-justify: inter-word;
-    font-weight: 400;
-    font-size: 1.2vw;
 }
 
 .tedx_pic {
@@ -107,30 +88,6 @@
 .tedx_pic2 {
     top: 9vh;
     display: none;
-}
-
-.team_redbox {
-    background: #FF0039;
-    height: 100vh;
-    width: 27vw;
-    position: fixed;
-    top: 0;
-    left: 73vw;
-    z-index: -1;
-    float: right;
-    writing-mode: vertical-lr;
-    font-size: 10vw;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 256px;
-    text-align: right;
-    color: #FF5C5C;
-}
-
-.team_redbox span {
-    padding-bottom: 10%;
-    position: relative;
-    right: 2vw;
 }
 
 .card {
@@ -176,7 +133,7 @@
 
 .none1 {
     display: none;
-    /* animation: fade-out 500ms linear; */
+    animation: fade-out 500ms linear;
 
 }
 
@@ -185,7 +142,7 @@
     to {opacity: 0;}
 } */
 
-.about_text_3 {
+/* .about_text_3 {
     width: 80vw;
     left: -4vw;
 }
@@ -193,4 +150,4 @@
 .about3 {
     min-height: 100vh;
     padding-bottom: 50vh;
-}
+} */

@@ -1,55 +1,119 @@
 <template>
-  <section class="webview" v-if="this.showWebView">
-    <section class="nav_section">
-      <Nav :open_button_color="'white'" open_button_style="icon" />
-      <BackButton />
-    </section>
-    <section class="about_section about1">
-      <div class="about_redbox" id="about_redbox"><span id="redbox_text">About.</span></div>
-      <h5>ABOUT</h5>
-      <h1>IIT Patna</h1>
-      <div class="about_text2 about_text_web2">Indian Institute of Technology Patna is one of the new IITs
-        established by an Act of
-        the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
-        post-doctoral degrees, it is one of the fastest developing colleges in India.<br /><br />
-        Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres. Many
-        inquisitive minds, eager to expand their technical prowess, are ably supported by astute professors and
-        state-of-the-art laboratories.<br /><br />
-        As the site for vibrant fests – Nebula, Reverberance, Celesta, Anwesha, Infinito– IIT Patna sees
-        overwhelming participation from all over the country. TEDxIITPatna is one of the more formal events in
-        this Institute of National Importance. IIT Patna is committed to providing the nation with well-rounded
-        individuals with professional and scientific competence of the highest degree.</div>
-      <div class="tedx_pic"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+  <Nav :open_button_color="this.showWebView ? 'white' : 'black'" open_button_style="icon" />
+  <BackButton />
+  
+  <div :class="['section-title', this.showWebView ? '' : 'mobile']">
+    <span class="text">{{ sectionTitle }}</span>
+  </div>
+
+  <!-- About Section - web view -->
+  <section class="about" v-if="this.showWebView">
+    <div class="text-wrapper">
+      <div class="content">
+        <div class="sub-heading">About</div>
+        <div class="heading">IIT Patna</div>
+        <div class="text">
+          Indian Institute of Technology Patna is one of the new IITs
+          established by an Act of
+          the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
+          post-doctoral degrees, it is one of the fastest developing colleges in India.<br /><br />
+          Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres. Many
+          inquisitive minds, eager to expand their technical prowess, are ably supported by astute professors and
+          state-of-the-art laboratories.<br /><br />
+          As the site for vibrant fests – Nebula, Reverberance, Celesta, Anwesha, Infinito – IIT Patna sees
+          overwhelming participation from all over the country. TEDxIITPatna is one of the more formal events in
+          this Institute of National Importance. IIT Patna is committed to providing the nation with well-rounded
+          individuals with professional and scientific competence of the highest degree.
+        </div>
       </div>
-    </section>
-    <section class="about_section about2">
-      <h5>ABOUT</h5>
-      <h1>TED</h1>
-      <div class="about_text2 about_text_web2">
-        TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
-        California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual
-        TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of
-        these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane
-        Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala,
-        Sal Khan and Daniel Kahneman.<br /><br />
-        The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media
-        initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides
-        subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational
-        initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to
-        funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals
-        or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows
-        program, helping world-changing innovators from around the globe to amplify the impact of their
-        remarkable projects and activities.<br /><br />
-        Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on
-        Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.
+    </div>
+
+    <div class="text-wrapper">
+      <div class="content">
+        <div class="sub-heading">About</div>
+        <div class="heading">TED</div>
+        <div class="text">
+          TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
+          California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual
+          TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of
+          these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane
+          Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala,
+          Sal Khan and Daniel Kahneman.<br /><br />
+          The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media
+          initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides
+          subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational
+          initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to
+          funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals
+          or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows
+          program, helping world-changing innovators from around the globe to amplify the impact of their
+          remarkable projects and activities.<br /><br />
+          Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on
+          Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.
+        </div>
       </div>
-      <div class="tedx_pic tedx_pic2"><img src="../assets/images/tedxiitpatna_logo-2B.png" alt="">
+    </div>
+    
+  </section>
+
+  <!-- About Section - mobile view -->
+  <section class="about mobile" v-else>
+    <div class="text-wrapper">
+      <div class="content">
+        <div class="sub-heading">About</div>
+        <div class="heading">IIT Patna</div>
+        <div class="text">
+              Indian Institute of Technology Patna is one of the new IITs established by an Act of
+          the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
+          post-doctoral degrees, it is one of the fastest developing colleges in India.<br /><br />
+          Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres. Many
+            inquisitive minds, eager<span
+            id="dots">...</span><span id="more"> to expand their technical prowess, are ably supported by astute professors and
+            state-of-the-art laboratories.<br /><br />
+            As the site for vibrant fests – Nebula, Reverberance, Celesta, Anwesha, Infinito– IIT Patna sees
+            overwhelming participation from all over the country. TEDxIITPatna is one of the more formal events in
+            this Institute of National Importance. IIT Patna is committed to providing the nation with well-rounded
+            individuals with professional and scientific competence of the highest degree.</span>
+        </div>
+        <a @click="myFunction()" class="expand-btn" id="expand-btn">EXPAND <i class="fa-solid fa-chevron-down fa-xs"></i></a>
       </div>
-    </section>
+    </div>
+
+    <div class="text-wrapper">
+      <div class="content">
+        <div class="sub-heading">About</div>
+        <div class="heading">TED</div>
+        <div class="text">
+          TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
+          California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual
+          TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of
+          these talks are then made available, free, at TED.com. TED
+          speakers have included Bill Gates, Jane
+          Goodall, Elizabeth Gilbert<span id="dots2">...</span><span id="more2">, Sir Richard Branson, Nandan
+            Nilekani, Philippe Starck, Ngozi Okonjo-Iweala,
+            Sal Khan and Daniel Kahneman.<br /><br />
+            The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media
+            initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides
+            subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational
+            initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to
+            funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals
+            or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows
+            program, helping world-changing innovators from around the globe to amplify the impact of their
+            remarkable projects and activities.<br /><br />
+            Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on
+            Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.</span>
+        </div>
+        <a @click="myFunction2()" class="expand-btn" id="expand-btn-2">EXPAND <i
+              class="fa-solid fa-chevron-down fa-xs"></i></a>
+    </div>
+    </div>
+    
+  </section>
+
+  <section class="webview" v-if="false">
 
     <!-- NOTE: Faculty -->
     <section class="about_section about3">
-      <div class="team_redbox" id="team_redbox"><span id="redbox_text1">Team.</span></div>
+      <!-- <div class="team_redbox" id="team_redbox"><span id="redbox_text1">Team.</span></div> -->
       <h5>TEAM</h5>
       <h1>Faculty</h1>
       <div class="hr"></div>
@@ -114,7 +178,7 @@
     </section>
   </section>
 
-  <section v-else>
+  <section v-if="false">
     <section class="nav_section">
 		<Nav :open_button_color="black" open_button_style="icon" />
 		<BackButton />
@@ -127,16 +191,16 @@
 			Indian Institute of Technology Patna is one of the new IITs established by an Act of
 			the Indian Parliament on August 06, 2008. Offering various undergraduate, postgraduate, and
 			post-doctoral degrees, it is one of the fastest developing colleges in India.<br /><br />
-			Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres.<span
-				id="dots">...</span><span id="more"> Many
-				inquisitive minds, eager to expand their technical prowess, are ably supported by astute professors and
+			Emerging as a center of thriving excellence, the lush green campus of IIT Patna spans 500 acres. Many
+				inquisitive minds, eager<span
+				id="dots">...</span><span id="more"> to expand their technical prowess, are ably supported by astute professors and
 				state-of-the-art laboratories.<br /><br />
 				As the site for vibrant fests – Nebula, Reverberance, Celesta, Anwesha, Infinito– IIT Patna sees
 				overwhelming participation from all over the country. TEDxIITPatna is one of the more formal events in
 				this Institute of National Importance. IIT Patna is committed to providing the nation with well-rounded
 				individuals with professional and scientific competence of the highest degree.</span>
 			<div class="expand-hr"></div>
-			<a @click="myFunction()" class="mybtn" id="myBtn">EXPAND <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+			<a @click="myFunction()" class="expand-btn" id="expand-btn">EXPAND <i class="fa-solid fa-chevron-down fa-xs"></i></a>
 		</div>
 		<div class="tedx-pic"><img src="../assets/images/tedxiitpatna_logo-1B.png" alt="">
 		</div>
@@ -164,7 +228,7 @@
 				Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on
 				Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.</span>
 			<div class="expand-hr"></div>
-			<a @click="myFunction2()" class="mybtn" id="myBtn2">EXPAND <i
+			<a @click="myFunction2()" class="expand-btn" id="expand-btn-2">EXPAND <i
 					class="fa-solid fa-chevron-down fa-xs"></i></a>
 		</div>
 		<div class="tedx-pic"><img src="../assets/images/tedxiitpatna_logo-1B.png" alt="">
@@ -300,19 +364,28 @@
 <script scoped>
 import Nav from '@/components/Nav.vue'
 import BackButton from '@/components/BackButton.vue'
-import Teamweb from '@/components/Teamweb.vue'
-import AboutmobileVue from '@/components/Aboutmobile.vue'
+// import Teamweb from '@/components/Teamweb.vue'
+// import AboutmobileVue from '@/components/Aboutmobile.vue'
 import Footer from '@/components/Footer.vue'
 import AboutModal from '@/components/AboutMobileModal.vue'
 
 export default {
   name: 'AboutView',
+  components: {
+    Nav,
+    BackButton,
+    Footer,
+    // AboutmobileVue,
+    // Teamweb,
+    Footer,
+    AboutModal,
+  },
   data() {
     return {
 
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
-      showWebView: window.innerWidth >= (1.51 * window.innerHeight),
+      showWebView: window.innerWidth >= 900,
 
       team: {
         Organisers: [
@@ -565,7 +638,8 @@ export default {
 				]
 			},
 			
-			screen: screen.width,
+			// screen: screen.width,
+      sectionTitle: "About.",
 			showSpeakerModal: false,
 			speakerModalSrc: null,
 			speakerName: null,
@@ -574,50 +648,43 @@ export default {
 			
     }
   },
-  components: {
-    Nav,
-    BackButton,
-    Footer,
-    AboutmobileVue,
-    Teamweb,
-    Footer,
-    AboutModal,
-  },
   mounted() {
-    window.onscroll = function () {
+    window.onscroll = () => {
       //Web-view variables
-      var redbox = document.getElementById('about_redbox');
-      var redbox1 = document.getElementById('team_redbox');
-      var height1 = document.querySelector(".about1").clientHeight;
-      var height2 = document.querySelector(".about2").clientHeight; 
-      console.log(height1);
-      if (window.pageYOffset > (height1 + height2)) {
-        redbox.classList.add("none1");
-        redbox1.classList.remove("none1");
+      // var redbox = document.getElementById('about_redbox');
+      // var redbox1 = document.getElementById('team_redbox');
+      // var height1 = document.querySelector(".about1").clientHeight;
+      // var height2 = document.querySelector(".about2").clientHeight; 
+      var height = document.querySelector("section.about").clientHeight; 
+      if (window.pageYOffset > (height)) {
+        // redbox.classList.add("none1");
+        // redbox1.classList.remove("none1");
+        this.sectionTitle = "Team.";
       } else {
-        redbox.classList.remove("none1");
-        redbox1.classList.add("none1");
+        // redbox.classList.remove("none1");
+        // redbox1.classList.add("none1");
+        this.sectionTitle = "About.";
       }
 
-    // Mobile-view variables
-      var body = document.body,
-				html = document.documentElement;
+    // // Mobile-view variables
+    //   var body = document.body,
+		// 		html = document.documentElement;
 
-			var height = Math.max(body.scrollHeight, body.offsetHeight,
-				html.clientHeight, html.scrollHeight, html.offsetHeight);
-			var print = height / window.pageYOffset;
-			console.log(print);
-			var redbox = document.getElementById('about_bg');
-			var redbox1 = document.getElementById('team_bg');
-			if (window.pageYOffset > height / 10.4) {
-				redbox.classList.add("none");
-				redbox1.classList.remove("none");
+		// 	var height = Math.max(body.scrollHeight, body.offsetHeight,
+		// 		html.clientHeight, html.scrollHeight, html.offsetHeight);
+		// 	var print = height / window.pageYOffset;
+		// 	console.log(print);
+		// 	var redbox = document.getElementById('about_bg');
+		// 	var redbox1 = document.getElementById('team_bg');
+		// 	if (window.pageYOffset > height / 10.4) {
+		// 		redbox.classList.add("none");
+		// 		redbox1.classList.remove("none");
         
-				// document.querySelector(".team_word").innerHTML="Team."
-			} else {
-				redbox.classList.remove("none");
-				redbox1.classList.add("none");
-			}
+		// 		// document.querySelector(".team_word").innerHTML="Team."
+		// 	} else {
+		// 		redbox.classList.remove("none");
+		// 		redbox1.classList.add("none");
+		// 	}
     };
     window.addEventListener('keydown', this.closeAllModalsOnKeyPress)
 
@@ -635,12 +702,12 @@ export default {
     onResize() {
       this.screenWidth = window.innerWidth
       this.screenHeight = window.innerHeight
-      this.showWebView = window.innerWidth >= (1.51 * window.innerHeight)
+      this.showWebView = window.innerWidth >= 900
     },
 		myFunction() {
 			var dots = document.getElementById("dots");
 			var moreText = document.getElementById("more");
-			var btnText = document.getElementById("myBtn");
+			var btnText = document.getElementById("expand-btn");
 
 			if (dots.style.display === "none") {
 				dots.style.display = "inline";
@@ -655,7 +722,7 @@ export default {
 		myFunction2() {
 			var dots = document.getElementById("dots2");
 			var moreText = document.getElementById("more2");
-			var btnText = document.getElementById("myBtn2");
+			var btnText = document.getElementById("expand-btn-2");
 
 			if (dots.style.display === "none") {
 				dots.style.display = "inline";
@@ -687,7 +754,8 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/about.css';
+/* @import '@/assets/css/about.css'; */
 @import '@/assets/css/about.content.css';
-@import '@/assets/css/about.mobile.css';
+@import '@/assets/css/about.content.mobile.css';
+/* @import '@/assets/css/about.mobile.css'; */
 </style>
