@@ -1,6 +1,7 @@
 <template>
-  <Nav :open_button_color='black' open_button_style="icon" />
   <BackButton />
+  <Nav :open_button_color='black' open_button_style="text" v-if="this.showWebView" />
+  <Nav :open_button_color='black' open_button_style="icon" v-else />
 
   <!-- web-view -->
   <section class="wrapper full" v-if="this.showWebView">
@@ -72,7 +73,7 @@ export default {
   methods: {
     onResize() {
       this.screenWidth = window.innerWidth
-      this.showWebView = window.innerWidth >= 830
+      this.showWebView = window.innerWidth >= 970
     },
   },
   mounted() {
