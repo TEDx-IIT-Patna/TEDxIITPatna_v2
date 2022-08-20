@@ -165,7 +165,7 @@ export default {
       showWebView: window.innerWidth >= 900,
 
       team: {
-        PIC: [
+        "PIC": [
           {
             index: "0",
             Name: "Dr. S.K. Samanta",
@@ -177,7 +177,7 @@ export default {
             },
           },
         ],
-        Organisers: [
+        "Organisers": [
           {
             index: "1",
             Name: "Palak Totala",
@@ -199,7 +199,7 @@ export default {
             },
           },
         ],
-        PnC: [
+        "Planning & Curation": [
           {
             index: "6",
             Name: "Pradipti Mondal",
@@ -231,7 +231,7 @@ export default {
             },
           },
         ],
-        Sponsorship: [
+        "Sponsorship": [
           {
             index: "7",
             Name: "Sai Nandan",
@@ -263,7 +263,7 @@ export default {
             },
           },
         ],
-        Production: [
+        "Production": [
           {
             index: "9",
             Name: "Devna Srivastava",
@@ -295,7 +295,7 @@ export default {
             },
           },
         ],
-        Webnapp: [
+        "Web & App": [
           {
             index: "3",
             Name: "Pratyush Kumar",
@@ -317,7 +317,7 @@ export default {
             },
           },
         ],
-        Registration: [
+        "Registration": [
           {
             index: "10",
             Name: "Abhinav Mishra",
@@ -339,7 +339,7 @@ export default {
             },
           },
         ],
-        MPR: [
+        "Media & Public Relations": [
           {
             index: "13",
             Name: "Hardik Tiwari",
@@ -361,7 +361,7 @@ export default {
             },
           }
         ],
-        Editorial: [
+        "Editorial": [
           {
             index: "12",
             Name: "Khushi Shah",
@@ -372,7 +372,7 @@ export default {
               Linkedin: ["https://www.linkedin.com/in/khushishah8221/", "fa-linkedin-in"],
             },
           },],
-        Hospitality: [
+        "Hospitality": [
           {
             index: "5",
             Name: "Vani Grover",
@@ -383,7 +383,7 @@ export default {
               Linkedin: ["https://www.linkedin.com/in/vani-grover-77078a207/", "fa-linkedin-in"],
             },
           },],
-        CnD: [
+        "Creatives & Design": [
           {
             index: "17",
             Name: "Farhaan Alam",
@@ -394,7 +394,7 @@ export default {
               Linkedin: ["https://www.linkedin.com/in/farhaan-alam/", "fa-linkedin-in"],
             },
           },],
-        Convener: [
+        "Conveners": [
           {
             index: "21",
             Name: "Deepshikha",
