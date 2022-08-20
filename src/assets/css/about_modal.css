@@ -134,3 +134,11 @@
     display: inline-block;
     margin-left: 1ch;
 }
+
+.col{
+    display: flex;
+    flex-direction: row;
+    column-gap: 7vw;
+    padding-left: 12px;
+    font-size: 20px;
+}

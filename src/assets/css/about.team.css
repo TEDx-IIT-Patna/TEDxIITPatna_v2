@@ -118,3 +118,7 @@ section.team .card-container .socials .fa-brands{
     color: var(--red-l1);
     font-size: calc(40 * (clamp(400px, 70vw, 550px) / 1080));
 }
+
+.web{
+    display: none;
+}

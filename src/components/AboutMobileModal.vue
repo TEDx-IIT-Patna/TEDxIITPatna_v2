@@ -62,8 +62,10 @@
                 <div class="desc">
                     <div class="row icon">
                         <div class="col">
-                            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f mx-2 fa-xl"></i></a>
-                            <a :href="Linkedin" target="_blank"><i class="fa-brands fa-linkedin-in mx-2 fa-xl"></i></a>
+                       <div class="social-icons" v-for="(social, index) in Socials" :key="index">
+                        <a target="__blank" :href="social[0]"><i class="fa-brands" :class="social[1]"></i></a>
+                        <!-- <a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin"></i></a> -->
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -89,8 +91,8 @@ export default {
             type: Boolean,
             default: false
         },
-        'Linkedin': {
-            type: String,
+        'Socials': {
+            type: Object,
             // default: ""
         }
     },
