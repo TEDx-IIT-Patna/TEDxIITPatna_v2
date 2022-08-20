@@ -4,11 +4,14 @@
   --red: #e62b1e;
   --red-l1: #ff0039;
   --red-l2: #ff1f51;
+  --red-l3: #FF0039;
   --black: #000;
   --grey: #444;
   --grey-l1: #777;
   --grey-l2: #fff4f4; 
   --white-d1: #a0a0a0;
+
+  --back-button-size: 22px;
 }
 
 body {
