@@ -6,33 +6,30 @@
   <!-- web-view -->
   <section class="wrapper full" v-if="this.showWebView">
     <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo watermark" v-if="screenWidth > 1300">
-    <div class="title"><span style="color: white" class="box">OUR</span> PARTNERS.</div>
-
     <div class="partners-wrapper">
-      
+      <div class="title"><span style="color: white" class="box">OUR</span> PARTNERS.</div>
+
       <div class="partner-scroller">
-        
         <div class="partners-images" v-for="partner in this.partner_images">
             <img :src="partner"/>
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- mobile-view -->
   <section class="wrapper mobile full" v-else>
     <img src="@/assets/images/tedxiitpatna_logo-2B.png" class="logo watermark">
-    
     <div class="partners-wrapper">
       <div class="title"><span style="color: white" class="box">O</span>UR PARTNERS.</div>
 
       <div class="partner-scroller">
-
         <div class="partners-images" v-for="partner in this.partner_images">
           <img :src="partner"/>
         </div>
-
       </div>
+      
     </div>
   </section>
 </template>
