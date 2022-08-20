@@ -22,11 +22,13 @@
 }
 
 .wrapper .logo {
-    position: absolute;
-    left: 0;
+    position: fixed;
+    left: 2vw;
     bottom: 0;
-    height: var(--watermark-logo-size);
-    transform: translate(20%, 0);
+    width: 8vw;
+    max-width: 100px;
+    transform: none;
+    background-color: transparent;
     z-index: -1;
 }
 

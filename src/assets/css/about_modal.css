@@ -1,0 +1,114 @@
+.about-modal-wrapper {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    place-content: center;
+    z-index: 1;
+}
+
+.about-modal-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* close button */
+.about-modal-wrapper .close-btn {
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    color: white;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.about-modal-wrapper .container {
+    position: relative;
+    width: 90vw;
+    max-width: 400px;
+    height: 90vh;
+    max-height: 450px;
+    color: black;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.about-modal-wrapper .container .modal-image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.about-modal-wrapper .container .modal-image .pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-modal-wrapper .container .content {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 70%);
+    min-height: 130px;
+    padding: 1rem 10%;
+    float: right;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: white;
+}
+
+.about-modal-wrapper .container .name-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-modal-wrapper .container .name {
+    margin-left: 0;
+    font-size: calc(85 * (clamp(330px, 50vw, 400px) / 1080));
+    font-weight: 700;
+    line-height: 1;
+}
+
+.about-modal-wrapper .container .post {
+    font-size: calc(35 * (clamp(330px, 50vw, 400px) / 1080));
+    font-weight: 500;
+    color: var(--grey-l1);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.about-modal-wrapper .container .socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 7vw;
+    
+    color: var(--red-l1);
+    text-align: justify;
+    font-size: calc(55 * (clamp(400px, 50vw, 420px) / 1080));
+    line-height: calc(55 * (clamp(400px, 50vw, 420px) / 1080));
+    font-weight: 400;
+}
+
+.about-modal-wrapper .container .socials .social-icon{
+    padding-top: 1rem;
+}

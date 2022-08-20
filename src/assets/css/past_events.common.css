@@ -1,9 +1,11 @@
 .logo.watermark {
     position: fixed;
-    left: 0;
+    left: 2vw;
     bottom: 0;
-    height: var(--watermark-logo-size);
-    transform: translate(20%, 0);
+    width: 8vw;
+    max-width: 100px;
+    transform: none;
+    background-color: transparent;
 }
 
 /* .theme-bg == the backround image basically */
@@ -42,7 +44,7 @@
     display: flex;
     /* position: absolute; */
     top: 50%;
-    left: 15%;
+    left: 12vw;
     width: 100%;
     max-width: 700px;
     height: max-content;

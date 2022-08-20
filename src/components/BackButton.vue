@@ -31,7 +31,7 @@
 -->
 
 <template>
-    <div class="back-button" v-if="this.screeWidth > 800">
+    <div class="back-button" v-if="this.screenWidth > 800">
         <a @click="$router.go(-1)">Back</a>
     </div>
     <div class="back-button mobile" v-else>

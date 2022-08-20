@@ -1,0 +1,124 @@
+section.about{
+    padding-right: 27vw;
+    text-align: justify;
+}
+
+.section-title {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 27vw;
+    color: #FF5C5C;
+    background-color: var(--red-l1);
+    opacity: 1;
+    z-index: -1;
+
+    writing-mode: vertical-lr;
+    /* font-size: 10vw; */
+    font-size: calc(400 * (60vh / 1080));
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 256px; */
+    text-align: right;
+}
+
+.section-title span {
+    padding-bottom: 5%;
+    position: relative;
+    right: 0.2ch;
+    /* left: calc(0vw + 0rem); */
+}
+
+.logo.watermark {
+    position: fixed;
+    left: 2vw;
+    bottom: 0;
+    width: 8vw;
+    max-width: 100px;
+    transform: none;
+    background-color: transparent;
+    z-index: -1;
+}
+.logo.watermark.mobile::before{ display: none; }
+
+.logo.watermark img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo.watermark.mobile {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: clamp(125px, 35vw, 150px);
+    max-width: unset;
+    padding: 0.2rem;
+    background-color: white;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+.logo.watermark.mobile::before{
+    content: '';
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+
+.text-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20vh 12vw;
+}
+
+.text-wrapper .content{
+    max-width: 800px;
+}
+
+.text-wrapper .sub-heading{
+    color: #9B9B9B;
+    font-size: calc(35 * (clamp(400px, 70vw, 550px) / 1080));
+    letter-spacing: calc(20 * (clamp(400px, 70vw, 550px) / 1080));
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text-wrapper .heading{
+    margin-bottom: 2rem;
+    font-size: calc(105 * (clamp(400px, 70vw, 550px) / 1080));
+    font-weight: 700;
+}
+
+.text-wrapper .text{
+    font-size: calc(35 * (clamp(500px, 70vw, 550px) / 1080));
+    line-height: calc(55 * (clamp(500px, 70vw, 550px) / 1080));
+    font-weight: 400;
+}
+
+.expand-btn {
+    /* display: inline-block; */
+    position: relative;
+    /* top: 2rem; */
+    /* left: 50%; */
+    text-align: center;
+    color: var(--red-l1);
+    line-height: 36px;
+    font-size: calc(28 * (clamp(500px, 70vw, 550px) / 1080));
+    letter-spacing: calc(10 * (clamp(500px, 70vw, 550px) / 1080));
+    /* transform: translate(37vw, -3vh); */
+    /* right: 0px; */
+    cursor: pointer;
+    float: right;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.expand-btn.web .arrow{
+    display: none;
+}
