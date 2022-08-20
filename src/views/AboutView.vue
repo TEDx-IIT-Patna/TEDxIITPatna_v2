@@ -417,10 +417,7 @@ export default {
           }
         ]
       },
-
-      // screen: screen.width,
-
-      // **refactoring needed
+      
       sectionTitle: "About.",
       showAboutModal: false,
       aboutModalSrc: null,
