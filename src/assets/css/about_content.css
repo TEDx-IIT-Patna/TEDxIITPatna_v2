@@ -1,5 +1,5 @@
 section.about{
-    padding-right: 27vw;
+    padding-right: 30vw;
     text-align: justify;
 }
 
@@ -8,9 +8,10 @@ section.about{
     top: 0;
     right: 0;
     height: 100vh;
-    width: 27vw;
+    width: 30vw;
     color: #FF5C5C;
     background-color: var(--red-l1);
+    opacity: 1;
     z-index: -1;
 
     writing-mode: vertical-lr;
@@ -27,6 +28,45 @@ section.about{
     position: relative;
     right: 0.2ch;
     /* left: calc(0vw + 0rem); */
+}
+
+.logo.watermark {
+    position: fixed;
+    left: 2vw;
+    bottom: 0;
+    width: 8vw;
+    transform: none;
+    background-color: transparent;
+    z-index: -1;
+}
+.logo.watermark.mobile::before{ display: none; }
+
+.logo.watermark img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo.watermark.mobile {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: clamp(125px, 35vw, 150px);
+    padding: 0.2rem;
+    background-color: white;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+.logo.watermark.mobile::before{
+    content: '';
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+    transform: translate(-50%, 0);
+    z-index: -1;
 }
 
 .text-wrapper {
@@ -77,6 +117,6 @@ section.about{
     text-decoration: underline;
 }
 
-.expand-btn.web .down-arrow{
+.expand-btn.web .arrow{
     display: none;
 }

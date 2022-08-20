@@ -4,7 +4,12 @@
 
   <!-- Red Ribbon(web)/Background Text(mobile) -->
   <div :class="['section-title', !this.showWebView ? 'mobile' : 'web']">
-    <span class="text">{{ sectionTitle }}</span>
+    <span class="text" id="section-title">{{ sectionTitle }}</span>
+  </div>
+
+  <div :class="['logo', 'watermark', !this.showWebView ? 'mobile' : 'web']">
+    <img src="@/assets/images/tedxiitpatna_logo-2B.png" v-if="this.showWebView">
+    <img src="@/assets/images/tedxiitpatna_logo-1B.png" v-else>
   </div>
 
   <!-- About Section - web and mobile view -->
@@ -45,7 +50,7 @@
 
         <a :class="['expand-btn', !this.showWebView ? 'mobile' : 'web']" @click="expandText($event)">
           EXPAND
-          <i class="down-arrow fa-solid fa-chevron-down fa-xs"></i>
+          <i class="arrow fa-solid fa-chevron-down fa-xs"></i>
         </a>
       </div>
     </div>
@@ -100,7 +105,7 @@
 
         <a :class="['expand-btn', !this.showWebView ? 'mobile' : 'web']" @click="expandText($event)">
           EXPAND
-          <i class="down-arrow fa-solid fa-chevron-down fa-xs"></i>
+          <i class="arrow fa-solid fa-chevron-down fa-xs"></i>
         </a>
       </div>
     </div>
@@ -417,8 +422,10 @@ export default {
           }
         ]
       },
-      
+
       sectionTitle: "About.",
+      sectionTitleTransitionDuration: 0.15,
+
       showAboutModal: false,
       aboutModalSrc: null,
       aboutName: null,
@@ -448,11 +455,25 @@ export default {
         moreText.style.display = "none"
 
         btnText.innerHTML = btnText.innerHTML.replace(/Collapse/gmi, 'Expand')
+        btnText.innerHTML = btnText.innerHTML.replace(/fa-chevron-up/gmi, 'fa-chevron-down')
       }else{
         dots.style.display = "none"
         moreText.style.display = "inline"
 
         btnText.innerHTML = btnText.innerHTML.replace(/Expand/gmi, 'Collapse')
+        btnText.innerHTML = btnText.innerHTML.replace(/fa-chevron-down/gmi, 'fa-chevron-up')
+      }
+    },
+    updateSectionTitle(to){
+      const from = this.sectionTitle
+
+      if(to !== from){
+        const title = document.getElementById('section-title')
+        title.style.opacity = 0
+        setTimeout(() => {
+          this.sectionTitle = to
+          title.style.opacity = 1
+        }, this.sectionTitleTransitionDuration * 1000)
       }
     },
     configureSpeakerModal(speaker) {
@@ -472,10 +493,14 @@ export default {
     }
   },
   mounted() {
+    const title = document.getElementById('section-title')
+    title.style.transition = "opacity " + this.sectionTitleTransitionDuration + "s"
+
     window.onscroll = () => {
-      const height = document.querySelector("section.about").clientHeight
-      if (window.pageYOffset > height) { this.sectionTitle = "Team." }
-      else { this.sectionTitle = "About." }
+      const aboutSectionHeight = document.querySelector("section.about").clientHeight
+
+      if (window.pageYOffset > (aboutSectionHeight - window.innerHeight/2)) { this.updateSectionTitle("Team.") }
+      else { this.updateSectionTitle("About.") }
     };
     window.addEventListener('keydown', this.closeAllModalsOnKeyPress)
 
