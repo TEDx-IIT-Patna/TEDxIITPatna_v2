@@ -1,0 +1,82 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 0 10vw;
+    overflow: hidden;
+}
+
+.wrapper .logo {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: var(--watermark-logo-size);
+    transform: translate(20%, 0);
+    z-index: -1;
+}
+.partners-wrapper{
+    width: 80vw;
+}
+
+ .title{
+    width: 100%;
+    margin-bottom: 4rem;
+    text-align: left;
+    font-size: calc(160 * (clamp(300px, 63vw, 600px) / 1080));
+    font-weight: 700;
+    position:relative;
+    align-items: center;
+    margin-top: calc(10vh + 22px);
+    /* 22px is the height of back button. need to fix this hard-coding */
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+ .title::before{
+    width: calc(3.5ch + 10vw) ;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0%;
+    height: 120%;
+    background-color: var(--red-l3);
+    transform: translate(-10vw,-5%);
+    z-index: -1;
+}
+
+.partner-scroller{
+    display: grid;
+    position: relative;
+    left: 50%;
+    width: 100%;
+    max-width: 1500px;
+    justify-items: center;
+    align-items: center;
+    transform: translate(-50%, 0);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.partners-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    max-width: 200px;
+    height: 125px;
+}
+
+.partners-images img{
+    width: 60%;
+}
+.partners-images::before{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
