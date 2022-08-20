@@ -457,58 +457,7 @@ export default {
 
         btnText.innerHTML = btnText.innerHTML.replace(/Expand/gmi, 'Collapse')
       }
-
-      // if (dots.style.display === "none") {
-      //   if(!this.showWebView){
-      //     dots.style.display = "inline";
-      //     btnText.innerHTML = "EXPAND <i class='fa-solid fa-chevron-down fa-xs'></i>";
-      //     moreText.style.display = "none";
-      //   } else {
-      //     dots.style.display = "inline";
-      //     btnText.innerHTML = "EXPAND";
-      //     moreText.style.display = "none";
-      //   }
-      // } else {
-      //   if(!this.showWebView){
-      //     dots.style.display = "none";
-      //     btnText.innerHTML = "COLLAPSE <i class='fa-solid fa-chevron-up fa-xs'></i>";
-      //     moreText.style.display = "inline";
-      //   }
-      //   else {
-      //     dots.style.display = "inline";
-      //     btnText.innerHTML = "COLLAPSE";
-      //     moreText.style.display = "none";
-      //   }
-      // }
     },
-    // myFunction2() {
-    //   var dots = document.getElementById("dots2");
-    //   var moreText = document.getElementById("more2");
-    //   var btnText = document.getElementById("expand-btn-2");
-
-    //   if (dots.style.display === "none") {
-    //     if(!this.showWebView){
-    //       dots.style.display = "inline";
-    //       btnText.innerHTML = "EXPAND <i class='fa-solid fa-chevron-down fa-xs'></i>";
-    //       moreText.style.display = "none";
-    //     } else {
-    //       dots.style.display = "inline";
-    //       btnText.innerHTML = "EXPAND";
-    //       moreText.style.display = "none";
-    //     }
-    //   } else {
-    //     if(!this.showWebView){
-    //       dots.style.display = "none";
-    //       btnText.innerHTML = "COLLAPSE <i class='fa-solid fa-chevron-up fa-xs'></i>";
-    //       moreText.style.display = "inline";
-    //     }
-    //     else {
-    //       dots.style.display = "inline";
-    //       btnText.innerHTML = "COLLAPSE";
-    //       moreText.style.display = "none";
-    //     }
-    //   }
-    // },
     configureSpeakerModal(speaker) {
       this.aboutModalSrc = speaker.Path
       this.aboutName = speaker.Name
