@@ -35,6 +35,7 @@ section.about{
     left: 2vw;
     bottom: 0;
     width: 8vw;
+    max-width: 100px;
     transform: none;
     background-color: transparent;
     z-index: -1;
@@ -51,6 +52,7 @@ section.about{
     left: 50%;
     bottom: 0;
     width: clamp(125px, 35vw, 150px);
+    max-width: unset;
     padding: 0.2rem;
     background-color: white;
     transform: translate(-50%, 0);
