@@ -1,5 +1,5 @@
 section.about{
-    padding-right: 30vw;
+    padding-right: 27vw;
     text-align: justify;
 }
 
@@ -8,7 +8,7 @@ section.about{
     top: 0;
     right: 0;
     height: 100vh;
-    width: 30vw;
+    width: 27vw;
     color: #FF5C5C;
     background-color: var(--red-l1);
     opacity: 1;
