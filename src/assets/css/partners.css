@@ -8,11 +8,12 @@
 
 .wrapper .logo {
     position: fixed;
-    left: 0;
+    left: 2vw;
     bottom: 0;
-    height: var(--watermark-logo-size);
-    transform: translate(20%, 0);
-    z-index: -1;
+    width: 8vw;
+    max-width: 100px;
+    transform: none;
+    background-color: transparent;
 }
 .partners-wrapper{
     width: 80vw;
