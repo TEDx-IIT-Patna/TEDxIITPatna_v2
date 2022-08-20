@@ -43,7 +43,7 @@ section.about.mobile .text-wrapper .heading{
     display: none;
 }
 
-.expand-btn {
+.expand-btn.mobile {
     display: inline-block;
     position: relative;
     top: 2rem;
@@ -54,10 +54,12 @@ section.about.mobile .text-wrapper .heading{
     font-size: calc(28 * (clamp(500px, 70vw, 550px) / 1080));
     letter-spacing: calc(10 * (clamp(500px, 70vw, 550px) / 1080));
     transform: translate(-50%, 0);
+    text-decoration: none;
     cursor: pointer;
+    float: none;
 }
 
-.expand-btn::before {
+.expand-btn.mobile::before {
     content: '';
     display: block;
     position: absolute;
@@ -67,4 +69,8 @@ section.about.mobile .text-wrapper .heading{
     height: 1px;
     background-color: var(--red-l1);
     transform: translate(-50%, 0);
+}
+
+.expand-btn.mobile .down-arrow{
+    display: inline;
 }

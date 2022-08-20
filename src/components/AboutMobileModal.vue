@@ -8,7 +8,7 @@
         <SpeakerModal showModal="true","false"
             imageSrc="/absolute/path/to/image" name="speaker_name" title="speaker_title_aka_designation"
             content="speaker_details" talkLink="link_to_speakers_talk"
-            @closeSpeakerModal="this.callback_function_when_close_button_is_clicked_in_modal" />
+            @closeAboutModal="this.callback_function_when_close_button_is_clicked_in_modal" />
         ...
     </template>
     <script scoped>
@@ -46,27 +46,21 @@
 -->
 
 <template>
-    <div :class="['speaker-modal-wrapper', 0.9 * this.screenWidth >= this.screenHeight ? 'web' : 'mobile']"
-        v-if="this.showModal">
-        <div class="close-btn" @click="this.$emit('closeSpeakerModal')"><i class="gg-close"></i></div>
-        <div class="overlay" @click="this.$emit('closeSpeakerModal')"></div>
+    <div class="about-modal-wrapper mobile" v-if="this.showModal">
+        <div class="close-btn" @click="this.$emit('closeAboutModal')"><i class="gg-close"></i></div>
+        <div class="overlay" @click="this.$emit('closeAboutModal')"></div>
         <div class="container">
-            <div class="modal_image">
+            <div class="modal-image">
                 <img :src="Path" class="pic">
             </div>
             <div class="content">
                 <div class="name-wrapper">
                     <div class="name">{{ Name }}</div>
-                    <div class="title">{{ Committee }}</div>
+                    <div class="post">{{ Committee }}</div>
                 </div>
-                <div class="desc">
-                    <div class="row icon">
-                        <div class="col">
-                       <div class="social-icons" v-for="(social, index) in Socials" :key="index">
+                <div class="socials">
+                    <div class="social-icon" v-for="(social, index) in Socials" :key="index">
                         <a target="__blank" :href="social[0]"><i class="fa-brands" :class="social[1]"></i></a>
-                        <!-- <a target="__blank" :href="person.Linkedin"><i class="fa-brands fa-linkedin"></i></a> -->
-                        </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -97,7 +91,7 @@ export default {
         }
     },
     emits: [
-        'closeSpeakerModal'
+        'closeAboutModal'
     ],
     data() {
         return {
@@ -124,5 +118,4 @@ export default {
 
 <style scoped>
 @import '@/assets/css/about_modal.css';
-@import '@/assets/css/about_modal_mobile.css';
 </style>

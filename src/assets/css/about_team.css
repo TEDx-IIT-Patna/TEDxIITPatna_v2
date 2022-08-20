@@ -68,6 +68,7 @@ section.team .card-container .image{
     aspect-ratio: 1 / 1;
     border-radius: 100px;
     overflow: hidden;
+    cursor: pointer;
 }
 section.team .card-container .image img{
     position: relative;
@@ -86,14 +87,14 @@ section.team .card-container .card-body{
 section.team .card-container .name {
     margin-top: 1rem;
     color: var(--black);
-    font-size: calc(35 * (clamp(500px, 70vw, 550px) / 1080));
+    font-size: calc(40 * (clamp(500px, 70vw, 550px) / 1080));
     font-weight: 600;
     text-align: center;
 }
 
 section.team .card-container .post {
-    width: 90%;
-    padding: 0.2rem 0;
+    width: 100%;
+    padding: 0.3rem;
     margin-top: 0.4rem;
     color: white;
     font-size: calc(35 * (clamp(500px, 70vw, 550px) / 1080));
@@ -117,8 +118,4 @@ section.team .card-container .socials{
 section.team .card-container .socials .fa-brands{
     color: var(--red-l1);
     font-size: calc(40 * (clamp(400px, 70vw, 550px) / 1080));
-}
-
-.web{
-    display: none;
 }
