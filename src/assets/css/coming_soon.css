@@ -1,0 +1,65 @@
+.comingsoon-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* background image */
+.comingsoon-wrapper .banner {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+
+.comingsoon-wrapper .banner.web {
+    background-image: url('@/assets/images/coming-soon-banner-web.png');
+    background-size: cover;
+    background-position: left top;
+}
+
+.comingsoon-wrapper .banner.mobile {
+    background-image: url('@/assets/images/coming-soon-banner-mobile.png');
+    background-size: cover;
+    background-position: center top;
+}
+
+@media only screen and (max-width: calc(0.5 * 100vh)) {
+    .comingsoon-wrapper .banner.mobile{
+        background-size: auto 100%;
+    }
+}
+
+/* coming soon text */
+.comingsoon-wrapper .coming-soon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding-left: calc(60 * (clamp(300px, 80vw, 700px) / 1080));
+    transform: translate(-50%, -50%);
+
+    color: white;
+    text-align: center;
+    font-size: calc(50 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 700;
+    letter-spacing: calc(60 * (clamp(300px, 80vw, 700px) / 1080));
+    text-transform: uppercase;
+}
+
+/* small text */
+.comingsoon-wrapper .text{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    width: 70%;
+    max-width: 500px;
+    transform: translate(-50%, 0);
+
+    color: var(--white-d1);
+    text-align: center;
+    font-size: calc(20 * (clamp(500px, 80vw, 600px) / 1080));
+    font-weight: 100;
+    text-transform: uppercase;
+}

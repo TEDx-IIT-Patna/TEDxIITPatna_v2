@@ -90,6 +90,14 @@ const routes = [
       title: "Ticket Booking"
     },
   },
+  {
+    path: '/comingsoon',
+    name: 'comingsoon',
+    component: () => import(/* webpackChunkName: "commingsoon" */ '../views/ComingSoonView.vue'),
+    meta: {
+      title: "Coming Soon"
+    },
+  },
   // *** Error404 path. This needs to be created.
   // {
   //   path: '*',
