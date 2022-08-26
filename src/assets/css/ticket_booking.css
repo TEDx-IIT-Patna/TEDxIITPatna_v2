@@ -36,7 +36,7 @@
 /* ticket booking text */
 .ticketbooking-wrapper .book-tickets{
     position: relative;
-    top: max(170px, 25%);
+    top: max(140px, 25%);
     left: 50%;
     width: 100%;
     /* padding-top: max(150px, 15%); */
@@ -55,7 +55,7 @@
 /* Main div for the circles */
 div.tickets{
     position: relative;
-    top: max(30vh, 15%);
+    top: max(200px, 30%);
     width: 100%;
     display: flex;
     overflow: auto;
