@@ -64,7 +64,7 @@ section.tickets{
 }
 
 /* Each circle */
-.event{
+section.tickets .event{
     height: 150px;
     width: 150px;
     margin: 10px;
@@ -75,16 +75,16 @@ section.tickets{
 }
 
 /*  Hover effect */
-.event:hover{
+section.tickets .event:hover{
     background: #720129;
 }
 
-.event:hover .hash{
+section.tickets .event:hover .hash{
     visibility: hidden;
 }
 
 /* The number in the text */
-.number{
+section.tickets .number{
     width: 100%;
     position: relative;
 
@@ -97,7 +97,7 @@ section.tickets{
 }
 
 /* The text session in the circle */
-.session{
+section.tickets .session{
     width: 100%;
     position: relative;
 
@@ -110,7 +110,7 @@ section.tickets{
 }
 
 /* The background hash of the circle */
-.hash{
+section.tickets .hash{
     position: relative;
 
     top: 38%;
