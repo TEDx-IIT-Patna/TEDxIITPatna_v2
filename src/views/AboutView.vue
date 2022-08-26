@@ -235,6 +235,16 @@ export default {
               Linkedin: ["https://www.linkedin.com/in/shaheertanveer/", "fa-linkedin-in"],
             },
           },
+          {
+            index: "23",
+            Name: "Chirag Bhardwaj",
+            Post: "Co-ordinator",
+            Roll: "",
+            Path: require('@/assets/images/Team_Image/23.jpg'),
+            Socials: {
+              Linkedin: ["https://www.linkedin.com/in/chirag-bhardwaj-016428217/", "fa-linkedin-in"],
+            },
+          },
         ],
         "Sponsorship": [
           {
