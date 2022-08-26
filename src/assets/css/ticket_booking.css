@@ -36,10 +36,10 @@
 /* ticket booking text */
 .ticketbooking-wrapper .book-tickets{
     position: relative;
-    top: 20%;
+    top: max(170px, 25%);
     left: 50%;
     width: 100%;
-    padding-top: max(150px, 15%);
+    /* padding-top: max(150px, 15%); */
     padding-left: calc(60 * (clamp(300px, 80vw, 700px) / 1080));
     transform: translate(-50%, -50%);
 
@@ -52,10 +52,10 @@
     line-height: 60px;
 }
 
-/* Main section for the circles */
-section.tickets{
+/* Main div for the circles */
+div.tickets{
     position: relative;
-    top: max(20vh, 5%);
+    top: max(30vh, 15%);
     width: 100%;
     display: flex;
     overflow: auto;
@@ -66,7 +66,7 @@ section.tickets{
 }
 
 /* Each circle */
-section.tickets .event{
+div.tickets .event{
     height: 150px;
     width: 150px;
     margin: 10px;
@@ -78,16 +78,16 @@ section.tickets .event{
 }
 
 /*  Hover effect */
-section.tickets .event:hover{
+div.tickets .event:hover{
     background: #720129;
 }
 
-section.tickets .event:hover .hash{
+div.tickets .event:hover .hash{
     visibility: hidden;
 }
 
 /* The number in the text */
-section.tickets .number{
+div.tickets .number{
     width: 100%;
     position: relative;
 
@@ -100,7 +100,7 @@ section.tickets .number{
 }
 
 /* The text session in the circle */
-section.tickets .session{
+div.tickets .session{
     width: 100%;
     position: relative;
     color: white;
@@ -112,7 +112,7 @@ section.tickets .session{
 }
 
 /* The background hash of the circle */
-section.tickets .hash{
+div.tickets .hash{
     position: relative;
 
     top: 38%;

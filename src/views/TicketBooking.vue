@@ -5,13 +5,13 @@
     <div class="banner web" v-if="this.screenWidth > 460"></div>
     <div class="banner mobile" v-if="this.screenWidth <= 460"></div>
     <div class="book-tickets">Book <br/>Tickets</div>
-    <section :class="['tickets', !this.showWebView ? 'mobile' : 'web']">
+    <div :class="['tickets', !this.showWebView ? 'mobile' : 'web']">
       <div class="event"><div class="hash">#</div><div class="number">1</div><div class="session">session</div></div>
       <div class="event"><div class="hash">#</div><div class="number">2</div><div class="session">session</div></div>
       <div class="event"><div class="hash">#</div><div class="number">3</div><div class="session">session</div></div>
       <div class="event"><div class="hash">#</div><div class="number">4</div><div class="session">session</div></div>
       
-    </section>
+    </div>
   </div>
 </template>
 
