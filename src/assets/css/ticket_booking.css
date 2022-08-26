@@ -36,7 +36,7 @@
 /* ticket booking text */
 .ticketbooking-wrapper .book-tickets{
     position: relative;
-    top: max(140px, 25%);
+    top: max(180px, 25%);
     left: 50%;
     width: 100%;
     /* padding-top: max(150px, 15%); */
