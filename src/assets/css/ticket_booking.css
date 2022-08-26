@@ -11,7 +11,8 @@
     height: 100vh;
     background-color: black;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
+    z-index: -1;
 }
 
 .ticketbooking-wrapper .banner.web {
@@ -33,11 +34,12 @@
 }
 
 /* ticket booking text */
-.ticketbooking-wrapper .coming-soon{
+.ticketbooking-wrapper .book-tickets{
     position: relative;
     top: 20%;
     left: 50%;
     width: 100%;
+    padding-top: max(150px, 15%);
     padding-left: calc(60 * (clamp(300px, 80vw, 700px) / 1080));
     transform: translate(-50%, -50%);
 
@@ -53,7 +55,7 @@
 /* Main section for the circles */
 section.tickets{
     position: relative;
-    top: 27vh;
+    top: max(20vh, 5%);
     width: 100%;
     display: flex;
     overflow: auto;
@@ -72,6 +74,7 @@ section.tickets .event{
     margin-bottom: 30px;
     background: #72012966;
     border: 4px solid #720129;
+    cursor: pointer;
 }
 
 /*  Hover effect */
@@ -100,7 +103,6 @@ section.tickets .number{
 section.tickets .session{
     width: 100%;
     position: relative;
-
     color: white;
     top: -39%;
     font-size: 13px;
