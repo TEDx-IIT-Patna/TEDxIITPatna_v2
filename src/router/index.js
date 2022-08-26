@@ -85,7 +85,7 @@ const routes = [
   {
     path: '/comingsoon',
     name: 'comingsoon',
-    component: () => import(/* webpackChunkName: "commingsoon" */ '../views/ComingSoonView.vue'),
+    component: () => import(/* webpackChunkName: "commingsoon" */ '../views/TicketBooking.vue'),
     meta: {
       title: "Coming Soon"
     },
