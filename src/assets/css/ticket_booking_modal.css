@@ -41,8 +41,9 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: auto;
     z-index: 3;
+    overflow-x: hidden;
 }
 
 .booking-modal-wrapper .container .top{
@@ -51,14 +52,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
 
-    border-radius: 13px,13px,0px,0px;
     background-color: #FF0039;
 }
 
 .booking-modal-wrapper .container .top .session{
-    font-size: 35px;
+    font-size: 37px;
     color: white;
     font-weight: 500;
     line-height: 2;
@@ -69,7 +69,7 @@
 }
 
 .booking-modal-wrapper .container .top .session-text{
-    font-size: 31px;
+    font-size: 29px;
     color: #FF5C5C;
     letter-spacing: 13px;
     font-weight: 700;
@@ -77,7 +77,7 @@
 }
 
 
-.booking-modal-wrapper .container .content {
+/* .booking-modal-wrapper .container .content {
     position: absolute;
     left: 0;
     width: 100%;
@@ -88,6 +88,12 @@
     justify-content: space-around;
 
     background-color: white;
+} */
+
+.booking-modal-wrapper .container .content{
+    position: relative;
+    left: 39px;
+    top: 20px;
 }
 
 .booking-modal-wrapper .container .contents-wrapper {
@@ -136,21 +142,20 @@
     top: 33px;
     left: 143px;
     margin-top: 5px;
-    /* position: absolute; */
     color: var(--grey-l1);
-    font-size: calc(35 * (clamp(330px, 70vw, 400px) / 1080));
+    font-size: calc(45 * (clamp(340px, 70vw, 400px) / 1080));
+    font-weight: 200;
 }
 
 .booking-modal-wrapper .container .booking-btn{
-    position: relative;
+    position: sticky;
     width: 140px;
-    padding: 1rem 1.5rem;
+    padding: 0.7rem 1.8rem;
     cursor: pointer;
     border-radius: 40px;
-    
     left: 50%;
     transform: translate(-50%, 0);
-    
+
     background-color: var(--red-l1);
     color: white;
     font-weight: 500;
@@ -158,12 +163,12 @@
     letter-spacing: 10px;
     text-transform: uppercase;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    font-size: calc(55 * (clamp(400px, 40vw, 420px) / 1080));
+    font-size: calc(47 * (clamp(400px, 35vw, 420px) / 1080));
     line-height: calc(55 * (clamp(400px, 50vw, 420px) / 1080));
 }
 
 .booking-modal-wrapper .container .btn-container{
-    top: 236px;
     width: 100%;
-    position: relative;
+    position: absolute;
+    margin-top: 28px;
 }
