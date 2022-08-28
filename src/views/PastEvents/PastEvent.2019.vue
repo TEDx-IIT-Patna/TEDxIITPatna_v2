@@ -40,7 +40,7 @@
       <div class="title">Gallery.</div>
       <div class="gallery">
         <div class="gallery-image" v-for="i in 16" @click="this.configureImageModal(i)">
-          <img :src="require(`@/assets/gallery-images/2019/${i}.png`)">
+          <img :src="require(`@/assets/past-events/gallery-images/2019/${i}.png`)">
         </div>
       </div>
     </div>
@@ -138,7 +138,7 @@ export default {
       this.screenHeight = window.innerHeight
     },
     configureImageModal(i) {
-      this.imageModalSrc = require(`@/assets/gallery-images/2019/${i}.png`)
+      this.imageModalSrc = require(`@/assets/past-events/gallery-images/2019/${i}.png`)
       this.showImageModal = true
     },
     configureSpeakerModal(speaker) {
