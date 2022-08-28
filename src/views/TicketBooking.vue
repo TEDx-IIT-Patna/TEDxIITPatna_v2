@@ -1,5 +1,5 @@
 <template>
-  <Nav :open_button_color="this.showWebView ? 'white' : 'white'" open_button_style="icon" />
+  <!-- <Nav :open_button_color="this.showWebView ? 'white' : 'white'" open_button_style="icon" /> -->
   <!-- <BackButton /> -->
 
   <div :class="['ticketbooking-wrapper', !this.showWebView ? 'mobile' : 'web']">
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
-import BackButton from '@/components/BackButton.vue'
+// import Nav from '@/components/Nav.vue'
+// import BackButton from '@/components/BackButton.vue'
 import TicketModal from '@/components/TicketBookingModal.vue'
 export default {
   name: "TicketBookingView",
   components:{
-    Nav,
-    BackButton,
+    // Nav,
+    // BackButton,
     TicketModal
   },
   data() {
