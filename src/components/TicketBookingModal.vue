@@ -50,33 +50,20 @@
         <div class="close-btn" @click="this.$emit('closeBookingModal')"><i class="gg-close"></i></div>
         <div class="overlay" @click="this.$emit('closeBookingModal')"></div>
         <div class="container">
-            <!-- <div class="modal-image">
-                <img :src="Path" class="pic">
-            </div> -->
             <div class="top">
-                <div class="session"><span class="hash">#</span>{{ Session }}</div>
+                <div class="session">
+                    <span class="hash">#</span>{{ sessionDetails.Session }}
+                </div>
                 <div class="session-text">session</div>
             </div>
             <div class="content">
-                <div class="contents-wrapper">
-                    <div class="speaker-img"><img :src="Path1" alt=""></div>
+                <div class="contents-wrapper" v-for="(speaker, index) in sessionDetails.Speakers" :key="index">
+                    <div class="speaker-img"><img :src="speaker.Path" alt="speaker.Name"></div>
                     <div class="name-wrapper">
-                    <div class="name">{{ Name1 }}</div>
-                    <div class="time">{{ Time1 }}</div>
+                    <div class="name">{{ speaker.Name }}</div>
+                    <div class="time">{{ speaker.Time }}</div>
                     </div>
                 </div>
-                <div class="contents-wrapper">
-                    <div class="speaker-img"><img :src="Path2" alt=""></div>
-                    <div class="name-wrapper">
-                    <div class="name">{{ Name2 }}</div>
-                    <div class="time">{{ Time2 }}</div>
-                    </div>
-                </div>
-                <!-- <div class="socials">
-                    <div class="social-icon" v-for="(social, index) in Socials" :key="index">
-                        <a target="__blank" :href="social[0]"><i class="fa-brands" :class="social[1]"></i></a>
-                    </div>
-                </div> -->
             </div>
             <div class="btn-container">
             <a :href="Link"><div class="booking-btn">
@@ -91,33 +78,12 @@
 export default {
     name: 'TicketBookingModal',
     props: {
-        'Path1': {
-            type: String
-        },
-        'Path2': {
-            type: String
-        },
-        'Name1': {
-            type: String
-        },
-        'Name2': {
-            type: String
-        },
-        'Time1': {
-            type: String
-        },
-        'Time2': {
-            type: String
-        },
-        'Link': {
-            type: String
-        },
-        'Session': {
-            type: String
-        },
         'showModal': {
             type: Boolean,
             default: false
+        },
+        'sessionDetails': {
+            type: String
         },
     },
     emits: [

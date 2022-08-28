@@ -1,18 +1,20 @@
 <template>
   <Nav :open_button_color="this.showWebView ? 'white' : 'white'" open_button_style="icon" />
   <!-- <BackButton /> -->
+
   <div :class="['ticketbooking-wrapper', !this.showWebView ? 'mobile' : 'web']">
     <div class="banner web" v-if="this.screenWidth > 460"></div>
     <div class="banner mobile" v-if="this.screenWidth <= 460"></div>
     <div class="book-tickets">Book <br/>Tickets</div>
     <div :class="['tickets', !this.showWebView ? 'mobile' : 'web']">
-    <div  v-for="(sessions,index) in speakers" :key="index">
-      <div class="event" v-for="(content,index) in sessions" :key="index" @click="this.configureBookingModal(content)"><div class="hash">#</div><div class="number">{{ content.Session}}</div><div class="session">session</div></div>
+      <div class="event" v-for="(session,index) in sessions" :key="index" @click="this.configureBookingModal(session)">
+        <div class="hash">#</div><div class="number">{{ session.Session }}</div>
+        <div class="session">session</div>
       </div>
     </div>
   </div>
-    <TicketModal v-if="this.showBookingModal" :showModal="this.showBookingModal" :Path1="this.Path1" :Path2="this.Path2"
-    :Name1="this.Name1" :Name2="this.Name2" :Time1="this.Time1" :Time2="this.Time2" :Link="this.Link" :Session="this.Session" @closeBookingModal="this.closeAllModals" />
+
+  <TicketModal v-if="this.showBookingModal" :showModal="this.showBookingModal" :sessionDetails="this.selectedSession" @closeBookingModal="this.closeAllModals" />
 </template>
 
 <script>
@@ -31,63 +33,63 @@ export default {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       showWebView: window.innerWidth >= 900,
-      Path1: null,
-      Path2: null,
-      Name1: null,
-      Name2: null,
-      Time1: null,
-      Time2: null,
-      Link: null,
-      Session: null,
+      selectedSession: null,
       showBookingModal: false,
-      speakers:{
-        "Session1":[
-          {
+      sessions:[
+        {
           Session:"1",
-          Name1:"Javed Khatri",
-          Time1:"12:00 PM - 12:30 PM",
-          Name2:"Phani Tetali",
-          Time2:"12:45 PM - 1:15 PM",
-          Path1: require('@/assets/images/Team_Image/prof.png'),
-          Path2: require('@/assets/images/Team_Image/prof.png'),
-          Link:"https://www.facebook.com/alakh.panday",
-          }
-        ],
-        // "Session2":[
-        //   {
-        //   Session:"2",
-        //   Name2:"Arati/Tetseo",
-        //   Time2:"3:45 PM - 4:15 PM",
-        //   Path1: require('@/assets/images/Team_Image/prof.png'),
-        //   Path2: require('@/assets/images/Team_Image/prof.png'),
-        //   Link:"https://www.facebook.com/alakh.panday",
-        //   }
-        // ],
-        "Session2":[
-          {
+          Speakers: [
+            {
+              Name: "Javed Khatri",
+              Time: "12:00PM - 12:30PM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            },
+            {
+              Name: "Phani Tetali",
+              Time: "12:45PM - 1:15PM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            },
+            {
+              Name: "Narayan Mahadevan",
+              Time: "1:30 PM - 2:00 PM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            }
+          ],
+          Link:"#",
+        },
+        {
           Session:"2",
-          Name1:"Sriparna Saha",
-          Time1:"11:00 AM - 11:30 AM",
-          Name2:"Alakh Pandey",
-          Time2:"11:45 AM - 12:15 PM",
-          Path1: require('@/assets/images/Team_Image/prof.png'),
-          Path2: require('@/assets/images/Team_Image/prof.png'),
-          Link:"https://www.facebook.com/alakh.panday",
-          }
-        ],
-        "Session3":[
-          {
+          Speakers: [
+            {
+              Name: "Sriparna Saha",
+              Time: "11:00 AM - 11:30 AM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            },
+            {
+              Name: "Alakh Pandey",
+              Time: "11:45 AM - 12:15 PM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            },
+          ],
+          Link:"#",
+        },
+        {
           Session:"3",
-          Name1:"Klanz",
-          Time1:"3:00 PM - 3:30 PM",
-          Name2:"Sridharan Devrajan",
-          Time2:"3:45 PM - 4:15 PM",
-          Path1: require('@/assets/images/Team_Image/prof.png'),
-          Path2: require('@/assets/images/Team_Image/prof.png'),
-          Link:"https://www.facebook.com/alakh.panday",
-          }
-        ],
-      }
+          Speakers: [
+            {
+              Name: "Klanz",
+              Time: "3:00 PM - 3:30 PM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            },
+            {
+              Name: "Sridharan Devrajan",
+              Time: "3:45 PM - 4:15 PM",
+              Path: require('@/assets/images/Team_Image/prof.png')
+            }
+          ],
+          Link:"#",
+        }
+      ]
     }
   },
   methods: {
@@ -96,15 +98,8 @@ export default {
       this.screenHeight = window.innerHeight
       this.showWebView = window.innerWidth >= 900
     },
-    configureBookingModal(content) {
-      this.Path1 = content.Path1
-      this.Path2 = content.Path2
-      this.Name1 = content.Name1
-      this.Name2 = content.Name2
-      this.Time1 = content.Time1
-      this.Time2 = content.Time2
-      this.Link = content.Link
-      this.Session = content.Session
+    configureBookingModal(session) {
+      this.selectedSession = session
       this.showBookingModal = true
     },
     closeAllModals() {
