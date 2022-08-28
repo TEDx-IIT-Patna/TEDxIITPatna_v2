@@ -53,21 +53,19 @@ export default {
           Link:"https://www.facebook.com/alakh.panday",
           }
         ],
+        // "Session2":[
+        //   {
+        //   Session:"2",
+        //   Name2:"Arati/Tetseo",
+        //   Time2:"3:45 PM - 4:15 PM",
+        //   Path1: require('@/assets/images/Team_Image/prof.png'),
+        //   Path2: require('@/assets/images/Team_Image/prof.png'),
+        //   Link:"https://www.facebook.com/alakh.panday",
+        //   }
+        // ],
         "Session2":[
           {
           Session:"2",
-          Name1:"Narayan Mahadevan",
-          Time1:"3:00 PM - 3:30 PM",
-          Name2:"Arati/Tetseo",
-          Time2:"3:45 PM - 4:15 PM",
-          Path1: require('@/assets/images/Team_Image/prof.png'),
-          Path2: require('@/assets/images/Team_Image/prof.png'),
-          Link:"https://www.facebook.com/alakh.panday",
-          }
-        ],
-        "Session3":[
-          {
-          Session:"3",
           Name1:"Sriparna Saha",
           Time1:"11:00 AM - 11:30 AM",
           Name2:"Alakh Pandey",
@@ -77,9 +75,9 @@ export default {
           Link:"https://www.facebook.com/alakh.panday",
           }
         ],
-        "Session4":[
+        "Session3":[
           {
-          Session:"4",
+          Session:"3",
           Name1:"Klanz",
           Time1:"3:00 PM - 3:30 PM",
           Name2:"Sridharan Devrajan",

@@ -47,8 +47,9 @@
 }
 
 .booking-modal-wrapper .container .top{
-    height: 162px;
-    padding-bottom: 28px;
+    height: 35%;
+    padding-bottom: 5%;
+    min-height: 180px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -92,8 +93,7 @@
 
 .booking-modal-wrapper .container .content{
     position: relative;
-    left: 39px;
-    top: 20px;
+    padding: 2vh 0 0 5vh;
 }
 
 .booking-modal-wrapper .container .contents-wrapper {
