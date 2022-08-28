@@ -56,6 +56,7 @@
                         <span class="hash">#</span>{{ sessionDetails.Session }}
                     </div>
                     <div class="session-text">session</div>
+                    <div class="date">{{ sessionDetails.Date }}</div>
                 </div>
                 <div class="content">
                     <div class="contents-wrapper" v-for="(speaker, index) in sessionDetails.Speakers" :key="index">
@@ -84,9 +85,7 @@ export default {
             type: Boolean,
             default: false
         },
-        'sessionDetails': {
-            type: String
-        },
+        'sessionDetails':{}
     },
     emits: [
         'closeBookingModal'

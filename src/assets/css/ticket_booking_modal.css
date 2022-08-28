@@ -53,7 +53,7 @@
 }
 
 .booking-modal-wrapper .container .top{
-    height: 35%;
+    height: 45%;
     padding-bottom: 5%;
     min-height: 180px;
     display: flex;
@@ -61,7 +61,7 @@
     flex-direction: column;
     justify-content: center;
 
-    background-color: #FF0039;
+    background-color: var(--red-l1);
 }
 
 .booking-modal-wrapper .container .top .session{
@@ -77,10 +77,21 @@
 
 .booking-modal-wrapper .container .top .session-text{
     font-size: 29px;
-    color: #FF5C5C;
+    color: var(--red-l5);
     letter-spacing: 13px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.booking-modal-wrapper .container .top .date{
+    margin-top: 3%;
+
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* letter-spacing: 10px; */
+    text-align: center;
+    color: var(--red-l4);
 }
 
 
@@ -119,7 +130,7 @@
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    border: 3px solid #FF0039;
+    border: 3px solid var(--red-l1);
 }
 
 .booking-modal-wrapper .container .name-wrapper {

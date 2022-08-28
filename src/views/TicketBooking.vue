@@ -38,6 +38,7 @@ export default {
       sessions:[
         {
           Session:"1",
+          Date: "Sept 3, 2022",
           Speakers: [
             {
               Name: "Javed Khatri",
@@ -59,6 +60,7 @@ export default {
         },
         {
           Session:"2",
+          Date: "Sept 4, 2022",
           Speakers: [
             {
               Name: "Sriparna Saha",
@@ -75,6 +77,7 @@ export default {
         },
         {
           Session:"3",
+          Date: "Sept 4, 2022",
           Speakers: [
             {
               Name: "Klanz",
