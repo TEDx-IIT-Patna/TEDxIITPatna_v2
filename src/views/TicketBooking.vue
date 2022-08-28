@@ -42,17 +42,17 @@ export default {
             {
               Name: "Javed Khatri",
               Time: "12:00PM - 12:30PM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/javed.jpeg')
             },
             {
               Name: "Phani Tetali",
               Time: "12:45PM - 1:15PM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/phani.jpg')
             },
             {
               Name: "Narayan Mahadevan",
               Time: "1:30 PM - 2:00 PM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/Narayan.jpg')
             }
           ],
           Link:"https://forms.gle/3M1MB8yPq7pRMxxC7",
@@ -63,12 +63,12 @@ export default {
             {
               Name: "Sriparna Saha",
               Time: "11:00 AM - 11:30 AM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/sriparna.jpg')
             },
             {
               Name: "Alakh Pandey",
               Time: "11:45 AM - 12:15 PM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/alakh.png')
             },
           ],
           Link:"https://forms.gle/4VMLrdTFWeh3kfwb8",
@@ -79,12 +79,12 @@ export default {
             {
               Name: "Klanz",
               Time: "3:00 PM - 3:30 PM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/klanz.jpg')
             },
             {
               Name: "Sridharan Devrajan",
               Time: "3:45 PM - 4:15 PM",
-              Path: require('@/assets/images/Team_Image/prof.png')
+              Path: require('@/assets/current-event/speaker-images/sridharan.jpg')
             }
           ],
           Link:"https://forms.gle/c3rcop1Gab4isww68",
