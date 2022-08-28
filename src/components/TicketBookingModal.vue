@@ -50,23 +50,25 @@
         <div class="close-btn" @click="this.$emit('closeBookingModal')"><i class="gg-close"></i></div>
         <div class="overlay" @click="this.$emit('closeBookingModal')"></div>
         <div class="container">
-            <div class="top">
-                <div class="session">
-                    <span class="hash">#</span>{{ sessionDetails.Session }}
+            <div class="overflow-wrapper">
+                <div class="top">
+                    <div class="session">
+                        <span class="hash">#</span>{{ sessionDetails.Session }}
+                    </div>
+                    <div class="session-text">session</div>
                 </div>
-                <div class="session-text">session</div>
-            </div>
-            <div class="content">
-                <div class="contents-wrapper" v-for="(speaker, index) in sessionDetails.Speakers" :key="index">
-                    <div class="speaker-img"><img :src="speaker.Path" alt="speaker.Name"></div>
-                    <div class="name-wrapper">
-                    <div class="name">{{ speaker.Name }}</div>
-                    <div class="time">{{ speaker.Time }}</div>
+                <div class="content">
+                    <div class="contents-wrapper" v-for="(speaker, index) in sessionDetails.Speakers" :key="index">
+                        <div class="speaker-img"><img :src="speaker.Path" alt="speaker.Name"></div>
+                        <div class="name-wrapper">
+                        <div class="name">{{ speaker.Name }}</div>
+                        <div class="time">{{ speaker.Time }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="btn-container">
-            <a :href="Link"><div class="booking-btn">
+            <a :href="sessionDetails.Link" target="_blank"><div class="booking-btn">
                 Book
             </div></a>
             </div>

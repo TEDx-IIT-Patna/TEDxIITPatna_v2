@@ -62,7 +62,7 @@ div.tickets{
     flex-wrap: wrap;
     align-items: center;
     padding-inline: 18vw;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /* Each circle */

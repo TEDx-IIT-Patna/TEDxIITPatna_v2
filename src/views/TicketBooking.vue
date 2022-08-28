@@ -55,7 +55,7 @@ export default {
               Path: require('@/assets/images/Team_Image/prof.png')
             }
           ],
-          Link:"#",
+          Link:"https://forms.gle/3M1MB8yPq7pRMxxC7",
         },
         {
           Session:"2",
@@ -71,7 +71,7 @@ export default {
               Path: require('@/assets/images/Team_Image/prof.png')
             },
           ],
-          Link:"#",
+          Link:"https://forms.gle/4VMLrdTFWeh3kfwb8",
         },
         {
           Session:"3",
@@ -87,7 +87,7 @@ export default {
               Path: require('@/assets/images/Team_Image/prof.png')
             }
           ],
-          Link:"#",
+          Link:"https://forms.gle/c3rcop1Gab4isww68",
         }
       ]
     }

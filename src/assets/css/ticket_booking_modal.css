@@ -32,7 +32,7 @@
 .booking-modal-wrapper .container {
     position: relative;
     width: 90vw;
-    max-width: 380px;
+    max-width: 500px;
     height: 90vh;
     max-height: 500px;
     color: black;
@@ -43,6 +43,12 @@
     border-radius: 10px;
     overflow: auto;
     z-index: 3;
+    overflow-x: hidden;
+}
+
+.booking-modal-wrapper .container .overflow-wrapper{
+    height: calc(100% - max(15%, 80px));
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -93,13 +99,14 @@
 
 .booking-modal-wrapper .container .content{
     position: relative;
-    padding: 2vh 0 0 5vh;
+    padding: 5% 10%;
+    background-color: var(--grey-l2);
 }
 
 .booking-modal-wrapper .container .contents-wrapper {
-    position: relative;
-    margin-top: 9px;
-    margin-bottom: -23px;
+    display: flex;
+    flex-direction: row;
+    padding: 2.5% 0;
 }
 
 .booking-modal-wrapper .container .speaker-img {
@@ -116,15 +123,13 @@
 }
 
 .booking-modal-wrapper .container .name-wrapper {
-    position: relative;
-    height: fit-content;
-    top: -61px;
-    /* float: right; */
     display: flex;
+    position: relative;
+    width: 100%;
+    padding-left: 10%;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    padding-left: 117px;
 }
 
 .booking-modal-wrapper .container .name {
@@ -147,14 +152,21 @@
     font-weight: 200;
 }
 
+.booking-modal-wrapper .container .btn-container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: max(15%, 80px);
+    justify-content: center;
+    align-items: center;
+}
+
 .booking-modal-wrapper .container .booking-btn{
     position: sticky;
     width: 140px;
     padding: 0.7rem 1.8rem;
     cursor: pointer;
     border-radius: 40px;
-    left: 50%;
-    transform: translate(-50%, 0);
 
     background-color: var(--red-l1);
     color: white;
@@ -167,8 +179,18 @@
     line-height: calc(55 * (clamp(400px, 50vw, 420px) / 1080));
 }
 
-.booking-modal-wrapper .container .btn-container{
-    width: 100%;
-    position: absolute;
-    margin-top: 28px;
+@media only screen and (max-width: 400px){
+    .booking-modal-wrapper .container .contents-wrapper{
+        flex-direction: column;
+        align-items: center;
+        padding: 7.5% 0;
+    }
+
+    .booking-modal-wrapper .container .name-wrapper{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-top: 5%;
+        text-align: center;
+    }
 }
