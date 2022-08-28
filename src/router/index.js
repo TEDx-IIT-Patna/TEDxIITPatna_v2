@@ -83,6 +83,14 @@ const routes = [
     },
   },
   {
+    path: '/ticketbooking',
+    name: 'ticketbooking',
+    component: () => import(/* webpackChunkName: "commingsoon" */ '../views/TicketBooking.vue'),
+    meta: {
+      title: "Ticket Booking"
+    },
+  },
+  {
     path: '/comingsoon',
     name: 'comingsoon',
     component: () => import(/* webpackChunkName: "commingsoon" */ '../views/ComingSoonView.vue'),

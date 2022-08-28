@@ -1,0 +1,10 @@
+.ticketbooking-wrapper.mobile .banner {
+    width: 100vw;
+    height: 150vh;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+
+div.tickets.mobile{
+    top: (180px, 25%);
+}

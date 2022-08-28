@@ -1,0 +1,124 @@
+.ticketbooking-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* background image */
+.ticketbooking-wrapper .banner {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
+
+.ticketbooking-wrapper .banner.web {
+    background-image: url('@/assets/images/coming-soon-banner-web.png');
+    background-size: cover;
+    background-position: left top;
+}
+
+.ticketbooking-wrapper .banner.mobile {
+    background-image: url('@/assets/images/coming-soon-banner-mobile.png');
+    background-size: cover;
+    background-position: center top;
+}
+
+@media only screen and (max-width: calc(0.5 * 100vh)) {
+    .ticketbooking-wrapper .banner.mobile{
+        background-size: auto 100%;
+    }
+}
+
+/* ticket booking text */
+.ticketbooking-wrapper .book-tickets{
+    position: relative;
+    top: max(180px, 25%);
+    left: 50%;
+    width: 100%;
+    /* padding-top: max(150px, 15%); */
+    padding-left: calc(60 * (clamp(300px, 80vw, 700px) / 1080));
+    transform: translate(-50%, -50%);
+
+    color: white;
+    text-align: center;
+    font-size: calc(80 * (clamp(300px, 80vw, 600px) / 1080));
+    font-weight: 700;
+    letter-spacing: calc(50 * (clamp(300px, 80vw, 700px) / 1080));
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+/* Main div for the circles */
+div.tickets{
+    position: relative;
+    top: max(200px, 30%);
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline: 18vw;
+    justify-content: space-evenly;
+}
+
+/* Each circle */
+div.tickets .event{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background: #72012966;
+    border: 4px solid #720129;
+    cursor: pointer;
+}
+
+/*  Hover effect */
+div.tickets .event:hover{
+    background: #720129;
+}
+
+div.tickets .event:hover .hash{
+    visibility: hidden;
+}
+
+/* The number in the text */
+div.tickets .number{
+    width: 100%;
+    position: relative;
+
+    color: white;
+    top: -67%;
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    transform: translate(0, 50%);
+}
+
+/* The text session in the circle */
+div.tickets .session{
+    width: 100%;
+    position: relative;
+    color: white;
+    top: -39%;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* The background hash of the circle */
+div.tickets .hash{
+    position: relative;
+
+    top: 38%;
+    color: #FFFFFF1C;
+    font-size: 92px;
+    font-weight: 700;
+    text-align: center;
+    transform: translate(0, -50%);
+}
