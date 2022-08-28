@@ -83,9 +83,9 @@ const routes = [
     },
   },
   {
-    path: '/ticketbooking',
+    path: '/iitp-55a095e504b85523a2fd54a5e75d3bca/ticketbooking',
     name: 'ticketbooking',
-    component: () => import(/* webpackChunkName: "commingsoon" */ '../views/TicketBooking.vue'),
+    component: () => import(/* webpackChunkName: "ticketbooking" */ '../views/TicketBooking.vue'),
     meta: {
       title: "Ticket Booking"
     },
