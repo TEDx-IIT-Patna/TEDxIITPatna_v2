@@ -49,7 +49,7 @@
     <div class="booking-modal-wrapper mobile" v-if="this.showModal">
         <div class="close-btn" @click="this.$emit('closeBookingModal')"><i class="gg-close"></i></div>
         <div class="overlay" @click="this.$emit('closeBookingModal')"></div>
-        <div class="container">
+        <div :class="['container', sessionDetails.Closed ? 'closed' : 'open']">
             <div class="overflow-wrapper">
                 <div class="top">
                     <div class="session">
@@ -69,9 +69,9 @@
                 </div>
             </div>
             <div class="btn-container">
-            <a :href="sessionDetails.Link" target="_blank"><div class="booking-btn">
-                Book
-            </div></a>
+            <a :href="sessionDetails.Closed ? 'javascript:void(0)' : sessionDetails.Link" target="_blank">
+                <div :class="['booking-btn', sessionDetails.Closed ? 'disabled' : '']"> Book </div>
+            </a>
             </div>
         </div>
     </div>

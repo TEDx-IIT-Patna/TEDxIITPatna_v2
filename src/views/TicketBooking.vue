@@ -57,6 +57,7 @@ export default {
             }
           ],
           Link:"https://forms.gle/3M1MB8yPq7pRMxxC7",
+          Closed: false,
         },
         {
           Session:"2",
@@ -74,6 +75,7 @@ export default {
             },
           ],
           Link:"https://forms.gle/4VMLrdTFWeh3kfwb8",
+          Closed: true,
         },
         {
           Session:"3",
@@ -91,6 +93,7 @@ export default {
             }
           ],
           Link:"https://forms.gle/c3rcop1Gab4isww68",
+          Closed: false,
         }
       ]
     }
