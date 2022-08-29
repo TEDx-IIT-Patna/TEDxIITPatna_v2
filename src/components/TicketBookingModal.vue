@@ -70,7 +70,7 @@
             </div>
             <div class="btn-container">
             <a :href="sessionDetails.Closed ? 'javascript:void(0)' : sessionDetails.Link" target="_blank">
-                <div :class="['booking-btn', sessionDetails.Closed ? 'disabled' : '']"> Book </div>
+                <div class="booking-btn"> Book </div>
             </a>
             </div>
         </div>

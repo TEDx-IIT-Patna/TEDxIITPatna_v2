@@ -187,8 +187,10 @@
     font-size: calc(47 * (clamp(400px, 35vw, 420px) / 1080));
     line-height: calc(55 * (clamp(400px, 50vw, 420px) / 1080));
 }
-.booking-modal-wrapper .container .booking-btn.disabled{
+.booking-modal-wrapper .container.closed .btn-container{
     pointer-events: none;
+}
+.booking-modal-wrapper .container.closed .booking-btn{
     background-color: var(--red-l4);
 }
 
