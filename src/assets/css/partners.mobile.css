@@ -27,6 +27,12 @@
     transform: translate(-50%,0);
 }
 
+.partners-type.mobile{
+    text-align: center;
+    margin-block: 2vh;
+    margin-left: 32px;
+}
+
 .wrapper.mobile .title::before{
     content: '';
     display: block;

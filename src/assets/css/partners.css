@@ -45,6 +45,11 @@
     z-index: -1;
 }
 
+.partners-type{
+    text-align: center;
+    margin-block: 2vh;
+}
+
 .partner-scroller{
     display: grid;
     position: relative;
