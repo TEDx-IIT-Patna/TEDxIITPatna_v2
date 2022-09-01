@@ -9,6 +9,36 @@
     <div class="partners-wrapper">
       <div class="title"><span style="color: white" class="box">OUR</span> PARTNERS.</div>
 
+      
+      <h1 class="partners-type">Sponsors</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.sponsors">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+      
+      <h1 class="partners-type">Merchandise Partners</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.merchandise">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+
+      <h1 class="partners-type">Hospitality Partners</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.hospitality">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+
+      <h1 class="partners-type">Media Partners</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.media">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+
+      <h1 class="partners-type">Our Previous Partners</h1>
       <div class="partner-scroller">
         <div class="partners-images" v-for="partner in this.partner_images">
             <img :src="partner"/>
@@ -24,9 +54,38 @@
     <div class="partners-wrapper">
       <div class="title"><span style="color: white" class="box">O</span>UR PARTNERS.</div>
 
+      <h1 class="partners-type mobile">Sponsors</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.sponsors">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+      
+      <h1 class="partners-type mobile">Merchandise Partners</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.merchandise">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+
+      <h1 class="partners-type mobile">Hospitality Partners</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.hospitality">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+
+      <h1 class="partners-type mobile">Media Partners</h1>
+      <div class="partner-scroller">
+        <div class="partners-images" v-for="sponsor in this.media">
+            <img :src="sponsor"/>
+        </div>
+      </div>
+
+      <h1 class="partners-type mobile">Our Previous Partners</h1>
       <div class="partner-scroller">
         <div class="partners-images" v-for="partner in this.partner_images">
-          <img :src="partner"/>
+            <img :src="partner"/>
         </div>
       </div>
       
@@ -64,7 +123,20 @@ export default {
         require('@/assets/images/partners/varta.png'),
         require('@/assets/images/partners/ic.png'),
         require('@/assets/images/partners/pataliputra.png',)
-      ]
+      ],
+      sponsors:[
+        require('@/assets/images/partners/new_partners/BridgeLabz.png'),
+        require('@/assets/images/partners/new_partners/BlueMedix.png'),
+      ],
+      merchandise:[
+        require('@/assets/images/partners/new_partners/printiconics.png'),
+      ],
+      media:[
+        require('@/assets/images/partners/new_partners/DainikJagran.jpg'),
+      ],
+      hospitality:[
+        require('@/assets/images/partners/new_partners/amalfi.png'),
+      ],
     }
   },
   methods: {
