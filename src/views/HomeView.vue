@@ -2,7 +2,7 @@
   <Nav v-if="!this.showWebView" open_button_style="icon" />
 
   <!-- web-view landing -->
-  <section class="landing full" v-if="this.showWebView">
+  <section class="landing full" v-if="this.showWebView && this.showWebView2">
     <div class="black-bg"></div>
 
     <div class="countdown-container">
@@ -132,6 +132,7 @@ export default {
       this.screenWidth = window.innerWidth
       this.screenHeight = window.innerHeight
       this.showWebView = window.innerWidth >= (1.51 * window.innerHeight)
+      this.showWebView2 = window.innerHeight >= 600
     },
     formatTime(val) {
       return val >= 10 ? String(val) : "0" + String(val)
