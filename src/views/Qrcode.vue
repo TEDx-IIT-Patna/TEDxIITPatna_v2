@@ -6,7 +6,7 @@
 export default {
   name: "Qrcode",
   created() {
-    window.location.href = 'https://www.tedxiitpatna.com/iitp-55a095e504b85523a2fd54a5e75d3bca/ticketbooking'
+    window.location.href = 'https://youtu.be/o-YBDTqX_ZU'
   }
 }
 </script>
